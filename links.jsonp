@@ -1,0 +1,34 @@
+
+callback([
+
+  {
+    "text": "Lecture 2: Advanced Git concepts",
+    "href": "/ICP2017F/lecture/2-advanced-git"
+  } ,
+
+  {
+    "text": "Lecture 1: A professional programmer uses Version Control System (VCS)",
+    "href": "/ICP2017F/lecture/1-version-control-system"
+  } ,
+
+  {
+    "text": "Lecture 0: Programming history",
+    "href": "/ICP2017F/lecture/0-programming-history"
+  } ,
+
+  {
+    "text": "Homework 1: Problems - Version Control Using Git and Github",
+    "href": "/ICP2017F/homework/1-problems-version-control-using-git-github"
+  } ,
+
+  {
+    "text": "Announcement 1: Assessing your programming knowledge and interests",
+    "href": "/ICP2017F/announcement/1-assessing-your-programming-knowledge-and-interests"
+  } ,
+
+  {
+    "text": "Announcement 0: Student-professor connection day",
+    "href": "/ICP2017F/announcement/0-student-professor-connection-day"
+  } 
+
+])

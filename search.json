@@ -1,0 +1,51 @@
+[
+	
+		{
+		  "title"      : "Lecture 2: Advanced Git concepts",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/lecture/2-advanced-git",
+		  "date"       : "2017-09-08 00:00:00 -0500",
+		  "shortdate"  : "September 08, 2017"
+		} ,
+	
+		{
+		  "title"      : "Lecture 1: A professional programmer uses Version Control System (VCS)",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/lecture/1-version-control-system",
+		  "date"       : "2017-09-06 00:00:00 -0500",
+		  "shortdate"  : "September 06, 2017"
+		} ,
+	
+		{
+		  "title"      : "Lecture 0: Programming history",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/lecture/0-programming-history",
+		  "date"       : "2017-09-01 00:00:00 -0500",
+		  "shortdate"  : "September 01, 2017"
+		} ,
+	
+		{
+		  "title"      : "Homework 1: Problems - Version Control Using Git and Github",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/homework/1-problems-version-control-using-git-github",
+		  "date"       : "2017-09-01 00:00:00 -0500",
+		  "shortdate"  : "September 01, 2017"
+		} ,
+	
+		{
+		  "title"      : "Announcement 1: Assessing your programming knowledge and interests",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/announcement/1-assessing-your-programming-knowledge-and-interests",
+		  "date"       : "2017-08-30 00:00:00 -0500",
+		  "shortdate"  : "August 30, 2017"
+		} ,
+	
+		{
+		  "title"      : "Announcement 0: Student-professor connection day",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/announcement/0-student-professor-connection-day",
+		  "date"       : "2017-08-30 00:00:00 -0500",
+		  "shortdate"  : "August 30, 2017"
+		} 
+	
+]
