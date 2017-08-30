@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-08-29T15:05:48-05:00</updated>
+<updated>2017-08-30T08:06:04-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -1224,11 +1224,12 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 &lt;figure&gt;
 	&lt;a href=&quot;http:/ICP2017F/lecture/0/proglang.png&quot; target=&quot;_blank&quot;&gt;
         &lt;img src=&quot;http:/ICP2017F/lecture/0/proglang.png&quot; width=&quot;900&quot; /&gt;
-    &lt;/a&gt;
+    &lt;/a&gt;&lt;!--
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
         A flowchart illustrating .
-    &lt;/figcaption&gt;
+    &lt;/figcaption&gt;--&gt;
 &lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Depending on their levels of abstraction, programming languages are classified into different generations:&lt;/p&gt;
 
@@ -1721,7 +1722,24 @@ The following are the results of the two questions of the survey. The total resp
 
 &lt;p&gt;I am a physicist and researcher, currently at &lt;a target=&quot;_blank&quot; href=&quot;https://www.ices.utexas.edu/&quot;&gt;Institute for Computational Engineering and Sciences&lt;/a&gt; at &lt;a target=&quot;_blank&quot; href=&quot;http://www.utexas.edu/&quot;&gt;The University of Texas at Austin&lt;/a&gt;. I am a member of the &lt;a target=&quot;_blank&quot; href=&quot;http://cco.ices.utexas.edu/&quot;&gt;Center for Computational Oncology&lt;/a&gt; led by &lt;a target=&quot;_blank&quot; href=&quot;https://www.bme.utexas.edu/about-us/faculty-directory/yankeelov&quot;&gt;Dr. Thomas E. Yankeelov&lt;/a&gt; and &lt;a target=&quot;_blank&quot; href=&quot;https://www.ices.utexas.edu/people/85/&quot;&gt;Dr. J. Tinsley Oden&lt;/a&gt; at ICES with the goal of understanding Tumor Growth.&lt;/p&gt;
 
-&lt;p&gt;I was introduced to the world of information and computer programming around 1991 by my father and elder brother. By the end of elementary school, I was so impressed with and knew enough about computer software to write a few simple &lt;a target=&quot;_blank&quot; href=&quot; https://en.wikipedia.org/wiki/PC_game&quot;&gt;computer games&lt;/a&gt; in &lt;a target=&quot;_blank&quot; href=&quot;https://en.wikipedia.org/wiki/QBasic&quot;&gt;QBasic programming language&lt;/a&gt; on our first family personal computer, &lt;a target=&quot;_blank&quot; href=&quot;https://en.wikipedia.org/wiki/IBM_386SLC&quot;&gt;IBM 386&amp;lt;/a. Here is an example of how computer games looked liked 30 years ago.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/PhDdefense.gif&quot; width=&quot;700&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/EinsteinSandals.jpg&quot; width=&quot;700&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/memoriesOfGreen.jpg&quot; width=&quot;200&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I was introduced to the world of information and computer programming around 1991 by my father and elder brother. By the end of elementary school, I was so impressed with and knew enough about computer software to write a few simple &lt;a target=&quot;_blank&quot; href=&quot; https://en.wikipedia.org/wiki/PC_game&quot;&gt;computer games&lt;/a&gt; in &lt;a target=&quot;_blank&quot; href=&quot;https://en.wikipedia.org/wiki/QBasic&quot;&gt;QBasic programming language&lt;/a&gt; on our first family personal computer, &lt;a target=&quot;_blank&quot; href=&quot;https://en.wikipedia.org/wiki/IBM_386SLC&quot;&gt;IBM 386&lt;/a&gt;. Here is an example of how computer games looked liked 30 years ago.&lt;/p&gt;
 
 &lt;div class=&quot;center&quot;&gt;
 &lt;div class=&quot;video-wrapper&quot;&gt;
@@ -1731,169 +1749,13 @@ The following are the results of the two questions of the survey. The total resp
 	&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;
-I never imagined a day I would use computer programming for scientific purposes. Nevertheless, there has been almost no single day that I have not used scientific programming for my work and research, ever since I entered graduate school.&lt;/p&gt;
-
-&lt;h2 id=&quot;my-current-research-topics&quot;&gt;My current research topics&lt;/h2&gt;
-
-&lt;p&gt;The following are a few examples of what I do nowadays as part of my scientific reseach at UT Austin.&lt;/p&gt;
-
-&lt;h3 id=&quot;computational-oncology&quot;&gt;Computational Oncology&lt;/h3&gt;
-
-&lt;p&gt;What you see in the figures below, is a representation of the growth of Glioblastoma tumor cells in a Rat’s brain over time.&lt;/p&gt;
-
-&lt;hr /&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/onco_1.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;I never imagined a day I would use computer programming for scientific purposes. Nevertheless, there has been almost no single day that I have not used scientific programming for my work and research, ever since I entered graduate school.&lt;/p&gt;
 
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;my-research-topics&quot;&gt;My research topics&lt;/h2&gt;
 
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/onco_2.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/onco_3.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;the-temporal-evolution-of-the-growth-of-glioma-tumor-in-rat&quot;&gt;The temporal evolution of the growth of Glioma tumor in rat&lt;/h4&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_1_t10.0.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_2_t12.0.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_3_t14.0.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_5_t16.0.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_6_t18.0.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_7_t20.0.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;monte-carlo-simulation-and-integration-methods&quot;&gt;Monte Carlo Simulation and Integration Methods&lt;/h3&gt;
-
-&lt;p&gt;One of the fields on which my research is currently focused, is developing Monte Carlo optimizer/sampler and integrator algorithms for Bayesian inverse problems.&lt;/p&gt;
-
-&lt;h4 id=&quot;development-of-monte-carlo-sampling-algorithms&quot;&gt;Development of Monte Carlo sampling algorithms&lt;/h4&gt;
-
-&lt;p&gt;Below you see example animations of two &lt;a href=&quot;https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo&quot; target=&quot;_blank&quot;&gt;Markov Chain Monte Carlo&lt;/a&gt; (MCMC) samplers, both of which sample a double Gaussian-peak function, but with different MCMC sampling parameters.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/PDF_RS_L_Forever20ms.gif&quot; width=&quot;700&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;Example of low-efficiency, but good-mixing MCMC sampler.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/PDF_RS_H_Forever20ms.gif&quot; width=&quot;700&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;Example of highly-efficiency, but bad-mixing MCMC sampler.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;development-of-monte-carlo-integration-algorithms&quot;&gt;Development of Monte Carlo integration algorithms&lt;/h4&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/DRI.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/DLI.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/GR3D.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/GR2D.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/GR2D.gif&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/EB3D.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/EB2D.gif&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;The following are a few examples of what I do nowadays as part of my scientific research at UT Austin.&lt;/p&gt;
 
 &lt;h3 id=&quot;theoretical-astrophysics&quot;&gt;Theoretical Astrophysics&lt;/h3&gt;
 
@@ -1955,6 +1817,173 @@ I never imagined a day I would use computer programming for scientific purposes.
 
 &lt;figure&gt;
 	&lt;img src=&quot;http:/ICP2017F/announcement/0/petro_1.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;computational-oncology&quot;&gt;Computational Oncology&lt;/h3&gt;
+
+&lt;p&gt;What you see in the figures below, is a representation of the growth of Glioblastoma tumor cells in a Rat’s brain over time.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/onco_1.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/onco_2.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/onco_3.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;the-temporal-evolution-of-the-growth-of-glioma-tumor-in-rat&quot;&gt;The temporal evolution of the growth of Glioma tumor in rat&lt;/h4&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_1_t10.0.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/GBGlastLong.gif&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;!--
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_2_t12.0.png&quot; width=&quot;900&quot;&gt;
+&lt;/figure&gt;&lt;br&gt;
+
+---  
+&lt;br&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_3_t14.0.png&quot; width=&quot;900&quot;&gt;
+&lt;/figure&gt;&lt;br&gt;
+
+---  
+&lt;br&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_5_t16.0.png&quot; width=&quot;900&quot;&gt;
+&lt;/figure&gt;&lt;br&gt;
+
+---  
+&lt;br&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_6_t18.0.png&quot; width=&quot;900&quot;&gt;
+&lt;/figure&gt;&lt;br&gt;
+
+---  
+&lt;br&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_7_t20.0.png&quot; width=&quot;900&quot;&gt;
+&lt;/figure&gt;&lt;br&gt;
+
+--&gt;
+
+&lt;h3 id=&quot;monte-carlo-simulation-and-integration-methods&quot;&gt;Monte Carlo Simulation and Integration Methods&lt;/h3&gt;
+
+&lt;p&gt;One of the fields on which my research is currently focused, is developing Monte Carlo optimizer/sampler and integrator algorithms for Bayesian inverse problems.&lt;/p&gt;
+
+&lt;h4 id=&quot;development-of-monte-carlo-sampling-algorithms&quot;&gt;Development of Monte Carlo sampling algorithms&lt;/h4&gt;
+
+&lt;p&gt;Below you see example animations of two &lt;a href=&quot;https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo&quot; target=&quot;_blank&quot;&gt;Markov Chain Monte Carlo&lt;/a&gt; (MCMC) samplers, both of which sample a double Gaussian-peak function, but with different MCMC sampling parameters.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/PDF_RS_H_Forever20ms.gif&quot; width=&quot;700&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;Example of highly-efficiency, but bad-mixing MCMC sampler.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/PDF_RS_L_Forever20ms.gif&quot; width=&quot;700&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;Example of low-efficiency, but good-mixing MCMC sampler.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;development-of-monte-carlo-integration-algorithms&quot;&gt;Development of Monte Carlo integration algorithms&lt;/h4&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/DRI.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/DLI.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/GR3D.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/GR2D.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/GR2D.gif&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/EB3D.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/announcement/0/EB2D.gif&quot; width=&quot;900&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
