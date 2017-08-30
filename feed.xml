@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-08-30T11:08:21-05:00</updated>
+<updated>2017-08-30T14:41:03-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -37,6 +37,7 @@
 &lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;getting-help-for-git-commands&quot;&gt;Getting help for Git commands&lt;/h2&gt;
+
 &lt;p&gt;There are basically three ways to request information about Git commands on the Git-bash command line:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git help &amp;lt;command name&amp;gt;
 $ git &amp;lt;command name&amp;gt; --help
@@ -44,8 +45,8 @@ $ man git-&amp;lt;command name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Note that the last command &lt;code&gt;man&lt;/code&gt; is not a Git command. All Git commands begin with the word &lt;em&gt;git&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&quot;git-log&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;viewing-the-git-commit-history&quot;&gt;Viewing the Git commit history&lt;/h2&gt;
+
 &lt;p&gt;You can check the history of project commits to the repository using the Git command &lt;code&gt;git log&lt;/code&gt;.
 For example, here is a snippet from the output  of &lt;code&gt;git log&lt;/code&gt; on laptop screen:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;  $ git log
@@ -360,8 +361,8 @@ or, with the following date format:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&quot;git-reset-amend-tag&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;undoing-amending-and-tagging&quot;&gt;Undoing, amending, and tagging&lt;/h2&gt;
+
 &lt;p&gt;Suppose you want to undo the latest addition of files to the stage area. The command to use in order to clean the stage area is,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git reset
 &lt;/code&gt;&lt;/pre&gt;
@@ -410,8 +411,8 @@ Annotated tags (created with &lt;code&gt;-a&lt;/code&gt; flag) are meant for ver
 For more information about &lt;code&gt;git tag&lt;/code&gt;, see &lt;a href=&quot;https://git-scm.com/docs/git-tag&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt;.
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&quot;git-remote&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;working-with-remote-repositories&quot;&gt;Working with remote Repositories&lt;/h2&gt;
+
 &lt;p&gt;In order to see which remote servers you have configured for your project, you can run the following Git command,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git remote
 origin
@@ -443,8 +444,8 @@ The above information indicates that the current HEAD branch of the project is o
 &lt;p&gt;You can find more information about &lt;code&gt;git remote&lt;/code&gt; command in &lt;a href=&quot;https://git-scm.com/docs/git-remote&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt;.
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&quot;git-branch&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;git-branching&quot;&gt;Git branching&lt;/h2&gt;
+
 &lt;p&gt;Branching is powerful idea in Version Control Systems, which significantly facilitates collaboration or parallel development of a project. Suppose you have already a project which has reached its first release version, meaning that it works all fine. Now, you like to add a new feature to your project. To do this and to avoid further commits to your original project, you can create a new &lt;strong&gt;branch&lt;/strong&gt; of the project which is specifically devoted to adding the new feature. See the following figure, for an example of Git branching.&lt;/p&gt;
 
 &lt;figure&gt;
@@ -537,8 +538,7 @@ To resolve the conflict, open the conflicting file. There you will see the segme
 
 &lt;p&gt;In addition to &lt;code&gt;git merge&lt;/code&gt;, there is another more elegant and powerful Git command, &lt;code&gt;git rebase&lt;/code&gt; for integrating changes in different branches into a single branch. But, the subject goes beyond the goals of this class, and the interested reader is referred to &lt;a href=&quot;https://git-scm.com/docs/git-rebase&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt; for this command and &lt;a href=&quot;https://git-scm.com/book/en/v2/Git-Branching-Rebasing&quot; target=&quot;_blank&quot;&gt;this pedagogical Git page&lt;/a&gt; for &lt;code&gt;git rebase&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&quot;git-branch-d&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;deleting-a-branch&quot;&gt;Deleting a branch&lt;/h4&gt;
+&lt;h3 id=&quot;deleting-a-branch&quot;&gt;Deleting a branch&lt;/h3&gt;
 &lt;p&gt;Normally, when a branch merge is done, the development branch is not needed anymore, so it is always wise and cleaner to delete the unwanted branches, using the command &lt;code&gt;git branch -d &amp;lt;branch name&amp;gt;&lt;/code&gt;. To do this, on the same branch that you just performed &lt;code&gt;git merge&lt;/code&gt; use,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout master
 Your branch is ahead of 'origin/master' by 1 commit.

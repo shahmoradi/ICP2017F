@@ -151,6 +151,7 @@ MathJax.Hub.Queue(function() {
 <div class="post_toc"></div>
 
 <h2 id="getting-help-for-git-commands">Getting help for Git commands</h2>
+
 <p>There are basically three ways to request information about Git commands on the Git-bash command line:</p>
 <pre><code class="language-bash">$ git help &lt;command name&gt;
 $ git &lt;command name&gt; --help
@@ -158,8 +159,8 @@ $ man git-&lt;command name&gt;
 </code></pre>
 <p>Note that the last command <code>man</code> is not a Git command. All Git commands begin with the word <em>git</em>.</p>
 
-<p><a name="git-log"></a></p>
 <h2 id="viewing-the-git-commit-history">Viewing the Git commit history</h2>
+
 <p>You can check the history of project commits to the repository using the Git command <code>git log</code>.
 For example, here is a snippet from the output  of <code>git log</code> on laptop screen:</p>
 <pre><code class="language-bash">  $ git log
@@ -474,8 +475,8 @@ or, with the following date format:</p>
 </code></pre>
 <p><br /></p>
 
-<p><a name="git-reset-amend-tag"></a></p>
 <h2 id="undoing-amending-and-tagging">Undoing, amending, and tagging</h2>
+
 <p>Suppose you want to undo the latest addition of files to the stage area. The command to use in order to clean the stage area is,</p>
 <pre><code class="language-bash">$ git reset
 </code></pre>
@@ -524,8 +525,8 @@ Annotated tags (created with <code>-a</code> flag) are meant for very important 
 For more information about <code>git tag</code>, see <a href="https://git-scm.com/docs/git-tag" target="_blank">Git documentation</a>.
 <br /></p>
 
-<p><a name="git-remote"></a></p>
 <h2 id="working-with-remote-repositories">Working with remote Repositories</h2>
+
 <p>In order to see which remote servers you have configured for your project, you can run the following Git command,</p>
 <pre><code class="language-bash">$ git remote
 origin
@@ -557,8 +558,8 @@ The above information indicates that the current HEAD branch of the project is o
 <p>You can find more information about <code>git remote</code> command in <a href="https://git-scm.com/docs/git-remote" target="_blank">Git documentation</a>.
 <br /></p>
 
-<p><a name="git-branch"></a></p>
 <h2 id="git-branching">Git branching</h2>
+
 <p>Branching is powerful idea in Version Control Systems, which significantly facilitates collaboration or parallel development of a project. Suppose you have already a project which has reached its first release version, meaning that it works all fine. Now, you like to add a new feature to your project. To do this and to avoid further commits to your original project, you can create a new <strong>branch</strong> of the project which is specifically devoted to adding the new feature. See the following figure, for an example of Git branching.</p>
 
 <figure>
@@ -651,8 +652,7 @@ To resolve the conflict, open the conflicting file. There you will see the segme
 
 <p>In addition to <code>git merge</code>, there is another more elegant and powerful Git command, <code>git rebase</code> for integrating changes in different branches into a single branch. But, the subject goes beyond the goals of this class, and the interested reader is referred to <a href="https://git-scm.com/docs/git-rebase" target="_blank">Git documentation</a> for this command and <a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing" target="_blank">this pedagogical Git page</a> for <code>git rebase</code>.</p>
 
-<p><a name="git-branch-d"></a></p>
-<h4 id="deleting-a-branch">Deleting a branch</h4>
+<h3 id="deleting-a-branch">Deleting a branch</h3>
 <p>Normally, when a branch merge is done, the development branch is not needed anymore, so it is always wise and cleaner to delete the unwanted branches, using the command <code>git branch -d &lt;branch name&gt;</code>. To do this, on the same branch that you just performed <code>git merge</code> use,</p>
 <pre><code class="language-bash">$ git checkout master
 Your branch is ahead of 'origin/master' by 1 commit.
@@ -754,7 +754,7 @@ If you are sure you want to delete it, run 'git branch -D test'.
     <footer class="notepad-site-footer">
     <div class="copyright">
          <!-- <section>Last updated 2017 / 08 / 30</section></br> -->
-         <section>Last updated Wednesday, 30 Aug 2017 at 11:08 AM CST</section></br>
+         <section>Last updated Wednesday, 30 Aug 2017 at 02:41 PM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>
