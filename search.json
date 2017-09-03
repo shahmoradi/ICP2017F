@@ -1,7 +1,15 @@
 [
 	
 		{
-		  "title"      : "Lecture 2: Advanced Git concepts",
+		  "title"      : "Lecture 0: Programming history",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/lecture/1-programming-history",
+		  "date"       : "2017-09-11 00:00:00 -0500",
+		  "shortdate"  : "September 11, 2017"
+		} ,
+	
+		{
+		  "title"      : "Lecture 1: Advanced Git concepts",
 		  "category"   : "",
 		  "url"        : "/ICP2017F/lecture/2-advanced-git",
 		  "date"       : "2017-09-08 00:00:00 -0500",
@@ -9,17 +17,9 @@
 		} ,
 	
 		{
-		  "title"      : "Lecture 1: A professional programmer uses Version Control System (VCS)",
+		  "title"      : "Lecture 0: A professional programmer uses Version Control System (VCS)",
 		  "category"   : "",
-		  "url"        : "/ICP2017F/lecture/1-version-control-system",
-		  "date"       : "2017-09-06 00:00:00 -0500",
-		  "shortdate"  : "September 06, 2017"
-		} ,
-	
-		{
-		  "title"      : "Lecture 0: Programming history",
-		  "category"   : "",
-		  "url"        : "/ICP2017F/lecture/0-programming-history",
+		  "url"        : "/ICP2017F/lecture/0-version-control-system",
 		  "date"       : "2017-09-01 00:00:00 -0500",
 		  "shortdate"  : "September 01, 2017"
 		} ,
