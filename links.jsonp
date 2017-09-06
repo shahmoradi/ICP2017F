@@ -2,13 +2,13 @@
 callback([
 
   {
-    "text": "Lecture 1: Advanced Git concepts",
-    "href": "/ICP2017F/lecture/2-advanced-git"
+    "text": "Lecture 2: Programming history",
+    "href": "/ICP2017F/lecture/2-programming-history"
   } ,
 
   {
-    "text": "Lecture 0: Programming history",
-    "href": "/ICP2017F/lecture/1-programming-history"
+    "text": "Lecture 1: Advanced Git concepts",
+    "href": "/ICP2017F/lecture/1-advanced-git"
   } ,
 
   {

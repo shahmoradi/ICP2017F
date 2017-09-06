@@ -1,9 +1,9 @@
 [
 	
 		{
-		  "title"      : "Lecture 0: Programming history",
+		  "title"      : "Lecture 2: Programming history",
 		  "category"   : "",
-		  "url"        : "/ICP2017F/lecture/1-programming-history",
+		  "url"        : "/ICP2017F/lecture/2-programming-history",
 		  "date"       : "2017-09-11 00:00:00 -0500",
 		  "shortdate"  : "September 11, 2017"
 		} ,
@@ -11,7 +11,7 @@
 		{
 		  "title"      : "Lecture 1: Advanced Git concepts",
 		  "category"   : "",
-		  "url"        : "/ICP2017F/lecture/2-advanced-git",
+		  "url"        : "/ICP2017F/lecture/1-advanced-git",
 		  "date"       : "2017-09-08 00:00:00 -0500",
 		  "shortdate"  : "September 08, 2017"
 		} ,
