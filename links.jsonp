@@ -2,6 +2,11 @@
 callback([
 
   {
+    "text": "Lecture 3: MATLAB for beginners",
+    "href": "/ICP2017F/lecture/3-matlab-for-beginners"
+  } ,
+
+  {
     "text": "Lecture 2: Programming history",
     "href": "/ICP2017F/lecture/2-programming-history"
   } ,

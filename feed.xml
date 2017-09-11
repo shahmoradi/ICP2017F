@@ -7,13 +7,248 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-09-06T17:56:43-05:00</updated>
+<updated>2017-09-11T17:15:44-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/ICP2017F/</uri>
   <email>amir@ices.utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Lecture 3: MATLAB for beginners]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/lecture/3-matlab-for-beginners"/>
+  <id>http:/ICP2017F/lecture/3-matlab-for-beginners</id>
+  <published>2017-09-13T00:00:00-05:00</published>
+  <updated>2017-09-13T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;Goals: This lecture aims at providing an introduction to MATLAB programming for beginners, how to install it, different components of the Graphical Unit Interface of MATLAB, as well as how to perform simple arithmetic operations in MATLAB.&lt;/p&gt;
+
+&lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;matlab-a-brief-history&quot;&gt;MATLAB: a brief history&lt;/h2&gt;
+
+&lt;p&gt;MATLAB was developed in the mid 1980’, by the collaborative works of &lt;a href=&quot;https://en.wikipedia.org/wiki/Cleve_Moler&quot; target=&quot;_blank&quot;&gt;Cleve Moler&lt;/a&gt;, a PhD graduate of Stanford University, and &lt;a href=&quot;https://en.wikipedia.org/wiki/John_N._Little&quot; target=&quot;_blank&quot;&gt;John Little&lt;/a&gt;, a graudate of MIT. Together they co-founded a private company named &lt;a href=&quot;https://en.wikipedia.org/wiki/MathWorks&quot; target=&quot;_blank&quot;&gt;MathWorks&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The name of the language and software they developed, &lt;a href=&quot;https://en.wikipedia.org/wiki/MATLAB&quot; target=&quot;_blank&quot;&gt;MATLAB&lt;/a&gt; is an attribution to the original purpose of the software, that is, to serve as a &lt;strong&gt;mat&lt;/strong&gt;rix &lt;strong&gt;lab&lt;/strong&gt;oratory. Cleve Moler was among the developers of the popular Fortran libraries &lt;a href=&quot;https://en.wikipedia.org/wiki/EISPACK&quot; target=&quot;_blank&quot;&gt;EISPACK&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/LINPACK&quot; target=&quot;_blank&quot;&gt;LINPACK&lt;/a&gt;. He wanted to provide his students with a higher-level environment, so that they could use these high-performance Fortran libraries without the need to learn Fortran.&lt;/p&gt;
+
+&lt;p&gt;Since MATLAB was developed by a scientist for scientists, its structure and syntax has more resemblance to the popular programming language of scientists, Fortran, than to any other language. You will soon notice this similarity when we get to learn modern Fortran later on in this course.&lt;/p&gt;
+
+&lt;p&gt;An informative historical review of MATLAB by its own inventor is &lt;a href=&quot;https://www.mathworks.com/videos/evolution-of-matlab-93125.html&quot; target=&quot;_blank&quot;&gt;available to watch on MathWork website&lt;/a&gt;. A lower quality of the same video can be accessed on youtube, which I embed here for you:&lt;/p&gt;
+
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/fa-sUaKv56A&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;matlab-why-do-you-need-to-learn-it&quot;&gt;MATLAB: Why do you need to learn it?&lt;/h2&gt;
+
+&lt;p&gt;For the following reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It targets engineers as well as natural and medical scientists as its main audience, just like Fortran.&lt;/li&gt;
+  &lt;li&gt;It has excellent &lt;em&gt;native&lt;/em&gt; array/matrix representation and manipulation tools, just like Fortran.&lt;/li&gt;
+  &lt;li&gt;It has extensive sets of high-level commands for numerical computing.&lt;/li&gt;
+  &lt;li&gt;It is an interpreted language that makes it really easy to use anytime.&lt;/li&gt;
+  &lt;li&gt;It has excellent set of graphical tools for 2D and 3D plotting (in fact other languages like Python have tried to copy from and reverse-engineer the graphical tools and commands available in MATLAB).&lt;/li&gt;
+  &lt;li&gt;It has one of the largest user-base (over 2,000,000 users) in all scientific communities.&lt;/li&gt;
+  &lt;li&gt;There is an extensive list of numerical libraries written in MATLAB over the past decades by all those science/engineering -oriented users.&lt;/li&gt;
+  &lt;li&gt;It has excellent manual, and user guide, with extensive illustrative examples. Basically, you might not even need to take a MATLAB class, if you could closely and carefully follow MATLAB’s user guide.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;matlab-caveats&quot;&gt;MATLAB caveats&lt;/h2&gt;
+
+&lt;p&gt;Here is a personal list of MATLAB caveats that I can think of, at the moment:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It is not free.&lt;/li&gt;
+  &lt;li&gt;It is slow compared to compiled programming languages. See for example, the following performance comparisons and tests in &lt;a href=&quot;https://modelingguru.nasa.gov/docs/DOC-1762&quot; target=&quot;_blank&quot;&gt;NASA modeling guru web page&lt;/a&gt;. As you can see there, the &lt;strong&gt;performance of MATLAB script can be significantly lower than compiled languages such as Fortran and C&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;If you have already coded in a fully object-oriented programming (OOP) language &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;xx add youtube&lt;/a&gt;, in particular &lt;a href=&quot;xx&quot; target=&quot;_blank&quot;&gt;Python&lt;/a&gt;, you will find some oddities in MATLAB’s OOP implementation. You may feel this when, for example, you are working with &lt;a href=&quot;xx&quot; target=&quot;_blank&quot;&gt;cell arrays&lt;/a&gt; in MATLAB. We will see later on, what cell arrays are.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;matlab-features&quot;&gt;MATLAB features&lt;/h2&gt;
+
+&lt;p&gt;MATLAB has the following features and attributes.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;MATLAB is a fourth-generation, high-level programming language.&lt;/strong&gt; Remember from our &lt;a href=&quot;http:/ICP2017F/lecture/0-programming-history&quot; target=&quot;_blank&quot;&gt;zeroth lecture&lt;/a&gt;, that a high-level programming language provides a high level of programming abstraction from details of computer and machine code. For comparison, Fortran, C++, and C are considered high, medium, and low -level programming languages respectively.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MATLAB is an array-based programming language&lt;/strong&gt;, meaning that it is designed to be with the goal of facilitating array manipulation for scientists and engineers.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MATLAB is a multi-paradigm programming language&lt;/strong&gt;. MATLAB allows the programmer to use the following major programming paradigms in their codes:&lt;br /&gt;
+&lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot; target=&quot;_blank&quot;&gt;functional programming&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Imperative_programming&quot; target=&quot;_blank&quot;&gt;imperative programming&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Procedural_programming&quot; target=&quot;_blank&quot;&gt;procedural programming&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot; target=&quot;_blank&quot;&gt;object-oriented programming (OOP)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;   Later on, we will get to each of these programming paradigms in MATLAB.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;MATLAB is an interpreted language&lt;/strong&gt;. A programming language implementation is a system for executing computer programs. There are two general approaches to programming language implementation:&lt;br /&gt;
+&lt;br /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Interpretation&lt;/strong&gt;: An interpreter takes as input a program in some language, and performs the actions written in that language on some machine.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Compilation&lt;/strong&gt;: A compiler takes as input a program in some language, and translates that program into some other language, which may serve as input to another interpreter or another compiler.&lt;br /&gt;
+&lt;br /&gt;MATLAB is an interpreted language, meaning that, as soon as you type a MATLAB command on the MATLAB’s command-line and press enter, the MATLAB interpreter executes the statement.  MATLAB programs can also be compiled using &lt;a href=&quot;https://www.mathworks.com/products/compiler.html&quot; target=&quot;_blank&quot;&gt;MATLAB Compiler&lt;/a&gt;, to create standalone applications to be executed later when desired.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The extension for human-readable MATLAB source code file is &lt;code&gt;.m&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;some-useful-resources-for-matlab&quot;&gt;Some useful resources for MATLAB&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mathworks.com/matlabcentral/&quot; target=&quot;_blank&quot;&gt;MATLAB Central&lt;/a&gt;: A repository of many codes, libraries written in MATLAB, as well as many MATLAB related questions with answers.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mathworks.com/matlabcentral/newsreader/&quot; target=&quot;_blank&quot;&gt;comp.soft-sys.matlab&lt;/a&gt;: MATLAB’s newsletter.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mathworks.com/moler&quot; target=&quot;_blank&quot;&gt;http://www.mathworks.com/moler&lt;/a&gt;: The original MATLAB developer’s page.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mathworks.com/videos/search.html?q=&amp;amp;page=1&quot; target=&quot;_blank&quot;&gt;MATLAB educational videos&lt;/a&gt;: A long search-able list of educational MATLAB videos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;matlab-installation&quot;&gt;MATLAB installation&lt;/h2&gt;
+&lt;p&gt;Depending on your operating system, you can download and install a specific version of MATLAB for your personal computer. MATLAB is available to all students enrolled at UT Austin for free. It can be downloaded from &lt;a href=&quot;http://www.engr.utexas.edu/itg/products/8017-matlab&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;alternative-replicas-of-matlab&quot;&gt;Alternative replicas of MATLAB&lt;/h3&gt;
+
+&lt;p&gt;Since MATLAB is not free, the GNU organization has started a project called &lt;a href=&quot;https://en.wikipedia.org/wiki/GNU_Octave&quot; target=&quot;_blank&quot;&gt;GNU Octave&lt;/a&gt; which is a reverse-engineering of MATLAB language and environment, hence mostly compatible with it, but &lt;strong&gt;at no cost&lt;/strong&gt;!. You can download it from &lt;a href=&quot;https://www.gnu.org/software/octave/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. GNU Octave is a free open source software (FOSS) package which is &lt;em&gt;mostly compatible&lt;/em&gt; with MATLAB. It provides a very similar command line interpreter interface, and implements most of the functionality as the commercial MATLAB product. Nevertheless, there are subtle differences which anyone attempting to switch to GNU Octave or to write MATLAB/GNU Octave-compatible scripts must appreciate. Octave was conceived in 1988 and has been under development since 1992, and over the years has made a great deal of progress, especially in the area of graphics and plotting.&lt;/p&gt;
+
+&lt;h3 id=&quot;matlab-script-editors&quot;&gt;MATLAB script editors&lt;/h3&gt;
+
+&lt;p&gt;I highly recommend you to use MATLAB’s own IDE for MATLAB scripting since it has fantastic features such as automatic debugging, indentation and syntax highlight. However, once you become proficient in MATLAB scripting, you may realize that the text-editing capabilities of MATLAB IDE are not that great compared to highly popular general-purpose text editors. In that case, I recommend you to use,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sublimetext.com/&quot; target=&quot;_blank&quot;&gt;Sublime&lt;/a&gt;  (available Windows, OS X, Linux)&lt;br /&gt;
+Sublime is a sophisticated text editor for codes in many different languages, including MATLAB, C, C++, Fortran, etc. It has many advanced tools for code editing and syntax highlighting.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://notepad-plus-plus.org/&quot; target=&quot;_blank&quot;&gt;Notepad++&lt;/a&gt;  (available only on Windows)&lt;br /&gt;
+Notepad++ is a highly versatile text and source code editor for use with Microsoft Windows. It is likely – and in my opinion, arguably – the most powerful general-purpose text editor that is currently available on the web. Notepad++ automatically identifies the type of code the file contains based on the file extension and highlights the code syntax accordingly. However, you should keep in mind that it is not specifically designed for Python. If you are professional multi-language programmer, you will soon find the hidden gems in Notepad++, that are not available in any other editor, including MATLAB’s own editor.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;which-matlab-version-should-i-use&quot;&gt;Which MATLAB version should I use?&lt;/h3&gt;
+
+&lt;p&gt;Always try to use the latest version if possible, since new features are added to MATLAB every year.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-matlab-online-in-your-web-browser&quot;&gt;Using MATLAB online, in your web browser&lt;/h3&gt;
+
+&lt;p&gt;Since as a UT student, you have a campus-wide MATLAB licence, you can login to your account to use MATLAB in your browser, on a remote server. For instructions on how to use MATLAB on-line, click &lt;a href=&quot;https://www.mathworks.com/products/matlab-online.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;matlab-environment&quot;&gt;MATLAB environment&lt;/h2&gt;
+
+&lt;p&gt;As soon as you open MATLAB, you will likely encounter a environment like the following figure.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/3/matlab.png&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        A snapshot of MATLAB environment.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The main compartments in MATLAB environment are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;command window&lt;/strong&gt;: where you can type single or multiple line commands.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;script editor&lt;/strong&gt;: which is where you can create new or open/edit existing MATLAB files.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;address bar&lt;/strong&gt;: indicating the &lt;strong&gt;current working directory&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;folder tree window&lt;/strong&gt;: showing all files in the current working directory.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;workspace window&lt;/strong&gt;: which shows all the global variables currently defined in MATLAB.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;useful-matlab-commands&quot;&gt;Useful MATLAB commands&lt;/h2&gt;
+
+&lt;p&gt;The following are some useful MATLAB commands  that allow you to get help on the command-line:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;demo&lt;/code&gt; will load MATLAB examples in the Help Browser, illustrating some features of MATLAB.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;help \&amp;lt;keyword&amp;gt;&lt;/code&gt; will explain any function. For example,
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; help sin
+sin    Sine of argument in radians.
+ sin(X) is the sine of the elements of X.
+
+ See also asin, sind.
+
+ Reference page for sin
+ Other functions named sin
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;help help&lt;/code&gt; will explain how MATLAB help works.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;lookfor \&amp;lt;keyword&amp;gt;&lt;/code&gt; searches through MATLAB help for a specific word or phrase. For example,
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; lookfor gaussian
+hwv                            - Create a Hull-White/Vasicek mean-reverting Gaussian diffusion model
+xreggpr                        - xreggpm Gaussian Process model constructor
+gmdistribution                 - Gaussian mixture distribution class.
+awgn                           - Add white Gaussian noise to a signal.
+bigaussianir                   - Bi-Gaussian Doppler filter impulse response.
+gaussianir                     - Gaussian Doppler filter impulse response.
+intfiltgaussian_intfactor      - Support function used by @channel package for
+wgn                            - Generate white Gaussian noise.
+commblkgaussfilt               - Gaussian filter block helper function.
+commblkgaussiansrc2            - Mask function for Gaussian Noise Generator block
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;doc \&amp;lt;keyword&amp;gt;&lt;/code&gt; will bring up a documentation page in the Help Browser for the given keyword.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;dir \&amp;lt;path&amp;gt;&lt;/code&gt; lists the contents of the given path.
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; dir
+.                lcdata.xml       m3iregistry      mcc.bat          mexext.bat       mw_mpiexec.bat   win64            
+..               lcdata.xsd       matlab.exe       mex.bat          mexsetup.pm      registry         worker.bat       
+deploytool.bat   lcdata_utf8.xml  mbuild.bat       mex.pl           mexutils.pm      util             
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;pwd&lt;/code&gt; outputs the current working directory.
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; pwd
+ans =
+C:\Program Files\MATLAB\R2016a\bin
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;quit&lt;/code&gt; quits MATLAB by closing the application.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;diary('filename')&lt;/code&gt; (or &lt;code&gt;diary filename&lt;/code&gt;) saves  all subsequent keyboard interactions with MATLAB Command Window to the file &lt;code&gt;filename&lt;/code&gt;. &lt;code&gt;diary off&lt;/code&gt; suspends the diary. &lt;code&gt;diary on&lt;/code&gt; resumes diary mode using the current filename, or the default filename diary if none has yet been specified.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;comments-in-matlab-scripts&quot;&gt;Comments in MATLAB scripts&lt;/h2&gt;
+
+&lt;p&gt;Comment lines in MATLAB begin with percent character &lt;code&gt;%&lt;/code&gt;. Anything after &lt;code&gt;%&lt;/code&gt; is ignored by MATLAB interpreter. The &lt;code&gt;%&lt;/code&gt; character itself only tells the interpreter to ignore the remainder of the same line. In the MATLAB Editor, &lt;font color=&quot;#00e600&quot;&gt;commented areas are printed in green by default&lt;/font&gt;. There are two useful keyboard shortcuts for adding and removing chunks of comments. Select the code you wish to comment or uncomment, and then press &lt;code&gt;Ctrl-R&lt;/code&gt; to place one &lt;code&gt;%&lt;/code&gt; symbol at the beginning of each line and `Ctrl-T to do the opposite.&lt;/p&gt;
+
+&lt;p&gt;MATLAB also supports multi-line comments, akin to &lt;code&gt;/* ... */&lt;/code&gt; in languages like C or C++, via the &lt;code&gt;%{ %}&lt;/code&gt; delimiters. But there is a small and important difference. In MATLAB, the **lines containing &lt;code&gt;%{&lt;/code&gt; or &lt;code&gt;%}&lt;/code&gt; should not contain any other text (except white spaces). Otherwise the multi-line comment would not work as you wish. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;%{ x = 1;
+y=2;%}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+You notice that in the above, &lt;code&gt;y=2;&lt;/code&gt; is not commented. The correct syntax is,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;%{
+x = 1;
+y=2;
+%}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Comments are useful for explaining what function a certain piece of code performs especially if the code relies on implicit or subtle assumptions or otherwise perform subtle actions. Doing this is a good idea both for yourself and for others who try to read your code. It is highly recommended to include a block of comments at the beginning of your codes explaining what the your MATLAB script or function does does and how to use it. MATLAB will output the leading comments that appear at the beginning of an &lt;code&gt;.m&lt;/code&gt; file, when you type,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; help &amp;lt;my function name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+All of MATLAB’s built-in functions written in MATLAB are documented this way.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/3-matlab-for-beginners&quot;&gt;Lecture 3: MATLAB for beginners&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on September 13, 2017.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -162,7 +397,7 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 &lt;p&gt;Immediately after the first world-war and during the second world-war, many fields of science and engineering witnessed rapid growth. In particular, two fields of mathematical and physical sciences, &lt;strong&gt;mathematical programming&lt;/strong&gt; (a terminology used commonly in place of &lt;a href=&quot;https://en.wikipedia.org/wiki/Mathematical_optimization&quot; target=&quot;_blank&quot;&gt;mathematical optimization&lt;/a&gt;) (not to be confused with computer programming!) and &lt;a href=&quot;https://en.wikipedia.org/wiki/Monte_Carlo_method&quot; target=&quot;_blank&quot;&gt;Monte Carlo methods&lt;/a&gt; witnessed rapid exponential growth in both theory and practical applications. Parallel to progresses in natural sciences, a new field of science and technology, &lt;a href=&quot;https://en.wikipedia.org/wiki/History_of_computer_science&quot; target=&quot;_blank&quot;&gt;computer science&lt;/a&gt;, began to rise during the years of world-war-II, partly in response to the needs of war, but mostly in response to the exponential growth of natural sciences and engineering in the post-world-war-II era.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/0/wordFreq.png&quot; width=&quot;900&quot; /&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/2/wordFreq.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption style=&quot;text-align:justify&quot;&gt;
         A word-usage relative frequency plot, illustrating the exponential growth of computer technology in the mid 20th century, as well as developments in the fields of deterministic and stochastic optimization techniques, which ultimately led to the emergence of &lt;a href=&quot;https://www.nibib.nih.gov/science-education/science-topics/computational-modeling&quot; target=&quot;_blank&quot;&gt;computational modeling&lt;/a&gt; as the third pillar of science. Advances in the computational methods and technology also led to the gradual popularity of Bayesian techniques in mathematical modeling toward the end of the 20th century, and the emergence of an important of subfield of computational modeling, now known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Uncertainty_quantification&quot; target=&quot;_blank&quot;&gt;Uncertainty Quantification&lt;/a&gt;. Note that the positive-slope linear behavior on this semi-logarithmic plot indicates a exponential growth. (Data is adopted from &lt;a href=&quot;https://books.google.com/ngrams&quot; target=&quot;_blank&quot;&gt;Google Ngrams&lt;/a&gt;).
     &lt;/figcaption&gt;
@@ -171,7 +406,7 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 &lt;p&gt;The history of computer programming probably begins with the development of the first computer, &lt;a href=&quot;https://en.wikipedia.org/wiki/ENIAC&quot; target=&quot;_blank&quot;&gt;ENIAC&lt;/a&gt; (&lt;em&gt;Electronic Numerical Integrator And Computer&lt;/em&gt;), one of the earliest electronic general-purpose computers made.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/0/computer.png&quot; width=&quot;900&quot; /&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/2/computer.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption style=&quot;text-align:justify&quot;&gt;
         A diagram representing the basic underlying structure of every digital device, most importantly, desktop computers.
     &lt;/figcaption&gt;
@@ -190,13 +425,13 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 &lt;p&gt;are all declarative statements. By contrast, &lt;strong&gt;imperative knowledge&lt;/strong&gt; is about how to accomplish something, or basically, is a recipe on how to do something, known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Algorithm&quot; target=&quot;_blank&quot;&gt;algorithm&lt;/a&gt; in scientific terminology. In order for a computer to achieve a specific computational goal, it needs to be given a set of tasks, collectively called algorithm. For example, most calculators contain a rather complex &lt;a href=&quot;https://www.sistenix.com/sqrt.html&quot; target=&quot;_blank&quot;&gt;algorithm for calculating the square root of a given input number&lt;/a&gt;, like the following,&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/0/sqrt.png&quot; width=&quot;500&quot; /&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/2/sqrt.png&quot; width=&quot;500&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;As seen, the algorithm has a &lt;strong&gt;start&lt;/strong&gt;, a &lt;strong&gt;flow control&lt;/strong&gt;, and a &lt;strong&gt;stop&lt;/strong&gt;. These are the basic elements of any algorithm. In the early 20th century, the algorithms had to be physically and mechanically implemented in computers. Therefore, the earliest computing machines were often called &lt;strong&gt;fixed-program computers&lt;/strong&gt;. This means that they could only perform the algorithms for which they had been physically wired and built. An example of such machines is &lt;a href=&quot;https://en.wikipedia.org/wiki/ENIAC&quot; target=&quot;_blank&quot;&gt;ENIAC&lt;/a&gt;. &lt;strong&gt;Reprogramming&lt;/strong&gt; such computers, when possible at all, is a laborious process, starting with flowcharts and paper notes, followed by detailed engineering designs, and then the often-arduous process of physically rewiring and rebuilding the machine. For example, it could take almost a month to set up a program on ENIAC and get it working.&lt;/p&gt;
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/0/eniac.png&quot; width=&quot;900&quot; /&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/2/eniac.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption style=&quot;text-align:justify&quot;&gt;
         Portraits of The three giants behind the first US-made computer ENIAC and first computer simulations in history.
     &lt;/figcaption&gt;
@@ -211,8 +446,8 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 &lt;p&gt;Initially computers had to be programmed by what is called &lt;a href=&quot;https://en.wikipedia.org/wiki/Machine_code&quot; target=&quot;_blank&quot;&gt;machine code&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Machine_code&quot; target=&quot;_blank&quot;&gt;machine language&lt;/a&gt;, a set of instructions for the Central Processing Unit (CPU)  of the computer, comprising a long sequence of binary digital zeros and ones. Any interaction with computer hardware, even nowadays, has to be first converted to machine code in order to become comprehensible by the computer hardware. The coding in this language is however, very tedious and time consuming, and non-portable. As a result, immediately after the development of the first generation of computers, the first generation of programming languages also came to exist, most notably, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Assembly_language&quot; target=&quot;_blank&quot;&gt;Assembly language&lt;/a&gt; in the late 1940s. Many more programming languages have been since developed that provide higher and higher levels of &lt;a href=&quot;https://en.wikipedia.org/wiki/Abstraction_(software_engineering)&quot; target=&quot;_blank&quot;&gt;programming abstraction&lt;/a&gt; by hiding more complexities of the machine code interaction with machine hardware from the front-end computer software and users.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;a href=&quot;http:/ICP2017F/lecture/0/proglang.png&quot; target=&quot;_blank&quot;&gt;
-        &lt;img src=&quot;http:/ICP2017F/lecture/0/proglang.png&quot; width=&quot;900&quot; /&gt;
+	&lt;a href=&quot;http:/ICP2017F/lecture/2/proglang.png&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;http:/ICP2017F/lecture/2/proglang.png&quot; width=&quot;900&quot; /&gt;
     &lt;/a&gt;&lt;!--
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
         A flowchart illustrating .
@@ -230,8 +465,8 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 &lt;/ul&gt;
 
 &lt;figure&gt;
-	&lt;a href=&quot;http:/ICP2017F/lecture/0/PLchart.png&quot; target=&quot;_blank&quot;&gt;
-        &lt;img src=&quot;http:/ICP2017F/lecture/0/PLchart.png&quot; width=&quot;900&quot; /&gt;
+	&lt;a href=&quot;http:/ICP2017F/lecture/2/PLchart.png&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;http:/ICP2017F/lecture/2/PLchart.png&quot; width=&quot;900&quot; /&gt;
     &lt;/a&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
         A diagram tracing the history of computer languages throughout the history of computer science.
@@ -252,8 +487,8 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 &lt;/ul&gt;
 
 &lt;figure&gt;
-	&lt;a href=&quot;http:/ICP2017F/lecture/0/progEvol.png&quot; target=&quot;_blank&quot;&gt;
-        &lt;img src=&quot;http:/ICP2017F/lecture/0/progEvol.png&quot; width=&quot;900&quot; /&gt;
+	&lt;a href=&quot;http:/ICP2017F/lecture/2/progEvol.png&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;http:/ICP2017F/lecture/2/progEvol.png&quot; width=&quot;900&quot; /&gt;
     &lt;/a&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
         A schematic representation of the evolution of programming techniques.
@@ -263,8 +498,8 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 &lt;p&gt;Among all however, the last two programming paradigms are the most important and more widely used than the others. Historically all programming languages were &lt;strong&gt;imperative (or, procedural)&lt;/strong&gt; since this paradigm is more intuitive to human mind, and indeed, what the computer hardware does. These languages are basically human-readable abstractions of the machine code.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;a href=&quot;http:/ICP2017F/lecture/0/imperative.gif&quot; target=&quot;_blank&quot;&gt;
-        &lt;img src=&quot;http:/ICP2017F/lecture/0/imperative.gif&quot; width=&quot;500&quot; /&gt;
+	&lt;a href=&quot;http:/ICP2017F/lecture/2/imperative.gif&quot; target=&quot;_blank&quot;&gt;
+        &lt;img src=&quot;http:/ICP2017F/lecture/2/imperative.gif&quot; width=&quot;500&quot; /&gt;
     &lt;/a&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
         A schematic representation of the structure of imperative (procedural) programming.
@@ -284,10 +519,10 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 
 &lt;figure&gt;
 	&lt;!--
-    &lt;a href=&quot;http:/ICP2017F/lecture/0/oop_car.png&quot; target=&quot;_blank&quot;&gt;
+    &lt;a href=&quot;http:/ICP2017F/lecture/2/oop_car.png&quot; target=&quot;_blank&quot;&gt;
     &lt;/a&gt;
     --&gt;
-        &lt;img src=&quot;http:/ICP2017F/lecture/0/oop_car.png&quot; width=&quot;500&quot; /&gt;
+        &lt;img src=&quot;http:/ICP2017F/lecture/2/oop_car.png&quot; width=&quot;500&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
         A example of a OOP class describing a car, with its attributes and methods.
     &lt;/figcaption&gt;
@@ -318,7 +553,7 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 
 &lt;figure&gt;
 	&lt;a href=&quot;https://books.google.com/ngrams/graph?content=fortran%2Cplasma%2Caerospace&amp;amp;case_insensitive=on&amp;amp;year_start=1920&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t4%3B%2Cfortran%3B%2Cc0%3B%2Cs0%3B%3BFORTRAN%3B%2Cc0%3B%3BFortran%3B%2Cc0%3B.t4%3B%2Cplasma%3B%2Cc0%3B%2Cs0%3B%3Bplasma%3B%2Cc0%3B%3BPlasma%3B%2Cc0%3B%3BPLASMA%3B%2Cc0%3B.t4%3B%2Caerospace%3B%2Cc0%3B%2Cs0%3B%3BAerospace%3B%2Cc0%3B%3Baerospace%3B%2Cc0%3B%3BAEROSPACE%3B%2Cc0&quot; target=&quot;_blank&quot;&gt;
-        &lt;img src=&quot;http:/ICP2017F/lecture/0/plasma-aerospace-fortran.png&quot; width=&quot;900&quot; /&gt;
+        &lt;img src=&quot;http:/ICP2017F/lecture/2/plasma-aerospace-fortran.png&quot; width=&quot;900&quot; /&gt;
     &lt;/a&gt;
     &lt;figcaption style=&quot;text-align:justify&quot;&gt;
         A plot illustrating the co-evolution of two of the most challenging computationally-intensive fields of science (Aerospace and Plasma Physics) with the most popular high-performance scientific programming language in human history as of today. The vertical axis represents the relative word-usage frequency of the three keywords (Plasma, Aerospace, and Fortran) in all digital corpus, and the horizontal axis represents the year. Note that the downward slope of the curves in later times does NOT imply the decline of these fields of science or the decline of Fortran. It merely means that they have reached their exponential peak growth in the mid-1980s, and are now expanding steadily (linearly), whereas other newer fields (such as bioinformatics) are being more and more frequently referenced than the above three keywords every year in all digital corpus.
@@ -329,7 +564,7 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 
 &lt;figure&gt;
 	&lt;a href=&quot;https://books.google.com/ngrams/graph?content=python%2Cbioinformatics&amp;amp;case_insensitive=on&amp;amp;year_start=1980&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t4%3B%2Cpython%3B%2Cc0%3B%2Cs0%3B%3BPython%3B%2Cc0%3B%3Bpython%3B%2Cc0%3B%3BPYTHON%3B%2Cc0%3B.t4%3B%2Cbioinformatics%3B%2Cc0%3B%2Cs0%3B%3BBioinformatics%3B%2Cc0%3B%3Bbioinformatics%3B%2Cc0%3B%3BBIOINFORMATICS%3B%2Cc0&quot; target=&quot;_blank&quot;&gt;
-        &lt;img src=&quot;http:/ICP2017F/lecture/0/bioinformatics-python.png&quot; width=&quot;900&quot; /&gt;
+        &lt;img src=&quot;http:/ICP2017F/lecture/2/bioinformatics-python.png&quot; width=&quot;900&quot; /&gt;
     &lt;/a&gt;
     &lt;figcaption style=&quot;text-align:justify&quot;&gt;
         A plot illustrating the co-evolution and thriving of the field of bioinformatics with the popular programming language, Python. The vertical axis represents the relative word-usage frequency of the two keywords (Bioinformatics and Python) in all digital corpus, and the horizontal axis represents the year.
@@ -340,7 +575,7 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
 
 &lt;figure&gt;
 	&lt;a href=&quot;https://books.google.com/ngrams/graph?content=python%2Cbioinformatics%2Cperl&amp;amp;case_insensitive=on&amp;amp;year_start=1980&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t4%3B%2Cpython%3B%2Cc0%3B%2Cs0%3B%3BPython%3B%2Cc0%3B%3Bpython%3B%2Cc0%3B%3BPYTHON%3B%2Cc0%3B.t4%3B%2Cbioinformatics%3B%2Cc0%3B%2Cs0%3B%3BBioinformatics%3B%2Cc0%3B%3Bbioinformatics%3B%2Cc0%3B%3BBIOINFORMATICS%3B%2Cc0%3B.t4%3B%2Cperl%3B%2Cc0%3B%2Cs0%3B%3BPerl%3B%2Cc0%3B%3Bperl%3B%2Cc0%3B%3BPERL%3B%2Cc0&quot; target=&quot;_blank&quot;&gt;
-        &lt;img src=&quot;http:/ICP2017F/lecture/0/bioinformatics-python-perl.png&quot; width=&quot;900&quot; /&gt;
+        &lt;img src=&quot;http:/ICP2017F/lecture/2/bioinformatics-python-perl.png&quot; width=&quot;900&quot; /&gt;
     &lt;/a&gt;
     &lt;figcaption style=&quot;text-align:justify&quot;&gt;
         A plot illustrating the evolution and steady expansion of the Perl programming language and its gradual replacement with Python, in the field of bioinformatics. The vertical axis represents the relative word-usage frequency of the three keywords (Bioinformatics, Python, and Perl) in all digital corpus, and the horizontal axis represents the year.
@@ -785,7 +1020,7 @@ The above information indicates that the current HEAD branch of the project is o
 &lt;p&gt;Branching is powerful idea in Version Control Systems, which significantly facilitates collaboration or parallel development of a project. Suppose you have already a project which has reached its first release version, meaning that it works all fine. Now, you like to add a new feature to your project. To do this and to avoid further commits to your original project, you can create a new &lt;strong&gt;branch&lt;/strong&gt; of the project which is specifically devoted to adding the new feature. See the following figure, for an example of Git branching.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/2/branch-flowchart.png&quot; width=&quot;900&quot; /&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/1/branch-flowchart.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
         An example illustration of Git branching for a project with three branches: master, development, topic.
     &lt;/figcaption&gt;
@@ -930,10 +1165,11 @@ If you are sure you want to delete it, run 'git branch -D test'.
 
 &lt;p&gt;&lt;strong&gt;Some useful links for future reference:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/1/progit.en.pdf&quot; target=&quot;_blank&quot;&gt;Git reference manual (2009)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/1/github-git-cheat-sheet.pdf&quot; target=&quot;_blank&quot;&gt;Github’s Git cheat-sheet&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/1/atlassian_git_cheatsheet.pdf&quot; target=&quot;_blank&quot;&gt;Atlassian’s Git cheat-sheet&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/1/markdown-cheatsheet-online.pdf&quot; target=&quot;_blank&quot;&gt;Markdown language cheat-sheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/0/linuxRef.pdf&quot; target=&quot;_blank&quot;&gt;Linux commands cheat-sheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/0/progit.en.pdf&quot; target=&quot;_blank&quot;&gt;Git reference manual (2009)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/0/github-git-cheat-sheet.pdf&quot; target=&quot;_blank&quot;&gt;Github’s Git cheat-sheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/0/atlassian_git_cheatsheet.pdf&quot; target=&quot;_blank&quot;&gt;Atlassian’s Git cheat-sheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/0/markdown-cheatsheet-online.pdf&quot; target=&quot;_blank&quot;&gt;Markdown language cheat-sheet&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -962,12 +1198,21 @@ If you are sure you want to delete it, run 'git branch -D test'.
     - [Git commands summary](#git-summary)
 --&gt;
 
+&lt;h2 id=&quot;lecture-videos&quot;&gt;Lecture Videos&lt;/h2&gt;
+
+&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.&lt;/p&gt;
+
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/kCCQZpao3wM&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;a name=&quot;Motivation&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;Back in the early years of my graduate studies when I started scientific research and programming, the directory containing my first project looked something like the following figure.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/1/badCodingHabit.png&quot; width=&quot;900&quot; /&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/0/badCodingHabit.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption style=&quot;text-align:justify&quot;&gt;
         An example of bad coding habit and project maintenance. The figure shows part of the content of a directory dedicated to a research project. Each folder contains one version of the project and its corresponding codes and results at a given time (i.e., one &lt;a href=&quot;https://en.wikipedia.org/wiki/Deliverable&quot; target=&quot;_blank&quot;&gt;deliverable&lt;/a&gt;). Obviously, tracking minor development stages of the project leading to each of the deliverables would be a very difficult task with such project management method.
     &lt;/figcaption&gt;
@@ -1057,7 +1302,7 @@ Using this method, it is easy to forget which directory you’re in and accident
 &lt;p&gt;VCS software, such as SVN and and Bazaar, index the new developments in the projects by tracking the changes in individual files of the projects, similar to the diagram below.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/1/deltas.png&quot; width=&quot;900&quot; /&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/0/deltas.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption&gt;
         &lt;b&gt;File-based&lt;/b&gt; project indexing method that is common to some VCS software such as CVS, Subversion, Perforce, Bazaar. &lt;br /&gt;(&lt;i&gt;Diagram is adopted from &lt;a href=&quot;https://git-scm.com/doc&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt;&lt;/i&gt;).
     &lt;/figcaption&gt;
@@ -1066,7 +1311,7 @@ Using this method, it is easy to forget which directory you’re in and accident
 &lt;p&gt;By contrast, both Git and Mercurial work by generating a complete snapshot of the project at any moment the project is committed to the local repository for version control. Even if some files have not changed in the new version of the project, they will still exist in the newly generated version of the project. However, both Git and Mercurial have been designed smart enough to realize if any changes has occurred to each individual file and store the files effectively and without redundancy.  The complete history of the project is constructed by the series of snapshots generated, a flow similar to the following figure.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/1/snapshots.png&quot; width=&quot;900&quot; /&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/0/snapshots.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption&gt;
         &lt;b&gt;Snapshot-based&lt;/b&gt; project indexing method that is used in Git and Mercurial VCS software. &lt;br /&gt;(&lt;i&gt;Diagram is adopted from &lt;a href=&quot;https://git-scm.com/doc&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt;&lt;/i&gt;).
     &lt;/figcaption&gt;
@@ -1090,7 +1335,7 @@ Each project file in Git/Mercurial indexing process can have one of the three po
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/1/gitAreas.png&quot; width=&quot;900&quot; /&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/0/gitAreas.png&quot; width=&quot;900&quot; /&gt;
     &lt;figcaption&gt;
         A diagram illustrating the project-indexing process of Git and Mercurial VCS software. Each project file can reside in three different states: working directory, staging area, or in the local repository. (&lt;i&gt;Diagram is adopted from &lt;a href=&quot;https://git-scm.com/doc&quot; target=&quot;_blank&quot;&gt;Git documentation&lt;/a&gt;&lt;/i&gt;).
     &lt;/figcaption&gt;
@@ -1377,7 +1622,7 @@ for syncing your local with the remote repository. Remember that you have to use
   
   <content type="html">
   
-    &lt;p&gt;♣ &lt;strong&gt;Due Date: Wednesday Sep 13, 2017 9:00 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to create Git branches, develop your project on multiple branches, merge them, resolve potential conflicts between different branches upon merging, and finally how to delete them. It also gives you some experience with using other commonly-used Git commands.&lt;/p&gt;
+    &lt;p&gt;♣ &lt;strong&gt;Due Date: Monday Sep 18, 2017 9:00 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to create Git branches, develop your project on multiple branches, merge them, resolve potential conflicts between different branches upon merging, and finally how to delete them. It also gives you some experience with using other commonly-used Git commands.&lt;/p&gt;
 
 &lt;p&gt;First, use the following Markdown language references, or any other reference that you find or prefer, to design a Github-interpretable README file for each of folders in your project for this course, and a Github web-page for your project.&lt;/p&gt;
 

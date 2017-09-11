@@ -148,10 +148,11 @@ MathJax.Hub.Queue(function() {
 
 <p><strong>Some useful links for future reference:</strong></p>
 <ul>
-  <li><a href="/ICP2017F/lecture/1/progit.en.pdf" target="_blank">Git reference manual (2009)</a></li>
-  <li><a href="/ICP2017F/lecture/1/github-git-cheat-sheet.pdf" target="_blank">Github’s Git cheat-sheet</a></li>
-  <li><a href="/ICP2017F/lecture/1/atlassian_git_cheatsheet.pdf" target="_blank">Atlassian’s Git cheat-sheet</a></li>
-  <li><a href="/ICP2017F/lecture/1/markdown-cheatsheet-online.pdf" target="_blank">Markdown language cheat-sheet</a></li>
+  <li><a href="/ICP2017F/lecture/0/linuxRef.pdf" target="_blank">Linux commands cheat-sheet</a></li>
+  <li><a href="/ICP2017F/lecture/0/progit.en.pdf" target="_blank">Git reference manual (2009)</a></li>
+  <li><a href="/ICP2017F/lecture/0/github-git-cheat-sheet.pdf" target="_blank">Github’s Git cheat-sheet</a></li>
+  <li><a href="/ICP2017F/lecture/0/atlassian_git_cheatsheet.pdf" target="_blank">Atlassian’s Git cheat-sheet</a></li>
+  <li><a href="/ICP2017F/lecture/0/markdown-cheatsheet-online.pdf" target="_blank">Markdown language cheat-sheet</a></li>
 </ul>
 
 <p><br /></p>
@@ -180,12 +181,21 @@ MathJax.Hub.Queue(function() {
     - [Git commands summary](#git-summary)
 -->
 
+<h2 id="lecture-videos">Lecture Videos</h2>
+
+<p>This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.</p>
+
+<div class="center"><div class="video-wrapper"><div class="video-container">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/kCCQZpao3wM" frameborder="0" allowfullscreen=""></iframe>
+</div></div></div>
+<p><br /></p>
+
 <p><a name="Motivation"></a></p>
 <h2 id="motivation">Motivation</h2>
 <p>Back in the early years of my graduate studies when I started scientific research and programming, the directory containing my first project looked something like the following figure.</p>
 
 <figure>
-	<img src="/ICP2017F/lecture/1/badCodingHabit.png" width="900" />
+	<img src="/ICP2017F/lecture/0/badCodingHabit.png" width="900" />
     <figcaption style="text-align:justify">
         An example of bad coding habit and project maintenance. The figure shows part of the content of a directory dedicated to a research project. Each folder contains one version of the project and its corresponding codes and results at a given time (i.e., one <a href="https://en.wikipedia.org/wiki/Deliverable" target="_blank">deliverable</a>). Obviously, tracking minor development stages of the project leading to each of the deliverables would be a very difficult task with such project management method.
     </figcaption>
@@ -275,7 +285,7 @@ Using this method, it is easy to forget which directory you’re in and accident
 <p>VCS software, such as SVN and and Bazaar, index the new developments in the projects by tracking the changes in individual files of the projects, similar to the diagram below.</p>
 
 <figure>
-	<img src="/ICP2017F/lecture/1/deltas.png" width="900" />
+	<img src="/ICP2017F/lecture/0/deltas.png" width="900" />
     <figcaption>
         <b>File-based</b> project indexing method that is common to some VCS software such as CVS, Subversion, Perforce, Bazaar. <br />(<i>Diagram is adopted from <a href="https://git-scm.com/doc" target="_blank">Git documentation</a></i>).
     </figcaption>
@@ -284,7 +294,7 @@ Using this method, it is easy to forget which directory you’re in and accident
 <p>By contrast, both Git and Mercurial work by generating a complete snapshot of the project at any moment the project is committed to the local repository for version control. Even if some files have not changed in the new version of the project, they will still exist in the newly generated version of the project. However, both Git and Mercurial have been designed smart enough to realize if any changes has occurred to each individual file and store the files effectively and without redundancy.  The complete history of the project is constructed by the series of snapshots generated, a flow similar to the following figure.</p>
 
 <figure>
-	<img src="/ICP2017F/lecture/1/snapshots.png" width="900" />
+	<img src="/ICP2017F/lecture/0/snapshots.png" width="900" />
     <figcaption>
         <b>Snapshot-based</b> project indexing method that is used in Git and Mercurial VCS software. <br />(<i>Diagram is adopted from <a href="https://git-scm.com/doc" target="_blank">Git documentation</a></i>).
     </figcaption>
@@ -308,7 +318,7 @@ Each project file in Git/Mercurial indexing process can have one of the three po
 <br /></p>
 
 <figure>
-	<img src="/ICP2017F/lecture/1/gitAreas.png" width="900" />
+	<img src="/ICP2017F/lecture/0/gitAreas.png" width="900" />
     <figcaption>
         A diagram illustrating the project-indexing process of Git and Mercurial VCS software. Each project file can reside in three different states: working directory, staging area, or in the local repository. (<i>Diagram is adopted from <a href="https://git-scm.com/doc" target="_blank">Git documentation</a></i>).
     </figcaption>
@@ -644,8 +654,8 @@ for syncing your local with the remote repository. Remember that you have to use
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 09 / 06</section></br> -->
-         <section>Last updated Wednesday, 06 Sep 2017 at 05:56 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 09 / 11</section></br> -->
+         <section>Last updated Monday, 11 Sep 2017 at 05:15 PM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>
