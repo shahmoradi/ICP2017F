@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-09-11T17:15:44-05:00</updated>
+<updated>2017-09-13T10:19:03-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -1713,7 +1713,7 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; Create two additional test branches in your project, each of which is branched directly from &lt;em&gt;master&lt;/em&gt;. &lt;strong&gt;For each of the following cases, write the command and the corresponding output message of Git, in Markdown language in a &lt;code&gt;readme.md&lt;/code&gt; file inside your &lt;code&gt;homework/2/&lt;/code&gt; folder in your master branch&lt;/strong&gt;. If you don’t have this folder in your project, then create the folder and then place your initial &lt;code&gt;readme.md&lt;/code&gt; file in this folder with your signature as the content of the file. Then stage and commit this file together with homework-2 folder to your local repository. Throughout the rest of this homework, you will fill this &lt;code&gt;readme.md&lt;/code&gt; file with your answers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; Create two additional test branches in your project, each of which is branched directly from &lt;em&gt;master&lt;/em&gt;. &lt;strong&gt;For each of the following cases, write the command and the corresponding output message of Git, in Markdown language in a &lt;code&gt;readme.md&lt;/code&gt; file inside your &lt;code&gt;homework/1/&lt;/code&gt; folder in your master branch&lt;/strong&gt;. If you don’t have this folder in your project, then create the folder and then place your initial &lt;code&gt;readme.md&lt;/code&gt; file in this folder with your signature as the content of the file. Then stage and commit this file together with homework-1 folder to your local repository. Throughout the rest of this homework, you will fill this &lt;code&gt;readme.md&lt;/code&gt; file with your answers.&lt;/p&gt;
 
 &lt;p&gt;(A) Create two branches, &lt;strong&gt;both from your &lt;em&gt;master&lt;/em&gt; branch&lt;/strong&gt;, with names &lt;em&gt;test1&lt;/em&gt; and &lt;em&gt;test2&lt;/em&gt;.&lt;/p&gt;
 
@@ -1723,7 +1723,7 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;(B) Now checkout the &lt;em&gt;test1&lt;/em&gt; branch and create a new text file named &lt;code&gt;test.txt&lt;/code&gt; in the &lt;code&gt;homework/2/&lt;/code&gt; directory of this branch.&lt;/p&gt;
+&lt;p&gt;(B) Now checkout the &lt;em&gt;test1&lt;/em&gt; branch and create a new text file named &lt;code&gt;test.txt&lt;/code&gt; in the &lt;code&gt;homework/1/&lt;/code&gt; directory of this branch.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1747,7 +1747,7 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;(E) Checkout the branch &lt;em&gt;test2&lt;/em&gt;. Do you still see &lt;code&gt;test.txt&lt;/code&gt; that you just created in your &lt;code&gt;homework/2/&lt;/code&gt; directory? You can search for it by the &lt;em&gt;bash&lt;/em&gt; command &lt;code&gt;ls&lt;/code&gt;. Explain why you see/don’t see the file in your working directory anymore.&lt;/p&gt;
+&lt;p&gt;(E) Checkout the branch &lt;em&gt;test2&lt;/em&gt;. Do you still see &lt;code&gt;test.txt&lt;/code&gt; that you just created in your &lt;code&gt;homework/1/&lt;/code&gt; directory? You can search for it by the &lt;em&gt;bash&lt;/em&gt; command &lt;code&gt;ls&lt;/code&gt;. Explain why you see/don’t see the file in your working directory anymore.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1755,7 +1755,7 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;(F) Create a new text file named &lt;code&gt;test.txt&lt;/code&gt; in the &lt;code&gt;homework/2/&lt;/code&gt; directory of this branch as well, and add &lt;em&gt;This is some example text for branch test2&lt;/em&gt; to its content.&lt;/p&gt;
+&lt;p&gt;(F) Create a new text file named &lt;code&gt;test.txt&lt;/code&gt; in the &lt;code&gt;homework/1/&lt;/code&gt; directory of this branch as well, and add &lt;em&gt;This is some example text for branch test2&lt;/em&gt; to its content.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
