@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Quiz 1: Problems - Version control system",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/quiz/1-problems-version-control-system",
+		  "date"       : "2017-09-13 00:00:00 -0500",
+		  "shortdate"  : "September 13, 2017"
+		} ,
+	
+		{
 		  "title"      : "Lecture 3: MATLAB for beginners",
 		  "category"   : "",
 		  "url"        : "/ICP2017F/lecture/3-matlab-for-beginners",

@@ -2,6 +2,11 @@
 callback([
 
   {
+    "text": "Quiz 1: Problems - Version control system",
+    "href": "/ICP2017F/quiz/1-problems-version-control-system"
+  } ,
+
+  {
     "text": "Lecture 3: MATLAB for beginners",
     "href": "/ICP2017F/lecture/3-matlab-for-beginners"
   } ,
