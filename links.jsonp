@@ -32,6 +32,16 @@ callback([
   } ,
 
   {
+    "text": "Homework 2: Problems - Variables, Values, and Types",
+    "href": "/ICP2017F/homework/2-problems-variables-values-types"
+  } ,
+
+  {
+    "text": "Homework 1: Solutions - Version Control Using Git and Github",
+    "href": "/ICP2017F/homework/1-solutions-version-control-using-git-github"
+  } ,
+
+  {
     "text": "Homework 1: Problems - Version Control Using Git and Github",
     "href": "/ICP2017F/homework/1-problems-version-control-using-git-github"
   } ,

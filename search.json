@@ -17,6 +17,22 @@
 		} ,
 	
 		{
+		  "title"      : "Homework 2: Problems - Variables, Values, and Types",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/homework/2-problems-variables-values-types",
+		  "date"       : "2017-09-18 00:00:00 -0500",
+		  "shortdate"  : "September 18, 2017"
+		} ,
+	
+		{
+		  "title"      : "Homework 1: Solutions - Version Control Using Git and Github",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/homework/1-solutions-version-control-using-git-github",
+		  "date"       : "2017-09-18 00:00:00 -0500",
+		  "shortdate"  : "September 18, 2017"
+		} ,
+	
+		{
 		  "title"      : "Lecture 3: MATLAB for beginners",
 		  "category"   : "",
 		  "url"        : "/ICP2017F/lecture/3-matlab-for-beginners",
