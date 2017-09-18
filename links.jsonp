@@ -12,6 +12,11 @@ callback([
   } ,
 
   {
+    "text": "Lecture 4: MATLAB - values, variables, types - I",
+    "href": "/ICP2017F/lecture/4-matlab-values-variables-types-I"
+  } ,
+
+  {
     "text": "Lecture 3: MATLAB for beginners",
     "href": "/ICP2017F/lecture/3-matlab-for-beginners"
   } ,
