@@ -1,11 +1,19 @@
 [
 	
 		{
+		  "title"      : "Quiz 1: Solutions - Version control system",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/quiz/1-solutions-version-control-system",
+		  "date"       : "2017-09-18 00:00:00 -0500",
+		  "shortdate"  : "September 18, 2017"
+		} ,
+	
+		{
 		  "title"      : "Quiz 1: Problems - Version control system",
 		  "category"   : "",
 		  "url"        : "/ICP2017F/quiz/1-problems-version-control-system",
-		  "date"       : "2017-09-13 00:00:00 -0500",
-		  "shortdate"  : "September 13, 2017"
+		  "date"       : "2017-09-18 00:00:00 -0500",
+		  "shortdate"  : "September 18, 2017"
 		} ,
 	
 		{
