@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-09-20T08:40:39-05:00</updated>
+<updated>2017-09-20T08:42:05-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -1229,7 +1229,7 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
   &lt;li&gt;the source code for each procedure is compiled and linked with compilation of other source codes to produce a complete executable program.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;A few decades after the first imperative programming languages were developed, computer scientists came up with an alternative programming paradigm that resulted in higher levels of abstraction from the machine code, however, could also significantly reduce the cost of code development and increase the amount of code re-usability, from one program to the next. This programming paradigm is called &lt;strong&gt;object-oriented programming (OOP), since it looks at everything in the code, as an **object&lt;/strong&gt;. Each object then, has a &lt;strong&gt;type&lt;/strong&gt;, or, &lt;strong&gt;class&lt;/strong&gt;, to which it belongs. For example, one can define a class describing a car in general, which has some &lt;strong&gt;attributes&lt;/strong&gt; that specify its model, make, year, owner, … , as well as some &lt;em&gt;*methods&lt;/em&gt; that can act on these attributes and make the car do something,&lt;/p&gt;
+&lt;p&gt;A few decades after the first imperative programming languages were developed, computer scientists came up with an alternative programming paradigm that resulted in higher levels of abstraction from the machine code, however, could also significantly reduce the cost of code development and increase the amount of code re-usability, from one program to the next. This programming paradigm is called &lt;strong&gt;object-oriented programming (OOP)&lt;/strong&gt;, since it looks at everything in the code, as an &lt;strong&gt;object&lt;/strong&gt;. Each object then, has a &lt;strong&gt;type&lt;/strong&gt;, or, &lt;strong&gt;class&lt;/strong&gt;, to which it belongs. For example, one can define a class describing a car in general, which has some &lt;strong&gt;attributes&lt;/strong&gt; that specify its model, make, year, owner, … , as well as some &lt;em&gt;*methods&lt;/em&gt; that can act on these attributes and make the car do something,&lt;/p&gt;
 
 &lt;figure&gt;
 	&lt;!--
