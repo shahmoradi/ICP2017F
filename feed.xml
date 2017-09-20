@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-09-18T13:50:30-05:00</updated>
+<updated>2017-09-20T08:40:39-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -647,8 +647,8 @@ ans =
 &lt;ul&gt;
   &lt;li&gt;It targets engineers as well as natural and medical scientists as its main audience, just like Fortran.&lt;/li&gt;
   &lt;li&gt;It has excellent &lt;em&gt;native&lt;/em&gt; array/matrix representation and manipulation tools, just like Fortran.&lt;/li&gt;
-  &lt;li&gt;It has extensive sets of high-level commands for numerical computing.&lt;/li&gt;
-  &lt;li&gt;It is an interpreted language that makes it really easy to use anytime.&lt;/li&gt;
+  &lt;li&gt;It has extensive sets of high-level commands for numerical computing, like Fortran.&lt;/li&gt;
+  &lt;li&gt;It is an interpreted language that makes it really easy to use anytime, unlike C, C++, Fortran which are compiled languages.&lt;/li&gt;
   &lt;li&gt;It has excellent set of graphical tools for 2D and 3D plotting (in fact other languages like Python have tried to copy from and reverse-engineer the graphical tools and commands available in MATLAB).&lt;/li&gt;
   &lt;li&gt;It has one of the largest user-base (over 2,000,000 users) in all scientific communities.&lt;/li&gt;
   &lt;li&gt;There is an extensive list of numerical libraries written in MATLAB over the past decades by all those science/engineering -oriented users.&lt;/li&gt;
@@ -662,7 +662,7 @@ ans =
 &lt;ul&gt;
   &lt;li&gt;It is not free.&lt;/li&gt;
   &lt;li&gt;It is slow compared to compiled programming languages. See for example, the following performance comparisons and tests in &lt;a href=&quot;https://modelingguru.nasa.gov/docs/DOC-1762&quot; target=&quot;_blank&quot;&gt;NASA modeling guru web page&lt;/a&gt;. As you can see there, the &lt;strong&gt;performance of MATLAB script can be significantly lower than compiled languages such as Fortran and C&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;If you have already coded in a fully object-oriented programming (OOP) language &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;xx add youtube&lt;/a&gt;, in particular &lt;a href=&quot;xx&quot; target=&quot;_blank&quot;&gt;Python&lt;/a&gt;, you will find some oddities in MATLAB’s OOP implementation. You may feel this when, for example, you are working with &lt;a href=&quot;xx&quot; target=&quot;_blank&quot;&gt;cell arrays&lt;/a&gt; in MATLAB. We will see later on, what cell arrays are.&lt;/li&gt;
+  &lt;li&gt;If you have already coded in a fully object-oriented programming (OOP) language, in particular Python, you will find some oddities in MATLAB’s OOP implementation. You may feel this when, for example, you are working with &lt;a href=&quot;xx&quot; target=&quot;_blank&quot;&gt;cell arrays&lt;/a&gt; in MATLAB. We will see later on, what cell arrays are.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;matlab-features&quot;&gt;MATLAB features&lt;/h2&gt;
@@ -670,7 +670,7 @@ ans =
 &lt;p&gt;MATLAB has the following features and attributes.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;MATLAB is a fourth-generation, high-level programming language.&lt;/strong&gt; Remember from our &lt;a href=&quot;http:/ICP2017F/lecture/0-programming-history&quot; target=&quot;_blank&quot;&gt;zeroth lecture&lt;/a&gt;, that a high-level programming language provides a high level of programming abstraction from details of computer and machine code. For comparison, Fortran, C++, and C are considered high, medium, and low -level programming languages respectively.&lt;br /&gt;
+  &lt;li&gt;&lt;strong&gt;MATLAB is a fourth-generation, high-level programming language.&lt;/strong&gt; Remember from our &lt;a href=&quot;http:/ICP2017F/lecture/2-programming-history&quot; target=&quot;_blank&quot;&gt;second lecture&lt;/a&gt;, that a high-level programming language provides a high level of programming abstraction from details of computer and machine code. For comparison, Fortran, C++, and C are considered high, medium, and low -level programming languages respectively.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;MATLAB is an array-based programming language&lt;/strong&gt;, meaning that it is designed to be with the goal of facilitating array manipulation for scientists and engineers.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
@@ -690,7 +690,8 @@ ans =
   &lt;li&gt;&lt;strong&gt;MATLAB is an interpreted language&lt;/strong&gt;. A programming language implementation is a system for executing computer programs. There are two general approaches to programming language implementation:&lt;br /&gt;
 &lt;br /&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Interpretation&lt;/strong&gt;: An interpreter takes as input a program in some language, and performs the actions written in that language on some machine.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Interpretation&lt;/strong&gt;: An interpreter takes as input a program in some language, and performs the actions written in that language on some machine.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
       &lt;li&gt;&lt;strong&gt;Compilation&lt;/strong&gt;: A compiler takes as input a program in some language, and translates that program into some other language, which may serve as input to another interpreter or another compiler.&lt;br /&gt;
 &lt;br /&gt;MATLAB is an interpreted language, meaning that, as soon as you type a MATLAB command on the MATLAB’s command-line and press enter, the MATLAB interpreter executes the statement.  MATLAB programs can also be compiled using &lt;a href=&quot;https://www.mathworks.com/products/compiler.html&quot; target=&quot;_blank&quot;&gt;MATLAB Compiler&lt;/a&gt;, to create standalone applications to be executed later when desired.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
@@ -724,7 +725,7 @@ ans =
 Sublime is a sophisticated text editor for codes in many different languages, including MATLAB, C, C++, Fortran, etc. It has many advanced tools for code editing and syntax highlighting.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://notepad-plus-plus.org/&quot; target=&quot;_blank&quot;&gt;Notepad++&lt;/a&gt;  (available only on Windows)&lt;br /&gt;
-Notepad++ is a highly versatile text and source code editor for use with Microsoft Windows. It is likely – and in my opinion, arguably – the most powerful general-purpose text editor that is currently available on the web. Notepad++ automatically identifies the type of code the file contains based on the file extension and highlights the code syntax accordingly. However, you should keep in mind that it is not specifically designed for Python. If you are professional multi-language programmer, you will soon find the hidden gems in Notepad++, that are not available in any other editor, including MATLAB’s own editor.&lt;br /&gt;
+Notepad++ is a highly versatile text and source code editor for use with Microsoft Windows. It is likely – and in my opinion, arguably – the most powerful general-purpose text editor that is currently available on the web. Notepad++ automatically identifies the type of code the file contains based on the file extension and highlights the code syntax accordingly. However, you should keep in mind that it is not specifically designed for MATLAB. If you are professional multi-language programmer, you will soon find the hidden gems in Notepad++, that are not available in any other editor, including MATLAB’s own editor.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -763,7 +764,7 @@ Notepad++ is a highly versatile text and source code editor for use with Microso
 &lt;ul&gt;
   &lt;li&gt;&lt;code&gt;demo&lt;/code&gt; will load MATLAB examples in the Help Browser, illustrating some features of MATLAB.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;help \&amp;lt;keyword&amp;gt;&lt;/code&gt; will explain any function. For example,
+  &lt;li&gt;&lt;code&gt;help &amp;lt;keyword&amp;gt;&lt;/code&gt; will explain any function. For example,
     &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; help sin
 sin    Sine of argument in radians.
  sin(X) is the sine of the elements of X.
@@ -775,9 +776,9 @@ sin    Sine of argument in radians.
 &lt;/code&gt;&lt;/pre&gt;
     &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;help help&lt;/code&gt; will explain how MATLAB help works.&lt;br /&gt;
+  &lt;li&gt;&lt;code&gt;help help&lt;/code&gt;  will explain how MATLAB help works.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;lookfor \&amp;lt;keyword&amp;gt;&lt;/code&gt; searches through MATLAB help for a specific word or phrase. For example,
+  &lt;li&gt;&lt;code&gt;lookfor &amp;lt;keyword&amp;gt;&lt;/code&gt; searches through MATLAB help for a specific word or phrase. For example,
     &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; lookfor gaussian
 hwv                            - Create a Hull-White/Vasicek mean-reverting Gaussian diffusion model
 xreggpr                        - xreggpm Gaussian Process model constructor
@@ -792,9 +793,9 @@ commblkgaussiansrc2            - Mask function for Gaussian Noise Generator bloc
 &lt;/code&gt;&lt;/pre&gt;
     &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;doc \&amp;lt;keyword&amp;gt;&lt;/code&gt; will bring up a documentation page in the Help Browser for the given keyword.&lt;br /&gt;
+  &lt;li&gt;&lt;code&gt;doc &amp;lt;keyword&amp;gt;&lt;/code&gt; will bring up a documentation page in the Help Browser for the given keyword.&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;dir \&amp;lt;path&amp;gt;&lt;/code&gt; lists the contents of the given path.
+  &lt;li&gt;&lt;code&gt;dir &amp;lt;path&amp;gt;&lt;/code&gt; lists the contents of the given path.
     &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; dir
 .                lcdata.xml       m3iregistry      mcc.bat          mexext.bat       mw_mpiexec.bat   win64            
 ..               lcdata.xsd       matlab.exe       mex.bat          mexsetup.pm      registry         worker.bat       
@@ -818,7 +819,7 @@ C:\Program Files\MATLAB\R2016a\bin
 
 &lt;p&gt;Comment lines in MATLAB begin with percent character &lt;code&gt;%&lt;/code&gt;. Anything after &lt;code&gt;%&lt;/code&gt; is ignored by MATLAB interpreter. The &lt;code&gt;%&lt;/code&gt; character itself only tells the interpreter to ignore the remainder of the same line. In the MATLAB Editor, &lt;font color=&quot;#00e600&quot;&gt;commented areas are printed in green by default&lt;/font&gt;. There are two useful keyboard shortcuts for adding and removing chunks of comments. Select the code you wish to comment or uncomment, and then press &lt;code&gt;Ctrl-R&lt;/code&gt; to place one &lt;code&gt;%&lt;/code&gt; symbol at the beginning of each line and `Ctrl-T to do the opposite.&lt;/p&gt;
 
-&lt;p&gt;MATLAB also supports multi-line comments, akin to &lt;code&gt;/* ... */&lt;/code&gt; in languages like C or C++, via the &lt;code&gt;%{ %}&lt;/code&gt; delimiters. But there is a small and important difference. In MATLAB, the **lines containing &lt;code&gt;%{&lt;/code&gt; or &lt;code&gt;%}&lt;/code&gt; should not contain any other text (except white spaces). Otherwise the multi-line comment would not work as you wish. For example,&lt;/p&gt;
+&lt;p&gt;MATLAB also supports multi-line comments, akin to &lt;code&gt;/* ... */&lt;/code&gt; in languages like C or C++, via the &lt;code&gt;%{ %}&lt;/code&gt; delimiters. But there is a small and important difference. In MATLAB, the &lt;strong&gt;lines containing &lt;code&gt;%{&lt;/code&gt; or &lt;code&gt;%}&lt;/code&gt; should not contain any other text (except white spaces)&lt;/strong&gt;. Otherwise the multi-line comment would not work as you wish. For example,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;%{ x = 1;
 y=2;%}
 &lt;/code&gt;&lt;/pre&gt;
@@ -1195,8 +1196,8 @@ Table 1. Some programming phrases that are discussed in this lecture. The boldfa
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Structured_programming&quot; target=&quot;_blank&quot;&gt;structured programming&lt;/a&gt;,&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Imperative_programming&quot; target=&quot;_blank&quot;&gt;imperative programming&lt;/a&gt; (allows side effects),&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot; target=&quot;_blank&quot;&gt;functional programming&lt;/a&gt; (disallows side effects),&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Procedural_programming&quot; target=&quot;_blank&quot;&gt;procedural programming&lt;/a&gt; (groups code into functions),&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot; target=&quot;_blank&quot;&gt;object-oriented programming (OOP)&lt;/a&gt; (groups code together with the state the code modifies).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Procedural_programming&quot; target=&quot;_blank&quot;&gt;procedural programming&lt;/a&gt; (groups code into functions and subroutines),&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot; target=&quot;_blank&quot;&gt;object-oriented programming (OOP)&lt;/a&gt; (groups code together with the data on which the code works).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;figure&gt;
@@ -1859,7 +1860,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;(K) Now chekcout &lt;em&gt;test2&lt;/em&gt;. What error/warning message do you get?&lt;/p&gt;
+&lt;p&gt;(K) Now checkout &lt;em&gt;test2&lt;/em&gt;. What error/warning message do you get?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout test2
@@ -3279,7 +3280,7 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;(K) Now chekcout &lt;em&gt;test2&lt;/em&gt;. What error/warning message do you get?&lt;/p&gt;
+&lt;p&gt;(K) Now checkout &lt;em&gt;test2&lt;/em&gt;. What error/warning message do you get?&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 

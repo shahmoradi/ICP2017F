@@ -169,8 +169,8 @@ MathJax.Hub.Queue(function() {
 <ul>
   <li>It targets engineers as well as natural and medical scientists as its main audience, just like Fortran.</li>
   <li>It has excellent <em>native</em> array/matrix representation and manipulation tools, just like Fortran.</li>
-  <li>It has extensive sets of high-level commands for numerical computing.</li>
-  <li>It is an interpreted language that makes it really easy to use anytime.</li>
+  <li>It has extensive sets of high-level commands for numerical computing, like Fortran.</li>
+  <li>It is an interpreted language that makes it really easy to use anytime, unlike C, C++, Fortran which are compiled languages.</li>
   <li>It has excellent set of graphical tools for 2D and 3D plotting (in fact other languages like Python have tried to copy from and reverse-engineer the graphical tools and commands available in MATLAB).</li>
   <li>It has one of the largest user-base (over 2,000,000 users) in all scientific communities.</li>
   <li>There is an extensive list of numerical libraries written in MATLAB over the past decades by all those science/engineering -oriented users.</li>
@@ -184,7 +184,7 @@ MathJax.Hub.Queue(function() {
 <ul>
   <li>It is not free.</li>
   <li>It is slow compared to compiled programming languages. See for example, the following performance comparisons and tests in <a href="https://modelingguru.nasa.gov/docs/DOC-1762" target="_blank">NASA modeling guru web page</a>. As you can see there, the <strong>performance of MATLAB script can be significantly lower than compiled languages such as Fortran and C</strong>.</li>
-  <li>If you have already coded in a fully object-oriented programming (OOP) language <a href="" target="_blank">xx add youtube</a>, in particular <a href="xx" target="_blank">Python</a>, you will find some oddities in MATLAB’s OOP implementation. You may feel this when, for example, you are working with <a href="xx" target="_blank">cell arrays</a> in MATLAB. We will see later on, what cell arrays are.</li>
+  <li>If you have already coded in a fully object-oriented programming (OOP) language, in particular Python, you will find some oddities in MATLAB’s OOP implementation. You may feel this when, for example, you are working with <a href="xx" target="_blank">cell arrays</a> in MATLAB. We will see later on, what cell arrays are.</li>
 </ul>
 
 <h2 id="matlab-features">MATLAB features</h2>
@@ -192,7 +192,7 @@ MathJax.Hub.Queue(function() {
 <p>MATLAB has the following features and attributes.</p>
 
 <ul>
-  <li><strong>MATLAB is a fourth-generation, high-level programming language.</strong> Remember from our <a href="/ICP2017F/lecture/0-programming-history" target="_blank">zeroth lecture</a>, that a high-level programming language provides a high level of programming abstraction from details of computer and machine code. For comparison, Fortran, C++, and C are considered high, medium, and low -level programming languages respectively.<br />
+  <li><strong>MATLAB is a fourth-generation, high-level programming language.</strong> Remember from our <a href="/ICP2017F/lecture/2-programming-history" target="_blank">second lecture</a>, that a high-level programming language provides a high level of programming abstraction from details of computer and machine code. For comparison, Fortran, C++, and C are considered high, medium, and low -level programming languages respectively.<br />
 <br /></li>
   <li><strong>MATLAB is an array-based programming language</strong>, meaning that it is designed to be with the goal of facilitating array manipulation for scientists and engineers.<br />
 <br /></li>
@@ -212,7 +212,8 @@ MathJax.Hub.Queue(function() {
   <li><strong>MATLAB is an interpreted language</strong>. A programming language implementation is a system for executing computer programs. There are two general approaches to programming language implementation:<br />
 <br />
     <ul>
-      <li><strong>Interpretation</strong>: An interpreter takes as input a program in some language, and performs the actions written in that language on some machine.</li>
+      <li><strong>Interpretation</strong>: An interpreter takes as input a program in some language, and performs the actions written in that language on some machine.<br />
+<br /></li>
       <li><strong>Compilation</strong>: A compiler takes as input a program in some language, and translates that program into some other language, which may serve as input to another interpreter or another compiler.<br />
 <br />MATLAB is an interpreted language, meaning that, as soon as you type a MATLAB command on the MATLAB’s command-line and press enter, the MATLAB interpreter executes the statement.  MATLAB programs can also be compiled using <a href="https://www.mathworks.com/products/compiler.html" target="_blank">MATLAB Compiler</a>, to create standalone applications to be executed later when desired.<br />
 <br /></li>
@@ -246,7 +247,7 @@ MathJax.Hub.Queue(function() {
 Sublime is a sophisticated text editor for codes in many different languages, including MATLAB, C, C++, Fortran, etc. It has many advanced tools for code editing and syntax highlighting.<br />
 <br /></li>
   <li><a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>  (available only on Windows)<br />
-Notepad++ is a highly versatile text and source code editor for use with Microsoft Windows. It is likely – and in my opinion, arguably – the most powerful general-purpose text editor that is currently available on the web. Notepad++ automatically identifies the type of code the file contains based on the file extension and highlights the code syntax accordingly. However, you should keep in mind that it is not specifically designed for Python. If you are professional multi-language programmer, you will soon find the hidden gems in Notepad++, that are not available in any other editor, including MATLAB’s own editor.<br />
+Notepad++ is a highly versatile text and source code editor for use with Microsoft Windows. It is likely – and in my opinion, arguably – the most powerful general-purpose text editor that is currently available on the web. Notepad++ automatically identifies the type of code the file contains based on the file extension and highlights the code syntax accordingly. However, you should keep in mind that it is not specifically designed for MATLAB. If you are professional multi-language programmer, you will soon find the hidden gems in Notepad++, that are not available in any other editor, including MATLAB’s own editor.<br />
 <br /></li>
 </ul>
 
@@ -285,7 +286,7 @@ Notepad++ is a highly versatile text and source code editor for use with Microso
 <ul>
   <li><code>demo</code> will load MATLAB examples in the Help Browser, illustrating some features of MATLAB.<br />
 <br /></li>
-  <li><code>help \&lt;keyword&gt;</code> will explain any function. For example,
+  <li><code>help &lt;keyword&gt;</code> will explain any function. For example,
     <pre><code class="language-matlab">&gt;&gt; help sin
 sin    Sine of argument in radians.
  sin(X) is the sine of the elements of X.
@@ -297,9 +298,9 @@ sin    Sine of argument in radians.
 </code></pre>
     <p><br /></p>
   </li>
-  <li><code>help help</code> will explain how MATLAB help works.<br />
+  <li><code>help help</code>  will explain how MATLAB help works.<br />
 <br /></li>
-  <li><code>lookfor \&lt;keyword&gt;</code> searches through MATLAB help for a specific word or phrase. For example,
+  <li><code>lookfor &lt;keyword&gt;</code> searches through MATLAB help for a specific word or phrase. For example,
     <pre><code class="language-matlab">&gt;&gt; lookfor gaussian
 hwv                            - Create a Hull-White/Vasicek mean-reverting Gaussian diffusion model
 xreggpr                        - xreggpm Gaussian Process model constructor
@@ -314,9 +315,9 @@ commblkgaussiansrc2            - Mask function for Gaussian Noise Generator bloc
 </code></pre>
     <p><br /></p>
   </li>
-  <li><code>doc \&lt;keyword&gt;</code> will bring up a documentation page in the Help Browser for the given keyword.<br />
+  <li><code>doc &lt;keyword&gt;</code> will bring up a documentation page in the Help Browser for the given keyword.<br />
 <br /></li>
-  <li><code>dir \&lt;path&gt;</code> lists the contents of the given path.
+  <li><code>dir &lt;path&gt;</code> lists the contents of the given path.
     <pre><code class="language-matlab">&gt;&gt; dir
 .                lcdata.xml       m3iregistry      mcc.bat          mexext.bat       mw_mpiexec.bat   win64            
 ..               lcdata.xsd       matlab.exe       mex.bat          mexsetup.pm      registry         worker.bat       
@@ -340,7 +341,7 @@ C:\Program Files\MATLAB\R2016a\bin
 
 <p>Comment lines in MATLAB begin with percent character <code>%</code>. Anything after <code>%</code> is ignored by MATLAB interpreter. The <code>%</code> character itself only tells the interpreter to ignore the remainder of the same line. In the MATLAB Editor, <font color="#00e600">commented areas are printed in green by default</font>. There are two useful keyboard shortcuts for adding and removing chunks of comments. Select the code you wish to comment or uncomment, and then press <code>Ctrl-R</code> to place one <code>%</code> symbol at the beginning of each line and `Ctrl-T to do the opposite.</p>
 
-<p>MATLAB also supports multi-line comments, akin to <code>/* ... */</code> in languages like C or C++, via the <code>%{ %}</code> delimiters. But there is a small and important difference. In MATLAB, the **lines containing <code>%{</code> or <code>%}</code> should not contain any other text (except white spaces). Otherwise the multi-line comment would not work as you wish. For example,</p>
+<p>MATLAB also supports multi-line comments, akin to <code>/* ... */</code> in languages like C or C++, via the <code>%{ %}</code> delimiters. But there is a small and important difference. In MATLAB, the <strong>lines containing <code>%{</code> or <code>%}</code> should not contain any other text (except white spaces)</strong>. Otherwise the multi-line comment would not work as you wish. For example,</p>
 <pre><code class="language-matlab">%{ x = 1;
 y=2;%}
 </code></pre>
@@ -428,8 +429,8 @@ All of MATLAB’s built-in functions written in MATLAB are documented this way.<
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 09 / 18</section></br> -->
-         <section>Last updated Monday, 18 Sep 2017 at 01:50 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 09 / 20</section></br> -->
+         <section>Last updated Wednesday, 20 Sep 2017 at 08:40 AM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>
