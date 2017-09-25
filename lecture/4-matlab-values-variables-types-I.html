@@ -567,6 +567,7 @@ ans =
 
     'Hi'    [1]    [1]    'World!'
 </code></pre>
+<p><br /></p>
 
 <h5 id="table-values">Table values</h5>
 
@@ -681,6 +682,7 @@ Undefined operator '/' for input arguments of type 'logical'.
 
 <h4 id="some-further-useful-matlab-commands">Some further useful MATLAB commands</h4>
 
+<p>MATLAB has a built-in function called <code>format</code> that can modify the output style of MATLAB on the command line. For example,</p>
 <pre><code class="language-matlab">&gt;&gt; 2/5
 
 ans =
@@ -713,9 +715,41 @@ ans =
 
     0.4000
 </code></pre>
+<p><br /></p>
 
-<p><br /><br /></p>
+<p>Here is a complete list of options that format can take,</p>
+<table class="center">
+<caption class="title" style="padding-bottom:10px;text-align:center;">
+Table 2. A list of MATLAB <code>format</code> options.
+</caption>
+<thead>
+<tr>
+<th><font size="4rm" color="red">Style</font></th>
+<th><font size="4rm" color="red">Result</font></th>
+<th><font size="4rm" color="red">Example</font></th>
+</tr>
+</thead>
 
+<tbody>
+
+<tr><td><b><code>short (default)</code></b></td><td>Short, fixed-decimal format with 4 digits after the decimal point.</td><td>3.1416</td></tr>
+<tr><td><b><code>long</code></b></td><td>Long, fixed-decimal format with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.</td><td>3.141592654</td></tr>
+<tr><td><b><code>shortE</code></b></td><td>Short scientific notation with 4 digits after the decimal point.</td><td>3.14E+00</td></tr>
+<tr><td><b><code>longE</code></b></td><td>Long scientific notation with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.</td><td>3.14E+00</td></tr>
+<tr><td><b><code>shortG</code></b></td><td>Short, fixed-decimal format or scientific notation, whichever is more compact, with a total of 5 digits.</td><td>3.1416</td></tr>
+<tr><td><b><code>longG</code></b></td><td>Long, fixed-decimal format or scientific notation, whichever is more compact, with a total of 15 digits for double values, and 7 digits for singlevalues.</td><td>3.141592654</td></tr>
+<tr><td><b><code>shortEng</code></b></td><td>Short engineering notation (exponent is a multiple of 3) with 4 digits after the decimal point.</td><td>3.14E+00</td></tr>
+<tr><td><b><code>longEng</code></b></td><td>Long engineering notation (exponent is a multiple of 3) with 15 significant digits.</td><td>3.14E+00</td></tr>
+<tr><td><b><code>+</code></b></td><td>Positive/Negative format with +, -, and blank characters displayed for positive, negative, and zero elements.</td><td>+</td></tr>
+<tr><td><b><code>bank</code></b></td><td>Currency format with 2 digits after the decimal point.</td><td>3.14</td></tr>
+<tr><td><b><code>hex</code></b></td><td>Hexadecimal representation of a binary double-precision number.</td><td>400921fb54442d18</td></tr>
+<tr><td><b><code>rat</code></b></td><td>Ratio of small integers.</td><td>355/113</td></tr>
+
+
+<br /><br />
+
+    
+</tbody></table>
 
             </div>
         </article>
@@ -785,8 +819,8 @@ ans =
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 09 / 20</section></br> -->
-         <section>Last updated Wednesday, 20 Sep 2017 at 03:26 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 09 / 25</section></br> -->
+         <section>Last updated Monday, 25 Sep 2017 at 09:02 AM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>

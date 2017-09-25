@@ -368,6 +368,15 @@ Comments are useful for explaining what function a certain piece of code perform
 <p><br />
 All of MATLAB’s built-in functions written in MATLAB are documented this way.</p>
 
+<h2 id="matlabs-search-path">MATLAB’s search path</h2>
+
+<p>MATLAB has a search path and strategy that is used to find variables, and MATLAB scripts. MATLAB’s current <strong>working directory</strong> is always displayed in the MATLAB address bar. When you enter a name in MATLAB’s command prompt, the MATLAB interpreter attemps to find an entity with that name in the following order:</p>
+<ol>
+  <li>First, it looks for a variable of the same name in MATLAB’s workspace and if it exists, MATLAB displays the value of the variable.</li>
+  <li>If not, then MATLAB, looks for a M-file (a MATLAB script) in the working directory of MATLAB.</li>
+  <li>If not, then MATLAB looks for an M-file in MATLAB’s list of directories (the search path) to find the file. If no entity exists with the given name, then MATLAB gives an error.</li>
+</ol>
+
 <p><br /><br /></p>
 
             </div>
@@ -438,8 +447,8 @@ All of MATLAB’s built-in functions written in MATLAB are documented this way.<
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 09 / 20</section></br> -->
-         <section>Last updated Wednesday, 20 Sep 2017 at 03:26 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 09 / 25</section></br> -->
+         <section>Last updated Monday, 25 Sep 2017 at 09:02 AM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>

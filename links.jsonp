@@ -12,6 +12,16 @@ callback([
   } ,
 
   {
+    "text": "Lecture 6: MATLAB - operators, branching, and control statements",
+    "href": "/ICP2017F/lecture/6-matlab-operators-branching"
+  } ,
+
+  {
+    "text": "Lecture 5: MATLAB - values, variables, types - II",
+    "href": "/ICP2017F/lecture/5-matlab-values-variables-types-II"
+  } ,
+
+  {
     "text": "Lecture 4: MATLAB - values, variables, types - I",
     "href": "/ICP2017F/lecture/4-matlab-values-variables-types-I"
   } ,
