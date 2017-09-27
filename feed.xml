@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-09-26T12:44:32-05:00</updated>
+<updated>2017-09-27T08:47:08-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -617,14 +617,13 @@ disp(['Amir is a', amir])
 Amir is ateacher
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;The life expectancy for the millennials is projected to be x years! (But don't believe it...)
-&amp;gt;&amp;gt; life_expectancy = 120; disp( ['The life expectancy for the millennials is projected to be ',life_expectancy,' years! (But don''t believe it...)'] )
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; life_expectancy = 120; disp( ['The life expectancy for the millennials is projected to be ',life_expectancy,' years! (But don''t believe it...)'] )
 The life expectancy for the millennials is projected to be x years! (But don't believe it...)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;matlab-reserved-names-keywords&quot;&gt;MATLAB reserved names (keywords)&lt;/h4&gt;
-&lt;p&gt;There are some limitation as what names you can choose for your variables, even if they completely obey the MATLAB syntax standard. Variable names in MATLAB cannot be the same as &lt;strong&gt;MATLAB keywords&lt;/strong&gt;, which are simply names that reserved for a specific purpose in MATLAB programming.  They are used to define the syntax and structure of the MATLAB language. Note that &lt;strong&gt;MATLAB keywords are case-sensitive&lt;/strong&gt;.  You &lt;strong&gt;cannot&lt;/strong&gt; define variables with the exact same names as &lt;strong&gt;MATLAB keywords&lt;/strong&gt;, such as &lt;code&gt;if&lt;/code&gt; or &lt;code&gt;end&lt;/code&gt;. For a complete list of MATLAB keyword, run the &lt;code&gt;iskeyword&lt;/code&gt; command,&lt;/p&gt;
+&lt;p&gt;There are some limitation as to what names you can choose for your variables, even if they completely obey MATLAB syntax standard. Variable names in MATLAB cannot be the same as &lt;strong&gt;MATLAB keywords&lt;/strong&gt;, which are simply names that reserved for a specific purpose in MATLAB programming.  They are used to define the syntax and structure of the MATLAB language. Note that &lt;strong&gt;MATLAB keywords are case-sensitive&lt;/strong&gt;.  You &lt;strong&gt;cannot&lt;/strong&gt; define variables with the exact same names as &lt;strong&gt;MATLAB keywords&lt;/strong&gt;, such as &lt;code&gt;if&lt;/code&gt; or &lt;code&gt;end&lt;/code&gt;. For a complete list of MATLAB keyword, run the &lt;code&gt;iskeyword&lt;/code&gt; command,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; iskeyword
 ans = 
@@ -653,7 +652,7 @@ ans =
 
 &lt;h4 id=&quot;predefined-variables-in-matlab&quot;&gt;Predefined variables in MATLAB&lt;/h4&gt;
 
-&lt;p&gt;Note that there are some predefined variables in MATLAB, that are not considered as keywords. Therefore you can change their values and use them for your own purposes. But, **be very careful with predefined variables and in general, it is better to not mess with them, as they can lead to confusion and catastrophe. For example,&lt;/p&gt;
+&lt;p&gt;Note that there are some predefined variables in MATLAB, that are not considered as keywords. Therefore you can change their values and use them for your own purposes. But, &lt;strong&gt;be very careful with predefined variables and in general&lt;/strong&gt;, it is better to not mess with them, as they can lead to confusion and catastrophe. For example,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; true % true is a predefined MATLAB logical variable
 ans =
@@ -814,7 +813,7 @@ Now, pay attention to the size of the vector &lt;code&gt;x&lt;/code&gt;. What do
 
 &lt;h4 id=&quot;creating-matrices&quot;&gt;Creating matrices&lt;/h4&gt;
 
-&lt;p&gt;There are a number of functions MATLAB that can help you build predefined matrices or vectors.&lt;/p&gt;
+&lt;p&gt;There are a number of functions in MATLAB that can help you build predefined matrices or vectors.&lt;/p&gt;
 
 &lt;h5 id=&quot;zeros&quot;&gt;zeros&lt;/h5&gt;
 
@@ -1700,7 +1699,7 @@ ans =
 
 &lt;h5 id=&quot;cell-array-values&quot;&gt;Cell array values&lt;/h5&gt;
 
-&lt;p&gt;Cell arrays, are an array entities that can contain data of varying types and sizes. A &lt;strong&gt;cell array&lt;/strong&gt; is a data type with indexed data containers called &lt;strong&gt;cells&lt;/strong&gt;, where each cell can contain any type of data. Cell arrays commonly contain either lists of text strings, combinations of text and numbers, or numeric arrays of different sizes. Refer to sets of cells by enclosing indices in smooth parentheses, &lt;code&gt;()&lt;/code&gt;. Access the contents of cells by indexing with curly braces, &lt;code&gt;{}&lt;/code&gt;. Also, to define a cell, use &lt;code&gt;{}&lt;/code&gt; like the following notation,&lt;/p&gt;
+&lt;p&gt;Cell arrays, are array entities that can contain data of varying types and sizes. A &lt;strong&gt;cell array&lt;/strong&gt; is a data type with indexed data containers called &lt;strong&gt;cells&lt;/strong&gt;, where each cell can contain any type of data. Cell arrays commonly contain either lists of text strings, combinations of text and numbers, or numeric arrays of different sizes. Refer to sets of cells by enclosing indices in smooth parentheses, &lt;code&gt;()&lt;/code&gt;. Access the contents of cells by indexing with curly braces, &lt;code&gt;{}&lt;/code&gt;. Also, to define a cell, use &lt;code&gt;{}&lt;/code&gt; like the following notation,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; {'Hi', ' ', 'World!'} % a cell array of strings
 
