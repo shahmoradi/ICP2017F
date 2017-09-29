@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-09-27T15:36:54-05:00</updated>
+<updated>2017-09-29T13:51:18-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -570,6 +570,15 @@ disp(['y(x=',num2str(x),') = ',num2str(y)])
 &lt;p&gt;For general information on MATLAB Data Types, see &lt;a href=&quot;https://www.mathworks.com/help/matlab/data-types_data-types.html&quot; target=&quot;_blank&quot;&gt;MATLAB manual&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;lecture-videos&quot;&gt;Lecture Videos&lt;/h2&gt;
+
+&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful. For this lecture, video 4.0 was currupt, and could not be uploaded here.&lt;/p&gt;
+
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/3rsSGaYnSzc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;variables-in-matlab&quot;&gt;Variables in MATLAB&lt;/h2&gt;
 
