@@ -7,18 +7,18 @@ callback([
   } ,
 
   {
-    "text": "Quiz 1: Solutions - Programming history",
-    "href": "/ICP2017F/quiz/2-solutions-programming-history"
-  } ,
-
-  {
     "text": "Quiz 1: Problems - Version control system",
     "href": "/ICP2017F/quiz/1-problems-version-control-system"
   } ,
 
   {
-    "text": "Quiz 1: Problems - Programming history",
-    "href": "/ICP2017F/quiz/2-problems-programming-history"
+    "text": "Lecture 8-9: MATLAB - functions II & III",
+    "href": "/ICP2017F/lecture/8-9-matlab-functions-II-III"
+  } ,
+
+  {
+    "text": "Lecture 7: MATLAB - functions I",
+    "href": "/ICP2017F/lecture/7-matlab-functions-I"
   } ,
 
   {
