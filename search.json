@@ -1,6 +1,30 @@
 [
 	
 		{
+		  "title"      : "Quiz 1: Solutions - Programming history",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/quiz/2-solutions-programming-history",
+		  "date"       : "2017-10-02 00:00:00 -0500",
+		  "shortdate"  : "October 02, 2017"
+		} ,
+	
+		{
+		  "title"      : "Quiz 1: Problems - Programming history",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/quiz/2-problems-programming-history",
+		  "date"       : "2017-10-02 00:00:00 -0500",
+		  "shortdate"  : "October 02, 2017"
+		} ,
+	
+		{
+		  "title"      : "Homework 2: Solutions - Variables, Values, and Types",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/homework/2-solutions-variables-values-types",
+		  "date"       : "2017-10-02 00:00:00 -0500",
+		  "shortdate"  : "October 02, 2017"
+		} ,
+	
+		{
 		  "title"      : "Lecture 6: MATLAB - operators, branching, and control statements",
 		  "category"   : "",
 		  "url"        : "/ICP2017F/lecture/6-matlab-operators-branching",

@@ -11,23 +11,23 @@
 -->
 
 <meta charset="utf-8">
-<title>QUIZ 1: SOLUTIONS - VERSION CONTROL SYSTEM &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
+<title>HOMEWORK 2: SOLUTIONS - VARIABLES, VALUES, AND TYPES &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
 <meta name="description" content="Introduction to<br>Computer Programming">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/ICP2017F/images/logo.png">
-<meta name="twitter:title" content="Quiz 1: Solutions - Version control system">
+<meta name="twitter:title" content="Homework 2: Solutions - Variables, Values, and Types">
 <meta name="twitter:description" content="Introduction to<br>Computer Programming">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quiz 1: Solutions - Version control system">
+<meta property="og:title" content="Homework 2: Solutions - Variables, Values, and Types">
 <meta property="og:description" content="Introduction to<br>Computer Programming">
-<meta property="og:url" content="/ICP2017F/quiz/1-solutions-version-control-system">
+<meta property="og:url" content="/ICP2017F/homework/2-solutions-variables-values-types">
 <meta property="og:site_name" content="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110">
 <meta property="og:image" content="/ICP2017F/images/">
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/ICP2017F/quiz/1-solutions-version-control-system">
+<link rel="canonical" href="/ICP2017F/homework/2-solutions-variables-values-types">
 <!-- <link href="/ICP2017F/feed.xml" type="application/atom+xml" rel="alternate" title="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110 Feed"> -->
 
 
@@ -133,8 +133,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Quiz 1: Solutions - Version control system</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-09-18T00:00:00-05:00">18 Sep 2017</time></strong></p>
+                            <h2>Homework 2: Solutions - Variables, Values, and Types</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-10-02T00:00:00-05:00">02 Oct 2017</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -144,15 +144,15 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <p>This is the solution to <a href="1-problems-version-control-system.html" target="_blank">Quiz 1: Problems - Version control system</a>.</p>
+                <p>This is the solution to <a href="2-problems-variables-values-types.html" target="_blank">Homework 2: Problems - Variables, Values, and Types</a>.</p>
 
-<p>The following figure illustrates the grade distribution for this quiz.</p>
+<p>The following figure illustrates the grade distribution for this homework.</p>
 
 <!--
 <figure>
-	<img src="/ICP2017F/quiz/gradeDist/gradeHistQuiz2.png" width="700">
+	<img src="/ICP2017F/homework/gradeDist/gradeHistHomework1.png" width="700">
     <figcaption style="text-align:center">
-        Maximum possible points is 100.
+        Maximum possible points, excluding bonus question, is 100.
     </figcaption>
 </figure>
 -->
@@ -162,51 +162,435 @@ MathJax.Hub.Queue(function() {
 
 <p><br /></p>
 
-<ol>
-  <li>Which of the following Git commands can add all the <strong>new</strong> and <strong>modified-existing</strong> files to the staging area? choose all that apply.<br />
-(A) <code>git add -A</code><br />
-(B) <code>git add --A</code><br />
-(C) <code>git add -all</code><br />
-(D) <code>git add --all</code><br />
-(E) <code>git add -u</code><br />
-(F) <code>git add .</code><br />
-(G) <code>git add .; git add -u</code><br />
-(H) <code>git add .; git add --u</code><br />
-(I) <code>git add -u; git add .</code><br />
-(J) <code>git add --u; git add .</code><br />
-<br />
-<strong>Answer: A, D, G, F, I</strong>
-<br /><br /></li>
-  <li>Which of the following Git commands <strong>both</strong> stages and commits <strong>only modified and deleted files</strong> but <strong>NOT</strong> the <em>new files</em> added to the repository since the last commit. Choose all that apply.<br />
-(A) <code>git commit</code><br />
-(B) <code>git commit -a</code><br />
-(C) <code>git commit -am</code><br />
-<br />
-<strong>Answer: B, C</strong>
-<br /><br /></li>
-  <li>Write down the Git command that lists all Git commands for you.<br />
-<br />
-<strong>Answer:</strong>
-    <pre><code class="language-bash">$ git help -a
+<p>♣ <strong>Due Date: Monday Oct 2, 2017 9:00 AM</strong>. This homework aims at giving you some experience with MATLAB variables.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>1. </strong> Type the following in the command window and submit the results. Briefy explain what each assignment does.<br />
+<br /></p>
+
+<pre><code class="language-matlab">&gt;&gt; a = 1
+&gt;&gt; b = 'x'
+&gt;&gt; c = true
+&gt;&gt; whos a b c
+&gt;&gt; a == c
+&gt;&gt; a + c
+&gt;&gt; d = [1 2 3 4]
+&gt;&gt; e = ['a' 'b' 'c' 'd']
+&gt;&gt; f = ['abcd']
+&gt;&gt; g = {‘a’ ‘b’ ‘c’ ‘d’}
+&gt;&gt; h = { a b c d}
+&gt;&gt; whos d e f g h
 </code></pre>
-    <p><br /></p>
-  </li>
+<p><br /></p>
+
+<p><strong>Answer:</strong></p>
+
+<pre><code class="language-matlab">&gt;&gt; a = 1
+a =
+     1
+&gt;&gt; b = 'x'
+b =
+x
+&gt;&gt; c = true
+c =
+  logical
+   1
+&gt;&gt; whos abc
+&gt;&gt; whos a b c
+  Name      Size            Bytes  Class      Attributes
+
+  a         1x1                 8  double               
+  b         1x1                 2  char                 
+  c         1x1                 1  logical
+&gt;&gt; a == c
+ans =
+  logical
+   1
+&gt;&gt; a + c
+ans =
+     2
+</code></pre>
+<p><br /></p>
+
+<p><code>a == c</code> because, although they are different types, <code>a</code> logical type of true is also represented by the integer 1, so <code>a</code> and <code>c</code> are equivalent, and can be added together.</p>
+
+<p><br /></p>
+
+<pre><code class="language-matlab">&gt;&gt; d = [1 2 3 4]
+d =
+     1     2     3     4
+&gt;&gt; e = ['a' 'b' 'c' 'd']
+e =
+abcd
+&gt;&gt; f = ['abcd']
+f =
+abcd
+&gt;&gt; g = {'a' 'b' 'c' 'd'}
+g =
+  1×4 cell array
+    'a'    'b'    'c'    'd'
+&gt;&gt; h = { a b c d}
+h =
+  1×4 cell array
+    [1]    'x'    [1]    [1×4 double]
+&gt;&gt; whos d e f g h
+  Name      Size            Bytes  Class     Attributes
+
+  d         1x4                32  double              
+  e         1x4                 8  char                
+  f         1x4                 8  char                
+  g         1x4               456  cell                
+  h         1x4               491  cell    
+</code></pre>
+
+<p><br /></p>
+
+<p><code>e</code> and <code>f</code> are equivalent, because they are both just character arrays, <code>e</code> just concatenated all the individual single characters into one array, while <code>f</code> was already concatenated together. g is a cell array of characters ‘a’, ‘b’, ‘c’, and ‘d’, and h is a cell array of the variables <code>a</code>, <code>b</code>, <code>c</code>, and <code>d</code>.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>2. </strong> What would happen if you go beyond the range for a particular type? For example, the largest integer that can be stored in <strong>int8</strong> is 127, and the smallest integer is -128, so what would happen if we type cast a larger integer to the type <strong>int8</strong>? Smaller integer? Use the built-in functions <code>intmin</code> and <code>intmax</code> to find the largest and smallest integers that can be stored in <strong>int16</strong> and <strong>int32</strong>.
+<br /></p>
+
+<p><strong>Answer:</strong>
+<br /></p>
+<pre><code class="language-matlab">&gt;&gt; int8(200)
+ans =
+  int8
+   127
+&gt;&gt; int8(-150)
+ans =
+  int8
+   -128
+&gt;&gt; intmax('int16')
+ans =
+  int16
+   32767
+&gt;&gt; intmin('int16')
+ans =
+  int16
+   -32768
+&gt;&gt; intmax('int32')
+ans =
+  int32
+   2147483647
+&gt;&gt; intmin('int32')
+ans =
+  int32
+   -2147483648
+</code></pre>
+<p><br /></p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>3. </strong> Think about what the results would be for the following expressions, and then type them in to the terminal to verify your answers. Briefly explain the results for each one.</p>
+
+<p><br /></p>
+
+<pre><code class="language-matlab">&gt;&gt; 1\2 
+&gt;&gt; 1/2
+&gt;&gt; int8(1/2)
+&gt;&gt; int8(1/3)
+&gt;&gt; -5^2 
+&gt;&gt; (-5) ^ 2 
+&gt;&gt; 10-6/2 
+&gt;&gt; 5*4/2*3
+</code></pre>
+
+<p><br /></p>
+
+<p><strong>Answer:</strong>  :
+<br /></p>
+
+<pre><code class="language-matlab">&gt;&gt; 1\2
+ans =
+     2
+&gt;&gt; 1/2
+ans =
+    0.5000
+&gt;&gt; int8(1/2)
+ans =
+  int8
+   1
+&gt;&gt; int8(1/3)
+ans =
+  int8
+   0
+&gt;&gt; -5^2
+ans =
+   -25
+&gt;&gt; (-5)^2
+ans =
+    25
+&gt;&gt; 10-6/2
+ans =
+     7
+&gt;&gt; 5*4/2*3
+ans =
+    30
+</code></pre>
+<p><br /></p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>4.(a) </strong> Define the following variables:
+<br /></p>
+
+<pre><code class="language-matlab">&gt;&gt; a
+a =
+     1     0
+     2     1
+&gt;&gt; b
+b =
+    -1     2
+     0     1
+&gt;&gt; c
+c =
+     3
+     2
+&gt;&gt; d
+d =
+     5
+</code></pre>
+
+<p><br />
+<strong>Answer:</strong>
+<br /></p>
+
+<pre><code class="language-matlab">&gt;&gt; a = [1 0; 2 1]
+a =
+     1     0
+     2     1
+&gt;&gt; b = [-1 2; 0 1]
+b =
+    -1     2
+     0     1
+&gt;&gt; c = [3; 2]
+c =
+     3
+     2
+&gt;&gt; d = 5
+d =
+     5
+</code></pre>
+<p><br /></p>
+
+<p><strong>4.(b) </strong> What is the result of each of the following expressions? Briefly explain what MATLAB is doing for each operation.<br />
+<br /></p>
+<ol>
+  <li><code>a + b</code></li>
+  <li><code>a .* b</code></li>
+  <li><code>a * b</code></li>
+  <li><code>a * c</code></li>
+  <li><code>a + c</code></li>
+  <li><code>a + d</code></li>
+  <li><code>a .* d</code></li>
+  <li><code>a * d</code>
+<br /></li>
 </ol>
+
+<p><strong>Answer:</strong></p>
+
+<pre><code class="language-matlab">&gt;&gt; a + b
+ans =
+     0     2
+     2     2
+&gt;&gt; a .* b
+ans =
+    -1     0
+     0     1
+&gt;&gt; a * b
+ans =
+    -1     2
+    -2     5
+&gt;&gt; a * c
+ans =
+     3
+     8
+&gt;&gt; a + c
+ans =
+     4     3
+     4     3
+&gt;&gt; a + d
+ans =
+     6     5
+     7     6
+&gt;&gt; a .* d
+ans =
+     5     0
+    10     5
+&gt;&gt; a * d
+ans =
+     5     0
+    10     5
+</code></pre>
+<p><br /></p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>5. </strong> Provide three different methods of generating the matrix <strong>a</strong>, one method should use the <code>diag()</code> function, one should use the <strong>eye</strong> function, and one should use the <strong>zeros</strong> function.</p>
+<pre><code class="language-matlab">&gt;&gt; a
+a =
+     2     0     0
+     0     2     0
+     0     0     2
+</code></pre>
+<p><br /></p>
+
+<p><strong>Answer:</strong></p>
+
+<pre><code class="language-matlab">&gt;&gt; a = eye(3,3) * 2
+a =
+     2     0     0
+     0     2     0
+     0     0     2
+</code></pre>
+<p><br /></p>
+
+<pre><code class="language-matlab">&gt;&gt; d = [2 2 2]
+d =
+     2     2     2
+&gt;&gt; a = diag(d)
+a =
+     2     0     0
+     0     2     0
+     0     0     2
+</code></pre>
+<p><br /></p>
+
+<pre><code class="language-matlab">&gt;&gt; a = zeros(3,3);
+&gt;&gt; a(1,1) = 2;
+&gt;&gt; a(2,2) = 2;
+&gt;&gt; a(3,3) = 2;
+&gt;&gt; a
+a =
+     2     0     0
+     0     2     0
+     0     0     2
+</code></pre>
+<p><br /></p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>6. </strong> Download this <a href="../2-problems/script_full_of_errors.m" target="_blank">code</a>. This code is full syntax errors. Fix the errors and submit the corrected code with name <code>script_full_of_errors_fixed.m</code> in your folder for this HW. Explain in front of each corrected MATLAB statement, why the error occurred. Modify the last two variables so that they display,</p>
+<pre><code class="language-matlab">&gt;&gt; Persian
+Persian =
+Persian is a human language
+&gt;&gt; Spanish
+Spanish = 
+    'Spanish '    'is '    ' another'    'language'
+</code></pre>
+<p><br />
+Modify the last line such that for the last line the code displays,</p>
+<pre><code class="language-matlab">Persian is not the same as Spanish
+</code></pre>
+<p><br />
+Explain these results.</p>
+
+<p><strong>Answer:</strong><br />
+The corrected script can be found <a href="../2-solutions/script_full_of_errors_fixed.m" target="_blank">here</a></p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>7. </strong> Use MATLAB help to find out how you can create a new directory named <code>mynewdir</code> from MATLAB command line. Then change the working directory the newly created directory. Then create a MATLAB script in this directory named <code>myscript.m</code> with the following code in it,</p>
+
+<pre><code class="language-matlab">% First create an array from -2*pi to 2:pi
+x = -2*pi:pi/20:2*pi;
+
+% Calculate |sin(x)|
+y = abs(sin(x));
+
+plot(x,y);
+</code></pre>
+<p><br />
+Now on MATLAB command line, run the script by calling its name. What do you get? Save the output as a figure and submit it with your homework.</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>You can create a new directory and switch the current directory to it using the following commands,</p>
+<pre><code class="language-bash">&gt;&gt; mkdir mynewdir
+&gt;&gt; cd mynewdir
+</code></pre>
+<p><br />
+The script <code>myscript</code> generates a plot of $y$ versus $x$ where $y = |sin(x)|$. In doing so, MATLAB opens a new window called <strong>plot window</strong> that contains the plot of y as a function of x. Here is the resulting figure:</p>
+
+<figure>
+	<img src="/ICP2017F/homework/2-solutions/plot.png" width="900" />
+</figure>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>8. </strong> Now change your working directory to the original directory before you created <code>mynewdir</code> directory. Try to run the script <code>myscript</code> you had created again, from MATLAB command line. What do you get? and why?</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>You get an error message like the following,</p>
+
+<pre><code class="language-matlab">&gt;&gt; cd mynewdir\
+&gt;&gt; myscript
+&gt;&gt; cd ..
+&gt;&gt; myscript
+Undefined function or variable 'myscript'.
+</code></pre>
+<p><br />
+And this happens because the script we are trying to run is neither in MATLAB’s working directory, nor in any of MATLAB’s search paths. Therefore, MATLAB gives an error, as it cannot find the requested file.</p>
+
 
             </div>
         </article>
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 1: Solutions - Version control system&quot;%20/ICP2017F/quiz/1-solutions-version-control-system%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 2: Solutions - Variables, Values, and Types&quot;%20/ICP2017F/homework/2-solutions-variables-values-types%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/quiz/1-solutions-version-control-system"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/homework/2-solutions-variables-values-types"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/quiz/1-solutions-version-control-system"
+        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/homework/2-solutions-variables-values-types"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>

@@ -7,8 +7,18 @@ callback([
   } ,
 
   {
+    "text": "Quiz 1: Solutions - Programming history",
+    "href": "/ICP2017F/quiz/2-solutions-programming-history"
+  } ,
+
+  {
     "text": "Quiz 1: Problems - Version control system",
     "href": "/ICP2017F/quiz/1-problems-version-control-system"
+  } ,
+
+  {
+    "text": "Quiz 1: Problems - Programming history",
+    "href": "/ICP2017F/quiz/2-problems-programming-history"
   } ,
 
   {
@@ -44,6 +54,11 @@ callback([
   {
     "text": "Lecture 0: A professional programmer uses Version Control System (VCS)",
     "href": "/ICP2017F/lecture/0-version-control-system"
+  } ,
+
+  {
+    "text": "Homework 2: Solutions - Variables, Values, and Types",
+    "href": "/ICP2017F/homework/2-solutions-variables-values-types"
   } ,
 
   {

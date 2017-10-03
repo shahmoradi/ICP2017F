@@ -48,6 +48,18 @@
 
     
     <url>
+        <loc>/ICP2017F/quiz/2-solutions-programming-history</loc>
+    </url>
+    
+    <url>
+        <loc>/ICP2017F/quiz/2-problems-programming-history</loc>
+    </url>
+    
+    <url>
+        <loc>/ICP2017F/homework/2-solutions-variables-values-types</loc>
+    </url>
+    
+    <url>
         <loc>/ICP2017F/lecture/6-matlab-operators-branching</loc>
     </url>
     
