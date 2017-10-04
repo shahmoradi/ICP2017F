@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-03T19:45:31-05:00</updated>
+<updated>2017-10-04T09:02:53-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -963,6 +963,70 @@ ncol =
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/7-matlab-functions-I&quot;&gt;Lecture 7: MATLAB - functions I&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 06, 2017.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Quiz 2: Problems - Programming history, MATLAB variables]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/quiz/2-problems-programming-history-matlab-variables"/>
+  <id>http:/ICP2017F/quiz/2-problems-programming-history-matlab-variables</id>
+  <published>2017-10-04T00:00:00-05:00</published>
+  <updated>2017-10-04T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This quiz aims at testing your general knowledge of programming history and MATLAB arrays. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to &lt;strong&gt;quiz/2/&lt;/strong&gt; folder in your Github project.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;(A) What is the closest programming language to machine code (i.e., binary code)?&lt;br /&gt;
+(B) Does it need interpretation in order to become machine-comprehensible?&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;(A) Name the oldest high-level programming language that is still in active daily usage.&lt;br /&gt;
+(B) Approximately how many decades is it old? ($\pm15$ years is accetasble answer. the decade it was created is also an acceptable answer)&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;(A) Name a second-generation programming language.&lt;br /&gt;
+(B) Which language-generation are Fortran, C, C++, MATLAB?&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;In what decades C, C++, and MATLAB were created, respectively?&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name an ancestor programming language of C.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name a programming language ancestor of C++.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name a programming language ancestor of MATLAB.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Initialized a cell array variable &lt;code&gt;C&lt;/code&gt; of size $2\times2$, then fill its elements like the following figure.&lt;br /&gt;
+&lt;br /&gt;
+    &lt;figure&gt;
+    &lt;img src=&quot;http:/ICP2017F/quiz/2/cellArray.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Now, if you type &lt;code&gt;C{2}&lt;/code&gt; on the MATLAB command line, what do you get? Why do get this value?&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Does MATLAB follow column-wise data storage, or row-wise? Explain what it means? Why does it follow this storage method? (if you recall, we discussed this in class) &lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;How many bytes is a MATLAB integer of type &lt;code&gt;int64&lt;/code&gt;? (if you recall, we discussed this in class)&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;What would happen if you tried to covert a huge integer number that requires MATLAB &lt;code&gt;int64&lt;/code&gt; data type to the MATLAB &lt;code&gt;int32&lt;/code&gt; data type? (if you recall, we discussed this in class)&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/2-problems-programming-history-matlab-variables&quot;&gt;Quiz 2: Problems - Programming history, MATLAB variables&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 04, 2017.&lt;/p&gt;</content>
 </entry>
 
 

@@ -17,6 +17,14 @@
 		} ,
 	
 		{
+		  "title"      : "Quiz 2: Problems - Programming history, MATLAB variables",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/quiz/2-problems-programming-history-matlab-variables",
+		  "date"       : "2017-10-04 00:00:00 -0500",
+		  "shortdate"  : "October 04, 2017"
+		} ,
+	
+		{
 		  "title"      : "Lecture 6: MATLAB - operators, branching, and control statements",
 		  "category"   : "",
 		  "url"        : "/ICP2017F/lecture/6-matlab-operators-branching",

@@ -11,23 +11,23 @@
 -->
 
 <meta charset="utf-8">
-<title>HOMEWORK 2: PROBLEMS - VARIABLES, VALUES, AND TYPES &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
+<title>QUIZ 2: PROBLEMS - PROGRAMMING HISTORY, MATLAB VARIABLES &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
 <meta name="description" content="Introduction to<br>Computer Programming">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/ICP2017F/images/logo.png">
-<meta name="twitter:title" content="Homework 2: Problems - Variables, Values, and Types">
+<meta name="twitter:title" content="Quiz 2: Problems - Programming history, MATLAB variables">
 <meta name="twitter:description" content="Introduction to<br>Computer Programming">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Homework 2: Problems - Variables, Values, and Types">
+<meta property="og:title" content="Quiz 2: Problems - Programming history, MATLAB variables">
 <meta property="og:description" content="Introduction to<br>Computer Programming">
-<meta property="og:url" content="/ICP2017F/homework/2-problems-variables-values-types">
+<meta property="og:url" content="/ICP2017F/quiz/2-problems-programming-history-matlab-variables">
 <meta property="og:site_name" content="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110">
 <meta property="og:image" content="/ICP2017F/images/">
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/ICP2017F/homework/2-problems-variables-values-types">
+<link rel="canonical" href="/ICP2017F/quiz/2-problems-programming-history-matlab-variables">
 <!-- <link href="/ICP2017F/feed.xml" type="application/atom+xml" rel="alternate" title="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110 Feed"> -->
 
 
@@ -133,8 +133,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Homework 2: Problems - Variables, Values, and Types</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-09-18T00:00:00-05:00">18 Sep 2017</time></strong></p>
+                            <h2>Quiz 2: Problems - Programming history, MATLAB variables</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-10-04T00:00:00-05:00">04 Oct 2017</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <p>♣ <strong>Due Date: Monday Oct 2, 2017 9:00 AM</strong>. This homework aims at giving you some experience with MATLAB variables.</p>
+                <p>This quiz aims at testing your general knowledge of programming history and MATLAB arrays. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to <strong>quiz/2/</strong> folder in your Github project.</p>
 
 <p><br /></p>
 
@@ -153,178 +153,56 @@ MathJax.Hub.Queue(function() {
 
 <p><br /></p>
 
-<p><strong>1. </strong> Type the following in the command window and submit the results. Briefy explain what each assignment does.<br />
-<br /></p>
-
-<pre><code class="language-matlab">&gt;&gt; a = 1
-&gt;&gt; b = 'x'
-&gt;&gt; c = true
-&gt;&gt; whos a b c
-&gt;&gt; a == c
-&gt;&gt; a + c
-&gt;&gt; d = [1 2 3 4]
-&gt;&gt; e = ['a' 'b' 'c' 'd']
-&gt;&gt; f = ['abcd']
-&gt;&gt; g = {‘a’ ‘b’ ‘c’ ‘d’}
-&gt;&gt; h = { a b c d}
-&gt;&gt; whos d e f g h
-</code></pre>
-<p><br /></p>
-
-<p><br /></p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<p><strong>2. </strong> What would happen if you go beyond the range for a particular type? For example, the largest integer that can be stored in <strong>int8</strong> is 127, and the smallest integer is -128, so what would happen if we type cast a larger integer to the type <strong>int8</strong>? Smaller integer? Use the built-in functions <code>intmin</code> and <code>intmax</code> to find the largest and smallest integers that can be stored in <strong>int16</strong> and <strong>int32</strong>.</p>
-
-<p><br /></p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<p><strong>3. </strong> Think about what the results would be for the following expressions, and then type them in to the terminal to verify your answers. Briefly explain the results for each one.</p>
-
-<pre><code class="language-matlab">&gt;&gt; 1\2 
-&gt;&gt; 1/2
-&gt;&gt; int8(1/2)
-&gt;&gt; int8(1/3)
-&gt;&gt; -5^2 
-&gt;&gt; (-5) ^ 2 
-&gt;&gt; 10-6/2 
-&gt;&gt; 5*4/2*3
-</code></pre>
-<p><br /></p>
-
-<p><br /></p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<p><strong>4.(a) </strong> Define the following variables:
-<br /></p>
-
-<pre><code class="language-matlab">&gt;&gt; a
-a =
-     1     0
-     2     1
-&gt;&gt; b
-b =
-    -1     2
-     0     1
-&gt;&gt; c
-c =
-     3
-     2
-&gt;&gt; d
-d =
-     5
-</code></pre>
-<p><br /></p>
-
-<p><strong>4.(b) </strong> What is the result of each of the following expressions? Briefly explain what MATLAB is doing for each operation.<br />
-<br /></p>
 <ol>
-  <li><code>a + b</code></li>
-  <li><code>a .* b</code></li>
-  <li><code>a * b</code></li>
-  <li><code>a * c</code></li>
-  <li><code>a + c</code></li>
-  <li><code>a + d</code></li>
-  <li><code>a .* d</code></li>
-  <li><code>a * d</code>
-<br /></li>
+  <li>(A) What is the closest programming language to machine code (i.e., binary code)?<br />
+(B) Does it need interpretation in order to become machine-comprehensible?<br />
+<br /><br /></li>
+  <li>(A) Name the oldest high-level programming language that is still in active daily usage.<br />
+(B) Approximately how many decades is it old? ($\pm15$ years is accetasble answer. the decade it was created is also an acceptable answer)<br />
+<br /><br /></li>
+  <li>(A) Name a second-generation programming language.<br />
+(B) Which language-generation are Fortran, C, C++, MATLAB?<br />
+<br /><br /></li>
+  <li>In what decades C, C++, and MATLAB were created, respectively?<br />
+<br /><br /></li>
+  <li>Name an ancestor programming language of C.<br />
+<br /><br /></li>
+  <li>Name a programming language ancestor of C++.<br />
+<br /><br /></li>
+  <li>Name a programming language ancestor of MATLAB.<br />
+<br /><br /></li>
+  <li>Initialized a cell array variable <code>C</code> of size $2\times2$, then fill its elements like the following figure.<br />
+<br />
+    <figure>
+    <img src="/ICP2017F/quiz/2/cellArray.png" width="500" />
+</figure>
+    <p><br /><br /></p>
+  </li>
+  <li>Now, if you type <code>C{2}</code> on the MATLAB command line, what do you get? Why do get this value?<br />
+<br /><br /></li>
+  <li>Does MATLAB follow column-wise data storage, or row-wise? Explain what it means? Why does it follow this storage method? (if you recall, we discussed this in class) <br />
+<br /><br /></li>
+  <li>How many bytes is a MATLAB integer of type <code>int64</code>? (if you recall, we discussed this in class)<br />
+<br /><br /></li>
+  <li>What would happen if you tried to covert a huge integer number that requires MATLAB <code>int64</code> data type to the MATLAB <code>int32</code> data type? (if you recall, we discussed this in class)<br />
+<br /><br /></li>
 </ol>
 
-<p><br /></p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<p><strong>5. </strong> Provide three different methods of generating the matrix <strong>a</strong>, one method should use the <code>diag()</code> function, one should use the <strong>eye</strong> function, and one should use the <strong>zeros</strong> function.</p>
-<pre><code class="language-matlab">&gt;&gt; a
-a =
-     2     0     0
-     0     2     0
-     0     0     2
-</code></pre>
-<p><br /></p>
-
-<p><br /></p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<p><strong>6. </strong> Download this <a href="../homework/2-problems/script_full_of_errors.m" target="_blank">code</a>. This code is full syntax errors. Fix the errors and submit the corrected code with name <code>script_full_of_errors_fixed.m</code> in your folder for this HW. Explain in front of each corrected MATLAB statement, why the error occurred. Modify the last two variables so that they display,</p>
-<pre><code class="language-matlab">&gt;&gt; Persian
-Persian =
-Persian is a human language
-&gt;&gt; Spanish
-Spanish = 
-    'Spanish '    'is '    ' another'    'language'
-</code></pre>
-<p><br />
-Modify the last line such that for the last line the code displays,</p>
-<pre><code class="language-matlab">Persian is not the same as Spanish
-</code></pre>
-<p><br />
-Explain these results.</p>
-
-<p><br /></p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<p><strong>7. </strong> Use MATLAB help to find out how you can create a new directory named <code>mynewdir</code> from MATLAB command line. Then change the working directory the newly created directory. Then create a MATLAB script in this directory named <code>myscript.m</code> with the following code in it,</p>
-
-<pre><code class="language-matlab">% First create an array from -2*pi to 2:pi
-x = -2*pi:pi/20:2*pi;
-
-% Calculate |sin(x)|
-y = abs(sin(x));
-
-plot(x,y);
-</code></pre>
-<p><br />
-Now on MATLAB command line, run the script by calling its name. What do you get? Save the output as a figure and submit it with your homework.</p>
-
-<p><br /></p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<p><strong>8. </strong> Now change your working directory to the original directory before you created <code>mynewdir</code> directory. Try to run the script <code>myscript</code> you had created again, from MATLAB command line. What do you get? and why?</p>
-
-<p><br /><br /></p>
 
             </div>
         </article>
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 2: Problems - Variables, Values, and Types&quot;%20/ICP2017F/homework/2-problems-variables-values-types%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 2: Problems - Programming history, MATLAB variables&quot;%20/ICP2017F/quiz/2-problems-programming-history-matlab-variables%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/homework/2-problems-variables-values-types"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/quiz/2-problems-programming-history-matlab-variables"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/homework/2-problems-variables-values-types"
+        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/quiz/2-problems-programming-history-matlab-variables"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>
