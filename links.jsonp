@@ -2,6 +2,11 @@
 callback([
 
   {
+    "text": "Quiz 2: Solutions - Programming history, MATLAB variables",
+    "href": "/ICP2017F/quiz/2-solutions-programming-history-matlab-variables"
+  } ,
+
+  {
     "text": "Quiz 2: Problems - Programming history, MATLAB variables",
     "href": "/ICP2017F/quiz/2-problems-programming-history-matlab-variables"
   } ,
