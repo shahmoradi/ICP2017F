@@ -657,7 +657,40 @@ You'
 
 <h3 id="structure-variables">Structure variables</h3>
 
-<p>Structures are arrays with <strong>named fields</strong> that can contain data of varying types and sizes. A structure array is a data type that groups related data using data containers called fields. Each field can contain any type of data. You can access data in a structure using <strong>dot notation</strong> of the form <code>structName.fieldName</code>. Here is <a href="https://www.mathworks.com/videos/introducing-structures-and-cell-arrays-101508.html" target="_blank">MATLAB video</a> about cell and structure arrays. To create a structure, you have to use function <code>struct</code>,</p>
+<p>Let’s first review the meanings of Arrays and Cells:</p>
+
+<ul>
+  <li>An <strong>array</strong> is a MATLAB data type in which there is a name for the whole data object, and the individual elements in the array can be accessed only through their indices, which are integer numbers. For example,
+    <pre><code class="language-matlab">&gt;&gt; arr = [1,2,3,4]
+arr =
+   1     2     3     4
+</code></pre>
+    <p><br />
+But, notice that <strong>all the elements in a MATLAB array must be of the same data type</strong>. For example, you cannot combine numeric and string data types,</p>
+    <pre><code class="language-matlab">&gt;&gt; arr = [1,'Amir',3,4]
+arr =
+Amir
+</code></pre>
+    <p><br /></p>
+  </li>
+  <li>By contrast, a <strong>cell array</strong> is a MATLAB data type in which again, there is a name for the whole data object, and the individual elements in the array can be accessed only via their indices, but unlike regular arrays <strong>cell elements do not need to be all of the same type</strong>,
+    <pre><code class="language-matlab">&gt;&gt; arr = {1,'Amir',3,4}
+arr = 
+  [1]    'Amir'    [3]    [4]
+</code></pre>
+    <p><br /></p>
+  </li>
+  <li>There is yet another data type in MATLAB called <strong>structure</strong>, which has also counterparts in most other programming lansuages such as Fortra, C, C++. This is the topic of this section below.<br />
+<br /></li>
+</ul>
+
+<p>A <strong>structure</strong> is MATLAB data type in which the whole object has a name, just like regular and cell arrays. However, unlike cells and regular arrays, the elements of a structure object can be accessed by their assigned <strong>field names</strong> instead of a numarical index, as in numeric arrays and cells.</p>
+
+<p>Like cell arrays, structures can contain data of varying types and sizes. A structure object is a MATLAB data type that groups related data using data containers called <strong>fields</strong> (instead of cells as in cell arrays). <strong>Each field can contain any type of data</strong>. You can access data in a structure using <strong>dot notation</strong> of the form <code>structName.fieldName</code>. Here is <a href="https://www.mathworks.com/videos/introducing-structures-and-cell-arrays-101508.html" target="_blank">MATLAB video</a> about cell and structure arrays.</p>
+
+<h4 id="creating-structures">Creating structures</h4>
+
+<p>To create a structure, you can use function <code>struct</code>,</p>
 
 <pre><code class="language-matlab">&gt;&gt; field = 'f';
 value = {'some text';
@@ -670,13 +703,22 @@ s =
 </code></pre>
 <p><br />
 You can also create empty structure (which can be manipulated later),</p>
-
 <pre><code class="language-matlab">&gt;&gt; s = struct()
 s = 
 struct with no fields.
 </code></pre>
-<p><br />
-There is a along list of functions that can manipulate structures. A list of them is available on MATLAB website <a href="https://www.mathworks.com/help/matlab/structures.html" target="_blank">here</a>.</p>
+<p><br /></p>
+
+<p>One can also create structure objects by simply using the dot notation,</p>
+<pre><code class="language-matlab">&gt;&gt; amir.univ = 'UT Austin'
+amir = 
+    univ: 'UT Austin'
+</code></pre>
+<p><br /></p>
+
+<p>Structure objects described above are examples of <strong>scalar objects</strong> meaning that there is only one single structure object with a set of fields. However, MATLAB also provides</p>
+
+<p>There is a along list of functions that can manipulate structures. A list of them is available on MATLAB website <a href="https://www.mathworks.com/help/matlab/structures.html" target="_blank">here</a>.</p>
 
 <h3 id="matlab-tables">MATLAB tables</h3>
 
@@ -926,8 +968,8 @@ Since slicing the cell array by <code>{}</code> returns a comma-separated list, 
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 10 / 04</section></br> -->
-         <section>Last updated Wednesday, 04 Oct 2017 at 09:41 AM CST</section></br>
+         <!-- <section>Last updated 2017 / 10 / 06</section></br> -->
+         <section>Last updated Friday, 06 Oct 2017 at 09:10 AM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>

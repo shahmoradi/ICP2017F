@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-04T09:41:05-05:00</updated>
+<updated>2017-10-06T09:10:15-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -2678,7 +2678,40 @@ You'
 
 &lt;h3 id=&quot;structure-variables&quot;&gt;Structure variables&lt;/h3&gt;
 
-&lt;p&gt;Structures are arrays with &lt;strong&gt;named fields&lt;/strong&gt; that can contain data of varying types and sizes. A structure array is a data type that groups related data using data containers called fields. Each field can contain any type of data. You can access data in a structure using &lt;strong&gt;dot notation&lt;/strong&gt; of the form &lt;code&gt;structName.fieldName&lt;/code&gt;. Here is &lt;a href=&quot;https://www.mathworks.com/videos/introducing-structures-and-cell-arrays-101508.html&quot; target=&quot;_blank&quot;&gt;MATLAB video&lt;/a&gt; about cell and structure arrays. To create a structure, you have to use function &lt;code&gt;struct&lt;/code&gt;,&lt;/p&gt;
+&lt;p&gt;Let’s first review the meanings of Arrays and Cells:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An &lt;strong&gt;array&lt;/strong&gt; is a MATLAB data type in which there is a name for the whole data object, and the individual elements in the array can be accessed only through their indices, which are integer numbers. For example,
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; arr = [1,2,3,4]
+arr =
+   1     2     3     4
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;
+But, notice that &lt;strong&gt;all the elements in a MATLAB array must be of the same data type&lt;/strong&gt;. For example, you cannot combine numeric and string data types,&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; arr = [1,'Amir',3,4]
+arr =
+Amir
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;By contrast, a &lt;strong&gt;cell array&lt;/strong&gt; is a MATLAB data type in which again, there is a name for the whole data object, and the individual elements in the array can be accessed only via their indices, but unlike regular arrays &lt;strong&gt;cell elements do not need to be all of the same type&lt;/strong&gt;,
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; arr = {1,'Amir',3,4}
+arr = 
+  [1]    'Amir'    [3]    [4]
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;There is yet another data type in MATLAB called &lt;strong&gt;structure&lt;/strong&gt;, which has also counterparts in most other programming lansuages such as Fortra, C, C++. This is the topic of this section below.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A &lt;strong&gt;structure&lt;/strong&gt; is MATLAB data type in which the whole object has a name, just like regular and cell arrays. However, unlike cells and regular arrays, the elements of a structure object can be accessed by their assigned &lt;strong&gt;field names&lt;/strong&gt; instead of a numarical index, as in numeric arrays and cells.&lt;/p&gt;
+
+&lt;p&gt;Like cell arrays, structures can contain data of varying types and sizes. A structure object is a MATLAB data type that groups related data using data containers called &lt;strong&gt;fields&lt;/strong&gt; (instead of cells as in cell arrays). &lt;strong&gt;Each field can contain any type of data&lt;/strong&gt;. You can access data in a structure using &lt;strong&gt;dot notation&lt;/strong&gt; of the form &lt;code&gt;structName.fieldName&lt;/code&gt;. Here is &lt;a href=&quot;https://www.mathworks.com/videos/introducing-structures-and-cell-arrays-101508.html&quot; target=&quot;_blank&quot;&gt;MATLAB video&lt;/a&gt; about cell and structure arrays.&lt;/p&gt;
+
+&lt;h4 id=&quot;creating-structures&quot;&gt;Creating structures&lt;/h4&gt;
+
+&lt;p&gt;To create a structure, you can use function &lt;code&gt;struct&lt;/code&gt;,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; field = 'f';
 value = {'some text';
@@ -2691,13 +2724,22 @@ s =
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
 You can also create empty structure (which can be manipulated later),&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; s = struct()
 s = 
 struct with no fields.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-There is a along list of functions that can manipulate structures. A list of them is available on MATLAB website &lt;a href=&quot;https://www.mathworks.com/help/matlab/structures.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;One can also create structure objects by simply using the dot notation,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; amir.univ = 'UT Austin'
+amir = 
+    univ: 'UT Austin'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Structure objects described above are examples of &lt;strong&gt;scalar objects&lt;/strong&gt; meaning that there is only one single structure object with a set of fields. However, MATLAB also provides&lt;/p&gt;
+
+&lt;p&gt;There is a along list of functions that can manipulate structures. A list of them is available on MATLAB website &lt;a href=&quot;https://www.mathworks.com/help/matlab/structures.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;matlab-tables&quot;&gt;MATLAB tables&lt;/h3&gt;
 
