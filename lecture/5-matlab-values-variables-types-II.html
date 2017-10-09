@@ -712,16 +712,57 @@ You can also create empty structure (which can be manipulated later),</p>
 s = 
 struct with no fields.
 </code></pre>
-<p><br /></p>
-
-<p>One can also create structure objects by simply using the dot notation,</p>
+<p><br />
+One can also create structure objects by simply using the dot notation,</p>
 <pre><code class="language-matlab">&gt;&gt; amir.univ = 'UT Austin'
 amir = 
     univ: 'UT Austin'
 </code></pre>
-<p><br /></p>
+<p><br />
+Structure objects described above are examples of <strong>scalar objects</strong> meaning that there is only one single structure object with a set of fields. However, MATLAB also provides ways of creating <strong>structure arrays</strong>. You might think of structure array, as a cell array, whose columns are indexed by character names (field names) instead of integer indices, and whose rows represent the elements of the structure array. For example,</p>
+<pre><code class="language-matlab">&gt;&gt; student.name = 'Marshall'
+student = 
+    name: 'Marshall'
+&gt;&gt; student.grade = 4.0
+student = 
+     name: 'Marshall'
+    grade: 4
+&gt;&gt; student
+student = 
+     name: 'Marshall'
+    grade: 4
+</code></pre>
+<p><br />
+would create a scalar structure <code>student</code> with two fields. However, as soon as you add another name to this structure, using array notation like the following,</p>
+<pre><code class="language-matlab">&gt;&gt; student(2).name = 'vivek'
+student = 
+1x2 struct array with fields:
+    name
+    grade
+</code></pre>
+<p><br />
+the scalar structure <code>student</code> is automatically converted to a <strong>structure array</strong>, that has two rows indexed by integer numbers, and each row has two fields <code>name</code> and <code>grade</code>. Note that, even though we added only the <code>name</code> field for the second structure element, the other field name is also automatically created for the second structure element, although with no content (the content of the field <code>grade</code> for the second structure element is empty). There is even no need to add the elements in increasing order. For example,</p>
+<pre><code class="language-matlab">&gt;&gt; student(4).name = 'travis'
+student = 
+1x4 struct array with fields:
+    name
+    grade
+&gt;&gt; whos student
+  Name         Size            Bytes  Class     Attributes
 
-<p>Structure objects described above are examples of <strong>scalar objects</strong> meaning that there is only one single structure object with a set of fields. However, MATLAB also provides ways of creating</p>
+  student      1x4               654  struct          
+</code></pre>
+<p><br />
+will automatically add (initialize) the third structure element, even though we did not ask for it.</p>
+
+<figure>
+	<img src="/ICP2017F/lecture/5/structure.png" width="600" />
+    <figcaption style="text-align:center">
+        The content of the structure array <code>student</code> in MATLAB workspace. Note that the rows correspond to the structure elements, and the columns correspond to the structure fields, which are the same for all structure elements. 
+    </figcaption>
+</figure>
+
+<p>So, if there is so much similarity between MATLAB <strong>cell arrays</strong> and <strong>structure arrays</strong>, then what the advantage of defining or using structure arrays instead of cell arrays? The main advantage is that, in the case of structures, the content of the structure element is identified by set of tags (labels) called <strong>field names</strong>. This becomes very helpful in understanding the content of complex data, when they are written as structures instead of cell arrays.</p>
 
 <p>There is a along list of functions that can manipulate structures. A list of them is available on MATLAB website <a href="https://www.mathworks.com/help/matlab/structures.html" target="_blank">here</a>.</p>
 
@@ -974,7 +1015,7 @@ Since slicing the cell array by <code>{}</code> returns a comma-separated list, 
     <footer class="notepad-site-footer">
     <div class="copyright">
          <!-- <section>Last updated 2017 / 10 / 08</section></br> -->
-         <section>Last updated Sunday, 08 Oct 2017 at 07:45 PM CST</section></br>
+         <section>Last updated Sunday, 08 Oct 2017 at 08:12 PM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>

@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-08T19:45:14-05:00</updated>
+<updated>2017-10-08T20:12:57-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -2996,16 +2996,57 @@ You can also create empty structure (which can be manipulated later),&lt;/p&gt;
 s = 
 struct with no fields.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;One can also create structure objects by simply using the dot notation,&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+One can also create structure objects by simply using the dot notation,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; amir.univ = 'UT Austin'
 amir = 
     univ: 'UT Austin'
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+Structure objects described above are examples of &lt;strong&gt;scalar objects&lt;/strong&gt; meaning that there is only one single structure object with a set of fields. However, MATLAB also provides ways of creating &lt;strong&gt;structure arrays&lt;/strong&gt;. You might think of structure array, as a cell array, whose columns are indexed by character names (field names) instead of integer indices, and whose rows represent the elements of the structure array. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; student.name = 'Marshall'
+student = 
+    name: 'Marshall'
+&amp;gt;&amp;gt; student.grade = 4.0
+student = 
+     name: 'Marshall'
+    grade: 4
+&amp;gt;&amp;gt; student
+student = 
+     name: 'Marshall'
+    grade: 4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+would create a scalar structure &lt;code&gt;student&lt;/code&gt; with two fields. However, as soon as you add another name to this structure, using array notation like the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; student(2).name = 'vivek'
+student = 
+1x2 struct array with fields:
+    name
+    grade
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+the scalar structure &lt;code&gt;student&lt;/code&gt; is automatically converted to a &lt;strong&gt;structure array&lt;/strong&gt;, that has two rows indexed by integer numbers, and each row has two fields &lt;code&gt;name&lt;/code&gt; and &lt;code&gt;grade&lt;/code&gt;. Note that, even though we added only the &lt;code&gt;name&lt;/code&gt; field for the second structure element, the other field name is also automatically created for the second structure element, although with no content (the content of the field &lt;code&gt;grade&lt;/code&gt; for the second structure element is empty). There is even no need to add the elements in increasing order. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; student(4).name = 'travis'
+student = 
+1x4 struct array with fields:
+    name
+    grade
+&amp;gt;&amp;gt; whos student
+  Name         Size            Bytes  Class     Attributes
 
-&lt;p&gt;Structure objects described above are examples of &lt;strong&gt;scalar objects&lt;/strong&gt; meaning that there is only one single structure object with a set of fields. However, MATLAB also provides ways of creating&lt;/p&gt;
+  student      1x4               654  struct          
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+will automatically add (initialize) the third structure element, even though we did not ask for it.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/5/structure.png&quot; width=&quot;600&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        The content of the structure array &lt;code&gt;student&lt;/code&gt; in MATLAB workspace. Note that the rows correspond to the structure elements, and the columns correspond to the structure fields, which are the same for all structure elements. 
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So, if there is so much similarity between MATLAB &lt;strong&gt;cell arrays&lt;/strong&gt; and &lt;strong&gt;structure arrays&lt;/strong&gt;, then what the advantage of defining or using structure arrays instead of cell arrays? The main advantage is that, in the case of structures, the content of the structure element is identified by set of tags (labels) called &lt;strong&gt;field names&lt;/strong&gt;. This becomes very helpful in understanding the content of complex data, when they are written as structures instead of cell arrays.&lt;/p&gt;
 
 &lt;p&gt;There is a along list of functions that can manipulate structures. A list of them is available on MATLAB website &lt;a href=&quot;https://www.mathworks.com/help/matlab/structures.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
