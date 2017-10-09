@@ -344,7 +344,7 @@ ans =
 
 <p>You can learn more about operator precedence in <a href="https://www.mathworks.com/help/matlab/matlab_prog/operator-precedence.html" target="_blank">MATLAB manual</a>.</p>
 
-<h2 id="branching-in-python">Branching in Python</h2>
+<h2 id="branching-in-matlab">Branching in MATLAB</h2>
 
 <p>The normal flow of control in procedural programming paradigm is in general, <em>sequential</em>. So is the flow of control in MATLAB.</p>
 
@@ -388,11 +388,9 @@ Square root = 0.70711+0.70711i
 
 <p>Note in the above example, how MATLAB treats complex variables. More information on operators that can be used to construct or combine logical conditions for if-statements can be found <a href="https://www.mathworks.com/help/matlab/logical-operations.html" target="_blank">here</a>.</p>
 
-<h2 id="exercise">Exercise</h2>
+<h3 id="exercise">Exercise</h3>
 
-<ol>
-  <li>write a MATLAB script that takes two matrices as input and determines whether they have equal size.</li>
-</ol>
+<p><strong>1. </strong> write a MATLAB script that takes two predefined matrices <code>A</code> and <code>B</code> as input and determines whether they have equal size. If so, then it concatenates the two matrices in a column-wise manner.</p>
 
 <!--
 
@@ -409,15 +407,13 @@ end
 
 -->
 
-<ol>
-  <li>Write a script that checks if your script exists!</li>
-</ol>
+<p><strong>2. </strong> Write a script that checks if it (the script itself) exists!</p>
 
 <!--
 
 **answer**
 ```matlab
-if exist('myfunction.m','file')
+if exist('myScript.m','file')
     disp('Your file exists! Did you expect otherwise?')
 else
     disp('Your file does not exist! Then perhaps you don''t exist either??')
@@ -427,9 +423,7 @@ end
 
 -->
 
-<ol>
-  <li>Write a script that takes an input number and calculates the following function,</li>
-</ol>
+<p><strong>3. </strong> Write a script that takes an input predefined number $x$ and calculates the following function,</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{equation*}
@@ -565,15 +559,19 @@ end
 </code></pre>
 
 <pre><code class="language-matlab">if ''
+else
     disp('An empty string is always converted to boolean false, because it is considered an empty logical vector.')
 end
 </code></pre>
-<pre><code>An empty string is converted to boolean false
+<pre><code>An empty string is always converted to boolean false, because it is considered an empty logical vector.
 </code></pre>
 
 <pre><code class="language-matlab">if []
+else
     disp('An empty vector is always converted to boolean false, because it is considered an empty logical vector.')
 end
+</code></pre>
+<pre><code>An empty vector is always converted to boolean false, because it is considered an empty logical vector.
 </code></pre>
 
 <p>But note that conversion from cell to logical is not possible in MATLAB:</p>
@@ -751,8 +749,8 @@ For more information on each individual function, see <a href="https://www.mathw
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 10 / 08</section></br> -->
-         <section>Last updated Sunday, 08 Oct 2017 at 08:12 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 10 / 09</section></br> -->
+         <section>Last updated Monday, 09 Oct 2017 at 08:48 AM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>
