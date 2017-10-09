@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-09T10:44:54-05:00</updated>
+<updated>2017-10-09T11:38:31-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -4154,14 +4154,12 @@ All of MATLAB’s built-in functions written in MATLAB are documented this way.&
 
 &lt;p&gt;The following figure illustrates the grade distribution for this quiz.&lt;/p&gt;
 
-&lt;!--
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/quiz/gradeDist/gradeHistQuiz2.png&quot; width=&quot;700&quot;&gt;
+	&lt;img src=&quot;http:/ICP2017F/quiz/gradeDist/gradeHistQuiz1.png&quot; width=&quot;700&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Maximum possible points is 100.
+        Maximum possible points is 1.
     &lt;/figcaption&gt;
 &lt;/figure&gt;
---&gt;
 
 &lt;hr /&gt;
 &lt;hr /&gt;
@@ -4795,16 +4793,14 @@ Now on MATLAB command line, run the script by calling its name. What do you get?
   
     &lt;p&gt;This is the solution to &lt;a href=&quot;1-problems-version-control-using-git-github.html&quot; target=&quot;_blank&quot;&gt;Homework 1: Problems - Version Control Using Git and Github&lt;/a&gt;.&lt;/p&gt;
 
-&lt;!--
-The following figure illustrates the grade distribution for this homework.  
+&lt;p&gt;The following figure illustrates the grade distribution for this homework.&lt;/p&gt;
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/homework/gradeDist/gradeHistHomework1.png&quot; width=&quot;700&quot;&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/gradeDist/gradeHistHomework1.png&quot; width=&quot;700&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Maximum possible points, excluding bonus question, is 100.&lt;br&gt;
-        Maximum possible points, including bonus question, is 200.
+        Maximum possible points, excluding bonus questions, is 1.&lt;br /&gt;
+        Maximum possible points, including bonus questions, is 1.5.
     &lt;/figcaption&gt;
 &lt;/figure&gt;
---&gt;
 
 &lt;hr /&gt;
 &lt;hr /&gt;
