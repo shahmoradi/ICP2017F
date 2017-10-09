@@ -134,7 +134,7 @@ MathJax.Hub.Queue(function() {
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
                             <h2>Lecture 6: MATLAB - operators, branching, and control statements</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-10-04T00:00:00-05:00">04 Oct 2017</time></strong></p>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-10-09T00:00:00-05:00">09 Oct 2017</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -388,6 +388,74 @@ Square root = 0.70711+0.70711i
 
 <p>Note in the above example, how MATLAB treats complex variables. More information on operators that can be used to construct or combine logical conditions for if-statements can be found <a href="https://www.mathworks.com/help/matlab/logical-operations.html" target="_blank">here</a>.</p>
 
+<h2 id="exercise">Exercise</h2>
+
+<ol>
+  <li>write a MATLAB script that takes two matrices as input and determines whether they have equal size.</li>
+</ol>
+
+<!--
+
+**answer**
+```matlab
+if isequal(size(A),size(B))
+   C = [A; B];
+else
+   disp('A and B are not the same size.')
+   C = [];
+end
+```
+<br>
+
+-->
+
+<ol>
+  <li>Write a script that checks if your script exists!</li>
+</ol>
+
+<!--
+
+**answer**
+```matlab
+if exist('myfunction.m','file')
+    disp('Your file exists! Did you expect otherwise?')
+else
+    disp('Your file does not exist! Then perhaps you don''t exist either??')
+end
+```
+<br>
+
+-->
+
+<ol>
+  <li>Write a script that takes an input number and calculates the following function,</li>
+</ol>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{equation*}
+y =
+\begin{cases}
+    x & \text{for}~~~-1<=x<=1 \\
+    x^2 & \text{otherwise} \\
+\end{cases}
+\end{equation*} %]]></script>
+
+<!--
+
+**answer**  
+```matlab
+x = input('input the value of x: ')
+if x >= -1 && x <= 1
+    y = x
+else
+    y = x^2
+end
+disp(['y(x=',num2str(x),') = ',num2str(y)])
+```
+<br>
+
+-->
+
 <h3 id="matlab-switch-case">MATLAB switch-case</h3>
 
 <p>Sometimes we may have many if statements which all use conditions based on the same variable. It is not incorrect to use if statements in such cases, but it can lead to a large number of consecutive if statements in our code, making it harder to read and more prone to errors. In this case, it is preferable to use a switch statement. The switch statement offers an easy way of writing code where the same variable needs to be checked against a number of different values.</p>
@@ -437,6 +505,7 @@ The input day number corresponds to Weekend.
 </code></pre>
 
 <h3 id="non-boolean-conditions-in-if-statements">Non-boolean conditions in if-statements</h3>
+
 <p>There is a rather interesting feature of conditions for if-statements in MATLAB (also in Python language), that allows the programmer to use a non-boolean variable or non-boolean value type directly in place of the condition in if-statement. What really happens here is that, MATLAB interpreter converts the non-boolean type to a boolean value, when it occurs in place of an if-statement condition.</p>
 <pre><code class="language-matlab">if 5.6
     disp('The condition in this if statement is automatically converted from float to boolean')
@@ -612,52 +681,6 @@ Table of MATLAB's <i>is-functions</i> and description of their functionality.
 <p><br />
 For more information on each individual function, see <a href="https://www.mathworks.com/help/matlab/ref/is.html" target="_blank">MATLAB’s use manual</a>.</p>
 
-<h2 id="exercise">Exercise</h2>
-
-<ol>
-  <li>write a MATLAB script that takes two matrices as input and determines whether they have equal size.<br />
-<strong>answer</strong>
-    <pre><code class="language-matlab">if isequal(size(A),size(B))
-C = [A; B];
-else
-disp('A and B are not the same size.')
-C = [];
-end
-</code></pre>
-    <p><br /></p>
-  </li>
-  <li>Write a script that checks if your script exists!<br />
-<strong>answer</strong>
-    <pre><code class="language-matlab">if exist('myfunction.m','file')
- disp('Your file exists! Did you expect otherwise?')
-else
- disp('Your file does not exist! Then perhaps you don''t exist either??')
-end
-</code></pre>
-    <p><br /></p>
-  </li>
-  <li>Write a script that takes an input number and calculates the following function,</li>
-</ol>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{equation*}
-y =
-\begin{cases}
-    x & \text{for}~~~-1<=x<=1 \\
-    x^2 & \text{otherwise} \\
-\end{cases}
-\end{equation*} %]]></script>
-
-<p><strong>answer</strong></p>
-<pre><code class="language-matlab">x = input('input the value of x: ')
-if x &gt;= -1 &amp;&amp; x &lt;= 1
-    y = x
-else
-    y = x^2
-end
-disp(['y(x=',num2str(x),') = ',num2str(y)])
-</code></pre>
-
 <p><br /><br /></p>
 
             </div>
@@ -728,8 +751,8 @@ disp(['y(x=',num2str(x),') = ',num2str(y)])
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 10 / 06</section></br> -->
-         <section>Last updated Friday, 06 Oct 2017 at 09:11 AM CST</section></br>
+         <!-- <section>Last updated 2017 / 10 / 08</section></br> -->
+         <section>Last updated Sunday, 08 Oct 2017 at 07:42 PM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>

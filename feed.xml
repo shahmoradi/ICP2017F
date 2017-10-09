@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-06T09:11:08-05:00</updated>
+<updated>2017-10-08T19:42:46-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -20,8 +20,8 @@
   <title type="html"><![CDATA[Lecture 8-9: MATLAB - functions II & III]]></title>
   <link rel="alternate" type="text/html" href="http:/ICP2017F/lecture/8-9-matlab-functions-II-III"/>
   <id>http:/ICP2017F/lecture/8-9-matlab-functions-II-III</id>
-  <published>2017-10-09T00:00:00-05:00</published>
-  <updated>2017-10-09T00:00:00-05:00</updated>
+  <published>2017-10-13T00:00:00-05:00</published>
+  <updated>2017-10-13T00:00:00-05:00</updated>
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
@@ -686,7 +686,7 @@ To prevent clearing persistent variables, lock the function file using mlock.&lt
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/8-9-matlab-functions-II-III&quot;&gt;Lecture 8-9: MATLAB - functions II & III&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 09, 2017.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/8-9-matlab-functions-II-III&quot;&gt;Lecture 8-9: MATLAB - functions II & III&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 13, 2017.&lt;/p&gt;</content>
 </entry>
 
 
@@ -694,8 +694,8 @@ To prevent clearing persistent variables, lock the function file using mlock.&lt
   <title type="html"><![CDATA[Lecture 7: MATLAB - functions I]]></title>
   <link rel="alternate" type="text/html" href="http:/ICP2017F/lecture/7-matlab-functions-I"/>
   <id>http:/ICP2017F/lecture/7-matlab-functions-I</id>
-  <published>2017-10-06T00:00:00-05:00</published>
-  <updated>2017-10-06T00:00:00-05:00</updated>
+  <published>2017-10-11T00:00:00-05:00</published>
+  <updated>2017-10-11T00:00:00-05:00</updated>
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
@@ -962,205 +962,7 @@ ncol =
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/7-matlab-functions-I&quot;&gt;Lecture 7: MATLAB - functions I&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 06, 2017.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Quiz 2: Solutions - Programming history, MATLAB variables]]></title>
-  <link rel="alternate" type="text/html" href="http:/ICP2017F/quiz/2-solutions-programming-history-matlab-variables"/>
-  <id>http:/ICP2017F/quiz/2-solutions-programming-history-matlab-variables</id>
-  <published>2017-10-04T00:00:00-05:00</published>
-  <updated>2017-10-04T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;This is the solution to &lt;a href=&quot;2-problems-programming-history-matlab-variables.html&quot; target=&quot;_blank&quot;&gt;Quiz 2: Problems - Programming history, MATLAB variables&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--
-The following figure illustrates the grade distribution for this quiz.  
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/quiz/gradeDist/gradeHistQuiz1.png&quot; width=&quot;700&quot;&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Maximum possible points is 100.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
---&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;(A) What is the closest programming language to machine code (i.e., binary code)?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Assembly&lt;br /&gt;
-(B) Does it need interpretation in order to become machine-comprehensible?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Yes. An &lt;em&gt;Assembler&lt;/em&gt; interprets the program for the machine.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;(A) Name the oldest high-level programming language that is still in active daily usage.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Fortran&lt;br /&gt;
-(B) Approximately how many decades is it old? ($\pm15$ years is accetasble answer. the decade it was created is also an acceptable answer)&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-in 1950s&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;(A) Name a second-generation programming language.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Assembly  &lt;br /&gt;
-(B) Which language-generation are Fortran, C, C++, MATLAB?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-third, third, third, fourth&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;In what decades C, C++, and MATLAB were created, respectively?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-1970s, 1980s, 1980s&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name an ancestor programming language of C.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-B&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name a programming language ancestor of C++.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-C, Simula&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name a programming language ancestor of MATLAB.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Fortran&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Initialized a cell array variable &lt;code&gt;C&lt;/code&gt; of size $2\times2$, then fill its elements like the following figure.&lt;br /&gt;
-&lt;br /&gt;
-    &lt;figure&gt;
-    &lt;img src=&quot;http:/ICP2017F/quiz/2/cellArray.png&quot; width=&quot;500&quot; /&gt;
-&lt;/figure&gt;
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; C = cell(2,2)
-&amp;gt;&amp;gt; C{1,1} = [1,3,-7;2,0,6;0,5,1];
-&amp;gt;&amp;gt; C{1,2} = 'This is a text string.';
-&amp;gt;&amp;gt; C{2,1} = [];
-&amp;gt;&amp;gt; C{2,2} = [3+4i,-5;-10i,3-4i];
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; C
-C = 
-[3x3 double]    'This is a text string.'
-          []                [2x2 double]
-&amp;gt;&amp;gt; C{1,1}
-ans =
-    1     3    -7
-    2     0     6
-    0     5     1
-&amp;gt;&amp;gt; C{2,2}
-ans =
-    3.0000 + 4.0000i  -5.0000 + 0.0000i
-    0.0000 -10.0000i   3.0000 - 4.0000i
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Now, if you type &lt;code&gt;C{2}&lt;/code&gt; on the MATLAB command line, what do you get? Why do get this value?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-You will get the value for the cell element $(2,1)$. This is happens, because as we discussed in class, MATLAB is column-wise language.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Does MATLAB follow column-wise data storage, or row-wise? Explain what it means? Why does it follow this storage method? (if you recall, we discussed this in class) &lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-MATLAB stores data in a column-major (columnwise) numbering scheme, which is how Fortran stores matrices. MATLAB uses this convention because it was originally written in Fortran. MATLAB internally stores data elements from the first column first, then data elements from the second column second, and so on, through the last column.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;How many bytes is a MATLAB integer of type &lt;code&gt;int64&lt;/code&gt;? (if you recall, we discussed this in class)&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-8 bytes.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;What would happen if you tried to covert a huge integer number that requires MATLAB &lt;code&gt;int64&lt;/code&gt; data type to the MATLAB &lt;code&gt;int32&lt;/code&gt; data type? (if you recall, we discussed this in class)&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-The huge number is converted to the maximum number that can be represented by &lt;code&gt;int32&lt;/code&gt; data type.
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; intmax('int32')
-ans =
-    2147483647
-&amp;gt;&amp;gt; intmax('int64')
-ans =
-    9223372036854775807
-&amp;gt;&amp;gt; int32(intmax('int64'))
-ans =
-    2147483647
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;This is a language-specific rule. In other programming languages, the number may be converted to infinity, if it is bigger than the maximum number that can be represented by the requested integer type.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/2-solutions-programming-history-matlab-variables&quot;&gt;Quiz 2: Solutions - Programming history, MATLAB variables&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 04, 2017.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Quiz 2: Problems - Programming history, MATLAB variables]]></title>
-  <link rel="alternate" type="text/html" href="http:/ICP2017F/quiz/2-problems-programming-history-matlab-variables"/>
-  <id>http:/ICP2017F/quiz/2-problems-programming-history-matlab-variables</id>
-  <published>2017-10-04T00:00:00-05:00</published>
-  <updated>2017-10-04T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;This quiz aims at testing your general knowledge of programming history and MATLAB arrays. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to &lt;strong&gt;quiz/2/&lt;/strong&gt; folder in your Github project.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;(A) What is the closest programming language to machine code (i.e., binary code)?&lt;br /&gt;
-(B) Does it need interpretation in order to become machine-comprehensible?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;(A) Name the oldest high-level programming language that is still in active daily usage.&lt;br /&gt;
-(B) Approximately how many decades is it old? ($\pm15$ years is accetasble answer. the decade it was created is also an acceptable answer)&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;(A) Name a second-generation programming language.&lt;br /&gt;
-(B) Which language-generation are Fortran, C, C++, MATLAB?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;In what decades C, C++, and MATLAB were created, respectively?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name an ancestor programming language of C.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name a programming language ancestor of C++.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name a programming language ancestor of MATLAB.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Initialized a cell array variable &lt;code&gt;C&lt;/code&gt; of size $2\times2$, then fill its elements like the following figure.&lt;br /&gt;
-&lt;br /&gt;
-    &lt;figure&gt;
-    &lt;img src=&quot;http:/ICP2017F/quiz/2/cellArray.png&quot; width=&quot;500&quot; /&gt;
-&lt;/figure&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Now, if you type &lt;code&gt;C{2}&lt;/code&gt; on the MATLAB command line, what do you get? Why do get this value?&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Does MATLAB follow column-wise data storage, or row-wise? Explain what it means? Why does it follow this storage method? (if you recall, we discussed this in class) &lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;How many bytes is a MATLAB integer of type &lt;code&gt;int64&lt;/code&gt;? (if you recall, we discussed this in class)&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;What would happen if you tried to covert a huge integer number that requires MATLAB &lt;code&gt;int64&lt;/code&gt; data type to the MATLAB &lt;code&gt;int32&lt;/code&gt; data type? (if you recall, we discussed this in class)&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/2-problems-programming-history-matlab-variables&quot;&gt;Quiz 2: Problems - Programming history, MATLAB variables&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 04, 2017.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/7-matlab-functions-I&quot;&gt;Lecture 7: MATLAB - functions I&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 11, 2017.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1168,8 +970,8 @@ ans =
   <title type="html"><![CDATA[Lecture 6: MATLAB - operators, branching, and control statements]]></title>
   <link rel="alternate" type="text/html" href="http:/ICP2017F/lecture/6-matlab-operators-branching"/>
   <id>http:/ICP2017F/lecture/6-matlab-operators-branching</id>
-  <published>2017-10-04T00:00:00-05:00</published>
-  <updated>2017-10-04T00:00:00-05:00</updated>
+  <published>2017-10-09T00:00:00-05:00</published>
+  <updated>2017-10-09T00:00:00-05:00</updated>
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
@@ -1422,6 +1224,74 @@ Square root = 0.70711+0.70711i
 
 &lt;p&gt;Note in the above example, how MATLAB treats complex variables. More information on operators that can be used to construct or combine logical conditions for if-statements can be found &lt;a href=&quot;https://www.mathworks.com/help/matlab/logical-operations.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
+&lt;h2 id=&quot;exercise&quot;&gt;Exercise&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;write a MATLAB script that takes two matrices as input and determines whether they have equal size.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--
+
+**answer**
+```matlab
+if isequal(size(A),size(B))
+   C = [A; B];
+else
+   disp('A and B are not the same size.')
+   C = [];
+end
+```
+&lt;br&gt;
+
+--&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Write a script that checks if your script exists!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--
+
+**answer**
+```matlab
+if exist('myfunction.m','file')
+    disp('Your file exists! Did you expect otherwise?')
+else
+    disp('Your file does not exist! Then perhaps you don''t exist either??')
+end
+```
+&lt;br&gt;
+
+--&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Write a script that takes an input number and calculates the following function,&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{equation*}
+y =
+\begin{cases}
+    x &amp; \text{for}~~~-1&lt;=x&lt;=1 \\
+    x^2 &amp; \text{otherwise} \\
+\end{cases}
+\end{equation*} %]]&gt;&lt;/script&gt;
+
+&lt;!--
+
+**answer**  
+```matlab
+x = input('input the value of x: ')
+if x &gt;= -1 &amp;&amp; x &lt;= 1
+    y = x
+else
+    y = x^2
+end
+disp(['y(x=',num2str(x),') = ',num2str(y)])
+```
+&lt;br&gt;
+
+--&gt;
+
 &lt;h3 id=&quot;matlab-switch-case&quot;&gt;MATLAB switch-case&lt;/h3&gt;
 
 &lt;p&gt;Sometimes we may have many if statements which all use conditions based on the same variable. It is not incorrect to use if statements in such cases, but it can lead to a large number of consecutive if statements in our code, making it harder to read and more prone to errors. In this case, it is preferable to use a switch statement. The switch statement offers an easy way of writing code where the same variable needs to be checked against a number of different values.&lt;/p&gt;
@@ -1471,6 +1341,7 @@ The input day number corresponds to Weekend.
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;non-boolean-conditions-in-if-statements&quot;&gt;Non-boolean conditions in if-statements&lt;/h3&gt;
+
 &lt;p&gt;There is a rather interesting feature of conditions for if-statements in MATLAB (also in Python language), that allows the programmer to use a non-boolean variable or non-boolean value type directly in place of the condition in if-statement. What really happens here is that, MATLAB interpreter converts the non-boolean type to a boolean value, when it occurs in place of an if-statement condition.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if 5.6
     disp('The condition in this if statement is automatically converted from float to boolean')
@@ -1646,56 +1517,448 @@ Table of MATLAB's &lt;i&gt;is-functions&lt;/i&gt; and description of their funct
 &lt;p&gt;&lt;br /&gt;
 For more information on each individual function, see &lt;a href=&quot;https://www.mathworks.com/help/matlab/ref/is.html&quot; target=&quot;_blank&quot;&gt;MATLAB’s use manual&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;exercise&quot;&gt;Exercise&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;write a MATLAB script that takes two matrices as input and determines whether they have equal size.&lt;br /&gt;
-&lt;strong&gt;answer&lt;/strong&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if isequal(size(A),size(B))
-C = [A; B];
-else
-disp('A and B are not the same size.')
-C = [];
-end
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Write a script that checks if your script exists!&lt;br /&gt;
-&lt;strong&gt;answer&lt;/strong&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if exist('myfunction.m','file')
- disp('Your file exists! Did you expect otherwise?')
-else
- disp('Your file does not exist! Then perhaps you don''t exist either??')
-end
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Write a script that takes an input number and calculates the following function,&lt;/li&gt;
-&lt;/ol&gt;
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/6-matlab-operators-branching&quot;&gt;Lecture 6: MATLAB - operators, branching, and control statements&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 09, 2017.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Homework 3: Problems - structures, branching and functions in MATLAB]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/homework/3-problems-matlab-structures-branching-functions"/>
+  <id>http:/ICP2017F/homework/3-problems-matlab-structures-branching-functions</id>
+  <published>2017-10-09T00:00:00-05:00</published>
+  <updated>2017-10-09T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;♣ &lt;strong&gt;Due Date: Monday Oct 22, 2017 9:00 AM&lt;/strong&gt;. This homework aims at giving you some experience with structure types in MATLAB as well as branching and function concepts and their usage syntax. Write your MATLAB scripts with the corresponding &lt;code&gt;*.m&lt;/code&gt; file names, and add a readme.md file in HW 3 folder of your ICP2017F repository if you need to add any additional explanation (Don’t forget to use markdown syntax highlight in your readme file, if needed).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; The bell-shaped &lt;a href=&quot;https://en.wikipedia.org/wiki/Normal_distribution&quot; target=&quot;_blank&quot;&gt;Gaussian probability density function&lt;/a&gt;,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\bigg[ -\frac{1}{2}\bigg( \frac{x-\mu}{\sigma} \bigg)^2 \bigg]&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;
+is one of the most widely used functions in science and technology. The parameters of the function ($\mu\in[-\infty,+\infty]$, $\sigma&amp;gt;0$) are prescribed real numbers. Write a MATLAB script for evaluating this function when $\mu=0$, $\sigma=2$, $x = 1$.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Verify your answer by getting the same result from &lt;a href=&quot;https://www.wolframalpha.com/&quot; target=&quot;_blank&quot;&gt;Wolfram Alpha&lt;/a&gt; mathematical search engine, also by using MATLAB’s builtin function &lt;a href=&quot;https://www.mathworks.com/help/stats/normpdf.html&quot; target=&quot;_blank&quot;&gt;normpdf($x$,$\mu$,$\sigma$)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; As an egg cooks, the protein molecules in the egg first denature and then coagulate. When the temperature exceeds a critical point, reactions begin and proceed faster as the temperature increases. In the egg white, the proteins start to coagulate for temperatures above $63^\circ\rm{C}$, while in the yolk the proteins start to coagulate for temperatures above $70^\circ\rm{C}$. For a soft boiled egg, the white needs to have been heated long enough to coagulate at a temperature above $63^\circ\rm{C}$, but the yolk should not be heated above $70^\circ\rm{C}$. For a hard boiled egg, the center of the yolk should be allowed to reach $70^\circ\rm{C}$.&lt;/p&gt;
+
+&lt;p&gt;The following formula expresses the time $t$ it takes (in seconds) for the center of the yolk to reach the temperature Ty (in Celsius degrees):&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;t = \frac
+{ M^{2/3} ~ c ~ \rho^{1/3} }
+{ K\pi^2 ~ (4\pi/3)^{2/3} }
+~\ln
+\bigg[
+0.76 \frac{T_0 - T_w}{T_y-T_w}
+\bigg]&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;
+where $M$ is the mass of egg, $\rho$ is the density, $c$ is the specific heat capacity, and $K$ is thermal conductivity. Relevant values are $M=47~[g]$ for a small egg and $M=67~[g]$ for a large egg, $\rho=1.038 ~[g~cm^{-3}]$, $c = 3.7 ~[J~g^{-1}~K^{-1}]$, and $K = 5.4\times10^{-3} ~[Wcm^{-1}K^{-1}]$. Furthermore, $T_w$ is the temperature
+(in C degrees) of the boiling water, and $T_0$ is the original temperature (in C degrees) of the egg before being put in the water. Implement the formula in a MATLAB program, set $T_w = 100^\circ C$ and $T_y = 70^\circ C$, and compute $t$ for a large egg taken from the fridge ($T_0 = 4^\circ C$) and from room temperature ($T_0 = 20^\circ C$). (&lt;strong&gt;Hint&lt;/strong&gt;: Note that for this problem you will need to use MATLAB’s builtin function &lt;code&gt;log()&lt;/code&gt;, and the predefined variable &lt;code&gt;pi&lt;/code&gt;.)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; &lt;strong&gt;Converting polar and Cartesian vector representations using functions and structures.&lt;/strong&gt; A vector is a mathematical quantity that has both magnitude and direction. A 2-dimensional vector can be represented as a displacement along $x$ and $y$ axes in rectangular (Cartesian) coordinates or, by a distance $r$ and an angle $\phi$ in polar coordinates,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/3-problems/vector.png&quot; height=&quot;400&quot; width=&quot;400&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        The conversion rule between the Cartesian and Polar representations of a vector.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The relationships between the Cartesian $(x,y)$ and polar $(r,\phi)$ coordinates are given by the following equations,&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{equation*}
-y =
-\begin{cases}
-    x &amp; \text{for}~~~-1&lt;=x&lt;=1 \\
-    x^2 &amp; \text{otherwise} \\
-\end{cases}
-\end{equation*} %]]&gt;&lt;/script&gt;
+\begin{align*}
+    x &amp;= r\cos(\phi) \\
+    y &amp;= r\sin(\phi) \\
+    r &amp;= \sqrt{x^2 + y^2} \\
+\end{align*} %]]&gt;&lt;/script&gt;
 
-&lt;p&gt;&lt;strong&gt;answer&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;x = input('input the value of x: ')
-if x &amp;gt;= -1 &amp;amp;&amp;amp; x &amp;lt;= 1
-    y = x
-else
-    y = x^2
-end
-disp(['y(x=',num2str(x),') = ',num2str(y)])
+&lt;p&gt;Write a MATLAB function &lt;code&gt;getPolar(inputCartesianStruct)&lt;/code&gt; that takes a structure &lt;code&gt;inputCartesianStruct&lt;/code&gt; as input, that has two components &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt;. Then on output, it returns another structure that has to components &lt;code&gt;r&lt;/code&gt; and &lt;code&gt;phi&lt;/code&gt;. Write another function &lt;code&gt;getCart(inputPolarStruct)&lt;/code&gt; that does the inverse of &lt;code&gt;getPolar(inputCartesianStruct)&lt;/code&gt;. Make sure that both functions are robust to wrong input structures by checking whether the input structures have the required fields: &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt;, or &lt;code&gt;r&lt;/code&gt; and &lt;code&gt;phi&lt;/code&gt;. You can do so by using MATLAB’s builtin function &lt;code&gt;isfield()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. &lt;/strong&gt; &lt;strong&gt;Calculating the size of a directory&lt;/strong&gt; The MATLAB function &lt;code&gt;dir&lt;/code&gt; returns the contents of a specified directory. It returns the result in the form of an structure array with four fields, for example,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; s = dir
+s = 
+123x1 struct array with fields:
+    name
+    date
+    bytes
+    isdir
+    datenum
+&amp;gt;&amp;gt; size(s)
+ans =
+   123     1
+&amp;gt;&amp;gt; fieldnames(s)
+ans = 
+    'name'
+    'date'
+    'bytes'
+    'isdir'
+    'datenum'
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+where here, the directory contains 123 objects. Write a MATLAB function that takes the path to a directory and outputs the total size of all files in the directory in units of bytes.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. &lt;/strong&gt; In mathematics, the Fibonacci numbers are the numbers in the following integer sequence, called the Fibonacci sequence, that are characterized by the fact that every number after the first two is the sum of the two preceding ones:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;0,~1,~1,~2,~3,~5,~8,~13,~21,~34,~55,~89,~144,~\dots&lt;/script&gt;
+
+&lt;p&gt;with the following sequence equation,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{eqnarray}
+     Fib(n) &amp;=&amp; Fib(n-1) + Fib(n-2) ~, \\
+     Fib(0) &amp;=&amp; 0 ~, \\
+     Fib(1) &amp;=&amp; 1 ~.
+\end{eqnarray} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Write a MATLAB function named &lt;code&gt;fib&lt;/code&gt; that takes in an input argument which should be integer number &lt;code&gt;n&lt;/code&gt;, and then calculates the $n$th number in the Fibonacci sequence and outputs it on the screen. Also, if the input argument is not a non-negative integer, it prints an error message on the screen and asks the user to re-enter a non-negative integer number. Also, when it is done with finding the requested Fibonacci number, it asks again the user to either input a new non-negative integer, or enter ‘stop’ to end the function, like the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; fib
+Please enter a non-negative integer or type stop: -123
+The input argument is not a non-negative integer!
+Please enter a non-negative integer or type stop: a
+The input argument is not a non-negative integer!
+Please enter a non-negative integer or type stop: amir
+The input argument is not a non-negative integer!
+Please enter a non-negative integer or type stop: 
+The input argument is not a non-negative integer!
+Please enter a non-negative integer or type stop: -12.3
+The input argument is not a non-negative integer!
+Please enter a non-negative integer or type stop: 0
+fib(0) = 0
+Please enter a non-negative integer or type stop: 1
+fib(1) = 1
+Please enter a non-negative integer or type stop: 2
+fib(2) = 1
+Please enter a non-negative integer or type stop: 3
+fib(3) = 2
+Please enter a non-negative integer or type stop: 4
+fib(4) = 3
+Please enter a non-negative integer or type stop: 5
+fib(5) = 5
+Please enter a non-negative integer or type stop: 6
+fib(6) = 8
+Please enter a non-negative integer or type stop: 7
+fib(7) = 13
+Please enter a non-negative integer or type stop: 8
+fib(8) = 21
+Please enter a non-negative integer or type stop: 9
+fib(9) = 34
+Please enter a non-negative integer or type stop: 10
+fib(10) = 55
+Please enter a non-negative integer or type stop: 11
+fib(11) = 89
+Please enter a non-negative integer or type stop: 12
+fib(12) = 144
+Please enter a non-negative integer or type stop: 22
+fib(22) = 17711
+Please enter a non-negative integer or type stop: 32
+fib(32) = 2178309
+Please enter a non-negative integer or type stop: stop
+&amp;gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;First write a function &lt;code&gt;getFib(n_int)&lt;/code&gt; that finds the requested Fibonacci number for you, given a &lt;em&gt;strictly&lt;/em&gt; non-negative integer input (for example, name it &lt;code&gt;n_int&lt;/code&gt;).&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Then put this function &lt;strong&gt;inside another MATLAB function &lt;code&gt;fib()&lt;/code&gt;&lt;/strong&gt; that asks the user to input a number (which could be potentially anything: a string, a real number, a complex number, or an integer). You can do this using MATLAB’s builtin function &lt;code&gt;input()&lt;/code&gt;. Read the input value as a &lt;code&gt;string&lt;/code&gt; using this MATLAB function. Then check if the user’s input string is equivalent to &lt;strong&gt;‘stop’&lt;/strong&gt; or not. If it is ‘stop’, then the program must return, otherwise, use &lt;code&gt;str2double()&lt;/code&gt; to convert this string to MATLAB numeric type. Then check is the numeric-converted input value is real number (as opposed to complex number) via MATLAB’s function &lt;code&gt;isreal()&lt;/code&gt;. If the value is real, then check if it is a non-negative real number. Also check if it is an &lt;strong&gt;integer&lt;/strong&gt; by comparing the value with its rounded value using MATLAB’s function &lt;code&gt;round()&lt;/code&gt;. Thus is the user-input number is really a non-negative integer, then your code should display the result message as given in the above output (by calling your nested function &lt;code&gt;getFib(n_int)&lt;/code&gt;), and then call this function &lt;code&gt;fib&lt;/code&gt; to ask the user to input another number again, to repeat this procedure. If the user-input number is not a non-negative integer, then your code should display the requested message above, and call the function &lt;code&gt;fib&lt;/code&gt; again to ask the user for another input.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; 
+An arbitrary triangle can be described by the coordinates of its three vertices: $(x1,y1),(x2,y2),(x3,y3)$, numbered in a counterclockwise direction. The area of the triangle is given by the formula,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;A = \frac{1}{2} \bigg| x2y3 - x3y2 - x1y3 + x3y1 + x1y2 - x2y1j \bigg|&lt;/script&gt;
+
+&lt;p&gt;Write a function &lt;code&gt;getTriangleArea(vertices)&lt;/code&gt; that returns the area of a triangle whose vertices are specified by the argument vertices, which is a nested list of the vertex coordinates.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7. &lt;/strong&gt; Write a logical (boolean) function named &lt;code&gt;isPrime(n)&lt;/code&gt; that takes in an integer number &lt;code&gt;n&lt;/code&gt;, and finds whether it is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Prime_number&quot; target=&quot;_blank&quot;&gt;Prime number&lt;/a&gt; or not. Example output is the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;isPrime(23)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;True
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;isPrime(12)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;False
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that you do not need and don’t have to use a &lt;code&gt;for-loop&lt;/code&gt; for this problem (we have not yet discussed loops in our class!). All of it can be done using &lt;strong&gt;recursive function&lt;/strong&gt; concept. You can verify the accuracy of your MATLAB script via by checking its output against MATLAB’s builtin function &lt;code&gt;isprime()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;8. &lt;/strong&gt; &lt;strong&gt;Function generators.&lt;/strong&gt; Write a nested function that evaluates a polynomial of the form $y = ax^2+bx+c$. The host function &lt;code&gt;genFunc()&lt;/code&gt; should be able to take varying number of arguments using &lt;code&gt;varargin&lt;/code&gt; with maximum of 3 arguments (&lt;code&gt;a,b,c&lt;/code&gt;) to initialize the coefficients of the polynomial. If there is only one argument, then &lt;code&gt;b&lt;/code&gt; and &lt;code&gt;c&lt;/code&gt; must be set to zero. If there are two input arguments, then &lt;code&gt;c&lt;/code&gt; is set to zero. If none are given on input, then the returned function should be zero. If more than 3 arguments exist, then the function should display an error and stop. Also, if the input arguments are not real numbers, then the function should return and error and stop.&lt;/p&gt;
+
+&lt;p&gt;On output, the host function should create and return a function handle for the nested function &lt;code&gt;evalFunc()&lt;/code&gt;. The nested function should calculate a value of $y$ for a given value of $x$, using the values of $a$, $b$, and $c$ stored in the host function. This is called a &lt;strong&gt;function generator&lt;/strong&gt;, since the host function generates and outputs another function that can be called and used later on in the program. Once you create your function generator, test it in the following way: Call &lt;code&gt;genFunc(1,2,0)&lt;/code&gt; and save the output function handle in a variable, say &lt;code&gt;h1&lt;/code&gt;. Call &lt;code&gt;genFunc(1,2)&lt;/code&gt; and save the output function handle in a variable, say &lt;code&gt;h2&lt;/code&gt;. Then these two function handles, should give the same result, given the same input &lt;code&gt;x&lt;/code&gt; values.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/6-matlab-operators-branching&quot;&gt;Lecture 6: MATLAB - operators, branching, and control statements&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 04, 2017.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/3-problems-matlab-structures-branching-functions&quot;&gt;Homework 3: Problems - structures, branching and functions in MATLAB&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 09, 2017.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Quiz 2: Solutions - Programming history, MATLAB variables]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/quiz/2-solutions-programming-history-matlab-variables"/>
+  <id>http:/ICP2017F/quiz/2-solutions-programming-history-matlab-variables</id>
+  <published>2017-10-04T00:00:00-05:00</published>
+  <updated>2017-10-04T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This is the solution to &lt;a href=&quot;2-problems-programming-history-matlab-variables.html&quot; target=&quot;_blank&quot;&gt;Quiz 2: Problems - Programming history, MATLAB variables&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--
+The following figure illustrates the grade distribution for this quiz.  
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/quiz/gradeDist/gradeHistQuiz1.png&quot; width=&quot;700&quot;&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        Maximum possible points is 100.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+--&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;(A) What is the closest programming language to machine code (i.e., binary code)?&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Assembly&lt;br /&gt;
+(B) Does it need interpretation in order to become machine-comprehensible?&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Yes. An &lt;em&gt;Assembler&lt;/em&gt; interprets the program for the machine.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;(A) Name the oldest high-level programming language that is still in active daily usage.&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Fortran&lt;br /&gt;
+(B) Approximately how many decades is it old? ($\pm15$ years is accetasble answer. the decade it was created is also an acceptable answer)&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+in 1950s&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;(A) Name a second-generation programming language.&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Assembly  &lt;br /&gt;
+(B) Which language-generation are Fortran, C, C++, MATLAB?&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+third, third, third, fourth&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;In what decades C, C++, and MATLAB were created, respectively?&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+1970s, 1980s, 1980s&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name an ancestor programming language of C.&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+B&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name a programming language ancestor of C++.&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+C, Simula&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name a programming language ancestor of MATLAB.&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Fortran&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Initialized a cell array variable &lt;code&gt;C&lt;/code&gt; of size $2\times2$, then fill its elements like the following figure.&lt;br /&gt;
+&lt;br /&gt;
+    &lt;figure&gt;
+    &lt;img src=&quot;http:/ICP2017F/quiz/2/cellArray.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; C = cell(2,2)
+&amp;gt;&amp;gt; C{1,1} = [1,3,-7;2,0,6;0,5,1];
+&amp;gt;&amp;gt; C{1,2} = 'This is a text string.';
+&amp;gt;&amp;gt; C{2,1} = [];
+&amp;gt;&amp;gt; C{2,2} = [3+4i,-5;-10i,3-4i];
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; C
+C = 
+[3x3 double]    'This is a text string.'
+          []                [2x2 double]
+&amp;gt;&amp;gt; C{1,1}
+ans =
+    1     3    -7
+    2     0     6
+    0     5     1
+&amp;gt;&amp;gt; C{2,2}
+ans =
+    3.0000 + 4.0000i  -5.0000 + 0.0000i
+    0.0000 -10.0000i   3.0000 - 4.0000i
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Now, if you type &lt;code&gt;C{2}&lt;/code&gt; on the MATLAB command line, what do you get? Why do get this value?&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+You will get the value for the cell element $(2,1)$. This is happens, because as we discussed in class, MATLAB is column-wise language.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Does MATLAB follow column-wise data storage, or row-wise? Explain what it means? Why does it follow this storage method? (if you recall, we discussed this in class) &lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+MATLAB stores data in a column-major (columnwise) numbering scheme, which is how Fortran stores matrices. MATLAB uses this convention because it was originally written in Fortran. MATLAB internally stores data elements from the first column first, then data elements from the second column second, and so on, through the last column.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;How many bytes is a MATLAB integer of type &lt;code&gt;int64&lt;/code&gt;? (if you recall, we discussed this in class)&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+8 bytes.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;What would happen if you tried to covert a huge integer number that requires MATLAB &lt;code&gt;int64&lt;/code&gt; data type to the MATLAB &lt;code&gt;int32&lt;/code&gt; data type? (if you recall, we discussed this in class)&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+The huge number is converted to the maximum number that can be represented by &lt;code&gt;int32&lt;/code&gt; data type.
+    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; intmax('int32')
+ans =
+    2147483647
+&amp;gt;&amp;gt; intmax('int64')
+ans =
+    9223372036854775807
+&amp;gt;&amp;gt; int32(intmax('int64'))
+ans =
+    2147483647
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;This is a language-specific rule. In other programming languages, the number may be converted to infinity, if it is bigger than the maximum number that can be represented by the requested integer type.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/2-solutions-programming-history-matlab-variables&quot;&gt;Quiz 2: Solutions - Programming history, MATLAB variables&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 04, 2017.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Quiz 2: Problems - Programming history, MATLAB variables]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/quiz/2-problems-programming-history-matlab-variables"/>
+  <id>http:/ICP2017F/quiz/2-problems-programming-history-matlab-variables</id>
+  <published>2017-10-04T00:00:00-05:00</published>
+  <updated>2017-10-04T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This quiz aims at testing your general knowledge of programming history and MATLAB arrays. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to &lt;strong&gt;quiz/2/&lt;/strong&gt; folder in your Github project.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;(A) What is the closest programming language to machine code (i.e., binary code)?&lt;br /&gt;
+(B) Does it need interpretation in order to become machine-comprehensible?&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;(A) Name the oldest high-level programming language that is still in active daily usage.&lt;br /&gt;
+(B) Approximately how many decades is it old? ($\pm15$ years is accetasble answer. the decade it was created is also an acceptable answer)&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;(A) Name a second-generation programming language.&lt;br /&gt;
+(B) Which language-generation are Fortran, C, C++, MATLAB?&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;In what decades C, C++, and MATLAB were created, respectively?&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name an ancestor programming language of C.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name a programming language ancestor of C++.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Name a programming language ancestor of MATLAB.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Initialized a cell array variable &lt;code&gt;C&lt;/code&gt; of size $2\times2$, then fill its elements like the following figure.&lt;br /&gt;
+&lt;br /&gt;
+    &lt;figure&gt;
+    &lt;img src=&quot;http:/ICP2017F/quiz/2/cellArray.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Now, if you type &lt;code&gt;C{2}&lt;/code&gt; on the MATLAB command line, what do you get? Why do get this value?&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Does MATLAB follow column-wise data storage, or row-wise? Explain what it means? Why does it follow this storage method? (if you recall, we discussed this in class) &lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;How many bytes is a MATLAB integer of type &lt;code&gt;int64&lt;/code&gt;? (if you recall, we discussed this in class)&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;What would happen if you tried to covert a huge integer number that requires MATLAB &lt;code&gt;int64&lt;/code&gt; data type to the MATLAB &lt;code&gt;int32&lt;/code&gt; data type? (if you recall, we discussed this in class)&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/2-problems-programming-history-matlab-variables&quot;&gt;Quiz 2: Problems - Programming history, MATLAB variables&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 04, 2017.&lt;/p&gt;</content>
 </entry>
 
 
@@ -2737,7 +3000,7 @@ amir =
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Structure objects described above are examples of &lt;strong&gt;scalar objects&lt;/strong&gt; meaning that there is only one single structure object with a set of fields. However, MATLAB also provides&lt;/p&gt;
+&lt;p&gt;Structure objects described above are examples of &lt;strong&gt;scalar objects&lt;/strong&gt; meaning that there is only one single structure object with a set of fields. However, MATLAB also provides ways of creating&lt;/p&gt;
 
 &lt;p&gt;There is a along list of functions that can manipulate structures. A list of them is available on MATLAB website &lt;a href=&quot;https://www.mathworks.com/help/matlab/structures.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
