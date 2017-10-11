@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-11T09:44:25-05:00</updated>
+<updated>2017-10-11T11:45:51-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -993,6 +993,11 @@ ncol =
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/Q6t2SDX9mRc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;matlab-operators&quot;&gt;MATLAB operators&lt;/h2&gt;
 
 &lt;p&gt;A complete list of MALTAB operators can be found &lt;a href=&quot;https://www.mathworks.com/help/matlab/matlab_prog/matlab-operators-and-special-characters.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Corresponding to each operator, there is also MATLAB function that does the exact same thing for you.&lt;/p&gt;
@@ -1212,10 +1217,10 @@ ans =
 &lt;h3 id=&quot;matlab-if-blocks&quot;&gt;MATLAB if-blocks&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;a = input('Enter a number:');
-if (a &amp;gt;= 0)
+if isnumeric(a) &amp;amp;&amp;amp; (a &amp;gt;= 0)
     root = sqrt(a);
-    disp(['Square root = ' num2str(root)]);
-elseif (a &amp;lt; 0)
+    disp(['Square root(',num2str(a),') = ', num2str(root)]);
+elseif isnumeric(a) &amp;amp;&amp;amp; (a &amp;lt; 0)
     disp(['The input number is negative, there is no square root.']);
 else
     disp(['Please enter a real number!']);
