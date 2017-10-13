@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-13T09:35:28-05:00</updated>
+<updated>2017-10-13T09:39:25-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -1274,21 +1274,16 @@ y =
 \end{cases}
 \end{equation*} %]]&gt;&lt;/script&gt;
 
-&lt;!--
-
-**answer**  
-```matlab
-x = input('input the value of x: ')
-if x &gt;= -1 &amp;&amp; x &lt;= 1
+&lt;p&gt;&lt;strong&gt;answer&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;x = input('input the value of x: ')
+if x &amp;gt;= -1 &amp;amp;&amp;amp; x &amp;lt;= 1
     y = x
 else
     y = x^2
 end
 disp(['y(x=',num2str(x),') = ',num2str(y)])
-```
-&lt;br&gt;
-
---&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;matlab-switch-case&quot;&gt;MATLAB switch-case&lt;/h3&gt;
 
