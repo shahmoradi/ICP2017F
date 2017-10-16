@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-15T00:38:26-05:00</updated>
+<updated>2017-10-16T11:42:54-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -708,6 +708,15 @@ To prevent clearing persistent variables, lock the function file using mlock.&lt
 
 &lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
 
+&lt;h2 id=&quot;lecture-videos&quot;&gt;Lecture Videos&lt;/h2&gt;
+
+&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.&lt;/p&gt;
+
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/oKvgOGgmNIg&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;functions&quot;&gt;Functions&lt;/h2&gt;
 
 &lt;p&gt;Functions in programming languages are self-contained modules of code that accomplish a specific task. They &lt;em&gt;usually&lt;/em&gt; (but not always) take some data as &lt;strong&gt;input&lt;/strong&gt;, &lt;strong&gt;process&lt;/strong&gt; the input data, and &lt;strong&gt;return&lt;/strong&gt; a result. Therefore, the definition of function in programming goes far beyond the mathematical definition of function. For example, programming functions can have no input or output.&lt;/p&gt;
@@ -986,7 +995,7 @@ ncol =
 
 &lt;h2 id=&quot;lecture-videos&quot;&gt;Lecture Videos&lt;/h2&gt;
 
-&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful. For this lecture, video 4.0 was currupt, and could not be uploaded here.&lt;/p&gt;
+&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.&lt;/p&gt;
 
 &lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
     &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/EnuaR-NGedQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
@@ -2438,7 +2447,7 @@ And this happens because the script we are trying to run is neither in MATLAB’
 
 &lt;h2 id=&quot;lecture-videos&quot;&gt;Lecture Videos&lt;/h2&gt;
 
-&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful. For this lecture, video 4.0 was currupt, and could not be uploaded here.&lt;/p&gt;
+&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.&lt;/p&gt;
 
 &lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
     &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/3rsSGaYnSzc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
