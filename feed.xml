@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-18T08:31:12-05:00</updated>
+<updated>2017-10-18T11:09:08-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -33,7 +33,17 @@
     &lt;p&gt;This lecture further explains the concept of functions and different of types of it in MATLAB.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Useful link:&lt;/strong&gt; &lt;a href=&quot;https://www.mathworks.com/help/matlab/functionlist.html&quot; target=&quot;_blank&quot;&gt;Comprehensive MATLAB function list&lt;/a&gt;&lt;/p&gt;
+
 &lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;lecture-videos&quot;&gt;Lecture Videos&lt;/h2&gt;
+
+&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.&lt;/p&gt;
+
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/4Fx4ulZt0_c&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;function-handles-in-matlab&quot;&gt;Function handles in MATLAB&lt;/h2&gt;
 
@@ -1549,7 +1559,7 @@ For more information on each individual function, see &lt;a href=&quot;https://w
   
   <content type="html">
   
-    &lt;p&gt;♣ &lt;strong&gt;Due Date: Monday Oct 22, 2017 9:00 AM&lt;/strong&gt;. This homework aims at giving you some experience with structure types in MATLAB as well as branching and function concepts and their usage syntax. Write your MATLAB scripts with the corresponding &lt;code&gt;*.m&lt;/code&gt; file names, and add a readme.md file in HW 3 folder of your ICP2017F repository if you need to add any additional explanation (Don’t forget to use markdown syntax highlight in your readme file, if needed).&lt;/p&gt;
+    &lt;p&gt;♣ &lt;strong&gt;Due Date: Monday Oct 30, 2017 9:00 AM&lt;/strong&gt;. This homework aims at giving you some experience with structure types in MATLAB as well as branching and function concepts and their usage syntax. Write your MATLAB scripts with the corresponding &lt;code&gt;*.m&lt;/code&gt; file names, and add a readme.md file in HW 3 folder of your ICP2017F repository if you need to add any additional explanation (Don’t forget to use markdown syntax highlight in your readme file, if needed).&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1733,7 +1743,7 @@ Please enter a non-negative integer or type stop: stop
 &lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; 
 An arbitrary triangle can be described by the coordinates of its three vertices: $(x1,y1),(x2,y2),(x3,y3)$, numbered in a counterclockwise direction. The area of the triangle is given by the formula,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;A = \frac{1}{2} \bigg| x2y3 - x3y2 - x1y3 + x3y1 + x1y2 - x2y1j \bigg|&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;A = \frac{1}{2} \bigg| x2y3 - x3y2 - x1y3 + x3y1 + x1y2 - x2y1 \bigg|&lt;/script&gt;
 
 &lt;p&gt;Write a function &lt;code&gt;getTriangleArea(vertices)&lt;/code&gt; that returns the area of a triangle whose vertices are specified by the argument vertices, which is a nested list of the vertex coordinates.&lt;/p&gt;
 
