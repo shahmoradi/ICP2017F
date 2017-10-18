@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-16T11:42:54-05:00</updated>
+<updated>2017-10-18T08:31:12-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -42,7 +42,7 @@
 &lt;p&gt;Indirectly calling a function enables you to invoke the function regardless of where you call it from. Typical uses of function handles include:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Pass a function to another function (often called &lt;a href=&quot;#function-functions&quot;&gt;function functions&lt;/a&gt;. For example, passing a function to integration or optimization functions as we will see later in this course, such as &lt;code&gt;integral&lt;/code&gt; and &lt;code&gt;fzero&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Pass a function to another function (often called &lt;a href=&quot;#function-functions&quot;&gt;function functions&lt;/a&gt;). For example, passing a function to integration or optimization functions as we will see later in this course, such as &lt;code&gt;integral&lt;/code&gt; and &lt;code&gt;fzero&lt;/code&gt;.&lt;/li&gt;
   &lt;li&gt;Construct handles to functions defined inline instead of stored in a program file (anonymous functions).&lt;/li&gt;
   &lt;li&gt;Call &lt;a href=&quot;#local-functions&quot;&gt;local functions&lt;/a&gt; from outside the main function.&lt;/li&gt;
 &lt;/ul&gt;
@@ -136,7 +136,7 @@ ans =
 
 &lt;h3 id=&quot;anonymous-functions&quot;&gt;Anonymous functions&lt;/h3&gt;
 
-&lt;p&gt;Anonymous functions allow you to create a MATLAB file without the need to put the function in a separate &lt;code&gt;.m&lt;/code&gt; file dedicated to the function. This function is associated with a variable whose data type is &lt;strong&gt;function_handle&lt;/strong&gt;. Anonymous functions can accept inputs and return outputs, just as standard functions do. However, they can &lt;strong&gt;contain only a single executable statement&lt;/strong&gt;. The concept of anonymous function is similar to &lt;a href=&quot;https://www.programiz.com/python-programming/anonymous-function&quot; target=&quot;_blank&quot;&gt;lambda functions in Python&lt;/a&gt;, if you are already familiar with this language. For example, consider the following create a handle to an anonymous function that finds the square of a number,&lt;/p&gt;
+&lt;p&gt;Anonymous functions allow you to create a MATLAB file without the need to put the function in a separate &lt;code&gt;.m&lt;/code&gt; file dedicated to the function. This function is associated with a variable whose data type is &lt;strong&gt;function_handle&lt;/strong&gt;. Anonymous functions can accept inputs and return outputs, just as standard functions do. However, they can &lt;strong&gt;contain only a single executable statement&lt;/strong&gt;. The concept of anonymous function is similar to &lt;a href=&quot;https://www.programiz.com/python-programming/anonymous-function&quot; target=&quot;_blank&quot;&gt;lambda functions in Python&lt;/a&gt;, if you are already familiar with this language. For example, consider the following handle to an anonymous function that finds the square of a number,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; sq = @(x) x.^2;
 &amp;gt;&amp;gt; sq(2)
 ans =

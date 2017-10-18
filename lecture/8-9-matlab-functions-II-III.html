@@ -156,7 +156,7 @@ MathJax.Hub.Queue(function() {
 <p>Indirectly calling a function enables you to invoke the function regardless of where you call it from. Typical uses of function handles include:</p>
 
 <ul>
-  <li>Pass a function to another function (often called <a href="#function-functions">function functions</a>. For example, passing a function to integration or optimization functions as we will see later in this course, such as <code>integral</code> and <code>fzero</code>.</li>
+  <li>Pass a function to another function (often called <a href="#function-functions">function functions</a>). For example, passing a function to integration or optimization functions as we will see later in this course, such as <code>integral</code> and <code>fzero</code>.</li>
   <li>Construct handles to functions defined inline instead of stored in a program file (anonymous functions).</li>
   <li>Call <a href="#local-functions">local functions</a> from outside the main function.</li>
 </ul>
@@ -250,7 +250,7 @@ ans =
 
 <h3 id="anonymous-functions">Anonymous functions</h3>
 
-<p>Anonymous functions allow you to create a MATLAB file without the need to put the function in a separate <code>.m</code> file dedicated to the function. This function is associated with a variable whose data type is <strong>function_handle</strong>. Anonymous functions can accept inputs and return outputs, just as standard functions do. However, they can <strong>contain only a single executable statement</strong>. The concept of anonymous function is similar to <a href="https://www.programiz.com/python-programming/anonymous-function" target="_blank">lambda functions in Python</a>, if you are already familiar with this language. For example, consider the following create a handle to an anonymous function that finds the square of a number,</p>
+<p>Anonymous functions allow you to create a MATLAB file without the need to put the function in a separate <code>.m</code> file dedicated to the function. This function is associated with a variable whose data type is <strong>function_handle</strong>. Anonymous functions can accept inputs and return outputs, just as standard functions do. However, they can <strong>contain only a single executable statement</strong>. The concept of anonymous function is similar to <a href="https://www.programiz.com/python-programming/anonymous-function" target="_blank">lambda functions in Python</a>, if you are already familiar with this language. For example, consider the following handle to an anonymous function that finds the square of a number,</p>
 <pre><code class="language-matlab">&gt;&gt; sq = @(x) x.^2;
 &gt;&gt; sq(2)
 ans =
@@ -867,8 +867,8 @@ To prevent clearing persistent variables, lock the function file using mlock.</p
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 10 / 16</section></br> -->
-         <section>Last updated Monday, 16 Oct 2017 at 11:42 AM CST</section></br>
+         <!-- <section>Last updated 2017 / 10 / 18</section></br> -->
+         <section>Last updated Wednesday, 18 Oct 2017 at 08:31 AM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>
