@@ -347,23 +347,19 @@ ouput =
 <p><strong>Exercise</strong><br />
 Write a function that takes in three coefficients $(a,b,c)$ of a quadratic equation $ax^2+bx+c$ and finds the roots of this equation.</p>
 
-<!--
-**Answer**  
-```matlab
-function [x1,x2] = quadform(a,b,c)
+<p><strong>Answer</strong></p>
+<pre><code class="language-matlab">function [x1,x2] = quadform(a,b,c)
     d = sqrt(b^2 - 4*a*c);
     x1 = (-b + d) / (2*a);
     x2 = (-b - d) / (2*a);
 end
-```
-```matlab
->> [r1,r2] = quadform(1,1,1)
+</code></pre>
+<pre><code class="language-matlab">&gt;&gt; [r1,r2] = quadform(1,1,1)
 r1 =
   -0.5000 + 0.8660i
 r2 =
   -0.5000 - 0.8660i
-```
--->
+</code></pre>
 <p><br /></p>
 
 <h4 id="variable-number-of-output-arguments">Variable number of output arguments</h4>
@@ -478,8 +474,8 @@ ncol =
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 10 / 21</section></br> -->
-         <section>Last updated Saturday, 21 Oct 2017 at 02:34 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 10 / 22</section></br> -->
+         <section>Last updated Sunday, 22 Oct 2017 at 03:50 PM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>
