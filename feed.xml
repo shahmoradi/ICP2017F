@@ -7,13 +7,656 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-22T15:50:57-05:00</updated>
+<updated>2017-10-23T09:00:07-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/ICP2017F/</uri>
   <email>amir@ices.utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Lecture 10: MATLAB - loops and vectorization]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/lecture/10-matlab-loops-vectorization"/>
+  <id>http:/ICP2017F/lecture/10-matlab-loops-vectorization</id>
+  <published>2017-10-27T00:00:00-05:00</published>
+  <updated>2017-10-27T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This lecture explains the concept of for-loops and while-loops in MATLAB and different of types of it in MATLAB.&lt;/p&gt;
+
+&lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
+
+&lt;!--
+
+## Lecture Videos
+
+This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.
+
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/4Fx4ulZt0_c&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+
+--&gt;
+
+&lt;h2 id=&quot;loops-in-matlab&quot;&gt;Loops in MATLAB&lt;/h2&gt;
+
+&lt;p&gt;Many programming algorithms require iteration, that is, the repetitive execution of a block of program statements. Similar to other programming languages, MATLAB also has built-in tools for iterative tasks in codes.&lt;/p&gt;
+
+&lt;h3 id=&quot;for-loop&quot;&gt;For-loop&lt;/h3&gt;
+
+&lt;p&gt;The for-loop is among the most useful MATLAB constructs. The general syntax of for-loop is,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;for variable = expression
+    statements
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Usually, &lt;code&gt;expression&lt;/code&gt; is a vector of the form &lt;code&gt;istart:stepSize:iend&lt;/code&gt; where &lt;code&gt;fix((iend-istart)/stepSize+1)&lt;/code&gt; gives the number of iterations requested by the user, assuming &lt;code&gt;iend&amp;gt;istart&lt;/code&gt;. The &lt;code&gt;statements&lt;/code&gt; are the set of programming tasks that have to be repeated. For example consider a script named &lt;code&gt;forLoop.m&lt;/code&gt;,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;for index = istart:stepSize:iend
+    disp(index);
+end
+disp( [ 'number of iterations: ', num2str( fix((iend-istart)/stepSize+1) ) ] );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; istart = -2;
+iend = 10;
+stepSize = 3;
+forLoop
+    -2
+     1
+     4
+     7
+    10
+number of iterations: 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+You can also iterate in reverse order,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; istart = 10;
+iend = -2;
+stepSize = -3;
+forLoop
+    10
+     7
+     4
+     1
+    -2
+number of iterations: 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;breaking-a-for-loop-immaturely&quot;&gt;Breaking a for-loop immaturely&lt;/h4&gt;
+
+&lt;p&gt;You can also use &lt;code&gt;break&lt;/code&gt; inside a for-loop to get out of it, even before the for-loop finishes the full number of iterations. This is specially useful when you want to ensure if a condition has happened, and if so, then terminate the for-loop. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;for integer = 1:10
+    disp(integer)
+    if (integer==5)
+        break
+    end
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt; 1
+ 2
+ 3
+ 4
+ 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Exercise:&lt;/strong&gt;&lt;br /&gt;
+suppose you want to find the largest prime number that is smaller than a given input value by the user. Write a function that does so, using for-loop, &lt;code&gt;break&lt;/code&gt;, and MATLAB’s intrinsic function &lt;code&gt;isprime()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;!--
+**Answer:**  
+```matlab
+function integer = getPrime(upper)
+    if (upper&lt;1)
+        disp('input value cannot be less than 1. Goodbye!')
+        return
+    end
+    for integer = upper:-1:1
+        if isprime(integer)
+            break
+        end
+    end
+end
+```
+&lt;br&gt;
+--&gt;
+
+&lt;h4 id=&quot;continue-statement-within-for-loops&quot;&gt;Continue statement within for-loops&lt;/h4&gt;
+
+&lt;p&gt;To skip the rest of the instructions in a loop and begin the next iteration, you can use a &lt;code&gt;continue&lt;/code&gt; statement. For example, the following code prints only integers that are primes,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;for integer = 1:10
+    if ~isprime(integer)
+        continue
+    end
+    disp(['prime detected! ',num2str(integer)])
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;prime detected! 2
+prime detected! 3
+prime detected! 5
+prime detected! 7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;iterating-over-vectors-matrices-and-cell-using-for-loops&quot;&gt;Iterating over vectors, matrices, and cell using for-loops&lt;/h4&gt;
+
+&lt;p&gt;Note that the index of for-loop must not necessarily be an integer. Basically you can use the for-loop index to iterate over anything that is iterable in MATLAB. For example, consider the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;a = [1,0,2,3,7,-1];
+for index = a
+    disp(class(index))
+    disp(index)
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+The output of this script is,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;double
+    1
+double
+    0
+double
+    2
+double
+    3
+double
+    7
+double
+    -1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But, see what happens if we defined &lt;code&gt;a&lt;/code&gt; as a matrix,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;a = [1, 2, 3; 4, 5, 6; 7, 8, 9];
+for index = a
+    disp(class(index))
+    disp(index)
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;double
+    1
+    4
+    7
+double
+    2
+    5
+    8
+double
+    3
+    6
+    9
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What is happening here? The answer is that, MATLAB is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Row-_and_column-major_order&quot; target=&quot;_blank&quot;&gt;column-wise programming language&lt;/a&gt;, just like Fortran, and unlike C, C++ and all of their descendants. &lt;strong&gt;MATLAB, by default, iterates over elements of row vectors&lt;/strong&gt;. Therefore, when you use a matrix as the iterator in for-loops, MATLAB considers an entire column as the index of for-loop. The same is also true for other multidimensional arrays in MATLAB, for example cell arrays,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;a = {1, 2, 3; 4, 5, 6; 7, 8, 9};
+for index = a
+    disp(class(index))
+    disp(index)
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;cell
+    [1]
+    [4]
+    [7]
+cell
+    [2]
+    [5]
+    [8]
+cell
+    [3]
+    [6]
+    [9]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Therefore, if you want to iterate over elements of a multidimensional matrix or array, you have to first reshape them using MATLAB’s built-in &lt;code&gt;reshape()&lt;/code&gt; function to convert them to vector format, then iterating over them. For exzmple,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;a = {1, 2, 3; 4, 5, 6; 7, 8, 9};
+a = reshape(a,[1,9]);
+for index = a
+    disp(class(index))
+    disp(index)
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;cell
+    [1]
+cell
+    [4]
+cell
+    [7]
+cell
+    [2]
+cell
+    [5]
+cell
+    [8]
+cell
+    [3]
+cell
+    [6]
+cell
+    [9]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;some-general-advice-on-for-loop-index&quot;&gt;Some general advice on for-loop index&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Avoid using $i$ and $j$ as index variables in for-loops.&lt;/strong&gt; Note that &lt;code&gt;i&lt;/code&gt; and &lt;code&gt;j&lt;/code&gt; have special meanings in MATLAB, as described in previous lectures. They are used to define complex numbers. Using these variable names as indices in MATLAB for-loops, would overwrite the default meaning of these variables.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Avoid assigning a value to the index variable within the loop statements.&lt;/strong&gt; The for statement overrides any changes made to index within the loop.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;while-loop&quot;&gt;While-loop&lt;/h3&gt;
+
+&lt;p&gt;There is another iteration construct in MATLAB, called &lt;strong&gt;while-loop&lt;/strong&gt; which has the following general syntax,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;while expression
+    statements
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+The &lt;code&gt;statements&lt;/code&gt; within the while-loop are executed as long as &lt;code&gt;expression&lt;/code&gt; is true. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;x = realmax();
+while x&amp;gt;0
+    xmin = x
+    x = log(x)
+end
+xmin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;xmin =
+1.7977e+308
+x =
+709.7827
+xmin =
+709.7827
+x =
+    6.5650
+xmin =
+    6.5650
+x =
+    1.8817
+xmin =
+    1.8817
+x =
+    0.6322
+xmin =
+    0.6322
+x =
+-0.4585
+xmin =
+    0.6322
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that, &lt;code&gt;break&lt;/code&gt; and &lt;code&gt;continue&lt;/code&gt; can be used in while-loops in the same fashion as they are used in for-loops, described above. The condition is evaluated before the body is executed, so it is possible to get zero iterations. It’s often a good idea to limit the number of repetitions to avoid infinite loops (as could happen above if x is infinite). This can be done in a number of ways, but the most common is to use &lt;code&gt;break&lt;/code&gt;. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;n = 0;
+while abs(x) &amp;gt; 1
+    x = x/2;
+    n = n+1;
+    if n &amp;gt; 50, break, end
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+A break immediately jumps execution to the first statement after the loop. It’s good practice to include some diagnostic output or other indication that an abnormal loop exit has occurred once the code reach the &lt;code&gt;break&lt;/code&gt; statement.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Exercise:&lt;/strong&gt;&lt;br /&gt;
+Write function &lt;code&gt;getFac(n)&lt;/code&gt; using while-loop, that calculates the factorial of an input number &lt;code&gt;n&lt;/code&gt;. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; getFac(4)
+4! = 24
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;!--  
+**Answer:**
+```matlab
+function getFac(n)
+    nOrg = n;
+    fac = n;
+    while n &gt; 1
+        n = n-1;
+        fac = fac*n;
+    end
+    disp([num2str(nOrg),'! = ' num2str(fac)])
+end
+```
+&lt;br&gt;
+--&gt;
+
+&lt;h4 id=&quot;some-general-advice-on-while-loops&quot;&gt;Some general advice on while-loops&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If you inadvertently create an infinite loop (that is, a loop that never ends on its own), stop execution of the loop by pressing Ctrl+C.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;If the conditional expression evaluates to a matrix, MATLAB evaluates the statements only if &lt;strong&gt;all&lt;/strong&gt; elements in the matrix are true (nonzero). To execute statements if any element is true, wrap the expression in the &lt;code&gt;any()&lt;/code&gt; function.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;To exit the loop, use a &lt;code&gt;break&lt;/code&gt; statement as discussed above. To skip the rest of the instructions in the loop and begin the next iteration, use a &lt;code&gt;continue&lt;/code&gt; statement.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;When nesting a number of while statements, each while statement requires an &lt;code&gt;end&lt;/code&gt; keyword.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vectorization-in-matlab&quot;&gt;Vectorization in MATLAB&lt;/h2&gt;
+
+&lt;p&gt;Experienced programmers who are concerned with producing compact and fast code try to avoid for loops wherever possible in their MATLAB codes. There is a reason for this: for-loops and while-loops have significant overhead in interpreted languages such as MATLAB and Python.&lt;/p&gt;
+
+&lt;p&gt;There is of course, a remedy for this inefficiency. Since MATLAB is a matrix language, many of the matrix-level operations and functions are carried out internally using compiled C, Fortran, or assembly codes and are therefore executed at near-optimum efficiency. This is true of the arithmetic operators &lt;code&gt;*&lt;/code&gt;, &lt;code&gt;+&lt;/code&gt;,&lt;code&gt;-&lt;/code&gt;,&lt;code&gt;\&lt;/code&gt;, &lt;code&gt;/&lt;/code&gt; and of relational and logical operators. However, for loops may be executed
+relatively slowly—depending on what is inside the loop, MATLAB may or may not
+be able to optimize the loop. One of the most important tips for producing efficient M-files is to avoid for -loops in favor of vectorized constructs, that is, to convert for-loops into equivalent vector or matrix operations. Vectorization has important benefits beyond simply increasing speed of execution. It can lead to shorter and more readable MATLAB code. Furthermore, it expresses algorithms in terms of high-level constructs that are more appropriate for high-performance computing. For example, consider the process of summation of a random vector in MATLAB,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; n = 5e7; x = randn(n,1);
+&amp;gt;&amp;gt; tic, s = 0; for i=1:n, s = s + x(i)^2; end, toc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Elapsed time is 0.581945 seconds.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now doing the same thing, using array notation would yield,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; tic, s = sum(x.^2); toc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Elapsed time is 0.200450 seconds.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Amazing! isn’t it? You get almost 3x speedup in your MATLAB code f you use vectorized computation instead of fol-loops. Later on in this course, we will see that MATLAB has inherited these vectorization excellent techniques and syntax for matrix calculations, from its high-performance ancestor, &lt;a href=&quot;https://en.wikipedia.org/wiki/Fortran&quot; target=&quot;_blank&quot;&gt;Fortran&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Exercise:&lt;/strong&gt;&lt;br /&gt;
+How do you vectorize the following code?&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;i = 0;
+for t = 0:.01:10
+    i = i + 1;
+    y(i) = sin(t);
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;!--
+**Answer:**  
+```matlab
+t = 0:.01:10;
+y = sin(t);
+```
+&lt;br&gt;
+--&gt;
+
+&lt;h3 id=&quot;vectorization-of-array-operations&quot;&gt;Vectorization of array operations&lt;/h3&gt;
+
+&lt;p&gt;Vectorization of arrays can be done through &lt;strong&gt;array operators&lt;/strong&gt;, which perform the same operation for all elements in the data set. These types of operations are useful for repetitive calculations. For example, suppose you collect the volume (V) of various cones by recording their diameter (D) and height (H). If you collect the information for just one cone, you can calculate the volume for that single cone as,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; D = 0.2;
+&amp;gt;&amp;gt; H = 0.04;
+&amp;gt;&amp;gt; V = 1/12*pi*(D^2)*H
+V =
+   4.1888e-04
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Now, suppose we collect information on 10,000 cones. The vectors &lt;code&gt;D&lt;/code&gt; and &lt;code&gt;H&lt;/code&gt; each contain 10,000 elements, and you want to calculate 10,000 volumes. In most programming languages (except Fortran and R which have similar vectorization capabilities to MATLAB), you need to set up a loop similar to this MATLAB code (here instead of 10000, I am using 7):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; D = [-0.2 1.0 1.5 3.0 -1.0 4.2 3.14];
+&amp;gt;&amp;gt; H = [0.0400 1.0000 2.2500 9.0000 1.0000 17.6400 9.8596];
+for n = 1:7
+   V(n) = 1/12*pi*(D(n)^2)*H(n);
+end
+&amp;gt;&amp;gt; V
+V =
+    0.0004    0.2618    1.3254   21.2058    0.2618   81.4640   25.4500
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+With MATLAB, you can perform the calculation for each element of a vector with similar syntax as the scalar case,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; V = 1/12*pi*(D.^2).*H;  % Vectorized Calculation
+&amp;gt;&amp;gt; V
+V =
+    0.0004    0.2618    1.3254   21.2058    0.2618   81.4640   25.4500
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+    &lt;b&gt;NOTE&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+    Placing a period (&lt;code&gt;.&lt;/code&gt;) before the operators &lt;code&gt;*&lt;/code&gt;, &lt;code&gt;/&lt;/code&gt;, and &lt;code&gt;^&lt;/code&gt;, transforms them into array operators.
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;logical-array-operations&quot;&gt;Logical array operations&lt;/h3&gt;
+
+&lt;p&gt;MATLAB comparison operators also accept vector inputs and return vector outputs. For example, suppose while collecting data from 10,000 cones, you record several negative values for the diameter. You can determine which values in a vector are valid with the &lt;code&gt;&amp;gt;=&lt;/code&gt; operator,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; D = [-0.2 1.0 1.5 3.0 -1.0 4.2 3.14];
+&amp;gt;&amp;gt; D &amp;gt;= 0
+ans =
+     0     1     1     1     0     1     1
+&amp;gt;&amp;gt; class(ans)
+ans =
+logical
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+You can directly exploit the logical indexing power of MATLAB to select the valid cone volumes, &lt;code&gt;Vgood&lt;/code&gt;, for which the corresponding elements of D are nonnegative,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; Vgood = V(D &amp;gt;= 0) % removing all data corresponding to negative diameters
+Vgood =
+    0.2618    1.3254   21.2058   81.4640   25.4500
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+MATLAB allows you to perform a logical AND or OR on the elements of an entire vector with the functions all and any, respectively. You can throw a warning if all values of &lt;code&gt;D&lt;/code&gt; are below zero,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if all(D &amp;lt; 0) % gives no warning because not all values are negative
+   warning('All values of diameter are negative.')
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+or,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; if (D &amp;lt; 0)
+   warning('Some values of diameter are negative.')
+end
+Warning: Some values of diameter are negative. 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+MATLAB can also compare two vectors of the same size, allowing you to impose further restrictions. This code finds all the values where &lt;code&gt;V&lt;/code&gt; is nonnegative and &lt;code&gt;D&lt;/code&gt; is greater than &lt;code&gt;H&lt;/code&gt;,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; D = [-0.2 1.0 1.5 3.0 -1.0 4.2 3.14];
+&amp;gt;&amp;gt; H = [0.0400 1.0000 2.2500 1.5000 1.0000 0.6400 9.8596];
+&amp;gt;&amp;gt; V((V &amp;gt;= 0) &amp;amp; (D &amp;gt; H))
+ans =
+   21.2058   81.4640
+&amp;gt;&amp;gt; V
+V =
+    0.0004    0.2618    1.3254   21.2058    0.2618   81.4640   25.4500
+&amp;gt;&amp;gt; (V &amp;gt;= 0) &amp;amp; (D &amp;gt; H)
+ans =
+     0     0     0     1     0     1     0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+The resulting vector is the same size as the inputs. To aid comparison, MATLAB contains special values to denote &lt;strong&gt;overflow&lt;/strong&gt;, &lt;strong&gt;underflow&lt;/strong&gt;, and &lt;strong&gt;undefined operators&lt;/strong&gt;, such as &lt;strong&gt;inf&lt;/strong&gt; and &lt;strong&gt;nan&lt;/strong&gt;. Logical operators &lt;a href=&quot;https://www.mathworks.com/help/matlab/ref/isinf.html&quot; target=&quot;_blank&quot;&gt;isinf&lt;/a&gt; and &lt;a href=&quot;https://www.mathworks.com/help/matlab/ref/isnan.html&quot; target=&quot;_blank&quot;&gt;isnan&lt;/a&gt; exist to help perform logical tests for these special values. For example, it is often useful to exclude &lt;code&gt;NaN&lt;/code&gt; values from computations,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; x = [2 -1 0 3 NaN 2 NaN 11 4 Inf];
+&amp;gt;&amp;gt; xvalid = x(~isnan(x))
+xvalid =
+     2    -1     0     3     2    11     4   Inf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+    &lt;b&gt;NOTE&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
+    Note that &lt;code&gt;Inf == Inf&lt;/code&gt; returns &lt;code&gt;true&lt;/code&gt;; however, &lt;code&gt;NaN == NaN&lt;/code&gt; always returns &lt;code&gt;false&lt;/code&gt; in MATLAB.
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;matrix-operations&quot;&gt;Matrix Operations&lt;/h3&gt;
+
+&lt;p&gt;Matrix operations act according to the rules of linear algebra. These operations are most useful in vectorization if you are working with multidimensional data. Suppose you want to evaluate a function, $F$, of two variables, $x$ and $y$,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F(x,y) = x*\exp(-x2 - y2) ~.&lt;/script&gt;
+
+&lt;p&gt;To evaluate this function at every combination of points in the $x$ and $y$, you need to define a grid of values,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; x = -2:0.2:2;
+&amp;gt;&amp;gt; y = -1.5:0.2:1.5;
+&amp;gt;&amp;gt; [X,Y] = meshgrid(x,y);
+&amp;gt;&amp;gt; F = X.*exp(-X.^2-Y.^2);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Without &lt;code&gt;meshgrid()&lt;/code&gt;, you might need to write two for loops to iterate through vector combinations. The function &lt;code&gt;ndgrid()&lt;/code&gt; also creates number grids from vectors, but unlike &lt;code&gt;meshgrid()&lt;/code&gt;, it can construct grids beyond three dimensions. &lt;code&gt;meshgrid()&lt;/code&gt; can only construct 2-D and 3-D grids.&lt;/p&gt;
+
+&lt;p&gt;The following table contains a list of MATLAB functions that are commonly used in vectorized codes,&lt;/p&gt;
+
+&lt;table class=&quot;center&quot;&gt;
+&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
+Table of MATLAB's most-widely used vectorization functions.
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Function&lt;/font&gt;&lt;/th&gt;
+&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Description&lt;/font&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;all&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if all array elements are nonzero or true&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;any&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if any array elements are nonzero&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;cumsum&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Cumulative sum&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;diff&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Differences and Approximate Derivatives&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;find&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Find indices and values of nonzero elements&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ind2sub&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Subscripts from linear index&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ipermute&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Inverse permute dimensions of N-D array&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;logical&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Convert numeric values to logicals&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;meshgrid&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Rectangular grid in 2-D and 3-D space&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ndgrid&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Rectangular grid in N-D space&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;permute&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Rearrange dimensions of N-D array&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;prod&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Product of array elements&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;repmat&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Repeat copies of array&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;reshape&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Reshape array&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;shiftdim&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Shift dimensions&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;sort&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Sort array elements&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;squeeze&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Remove singleton dimensions&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;sub2ind&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Convert subscripts to linear indices&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;sum&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Sum of array elements&lt;/td&gt;&lt;/tr&gt;
+
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/10-matlab-loops-vectorization&quot;&gt;Lecture 10: MATLAB - loops and vectorization&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 27, 2017.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Quiz 3: Problems - MATLAB branching, functions]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/quiz/3-problems-matlab-branching-functions"/>
+  <id>http:/ICP2017F/quiz/3-problems-matlab-branching-functions</id>
+  <published>2017-10-23T00:00:00-05:00</published>
+  <updated>2017-10-23T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This quiz is about branching, if blocks and functions in MATLAB.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; Describe, with an example MATLAB script, the difference between &lt;code&gt;*&lt;/code&gt; and &lt;code&gt;.*&lt;/code&gt; operators (basically what is the role of &lt;code&gt;.&lt;/code&gt; in the later operator? (Hint: describe your answer by multiplying two matrices with each other.)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;Vector Dot-Product&lt;/strong&gt; Vector dot-product in algebra is defined as the summation of the product of the elements of two vectors of the same size. For example,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+a &amp;= [a_1, a_2, ..., a_n] ~, \\
+b &amp;= [b_1, b_2, ..., b_n] ~, \\
+a . b &amp;= \sum^n_{i=1} a_i b_i
+\end{align*} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;where $\sum$ denotes summation notation and $n$ is the number of elements of the vectors. Now, given your current knowledge of mathematical operators in MATLAB, what is the simplest way to get the result of the following dot-product of the two vectors $A$ and $B$,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;A = [1, 0, 3] \\
+B = [2, 3, 7]&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; (A) Write a MATLAB function named &lt;code&gt;testString&lt;/code&gt; that takes as input, a string and then checks if the input string by the user is the equivalent to &lt;code&gt;'MATLAB&lt;/code&gt;. If it is the correct string, then returns logical value &lt;code&gt;true&lt;/code&gt; as the function output, otherwise it returns &lt;code&gt;false&lt;/code&gt;. Provide two tests of your function which result in &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;false&lt;/code&gt; output.&lt;br /&gt;
+&lt;br /&gt;
+(B) One can argue that there are two basic ways of comparing two strings in MATLAB. one is using &lt;code&gt;==&lt;/code&gt; operator, and the other is with the use of a MATLAB built-in function that we have repeatedly used in our lectures and homework. What is this function, and what is its difference with &lt;code&gt;==&lt;/code&gt; operator. If you don’t remember this function’s name, then at least you should be able to explain the major flaw with string comparison using &lt;code&gt;==&lt;/code&gt;. Explain it with an example MATLAB script.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. &lt;/strong&gt; If you recall from the lectures, MATLAB has two operators corresponding to logical operator &lt;strong&gt;OR&lt;/strong&gt;: &lt;code&gt;|&lt;/code&gt; and &lt;code&gt;||&lt;/code&gt;. There are two minor differences between the two if you recall from our discussions in class. One is about code efficiency, and the other relates to whether we are operating on logical &lt;em&gt;vectors&lt;/em&gt; or &lt;em&gt;scalars&lt;/em&gt;. Describe which operator improves code efficiency and why. For the second difference, you could also provide an example to describe what each operator does.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. &lt;/strong&gt; Recall that in MATLAB &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;false&lt;/code&gt; are equivalent to &lt;code&gt;0&lt;/code&gt; and &lt;code&gt;1&lt;/code&gt;,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; true == 1
+ans =
+     1
+&amp;gt;&amp;gt; false == 0
+ans =
+     1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Now knowing this, consider the following MATLAB calculation,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = 1;
+&amp;gt;&amp;gt; b = 0;
+&amp;gt;&amp;gt; x = a/b&amp;gt;10.0
+x =
+     1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Note that $1/0$ is mathematically undefined (but MATLAB by convention, assumes that $1/0\equiv\infty$). Suppose MATLAB’s default behavior is not what you would like to get, that is, you don’t want $x=1$ when $b=0$, but instead $x=0$. What would be the simplest change to the logical expression &lt;code&gt;x=a/b&amp;gt;10.0&lt;/code&gt; such that the result is $x=0$ whenever $b=0$.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; &lt;strong&gt;Array of Structures vs. Structures of Arrays.&lt;/strong&gt; Suppose you would like to store information about students in a class. You create a array of structures like the following,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; AOS(1).grade = 20;
+&amp;gt;&amp;gt; AOS(1).name = 'foobar1';
+&amp;gt;&amp;gt; AOS(1).grade = 20;
+&amp;gt;&amp;gt; AOS(1).name = 'foobar2';
+&amp;gt;&amp;gt; AOS(1).grade = 30;
+&amp;gt;&amp;gt; AOS(1).name = 'foobar1';
+&amp;gt;&amp;gt; AOS(1).grade = 90;
+&amp;gt;&amp;gt; AOS(1).name = 'foobar2';
+&amp;gt;&amp;gt; AOS(1).name = 'foobar1';
+&amp;gt;&amp;gt; AOS(1).grade = 90;
+&amp;gt;&amp;gt; AOS(2).name = 'foobar2';
+&amp;gt;&amp;gt; AOS(2).grade = 100;
+&amp;gt;&amp;gt; AOS(3).name = 'foobar3';
+&amp;gt;&amp;gt; AOS(3).grade = 85;
+&amp;gt;&amp;gt; AOS
+AOS = 
+1x3 struct array with fields:
+    name
+    grade
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Alternatively, you could create a structure array for the same data, like the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; SOA.names = {'foobar1','foobar2','foobar3'};
+&amp;gt;&amp;gt; SOA.grades = [90,100,85];
+&amp;gt;&amp;gt; SOA
+SOA = 
+     names: {'foobar1'  'foobar2'  'foobar3'}
+    grades: [90 100 85]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Suppose you have 10000 students in your class. Which one of these representations do you think would be more computationally efficient to represent the student data, in order to calculate the average grade in you class? Why? (the explanation is brief, you don’t to write a paragraph.)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7. &lt;/strong&gt; Write a function &lt;code&gt;getRoot()&lt;/code&gt; that takes in three coefficients $(a,b,c)$ of a quadratic equation $ax^2+bx+c$ and outputs the roots of this equation as the function output result.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;8. &lt;/strong&gt; Write a MATLAB anonymous function that calculates the following integral, for arbitrary input integration limits $[a,b]$ and coefficient $c$,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(a,b,c) = \int^b_a \big( x^2 + cx + 1 \big) \operatorname{d}x&lt;/script&gt;
+
+&lt;p&gt;Write your function such that it takes the three variables collectively as a structure.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;9. &lt;/strong&gt; Write a function &lt;code&gt;getFac()&lt;/code&gt; that calculates the factorial of an input integer $n$ (no need for robust coding, assume the input variable is indeed a positive integer).&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;n! = n \times (n-1) \times \cdots \times 1 ~.&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/3-problems-matlab-branching-functions&quot;&gt;Quiz 3: Problems - MATLAB branching, functions&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 23, 2017.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -6704,352 +7347,6 @@ error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/1-problems-version-control-using-git-github&quot;&gt;Homework 1: Problems - Version Control Using Git and Github&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on September 01, 2017.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Announcement 1: Assessing your programming knowledge and interests]]></title>
-  <link rel="alternate" type="text/html" href="http:/ICP2017F/announcement/1-assessing-your-programming-knowledge-and-interests"/>
-  <id>http:/ICP2017F/announcement/1-assessing-your-programming-knowledge-and-interests</id>
-  <published>2017-08-30T00:00:00-05:00</published>
-  <updated>2017-08-30T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;The goal of this survey is to assess your prior programming experience and to identify the favorite programming language of the class. Please fill out the following two survey questions, and submit them within 3 minutes.&lt;/p&gt;
-
-&lt;div align=&quot;center&quot;&gt;
-    &lt;script&gt;
-        (function(t,e,n,o){var s,c,m;t.SMCX=t.SMCX||[],e.getElementById(o)||(s=e.getElementsByTagName(n),c=s[s.length-1],m=e.createElement(n),m.type=&quot;text/javascript&quot;,m.async=!0,m.id=o,m.src=[&quot;https:&quot;===location.protocol?&quot;https://&quot;:&quot;http://&quot;,&quot;widget.surveymonkey.com/collect/website/js/QVXTt9vEvYQmf6aZ6twhmx2kjfwCpdDvCImFnfDvD786R0JIq8qIpbqa6o0Atm0h.js&quot;].join(&quot;&quot;),c.parentNode.insertBefore(m,c))})(window,document,&quot;script&quot;,&quot;smcx-sdk&quot;);
-    &lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;survey-results&quot;&gt;Survey results&lt;/h2&gt;
-
-&lt;p&gt;The following are the results of the two questions of the survey. The total respondents for both questions were 96. It appears that at least half of the class, knows at least one programming language at some elementary level. Also it appears that almost everyone in this class is in love with Python!&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/1/Q2.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/1/Q3.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/1/Q4.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/1/Q5.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/announcement/1-assessing-your-programming-knowledge-and-interests&quot;&gt;Announcement 1: Assessing your programming knowledge and interests&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on August 30, 2017.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Announcement 0: Student-professor connection day]]></title>
-  <link rel="alternate" type="text/html" href="http:/ICP2017F/announcement/0-student-professor-connection-day"/>
-  <id>http:/ICP2017F/announcement/0-student-professor-connection-day</id>
-  <published>2017-08-30T00:00:00-05:00</published>
-  <updated>2017-08-30T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;I have ordered cookies to be delivered to our first ICP class. We will try to get to know each other and I will attempt to describe my research work and educational background for you, as well as what we should expect from this course. Then I will give you links to two surveys that will assess your programming knowledge and will determine the favorite programming language which the majority of class wish to learn.&lt;/p&gt;
-
-&lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;about-me-amir-the-instructor&quot;&gt;About me, Amir, the instructor&lt;/h2&gt;
-
-&lt;p&gt;I am a physicist and researcher, currently at &lt;a target=&quot;_blank&quot; href=&quot;https://www.ices.utexas.edu/&quot;&gt;Institute for Computational Engineering and Sciences&lt;/a&gt; at &lt;a target=&quot;_blank&quot; href=&quot;http://www.utexas.edu/&quot;&gt;The University of Texas at Austin&lt;/a&gt;. I am a member of the &lt;a target=&quot;_blank&quot; href=&quot;http://cco.ices.utexas.edu/&quot;&gt;Center for Computational Oncology&lt;/a&gt; led by &lt;a target=&quot;_blank&quot; href=&quot;https://www.bme.utexas.edu/about-us/faculty-directory/yankeelov&quot;&gt;Dr. Thomas E. Yankeelov&lt;/a&gt; and &lt;a target=&quot;_blank&quot; href=&quot;https://www.ices.utexas.edu/people/85/&quot;&gt;Dr. J. Tinsley Oden&lt;/a&gt; at ICES with the goal of understanding Tumor Growth.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/PhDdefense.gif&quot; width=&quot;700&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/EinsteinSandals.jpg&quot; width=&quot;700&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/memoriesOfGreen.jpg&quot; width=&quot;200&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;I was introduced to the world of information and computer programming around 1991 by my father and elder brother. By the end of elementary school, I was so impressed with and knew enough about computer software to write a few simple &lt;a target=&quot;_blank&quot; href=&quot; https://en.wikipedia.org/wiki/PC_game&quot;&gt;computer games&lt;/a&gt; in &lt;a target=&quot;_blank&quot; href=&quot;https://en.wikipedia.org/wiki/QBasic&quot;&gt;QBasic programming language&lt;/a&gt; on our first family personal computer, &lt;a target=&quot;_blank&quot; href=&quot;https://en.wikipedia.org/wiki/IBM_386SLC&quot;&gt;IBM 386&lt;/a&gt;. Here is an example of how computer games looked liked 30 years ago.&lt;/p&gt;
-
-&lt;div class=&quot;center&quot;&gt;
-&lt;div class=&quot;video-wrapper&quot;&gt;
-	&lt;div class=&quot;video-container&quot;&gt;
-        &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4TSF5sIgorA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-		&lt;!-- &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/0XL8RNxzrdw?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt; --&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;I never imagined a day I would use computer programming for scientific purposes. Nevertheless, there has been almost no single day that I have not used scientific programming for my work and research, ever since I entered graduate school.&lt;/p&gt;
-
-&lt;h2 id=&quot;my-research-topics&quot;&gt;My research topics&lt;/h2&gt;
-
-&lt;p&gt;The following are a few examples of what I do nowadays as part of my scientific research at UT Austin.&lt;/p&gt;
-
-&lt;h3 id=&quot;theoretical-astrophysics&quot;&gt;Theoretical Astrophysics&lt;/h3&gt;
-
-&lt;p&gt;While my current focus of research is mathematical modelling of tumor growth and Monte Carlo samplers, I am and have been working in multiple branches of science and engineering for several years, from the subatomic world of &lt;a target=&quot;_blank&quot; href=&quot;https://en.wikipedia.org/wiki/Elementary_particle&quot;&gt;elementary particles&lt;/a&gt;, to the microscopic world of &lt;a target=&quot;_blank&quot; href=&quot;https://en.wikipedia.org/wiki/Macromolecule&quot;&gt;biological macromolecules&lt;/a&gt;, to &lt;a target=&quot;_blank&quot; href=&quot;https://en.wikipedia.org/wiki/Gamma-ray_burst&quot;&gt;astrophysical phenomena&lt;/a&gt; occurring on the grandest scales of the &lt;a target=&quot;_blank&quot; href=&quot;https://en.wikipedia.org/wiki/Observable_universe&quot;&gt;observable Universe&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For several years of my research, I have been working on understanding Gamma-Ray Bursts (GRB) and their physics. Below is a movie of the moment a Short-duration GRB is generated from the merger of a binary Neutron star system.&lt;/p&gt;
-
-&lt;div class=&quot;center&quot;&gt;
-&lt;div class=&quot;video-wrapper&quot;&gt;
-	&lt;div class=&quot;video-container&quot;&gt;
-		&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/P2ESs1rPO_A?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/astro_1.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;theoretical-biology-bioinformatics&quot;&gt;Theoretical Biology, Bioinformatics&lt;/h3&gt;
-
-&lt;p&gt;I have also worked for a few years in the field of bioinformatics and evolutionary biology. The overarching goal in the field of protein bioinformatics and biophysics is to understand how proteins fold into their unique structure, and what determines the stability of the protein &lt;abbr title=&quot;3-Dimensional&quot;&gt;3D&lt;/abbr&gt; structure.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/bio_1.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/bio_2.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;One of the workhorses of this field, is therefore &lt;a href=&quot;https://en.wikipedia.org/wiki/Molecular_dynamics&quot; target=&quot;_blank&quot;&gt;molecular dynamic simulation&lt;/a&gt; to probe the dynamics of proteins and their interactions with other molecules. The following is a 1.5ns molecular dynamics simulation of Human Influenza H1 Hemagglutinin protein (&lt;a href=&quot;http://www.rcsb.org/pdb/explore.do?structureId=1rd8&quot; target=&quot;_blank&quot;&gt;1RD8&lt;/a&gt;, chains AB).&lt;/p&gt;
-
-&lt;div class=&quot;center&quot;&gt;
-&lt;div class=&quot;video-wrapper&quot;&gt;
-	&lt;div class=&quot;video-container&quot;&gt;
-		&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/0XL8RNxzrdw?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;petroleum-engineering&quot;&gt;Petroleum Engineering&lt;/h3&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/petro_1.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;computational-oncology&quot;&gt;Computational Oncology&lt;/h3&gt;
-
-&lt;p&gt;What you see in the figures below, is a representation of the growth of Glioblastoma tumor cells in a Rat’s brain over time.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/onco_1.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/onco_2.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/onco_3.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;the-temporal-evolution-of-the-growth-of-glioma-tumor-in-rat&quot;&gt;The temporal evolution of the growth of Glioma tumor in rat&lt;/h4&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_1_t10.0.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/GBGlastLong.gif&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;!--
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_2_t12.0.png&quot; width=&quot;900&quot;&gt;
-&lt;/figure&gt;&lt;br&gt;
-
----  
-&lt;br&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_3_t14.0.png&quot; width=&quot;900&quot;&gt;
-&lt;/figure&gt;&lt;br&gt;
-
----  
-&lt;br&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_5_t16.0.png&quot; width=&quot;900&quot;&gt;
-&lt;/figure&gt;&lt;br&gt;
-
----  
-&lt;br&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_6_t18.0.png&quot; width=&quot;900&quot;&gt;
-&lt;/figure&gt;&lt;br&gt;
-
----  
-&lt;br&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/tvccZSliceSubplotWithXYlabWithTB_rad_00gy_7_t20.0.png&quot; width=&quot;900&quot;&gt;
-&lt;/figure&gt;&lt;br&gt;
-
---&gt;
-
-&lt;h3 id=&quot;monte-carlo-simulation-and-integration-methods&quot;&gt;Monte Carlo Simulation and Integration Methods&lt;/h3&gt;
-
-&lt;p&gt;One of the fields on which my research is currently focused, is developing Monte Carlo optimizer/sampler and integrator algorithms for Bayesian inverse problems.&lt;/p&gt;
-
-&lt;h4 id=&quot;development-of-monte-carlo-sampling-algorithms&quot;&gt;Development of Monte Carlo sampling algorithms&lt;/h4&gt;
-
-&lt;p&gt;Below you see example animations of two &lt;a href=&quot;https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo&quot; target=&quot;_blank&quot;&gt;Markov Chain Monte Carlo&lt;/a&gt; (MCMC) samplers, both of which sample a double Gaussian-peak function, but with different MCMC sampling parameters.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/PDF_RS_H_Forever20ms.gif&quot; width=&quot;700&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;Example of highly-efficiency, but bad-mixing MCMC sampler.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/PDF_RS_L_Forever20ms.gif&quot; width=&quot;700&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;Example of low-efficiency, but good-mixing MCMC sampler.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;development-of-monte-carlo-integration-algorithms&quot;&gt;Development of Monte Carlo integration algorithms&lt;/h4&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/DRI.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/DLI.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/GR3D.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/GR2D.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/GR2D.gif&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/EB3D.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/announcement/0/EB2D.gif&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/announcement/0-student-professor-connection-day&quot;&gt;Announcement 0: Student-professor connection day&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on August 30, 2017.&lt;/p&gt;</content>
 </entry>
 
 </feed>

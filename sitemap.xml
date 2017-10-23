@@ -45,7 +45,19 @@
         <loc>/ICP2017F/tags/index.html</loc>
     </url>
     
+    <url>
+        <loc>/ICP2017F/page2/</loc>
+    </url>
+    
 
+    
+    <url>
+        <loc>/ICP2017F/lecture/10-matlab-loops-vectorization</loc>
+    </url>
+    
+    <url>
+        <loc>/ICP2017F/quiz/3-problems-matlab-branching-functions</loc>
+    </url>
     
     <url>
         <loc>/ICP2017F/lecture/8-9-matlab-functions-II-III</loc>

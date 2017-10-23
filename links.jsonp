@@ -2,6 +2,11 @@
 callback([
 
   {
+    "text": "Quiz 3: Problems - MATLAB branching, functions",
+    "href": "/ICP2017F/quiz/3-problems-matlab-branching-functions"
+  } ,
+
+  {
     "text": "Quiz 2: Solutions - Programming history, MATLAB variables",
     "href": "/ICP2017F/quiz/2-solutions-programming-history-matlab-variables"
   } ,
@@ -59,6 +64,11 @@ callback([
   {
     "text": "Lecture 1: Advanced Git concepts",
     "href": "/ICP2017F/lecture/1-advanced-git"
+  } ,
+
+  {
+    "text": "Lecture 10: MATLAB - loops and vectorization",
+    "href": "/ICP2017F/lecture/10-matlab-loops-vectorization"
   } ,
 
   {
