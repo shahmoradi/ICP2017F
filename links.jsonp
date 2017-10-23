@@ -2,6 +2,11 @@
 callback([
 
   {
+    "text": "Quiz 3: Solutions - MATLAB branching, functions",
+    "href": "/ICP2017F/quiz/3-solutions-matlab-branching-functions"
+  } ,
+
+  {
     "text": "Quiz 3: Problems - MATLAB branching, functions",
     "href": "/ICP2017F/quiz/3-problems-matlab-branching-functions"
   } ,
@@ -99,6 +104,11 @@ callback([
   {
     "text": "Homework 1: Problems - Version Control Using Git and Github",
     "href": "/ICP2017F/homework/1-problems-version-control-using-git-github"
+  } ,
+
+  {
+    "text": "Announcement 2: Course Progress Evaluation",
+    "href": "/ICP2017F/announcement/2-course-progress-evaluation"
   } ,
 
   {

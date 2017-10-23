@@ -9,9 +9,25 @@
 		} ,
 	
 		{
+		  "title"      : "Quiz 3: Solutions - MATLAB branching, functions",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/quiz/3-solutions-matlab-branching-functions",
+		  "date"       : "2017-10-23 00:00:00 -0500",
+		  "shortdate"  : "October 23, 2017"
+		} ,
+	
+		{
 		  "title"      : "Quiz 3: Problems - MATLAB branching, functions",
 		  "category"   : "",
 		  "url"        : "/ICP2017F/quiz/3-problems-matlab-branching-functions",
+		  "date"       : "2017-10-23 00:00:00 -0500",
+		  "shortdate"  : "October 23, 2017"
+		} ,
+	
+		{
+		  "title"      : "Announcement 2: Course Progress Evaluation",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/announcement/2-course-progress-evaluation",
 		  "date"       : "2017-10-23 00:00:00 -0500",
 		  "shortdate"  : "October 23, 2017"
 		} ,
