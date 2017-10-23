@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-23T09:00:07-05:00</updated>
+<updated>2017-10-23T09:16:14-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -569,7 +569,7 @@ B = [2, 3, 7]&lt;/script&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; (A) Write a MATLAB function named &lt;code&gt;testString&lt;/code&gt; that takes as input, a string and then checks if the input string by the user is the equivalent to &lt;code&gt;'MATLAB&lt;/code&gt;. If it is the correct string, then returns logical value &lt;code&gt;true&lt;/code&gt; as the function output, otherwise it returns &lt;code&gt;false&lt;/code&gt;. Provide two tests of your function which result in &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;false&lt;/code&gt; output.&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; (A) Write a MATLAB function named &lt;code&gt;testString&lt;/code&gt; that takes as input, a string and then checks if the input string by the user is the equivalent to string &lt;code&gt;'MATLAB'&lt;/code&gt;. If it is the correct string, then returns logical value &lt;code&gt;true&lt;/code&gt; as the function output, otherwise it returns &lt;code&gt;false&lt;/code&gt;. Provide two tests of your function which result in &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;false&lt;/code&gt; output.&lt;br /&gt;
 &lt;br /&gt;
 (B) One can argue that there are two basic ways of comparing two strings in MATLAB. one is using &lt;code&gt;==&lt;/code&gt; operator, and the other is with the use of a MATLAB built-in function that we have repeatedly used in our lectures and homework. What is this function, and what is its difference with &lt;code&gt;==&lt;/code&gt; operator. If you don’t remember this function’s name, then at least you should be able to explain the major flaw with string comparison using &lt;code&gt;==&lt;/code&gt;. Explain it with an example MATLAB script.&lt;/p&gt;
 
