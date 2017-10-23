@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-23T13:10:17-05:00</updated>
+<updated>2017-10-23T14:00:36-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -718,7 +718,7 @@ SOA =
     grades: [90 100 85]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-Suppose you have 10000 students in your class. Which one of these representations do you think would be more computationally efficient to represent the student data, in order to calculate the average grade in you class? Why? (the explanation is brief, you don’t to write a paragraph.)&lt;/p&gt;
+Suppose you have 10000 students in your class. Which one of these representations do you think would be more computationally efficient to represent the student data, in order to calculate the average grade in you class? Why? (the explanation is brief, you don’t need to write a paragraph.)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;Structure of arrays&lt;/em&gt; is much more efficient for storing grade data. As we discussed repeatedly in class, this is due to the fact that data is stored sequentially in computer memory. Therefore, it would be much easier for the computer to fetch data from memory when all grade data is stored in an array sequentially in memory, than when each grade is separated from the next student’s grade by their names, just as in &lt;em&gt;array of structures&lt;/em&gt;.&lt;/p&gt;
@@ -882,7 +882,7 @@ SOA =
     grades: [90 100 85]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-Suppose you have 10000 students in your class. Which one of these representations do you think would be more computationally efficient to represent the student data, in order to calculate the average grade in you class? Why? (the explanation is brief, you don’t to write a paragraph.)&lt;/p&gt;
+Suppose you have 10000 students in your class. Which one of these representations do you think would be more computationally efficient to represent the student data, in order to calculate the average grade in you class? Why? (the explanation is brief, you don’t need to write a paragraph.)&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -923,7 +923,7 @@ Suppose you have 10000 students in your class. Which one of these representation
   
   <content type="html">
   
-    &lt;p&gt;The goal of this survey is to assess your progress so far in this class, and to make improvements for the rest of the semester, if needed. I rely on your answers and comments to plan for the rest of the semester, so your accurate response and time is appreciated.&lt;/p&gt;
+    &lt;p&gt;The goal of this survey is to assess your progress so far in this class, and to make improvements for the rest of the semester, if needed. I rely on your answers and comments to plan for the rest of the semester, so your accurate timely response is appreciated.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;
     &lt;script&gt;
