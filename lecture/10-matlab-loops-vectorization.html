@@ -633,6 +633,63 @@ Table of MATLAB's most-widely used vectorization functions.
 </table>
 <p><br /></p>
 
+<h2 id="measuring-the-performance-of-your-matlab-functions-and-scripts">Measuring the performance of your MATLAB functions and scripts</h2>
+
+<p>MATLAB has several built-in methods of timing how long it takes to run a MATLAB function or script. The <code>timeit()</code> function as well as <code>tic</code> and <code>toc</code>, are in particular very useful. Use the <code>timeit()</code> function for a rigorous measurement of your function’s execution time. Use <code>tic</code> and <code>toc</code> to estimate time for smaller portions of code that are not complete functions.</p>
+
+<p>For additional details about the performance of your code, such as function call information and execution time of individual lines of code, MATLAB has more sophisticated tools such as <em>MATLAB® Profiler</em>.</p>
+
+<h3 id="timing-matlab-functions">Timing MATLAB functions</h3>
+
+<p>To measure the time required to run a function, whether built-in or your own, you can use the <code>timeit()</code> function. The <code>timeit()</code> function calls the user-specified function multiple times, and returns the median of the time measurements. This function takes <strong>a handle to the function whose performance is to be measured</strong> and returns the typical execution time, in seconds.</p>
+
+<p>For example, suppose that you want to measure the performance of MATLAB’s built-in function, <code>isprime()</code> for a given input value to this function. You can compute the time to execute the function using <code>timeit()</code> like the following,</p>
+
+<pre><code class="language-matlab">&gt;&gt; timeit( @()isprime(10^14) ) % pass the function as a handle to timeit()
+ans =
+    0.0787
+</code></pre>
+<p><br />
+Note that, this function <code>isprime()</code> will have different performance given different input numbers,</p>
+<pre><code class="language-matlab">&gt;&gt; timeit( @()isprime(10^4) ) % pass the function as a handle to timeit()
+ans =
+   2.0402e-05
+</code></pre>
+<p><br /></p>
+
+<h3 id="time-portions-of-code">Time Portions of Code</h3>
+
+<p>To estimate how long a portion of your program takes to run or to compare the speed of different implementations of portions of your program, you can use MATLAB stopwatch timer functions: <code>tic</code> and <code>toc</code>. Invoking <code>tic</code> starts the timer, and the next <code>toc</code> reads the elapsed time.</p>
+
+<pre><code class="language-matlab">tic
+   % The program section to time. 
+toc
+</code></pre>
+<p><br />
+Sometimes programs run too fast for <code>tic</code> and <code>toc</code> to provide useful data. If your code is faster than <strong>1/10 second</strong>, consider timing it while running in a loop, and then average the result to find the time for a single run of the loop.</p>
+
+<h4 id="the-cputime-function-vs-tictoc-and-timeit">The <code>cputime()</code> function vs. <code>tic/toc</code> and <code>timeit()</code></h4>
+
+<p>There is another MATLAB function that can do timing of your scripts or your functions: The <code>cputime()</code> function measures the total CPU time and <strong>sums across all threads (cores) in the CPU</strong>. This measurement is different from the <strong>wall-clock time</strong> that <code>timeit()</code> or <code>tic/toc</code> return, and could be misleading. For example, the CPU time for the pause function is typically small, but the wall-clock time accounts for the actual time that MATLAB execution is paused. Therefore, the wall-clock time might be longer.</p>
+
+<p>If your function uses four processing cores equally, the CPU time could be approximately four times higher than the wall-clock time.</p>
+
+<p>Frequently, your best choice to measure the performance of your code is <code>timeit()</code> or <code>tic</code> and <code>toc</code>. These functions return wall-clock time. Note that, unlike <code>tic</code> and <code>toc</code>, the <code>timeit()</code> function calls your code multiple times, and, therefore, considers the cost of first-time calls to your functions, which are typically more time-consuming than subsequent calls.</p>
+
+<h3 id="some-tips-for-measuring-performance">Some tips for Measuring Performance</h3>
+
+<ul>
+  <li>Always time a <strong>significant enough</strong> portion of code. Normally, the code that you are timing should <strong>take more than 1/10 second to run</strong>, otherwise the timing may not be very accurate.<br />
+<br /></li>
+  <li>Put the code you are trying to time into a function instead of timing it at the command line or inside a script.<br />
+<br /></li>
+  <li>Unless you are trying to measure first-time cost of running your code, run your code multiple times. Use the <code>timeit()</code> function for multiple calls timing of your function.<br />
+<br /></li>
+  <li>Avoid <code>clear all</code> when measuring performance of your MATLAB scripts. This will add additional time to wipe MATLAB workspace from all current existing variable definitions, and therefore contaminate the timing measurements of the actual code in your MATLAB scripts.<br />
+<br /></li>
+  <li>When performing timing measurements, assign your output to a variable instead of letting it default to <code>ans()</code>.</li>
+</ul>
+
 <p><br /><br /></p>
 
             </div>
@@ -703,8 +760,8 @@ Table of MATLAB's most-widely used vectorization functions.
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 10 / 23</section></br> -->
-         <section>Last updated Monday, 23 Oct 2017 at 02:00 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 10 / 25</section></br> -->
+         <section>Last updated Wednesday, 25 Oct 2017 at 12:32 PM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>

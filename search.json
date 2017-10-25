@@ -1,11 +1,27 @@
 [
 	
 		{
+		  "title"      : "Homework 4: Solutions - loops, IO",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/homework/4-solutions-loops-IO",
+		  "date"       : "2017-10-30 00:00:00 -0500",
+		  "shortdate"  : "October 30, 2017"
+		} ,
+	
+		{
 		  "title"      : "Lecture 10: MATLAB - loops and vectorization",
 		  "category"   : "",
 		  "url"        : "/ICP2017F/lecture/10-matlab-loops-vectorization",
 		  "date"       : "2017-10-27 00:00:00 -0500",
 		  "shortdate"  : "October 27, 2017"
+		} ,
+	
+		{
+		  "title"      : "Announcement 3: Midterm Exam Date and Schedule",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/announcement/3-midterm-exam-schedule",
+		  "date"       : "2017-10-25 00:00:00 -0500",
+		  "shortdate"  : "October 25, 2017"
 		} ,
 	
 		{
