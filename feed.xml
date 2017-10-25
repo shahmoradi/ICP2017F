@@ -7,327 +7,13 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-25T12:32:38-05:00</updated>
+<updated>2017-10-25T12:33:55-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/ICP2017F/</uri>
   <email>amir@ices.utexas.edu</email>
 </author>
-
-
-<entry>
-  <title type="html"><![CDATA[Homework 4: Solutions - loops, IO]]></title>
-  <link rel="alternate" type="text/html" href="http:/ICP2017F/homework/4-solutions-loops-IO"/>
-  <id>http:/ICP2017F/homework/4-solutions-loops-IO</id>
-  <published>2017-10-30T00:00:00-05:00</published>
-  <updated>2017-10-30T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;This is the solution to &lt;a href=&quot;2-problems-loops-IO.html&quot; target=&quot;_blank&quot;&gt;Homework 4: Problems - loops, IO&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The following figure illustrates the grade distribution for this homework.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/homework/gradeDist/gradeHistHomework2.png&quot; width=&quot;700&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Maximum possible points, excluding bonus question, is 100.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;♣ &lt;strong&gt;Due Date: Monday Nov 13, 2017 9:00 AM&lt;/strong&gt;. This homework aims at giving you some experience with MATLAB for-loops and while-loops as well as input/output functionalities in MATLAB.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; &lt;strong&gt;The while-loop implementation of a for-loop.&lt;/strong&gt; Consider the following two vectors of temperatures in Celsius degrees to Fahrenheit, using a for-loop and then prints them on screen.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;Cdegrees = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40]
-Fdegrees = [-20, -15, -5, 0, 10, 15, 30, 35, 40]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-(A) Write a function that takes an input vector of temperatures, and a string which is either &lt;code&gt;'F2C'&lt;/code&gt; or &lt;code&gt;C2F&lt;/code&gt;. Then, converts the input temperature vector from Fahrenheit to Celsius if the input string is &lt;code&gt;'F2C'&lt;/code&gt;, otherwise converts the input temperature vector from Celsius to Fahrenheit if the input string is &lt;code&gt;'C2F'&lt;/code&gt;, otherwise outputs an error message and aborts the program.&lt;/p&gt;
-
-&lt;p&gt;(A) Write this function using while-loop construct (you can name the function &lt;code&gt;convertTempFor.m&lt;/code&gt;).&lt;br /&gt;
-(B) Write this function using for-loop construct (you can name the function &lt;code&gt;convertTempWhile.m&lt;/code&gt;).&lt;br /&gt;
-(C) Write this function using vectorization concept (you can name the function &lt;code&gt;convertTempVec.m&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;Here are some example calls to these functions,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;InVec = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40];
-&amp;gt;&amp;gt; convertTempFor(InVec,'C2F')
-ans =
-    -4     5    14    23    32    41    50    59    68    77    86    95   104
-&amp;gt;&amp;gt; convertTempWhile(InVec,'C2F')
-ans =
-    -4     5    14    23    32    41    50    59    68    77    86    95   104
-&amp;gt;&amp;gt; convertTempVec(InVec,'C2F')
-ans =
-    -4     5    14    23    32    41    50    59    68    77    86    95   104
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Here are the three &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/convertTempFor.m&quot; target=&quot;_blank&quot;&gt;convertTempFor.m&lt;/a&gt;, &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/convertTempWhile.m&quot; target=&quot;_blank&quot;&gt;convertTempWhile.m&lt;/a&gt;, and &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/convertTempVec.m&quot; target=&quot;_blank&quot;&gt;convertTempVec.m&lt;/a&gt; functions.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; Use MATLAB built-in timing functions to measure the performance of three functions you wrote in question 1 above.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Here is &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/timing.m&quot; target=&quot;_blank&quot;&gt;one way (timing.m script)&lt;/a&gt; to time the functions. Here is a test result:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; timing
-Timing for convertTempVec: 0.038723 seconds.
-Timing for convertTempFor: 0.03936 seconds.
-Timing for convertTempWhile: 0.18011 seconds.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; Consider the following nested cell vector,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;List = { {'M','A','T','L','A','B'}, {' '}, {'i','s'}, {' '}, {'a'}, {' '}, {'s','t','r','a','n','g','e'}, {', '}, {'b','u','t',' '}, {'p','o','p','u','l','a','r'}, {' '}, {'p','r','o','g','r','a','m','m','i','n','g',' ','l','a','n','g','u','a','g','e'} };
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-Write a MATLAB script &lt;code&gt;extractLetter.m&lt;/code&gt; that uses for-loop to extract all the letters in the variable list and finally prints them all as a single string like the following,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; extractLetter
-MATLAB is a strange, but popular programming language
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Here is an &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/extractLetter.m&quot; target=&quot;_blank&quot;&gt;example implementation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4. &lt;/strong&gt; &lt;strong&gt;The significant impact of round-off errors in numerical computation.&lt;/strong&gt; Consider the following program,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;formatSpec = 'With %d sqrt, then %d times ^2 operations, the number %.16f becomes: %.16f \n'; % the string format for fprintf function
-for n = 1:60
-    r_original = 2.0;
-    r = r_original;
-    for i = 1:n
-        r = sqrt(r);
-    end
-    for i = 1:n
-        r = r^2;
-    end
-    fprintf(formatSpec,n,n,r_original,r);
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-Explain what this code does. Then run the code, and explain why do you see the behavior observed. In particular, why do you not recover the original value $2.0$ after many repetitions of the same forward and reverse task of taking square root and squaring the result?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-This code (&lt;code&gt;roundoff.m&lt;/code&gt;) will yield the following output:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;gt;&amp;gt; roundoff
-With 1 sqrt, then 1 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000004 
-With 2 sqrt, then 2 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999996 
-With 3 sqrt, then 3 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999996 
-With 4 sqrt, then 4 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
-With 5 sqrt, then 5 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
-With 6 sqrt, then 6 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
-With 7 sqrt, then 7 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999714 
-With 8 sqrt, then 8 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
-With 9 sqrt, then 9 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
-With 10 sqrt, then 10 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
-With 11 sqrt, then 11 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
-With 12 sqrt, then 12 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999991336 
-With 13 sqrt, then 13 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
-With 14 sqrt, then 14 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
-With 15 sqrt, then 15 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
-With 16 sqrt, then 16 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000117746 
-With 17 sqrt, then 17 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000408580 
-With 18 sqrt, then 18 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000408580 
-With 19 sqrt, then 19 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
-With 20 sqrt, then 20 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
-With 21 sqrt, then 21 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
-With 22 sqrt, then 22 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000010885857 
-With 23 sqrt, then 23 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000029511749 
-With 24 sqrt, then 24 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000066771721 
-With 25 sqrt, then 25 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000066771721 
-With 26 sqrt, then 26 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
-With 27 sqrt, then 27 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
-With 28 sqrt, then 28 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
-With 29 sqrt, then 29 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
-With 30 sqrt, then 30 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
-With 31 sqrt, then 31 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
-With 32 sqrt, then 32 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999990380770896 
-With 33 sqrt, then 33 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
-With 34 sqrt, then 34 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
-With 35 sqrt, then 35 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
-With 36 sqrt, then 36 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
-With 37 sqrt, then 37 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
-With 38 sqrt, then 38 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
-With 39 sqrt, then 39 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
-With 40 sqrt, then 40 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
-With 41 sqrt, then 41 times ^2 operations, the number 2.0000000000000000 becomes: 1.9994478907329654 
-With 42 sqrt, then 42 times ^2 operations, the number 2.0000000000000000 becomes: 1.9984718365144798 
-With 43 sqrt, then 43 times ^2 operations, the number 2.0000000000000000 becomes: 1.9965211562778555 
-With 44 sqrt, then 44 times ^2 operations, the number 2.0000000000000000 becomes: 1.9965211562778555 
-With 45 sqrt, then 45 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
-With 46 sqrt, then 46 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
-With 47 sqrt, then 47 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
-With 48 sqrt, then 48 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
-With 49 sqrt, then 49 times ^2 operations, the number 2.0000000000000000 becomes: 1.8682459487159784 
-With 50 sqrt, then 50 times ^2 operations, the number 2.0000000000000000 becomes: 1.6487212645509468 
-With 51 sqrt, then 51 times ^2 operations, the number 2.0000000000000000 becomes: 1.6487212645509468 
-With 52 sqrt, then 52 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
-With 53 sqrt, then 53 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
-With 54 sqrt, then 54 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
-With 55 sqrt, then 55 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
-With 56 sqrt, then 56 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
-With 57 sqrt, then 57 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
-With 58 sqrt, then 58 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
-With 59 sqrt, then 59 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
-With 60 sqrt, then 60 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-What is happening is that, 1 is returned for n &amp;gt;= 52 as square root of 2, that is, after 52 times square-root operation, the degree of accuracy required for representing the result goes beyond the degree of accuracy available in a MATLAB double precision number. Consequently, the later squaring operation on 1.00000000000000 will leave the number unchanged and therefore, 2 is not recovered.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;5. &lt;/strong&gt; Consider the following code,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;eps = 1.0;
-while 1.0 ~= 1.0 + eps
-    disp(['...............', num2str(eps)]);
-    eps = eps / 2.0;
-end
-disp(['final eps:', num2str(eps)]);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-Explain what the code is doing. Run the code and observe the output. How could &lt;code&gt;1.0 ~= 1.0 + eps&lt;/code&gt; be &lt;code&gt;false&lt;/code&gt;?!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Here is the output of the code,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;gt;&amp;gt; epsError
-eps: 1
-eps: 0.5
-eps: 0.25
-eps: 0.125
-eps: 0.0625
-eps: 0.03125
-eps: 0.015625
-eps: 0.0078125
-eps: 0.0039063
-eps: 0.0019531
-eps: 0.00097656
-eps: 0.00048828
-eps: 0.00024414
-eps: 0.00012207
-eps: 6.1035e-05
-eps: 3.0518e-05
-eps: 1.5259e-05
-eps: 7.6294e-06
-eps: 3.8147e-06
-eps: 1.9073e-06
-eps: 9.5367e-07
-eps: 4.7684e-07
-eps: 2.3842e-07
-eps: 1.1921e-07
-eps: 5.9605e-08
-eps: 2.9802e-08
-eps: 1.4901e-08
-eps: 7.4506e-09
-eps: 3.7253e-09
-eps: 1.8626e-09
-eps: 9.3132e-10
-eps: 4.6566e-10
-eps: 2.3283e-10
-eps: 1.1642e-10
-eps: 5.8208e-11
-eps: 2.9104e-11
-eps: 1.4552e-11
-eps: 7.276e-12
-eps: 3.638e-12
-eps: 1.819e-12
-eps: 9.0949e-13
-eps: 4.5475e-13
-eps: 2.2737e-13
-eps: 1.1369e-13
-eps: 5.6843e-14
-eps: 2.8422e-14
-eps: 1.4211e-14
-eps: 7.1054e-15
-eps: 3.5527e-15
-eps: 1.7764e-15
-eps: 8.8818e-16
-eps: 4.4409e-16
-eps: 2.2204e-16
-final eps:1.1102e-16
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-What is happening is that after a certain number of divisions performed on the value of &lt;code&gt;eps&lt;/code&gt;, the value goes beyond the highest float precision representable by Python standard ($0.0000000000000001$), and therefore the value of &lt;code&gt;eps&lt;/code&gt; is eventually rounded to exact zero. The nonzero &lt;code&gt;eps&lt;/code&gt; value computed above is called &lt;strong&gt;machine epsilon&lt;/strong&gt; or &lt;strong&gt;machine zero&lt;/strong&gt; and is an important parameter to know, since it can lead to disasters in your very important complex calculations.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; Suppose you want to find the largest prime number that is smaller than a given input value by the user. Write a function named &lt;code&gt;getLargestPrime&lt;/code&gt; that does so, using for-loop, break, and MATLAB’s intrinsic function isprime(). Here is a test,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; getLargestPrime(123)
-ans =
-   113
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;function integer = getLargestPrime(upper)
-    if (upper&amp;lt;1)
-        disp('input value cannot be less than 1. Goodbye!')
-        return
-    end
-    for integer = upper:-1:1
-        if isprime(integer)
-            break
-        end
-    end
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/4-solutions-loops-IO&quot;&gt;Homework 4: Solutions - loops, IO&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 30, 2017.&lt;/p&gt;</content>
-</entry>
 
 
 <entry>
@@ -6320,6 +6006,604 @@ Now on MATLAB command line, run the script by calling its name. What do you get?
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/2-problems-variables-values-types&quot;&gt;Homework 2: Problems - Variables, Values, and Types&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on September 18, 2017.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Homework 1: Solutions - Version Control Using Git and Github]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/homework/1-solutions-version-control-using-git-github"/>
+  <id>http:/ICP2017F/homework/1-solutions-version-control-using-git-github</id>
+  <published>2017-09-18T00:00:00-05:00</published>
+  <updated>2017-09-18T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This is the solution to &lt;a href=&quot;1-problems-version-control-using-git-github.html&quot; target=&quot;_blank&quot;&gt;Homework 1: Problems - Version Control Using Git and Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The following figure illustrates the grade distribution for this homework.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/gradeDist/gradeHistHomework1.png&quot; width=&quot;700&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        Maximum possible points, excluding bonus questions, is 1.&lt;br /&gt;
+        Maximum possible points, including bonus questions, is 1.5.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;♣ &lt;strong&gt;Due Date: Wednesday Sep 13, 2017 9:00 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to create Git branches, develop your project on multiple branches, merge them, resolve potential conflicts between different branches upon merging, and finally how to delete them. It also gives you some experience with using other commonly-used Git commands.&lt;/p&gt;
+
+&lt;p&gt;First, use the following Markdown language references, or any other reference that you find or prefer, to design a Github-interpretable README file for each of folders in your project for this course, and a Github web-page for your project.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/1/markdown-cheatsheet-online.pdf&quot; target=&quot;_blank&quot;&gt;Markdown language cheat-sheet (pdf)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.ghost.org/markdown/&quot; target=&quot;_blank&quot;&gt;Markdown language reference (web)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot; target=&quot;_blank&quot;&gt;Adam Pritchard’s Markdown cheat-sheet (web)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Write your code sections of your answer in Markdown syntax.
+For example,&lt;br /&gt;
+&lt;code&gt;
+    ```bash  &lt;br /&gt;
+    $ git branch -d test  &lt;br /&gt;
+    error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'  &lt;br /&gt;
+    ```
+&lt;/code&gt;
+&lt;br /&gt;
+will display the following text highlighted as &lt;em&gt;bash&lt;/em&gt; code, in your &lt;em&gt;readme.md&lt;/em&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git branch -d test
+error: Cannot delete branch 'test' checked out at 'C:/Users/Amir/git/foo'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Include the following information with the following format and information in your main directory &lt;code&gt;readme.md&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;h2 id=&quot;beginning-of-the-readme-files-content&quot;&gt;&lt;em&gt;Beginning of the README file’s content&lt;/em&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;icp2017f---introduction-to-computer-programming-fall-2017&quot;&gt;ICP2017F - Introduction to Computer Programming (Fall 2017)&lt;/h4&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;Name:&lt;/strong&gt; &amp;lt;first name&amp;gt; &amp;lt;last name&amp;gt;&lt;br /&gt;
+&lt;strong&gt;UT EID:&lt;/strong&gt; &amp;lt;your UT EID&amp;gt;&lt;br /&gt;
+&lt;strong&gt;Email:&lt;/strong&gt; &amp;lt;your email&amp;gt;&lt;br /&gt;
+&lt;strong&gt;Department:&lt;/strong&gt; &lt;a href=&quot;http://www.ae.utexas.edu/&quot;&gt;Department of Aerospace Engineering and Engineering Mechanics&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;University:&lt;/strong&gt; &lt;a href=&quot;http://www.utexas.edu/&quot;&gt;The University of Texas at Austin&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;Level:&lt;/strong&gt; Undergraduate - &amp;lt;Freshman(1st year) / Sophomore(2nd year) / Junior(3rd year) / Senior(4th year)&amp;gt;&lt;br /&gt;
+&lt;strong&gt;ICP Class Position:&lt;/strong&gt; Student&lt;br /&gt;
+&lt;strong&gt;Course Webpage:&lt;/strong&gt; &lt;a href=&quot;http://www.shahmoradi.orghttp:/ICP2017F/&quot;&gt;http://www.shahmoradi.orghttp:/ICP2017F/&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;Photo:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http:/ICP2017F/images/amir.png&quot; alt=&quot;Amir Shahmoradi&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;description-of-the-projects-content&quot;&gt;Description of the project’s content&lt;/h4&gt;
+&lt;p&gt;&lt;br /&gt; This repository contains my homework, quizzes, and virtually every effort that I have made for &lt;a href=&quot;http://www.shahmoradi.orghttp:/ICP2017F/&quot;&gt;ICP2017F class&lt;/a&gt;. The structure of the project is the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#homework&quot;&gt;homework&lt;/a&gt;:&lt;/strong&gt; (the homework hyperlink should take the reader to the homework folder)&lt;br /&gt;
+  This directory contains all my homework submissions, each of which is a folder properly named with homework number, containing the homework submission.&lt;br /&gt;
+  &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#quiz&quot;&gt;quiz&lt;/a&gt;:&lt;/strong&gt; (the quiz hyperlink should take the reader to the quizzes folder)&lt;br /&gt;
+  This directory contains all my quiz submissions, each of which is a folder properly named with quiz number, containing the quiz submission.&lt;br /&gt;
+  &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#exam&quot;&gt;exam&lt;/a&gt;:&lt;/strong&gt; (the exam hyperlink should take the reader to the exams folder)&lt;br /&gt;
+  This directory contains all my exam submissions, each of which is a folder properly named with exam name or number, containing the exam submission.&lt;br /&gt;
+  &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For questions and troubleshooting, please contact:&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;your name&amp;gt;&lt;br /&gt;
+&amp;lt;your email&amp;gt;&lt;br /&gt;
+&amp;lt;any other contact or signature information that you would like to add&amp;gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I have not failed. I’ve just found 10,000 ways that won’t work.&lt;br /&gt;
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Thomas_Edison&quot; target=&quot;_blank&quot;&gt;Thomas A. Edison&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;end-of-the-readme-files-content&quot;&gt;&lt;em&gt;End of the README file’s content&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Use the following Markdown code in your &lt;code&gt;readme.md&lt;/code&gt; file to get the exact same behavior as requested above:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;#### ICP2017F - Introduction to Computer Programming (Fall 2017)
+&amp;lt;br&amp;gt;
+**Name:** \&amp;lt;first name&amp;gt; \&amp;lt;last name&amp;gt;  
+**UT EID:** \&amp;lt;your UT EID&amp;gt;  
+**Email:** \&amp;lt;your email&amp;gt;  
+**Department:** [Department of Aerospace Engineering and Engineering Mechanics](http://www.ae.utexas.edu/)  
+**University:** [The University of Texas at Austin](http://www.utexas.edu/)  
+**Level:** Undergraduate - \&amp;lt;Freshman(1st year) / Sophomore(2nd year) / Junior(3rd year) / Senior(4th year)&amp;gt;  
+**ICP Class Position:** Student  
+**Course Webpage:** &amp;lt;http://www.shahmoradi.orghttp:/ICP2017F/&amp;gt;  
+**Photo:**  
+
+![Amir Shahmoradi](../../images/amir.png)  
+
+#### Description of the project's content
+&amp;lt;br&amp;gt; This repository contains my homework, quizzes, and virtually every effort that I have made for [ICP2017F class](http://www.shahmoradi.orghttp:/ICP2017F/). The structure of the project is the following:
+
+* **[homework](#homework):** (the homework hyperlink should take the reader to the homework folder)  
+    This directory contains all my homework submissions, each of which is a folder properly named with homework number, containing the homework submission.  
+    &amp;lt;br&amp;gt;
+* **[quiz](#quiz):** (the quiz hyperlink should take the reader to the quizzes folder)  
+    This directory contains all my quiz submissions, each of which is a folder properly named with quiz number, containing the quiz submission.  
+    &amp;lt;br&amp;gt;
+* **[exam](#exam):** (the exam hyperlink should take the reader to the exams folder)  
+    This directory contains all my exam submissions, each of which is a folder properly named with exam name or number, containing the exam submission.  
+    &amp;lt;br&amp;gt;
+
+For questions and troubleshooting, please contact:  
+
+\&amp;lt;your name&amp;gt;  
+\&amp;lt;your email&amp;gt;  
+\&amp;lt;any other contact or signature information that you would like to add&amp;gt;
+
+&amp;gt;I have not failed. I've just found 10,000 ways that won't work.  
+&amp;gt;[Thomas A. Edison](https://en.wikipedia.org/wiki/Thomas_Edison){:target=&quot;_blank&quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;Note that you will have to change the relevant information and hyper-references in the above Mardown code to those that match your own information in your own repository (including your own photo).&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; Create two additional test branches in your project, each of which is branched directly from &lt;em&gt;master&lt;/em&gt;. &lt;strong&gt;For each of the following cases, write the command and the corresponding output message of Git, in Markdown language in a &lt;code&gt;readme.md&lt;/code&gt; file inside your &lt;code&gt;homework/1/&lt;/code&gt; folder in your master branch&lt;/strong&gt;. If you don’t have this folder in your project, then create the folder and then place your initial &lt;code&gt;readme.md&lt;/code&gt; file in this folder with your signature as the content of the file. Then stage and commit this file together with homework-1 folder to your local repository. Throughout the rest of this homework, you will fill this &lt;code&gt;readme.md&lt;/code&gt; file with your answers.&lt;/p&gt;
+
+&lt;p&gt;(A) Create two branches, &lt;strong&gt;both from your &lt;em&gt;master&lt;/em&gt; branch&lt;/strong&gt;, with names &lt;em&gt;test1&lt;/em&gt; and &lt;em&gt;test2&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git branch
+* master
+
+$ git branch test1
+
+$ git branch test2
+
+$ git branch
+* master
+  test1
+  test2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(B) Now checkout the &lt;em&gt;test1&lt;/em&gt; branch and create a new text file named &lt;code&gt;test.txt&lt;/code&gt; in the &lt;code&gt;homework/1/&lt;/code&gt; directory of this branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout test1
+Switched to branch 'test1'
+
+$ git status
+On branch test1
+nothing to commit, working tree clean
+
+$ ls
+readme.md
+
+$ touch test.txt
+
+$ ls
+readme.md  test.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(C) Inside &lt;code&gt;test.txt&lt;/code&gt; in &lt;em&gt;test1&lt;/em&gt; branch write this message: &lt;em&gt;This is some example text for branch test1&lt;/em&gt;, and save it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Use &lt;code&gt;vim test.txt&lt;/code&gt; to open &lt;em&gt;vim&lt;/em&gt; editor. Press &lt;code&gt;shift + I&lt;/code&gt; to switch to &lt;em&gt;vim insert mode&lt;/em&gt;. write &lt;em&gt;This is some example text for branch test1&lt;/em&gt; in &lt;code&gt;test.txt&lt;/code&gt; file. Now, Press &lt;code&gt;ESC&lt;/code&gt; key and write &lt;code&gt;:wq&lt;/code&gt; on the &lt;em&gt;vim&lt;/em&gt; command line to save the file and quit &lt;em&gt;vim&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(D) Now stage and commit &lt;code&gt;test.txt&lt;/code&gt; file to branch &lt;em&gt;test1&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git status
+On branch test1
+Untracked files:
+  (use &quot;git add &amp;lt;file&amp;gt;...&quot; to include in what will be committed)
+
+        test.txt
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+
+$ git add --all
+warning: LF will be replaced by CRLF in test.txt.
+The file will have its original line endings in your working directory.
+
+$ git commit -m&quot;commiting the test.txt file in test1 branch&quot;
+[test1 715ca59] commiting the test.txt file in test1 branch
+1 file changed, 1 insertion(+)
+create mode 100644 test.txt
+
+$ git status
+On branch test1
+nothing to commit, working tree clean
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(E) Checkout the branch &lt;em&gt;test2&lt;/em&gt;. Do you still see &lt;code&gt;test.txt&lt;/code&gt; that you just created in your &lt;code&gt;homework/1/&lt;/code&gt; directory? You can search for it by the &lt;em&gt;bash&lt;/em&gt; command &lt;code&gt;ls&lt;/code&gt;. Explain why you see/don’t see the file in your working directory anymore.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout test2
+Switched to branch 'test2'
+
+$ ls
+readme.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+The &lt;code&gt;test.txt&lt;/code&gt; files is not in the project’s working directory, since I just chaecked out a new branch &lt;em&gt;test2&lt;/em&gt; that does not contain any files that were generated and committed in &lt;em&gt;test1&lt;/em&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(F) Create a new text file named &lt;code&gt;test.txt&lt;/code&gt; in the &lt;code&gt;homework/1/&lt;/code&gt; directory of this branch as well, and add &lt;em&gt;This is some example text for branch test2&lt;/em&gt; to its content.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ touch test.txt
+
+$ vim test.txt
+
+$ git status
+On branch test2
+Untracked files:
+  (use &quot;git add &amp;lt;file&amp;gt;...&quot; to include in what will be committed)
+
+        test.txt
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+The procedure for adding content to the file is very similar to that in part (C) of the problem, explained above.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(G) Now try to checkout &lt;em&gt;test1&lt;/em&gt;. What error/warning message do you get? Fix the source of error and then checkout &lt;em&gt;test1&lt;/em&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout test1
+error: The following untracked working tree files would be overwritten by checkout:
+        test.txt
+Please move or remove them before you switch branches.
+Aborting
+
+$ git add --all
+warning: LF will be replaced by CRLF in test.txt.
+The file will have its original line endings in your working directory.
+
+$ git commit -m&quot;commtting the test2 branch changes&quot;
+[test2 fce6a94] commtting the test2 branch changes
+1 file changed, 1 insertion(+)
+create mode 100644 test.txt
+
+$ git status
+On branch test2
+nothing to commit, working tree clean
+
+$ git checkout test1
+Switched to branch 'test1'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(H) Now merge the content of &lt;em&gt;test1&lt;/em&gt; with &lt;em&gt;master&lt;/em&gt; branch. (Hint: Note from which branch you doing this merge!)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout master
+Switched to branch 'master'
+
+$ ls
+readme.md
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ git merge test1
+Updating a661e87..715ca59
+Fast-forward
+ test.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(I) Now what do you see as the content of &lt;em&gt;master&lt;/em&gt; branch? (Hint: Use &lt;code&gt;ls&lt;/code&gt; &lt;em&gt;bash&lt;/em&gt; command, to list the files in the working directory.)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ ls
+readme.md  test.txt
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(J) Now merge the content of &lt;em&gt;test2&lt;/em&gt; with &lt;em&gt;master&lt;/em&gt; branch. What error/warning message do you get? Why does this error arise?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git merge test2
+Auto-merging test.txt
+CONFLICT (add/add): Merge conflict in test.txt
+Automatic merge failed; fix conflicts and then commit the result.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(K) Now checkout &lt;em&gt;test2&lt;/em&gt;. What error/warning message do you get?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout test2
+test.txt: needs merge
+error: you need to resolve your current index first
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(L) Run the Git command &lt;code&gt;git status&lt;/code&gt;. Why does such a conflict exist, as mentioned in &lt;code&gt;git status&lt;/code&gt; output?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Basically, by running &lt;code&gt;git merge test2&lt;/code&gt; command, we attempted to merge test.txt file of &lt;em&gt;test2&lt;/em&gt; branch with the existing &lt;code&gt;test.txt&lt;/code&gt; file of &lt;em&gt;master&lt;/em&gt; branch. But the content of the two is different.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(M) At this stage, you have two options: Either 1. stage and commit the combined conlifting &lt;code&gt;test.txt&lt;/code&gt; file to Git repository (but this is not recommended), or, 2. open the file &lt;code&gt;test.txt&lt;/code&gt; using &lt;em&gt;vim&lt;/em&gt; editor on the command line and reslve the conflict by editing the content of the file to only this sentence: &lt;em&gt;. Then save and quit *vim&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ vim test.txt
+
+$ cat test.txt
+This is some example text from both test1 and test2 branches combined.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+The &lt;em&gt;bash&lt;/em&gt; command &lt;code&gt;cat&lt;/code&gt; shows the content of &lt;code&gt;text.txt&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(N) Now, run &lt;code&gt;git status&lt;/code&gt;, then stage and commit your conflict-resolved file. Then checkout &lt;em&gt;test2&lt;/em&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run &quot;git commit&quot;)
+  (use &quot;git merge --abort&quot; to abort the merge)
+
+Unmerged paths:
+  (use &quot;git add &amp;lt;file&amp;gt;...&quot; to mark resolution)
+
+        both added:      test.txt
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+
+$ git add test.txt
+
+$ git commit -m&quot;adding the test.txt resolution file&quot;
+[master 4c74098] adding the test.txt resolution file
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ git checkout test2
+Switched to branch 'test2'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(O) Now, try deleting branch &lt;em&gt;test1&lt;/em&gt;, while on branch &lt;em&gt;test2&lt;/em&gt;. What error/warning message do you get?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git branch -d test1
+error: The branch 'test1' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D test1'.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(P) Now, switch back to &lt;em&gt;master&lt;/em&gt; branch. Now, try deleting branch &lt;em&gt;test1&lt;/em&gt;, while on &lt;em&gt;master&lt;/em&gt; branch. What message do you get from Git? List all the existing branches using &lt;code&gt;git branch&lt;/code&gt; command.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout master
+Switched to branch 'master'
+
+$ git branch
+* master
+  test2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Q) Why is there such a difference in Git messages between when you tried deleting &lt;em&gt;test1&lt;/em&gt; branch from &lt;em&gt;test2&lt;/em&gt; branch, and when you tried deleting &lt;em&gt;test1&lt;/em&gt; branch from &lt;em&gt;master&lt;/em&gt; branch?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The difference arises, because whichever branch you are in, Git assumes that the content of any other branch should be first merged for the current branch before deteting the other branch. Therefore, in the first case, Git warns that there is unmerged data between &lt;em&gt;test1&lt;/em&gt; and &lt;em&gt;test2&lt;/em&gt; branches. But the delete command from &lt;em&gt;master&lt;/em&gt; branch gives no error, since the content of &lt;em&gt;test1&lt;/em&gt; branch has been previously appropriately merged with &lt;em&gt;master&lt;/em&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(R) Now checkout &lt;em&gt;test2&lt;/em&gt; branch. While on &lt;em&gt;test2&lt;/em&gt;, try to delete branch &lt;em&gt;test2&lt;/em&gt;. What error/message do you get?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout test2
+Switched to branch 'test2'
+
+$ git branch -d test2
+error: Cannot delete branch 'test2' checked out at '~/test'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(S) Switch back to &lt;em&gt;master&lt;/em&gt; and delete &lt;em&gt;test2&lt;/em&gt; branch. List all your project branches by the appropriate Git command.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git checkout master
+Switched to branch 'master'
+
+$ git branch -d test2
+Deleted branch test2 (was fce6a94).
+
+$ git branch
+* master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;(T) Stage and commit all the changes (including the file &lt;code&gt;test.txt&lt;/code&gt;) to your project’s &lt;em&gt;master&lt;/em&gt; branch. Now push it all to the remote repository by Wednesday Feb 15 2017, 9:00 a.m. CDT.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git add --all
+
+$ git commit
+On branch master
+nothing to commit, working tree clean
+
+$ git push --all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; (Bonus, not mandatory) Design a simple Github page for your project, using the main directory’s &lt;code&gt;readme.md&lt;/code&gt; file. Submit the link to the page as your answer. Note that you don’t need to add anything extra to your readme file.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Ask me in class to teach you how to do it.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. &lt;/strong&gt; (Bonus, not mandatory) Create a &lt;em&gt;gh-pages&lt;/em&gt; branch for your project from master branch, such that your project is accessible through its web address based on the content of &lt;em&gt;gh-pages&lt;/em&gt; branch, not based on the content of &lt;em&gt;master&lt;/em&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Ask me in class and I will explain how to do it.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/1-solutions-version-control-using-git-github&quot;&gt;Homework 1: Solutions - Version Control Using Git and Github&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on September 18, 2017.&lt;/p&gt;</content>
 </entry>
 
 </feed>
