@@ -82,6 +82,11 @@ callback([
   } ,
 
   {
+    "text": "Homework 4: Problems - loops, IO",
+    "href": "/ICP2017F/homework/4-problems-loops-IO"
+  } ,
+
+  {
     "text": "Homework 3: Problems - structures, branching and functions in MATLAB",
     "href": "/ICP2017F/homework/3-problems-matlab-structures-branching-functions"
   } ,

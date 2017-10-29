@@ -11,23 +11,23 @@
 -->
 
 <meta charset="utf-8">
-<title>QUIZ 3: SOLUTIONS - MATLAB BRANCHING, FUNCTIONS &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
+<title>HOMEWORK 4: PROBLEMS - LOOPS, IO &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
 <meta name="description" content="Introduction to<br>Computer Programming">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/ICP2017F/images/logo.png">
-<meta name="twitter:title" content="Quiz 3: Solutions - MATLAB branching, functions">
+<meta name="twitter:title" content="Homework 4: Problems - loops, IO">
 <meta name="twitter:description" content="Introduction to<br>Computer Programming">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quiz 3: Solutions - MATLAB branching, functions">
+<meta property="og:title" content="Homework 4: Problems - loops, IO">
 <meta property="og:description" content="Introduction to<br>Computer Programming">
-<meta property="og:url" content="/ICP2017F/quiz/3-solutions-matlab-branching-functions">
+<meta property="og:url" content="/ICP2017F/homework/4-problems-loops-IO">
 <meta property="og:site_name" content="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110">
 <meta property="og:image" content="/ICP2017F/images/">
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/ICP2017F/quiz/3-solutions-matlab-branching-functions">
+<link rel="canonical" href="/ICP2017F/homework/4-problems-loops-IO">
 <!-- <link href="/ICP2017F/feed.xml" type="application/atom+xml" rel="alternate" title="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110 Feed"> -->
 
 
@@ -133,8 +133,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Quiz 3: Solutions - MATLAB branching, functions</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-10-23T00:00:00-05:00">23 Oct 2017</time></strong></p>
+                            <h2>Homework 4: Problems - loops, IO</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-10-30T00:00:00-05:00">30 Oct 2017</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -144,19 +144,7 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <p>This is the solution to <a href="3-problems-matlab-branching-functions.html" target="_blank">Quiz 3: Problems - MATLAB branching, functions</a>.</p>
-
-<!--
-The following figure illustrates the grade distribution for this quiz.  
-<figure>
-	<img src="/ICP2017F/quiz/gradeDist/gradeHistQuiz2.png" width="700">
-    <figcaption style="text-align:center">
-        Maximum possible points is 1.
-    </figcaption>
-</figure>
--->
-
-<p>This quiz is about branching, if blocks and functions in MATLAB.</p>
+                <p>♣ <strong>Due Date: Monday Nov 13, 2017 9:00 AM</strong>. This homework aims at giving you some experience with MATLAB for-loops and while-loops as well as input/output functionalities in MATLAB.</p>
 
 <p><br /></p>
 
@@ -165,213 +153,183 @@ The following figure illustrates the grade distribution for this quiz.
 
 <p><br /></p>
 
-<p><strong>1. </strong> Describe, with an example MATLAB script, the difference between <code>*</code> and <code>.*</code> operators (basically what is the role of <code>.</code> in the later operator? (Hint: describe your answer by multiplying two matrices with each other.)</p>
+<p><strong>1. </strong> <strong>The while-loop implementation of a for-loop.</strong> Consider the following two vectors of temperatures in Celsius degrees to Fahrenheit, using a for-loop and then prints them on screen.</p>
 
-<p><strong>Answer:</strong></p>
-
-<p>The <code>.*</code> multiplies two arrays A and B element by element and returns the result in C, if <code>C = A .* B</code>. By contrast, the operator <code>*</code> is understood by MATLAB as <a href="https://en.wikipedia.org/wiki/Matrix_multiplication" target="_blank">matrix multiplication (or cross product)</a>. For example,</p>
-<pre><code class="language-matlab">&gt;&gt; A = [1 0 3];
-&gt;&gt; B = [2 3 7];
-&gt;&gt; C = A.*B
-C =
-    2     0    21
-</code></pre>
-
-<p><br /><br /></p>
-
-<p><strong>2. </strong> <strong>Vector Dot-Product</strong> Vector dot-product in algebra is defined as the summation of the product of the elements of two vectors of the same size. For example,</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
-a &= [a_1, a_2, ..., a_n] ~, \\
-b &= [b_1, b_2, ..., b_n] ~, \\
-a . b &= \sum^n_{i=1} a_i b_i
-\end{align*} %]]></script>
-
-<p>where $\sum$ denotes summation notation and $n$ is the number of elements of the vectors. Now, given your current knowledge of mathematical operators in MATLAB, what is the simplest way to get the result of the following dot-product of the two vectors $A$ and $B$,</p>
-
-<script type="math/tex; mode=display">A = [1, 0, 3] \\
-B = [2, 3, 7]</script>
-
-<p><strong>Answer:</strong><br />
-We discussed in question 1 above, that the operator <code>*</code> in MATLAB performs matrix multiplication. So, all you need to do is to convert the vector <code>B</code> to a column vector using the transpose operator <code>'</code>, in order to get the dot-product result,</p>
-<pre><code class="language-matlab">&gt;&gt; A = [1 0 3];
-&gt;&gt; B = [2 3 7];
-&gt;&gt; C = A * B'
-C =
-    23
-</code></pre>
-
-<p><br /><br /></p>
-
-<p><strong>3. </strong> (A) Write a MATLAB function named <code>testString</code> that takes as input, a string and then checks if the input string by the user is the equivalent to <code>'MATLAB</code>’. If it is the correct string, then returns logical value <code>true</code> as the function output, otherwise it returns <code>false</code>. Provide two tests of your function which result in <code>true</code> and <code>false</code> output.</p>
-
-<p><strong>Answer:</strong><br />
-Here is an <a href="/ICP2017F/quiz/3-solutions/testString.m" target="_blank">implementation</a>.</p>
-<pre><code class="language-matlab">&gt;&gt; testString('MATLAB')
-ans =
-     1
-&gt;&gt; testString('matlab')
-ans =
-     0
+<pre><code class="language-matlab">Cdegrees = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40]
+Fdegrees = [-20, -15, -5, 0, 10, 15, 30, 35, 40]
 </code></pre>
 <p><br />
-(B) One can argue that there are two basic ways of comparing two strings in MATLAB. one is using <code>==</code> operator, and the other is with the use of a MATLAB built-in function that we have repeatedly used in our lectures and homework. What is this function, and what is its difference with <code>==</code> operator. If you don’t remember this function’s name, then at least you should be able to explain the major flaw with string comparison using <code>==</code>. Explain it with an example MATLAB script.</p>
+(A) Write a function that takes an input vector of temperatures, and a string which is either <code>'F2C'</code> or <code>C2F</code>. Then, converts the input temperature vector from Fahrenheit to Celsius if the input string is <code>'F2C'</code>, otherwise converts the input temperature vector from Celsius to Fahrenheit if the input string is <code>'C2F'</code>, otherwise outputs an error message and aborts the program.</p>
 
-<p><strong>Answer:</strong><br />
-The MATLAB built-in function for string comparison is <code>strcmp()</code>. This is the correct way of string comparison. The logical <code>==</code> operator is an elemental function, meaning that it assumes the two string being compared are arrays of characters, and therefore, the output of the comparison is also an array of logical values. For example,</p>
+<p>(A) Write this function using while-loop construct (you can name the function <code>convertTempFor.m</code>).<br />
+(B) Write this function using for-loop construct (you can name the function <code>convertTempWhile.m</code>).<br />
+(C) Write this function using vectorization concept (you can name the function <code>convertTempVec.m</code>).</p>
 
-<pre><code class="language-matlab">&gt;&gt; '1' == 'amir'
+<p>Here are some example calls to these functions,</p>
+<pre><code class="language-matlab">InVec = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40];
+&gt;&gt; convertTempFor(InVec,'C2F')
 ans =
-     0     0     0     0
-&gt;&gt; '12' == 'amir'
-Error using  == 
-Matrix dimensions must agree. 
-&gt;&gt; strcmp('1','amir')
+    -4     5    14    23    32    41    50    59    68    77    86    95   104
+&gt;&gt; convertTempWhile(InVec,'C2F')
 ans =
-     0
-&gt;&gt; strcmp('12','amir')
+    -4     5    14    23    32    41    50    59    68    77    86    95   104
+&gt;&gt; convertTempVec(InVec,'C2F')
 ans =
-     0
-&gt;&gt; strcmp('amir','amir')
-ans =
-     1
-&gt;&gt; 'amir' == 'amir'
-ans =
-     1     1     1     1
+    -4     5    14    23    32    41    50    59    68    77    86    95   104
 </code></pre>
 
-<p><br /><br /></p>
+<p><br /></p>
 
-<p><strong>4. </strong> If you recall from the lectures, MATLAB has two operators corresponding to logical operator <strong>OR</strong>: <code>|</code> and <code>||</code>. There are two minor differences between the two if you recall from our discussions in class. One is about code efficiency, and the other relates to whether we are operating on logical <em>vectors</em> or <em>scalars</em>. Describe which operator improves code efficiency and why. For the second difference, you could also provide an example to describe what each operator does.</p>
+<hr />
+<hr />
 
-<p><strong>Answer:</strong><br />
-Recall from our discussions in class that <code>||</code> does short-circuiting, meaning that, if the first element is true, the result of the expression involving OR operator will be true regardless of the rest of the logical expression. For example, <code>true OR x</code> will evaluate to <code>true</code> whatever logical value <code>x</code> might have. Therefore, MATLAB has a special operator <code>||</code> for the logical operator OR, that avoids the calculation of the rest of the logical OR expression, if it is not needed, thus, increasing the speed of your code by avoiding unnecessary logical calculations. The second difference is that,  the operator <code>||</code> is for scalar operations, for example, the following logical operation will lead to an error,</p>
-<pre><code class="language-matlab">&gt;&gt; [true true] || [true false]
-Operands to the || and &amp;&amp; operators must be convertible to logical scalar values. 
+<p><br /></p>
+
+<p><strong>2. </strong> Use MATLAB built-in timing functions to measure the performance of three functions you wrote in question 1 above.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>3. </strong> Consider the following nested cell vector,</p>
+<pre><code class="language-matlab">List = { {'M','A','T','L','A','B'}, {' '}, {'i','s'}, {' '}, {'a'}, {' '}, {'s','t','r','a','n','g','e'}, {', '}, {'b','u','t',' '}, {'p','o','p','u','l','a','r'}, {' '}, {'p','r','o','g','r','a','m','m','i','n','g',' ','l','a','n','g','u','a','g','e'} };
 </code></pre>
 <p><br />
-The correct operator for elemental logical OR operation is,</p>
-<pre><code class="language-matlab">&gt;&gt; [true true] | [true false]
-ans =
-     1     1
+Write a MATLAB script <code>extractLetter.m</code> that uses for-loop to extract all the letters in the variable list and finally prints them all as a single string like the following,</p>
+<pre><code class="language-matlab">&gt;&gt; extractLetter
+MATLAB is a strange, but popular programming language
 </code></pre>
 
-<p><br /><br /></p>
+<p><br /></p>
 
-<p><strong>5. </strong> Recall that in MATLAB <code>true</code> and <code>false</code> are equivalent to <code>0</code> and <code>1</code>,</p>
-<pre><code class="language-matlab">&gt;&gt; true == 1
-ans =
-     1
-&gt;&gt; false == 0
-ans =
-     1
-</code></pre>
-<p><br />
-Now knowing this, consider the following MATLAB calculation,</p>
-<pre><code class="language-matlab">&gt;&gt; a = 1;
-&gt;&gt; b = 0;
-&gt;&gt; x = a/b&gt;10.0
-x =
-     1
-</code></pre>
-<p><br />
-Note that $1/0$ is mathematically undefined (but MATLAB by convention, assumes that $1/0\equiv\infty$). Suppose MATLAB’s default behavior is not what you would like to get, that is, you don’t want $x=1$ when $b=0$, but instead $x=0$. What would be the simplest change to the logical expression <code>x=a/b&gt;10.0</code> such that the result is $x=0$ whenever $b=0$.</p>
+<hr />
+<hr />
 
-<p><strong>Answer:</strong></p>
-<pre><code class="language-matlab">&gt;&gt; a = 1;
-&gt;&gt; b = 0;
-&gt;&gt; x = (b~=0) &amp;&amp; (a/b&gt;10.0)
-x =
-     0
-</code></pre>
-<p><br />
-This way, the expression <code>(a/b&gt;10.0)</code> will not be evaluated when $b=0$, and <code>(b~=0)</code> will be returned as the value of <code>x</code>.</p>
+<p><br /></p>
 
-<p><br /><br /></p>
-
-<p><strong>6. </strong> <strong>Array of Structures vs. Structures of Arrays.</strong> Suppose you would like to store information about students in a class. You create a array of structures like the following,</p>
-
-<pre><code class="language-matlab">&gt;&gt; AOS(1).grade = 20;
-&gt;&gt; AOS(1).name = 'foobar1';
-&gt;&gt; AOS(1).grade = 20;
-&gt;&gt; AOS(1).name = 'foobar2';
-&gt;&gt; AOS(1).grade = 30;
-&gt;&gt; AOS(1).name = 'foobar1';
-&gt;&gt; AOS(1).grade = 90;
-&gt;&gt; AOS(1).name = 'foobar2';
-&gt;&gt; AOS(1).name = 'foobar1';
-&gt;&gt; AOS(1).grade = 90;
-&gt;&gt; AOS(2).name = 'foobar2';
-&gt;&gt; AOS(2).grade = 100;
-&gt;&gt; AOS(3).name = 'foobar3';
-&gt;&gt; AOS(3).grade = 85;
-&gt;&gt; AOS
-AOS = 
-1x3 struct array with fields:
-    name
-    grade
-</code></pre>
-<p><br />
-Alternatively, you could create a structure array for the same data, like the following,</p>
-<pre><code class="language-matlab">&gt;&gt; SOA.names = {'foobar1','foobar2','foobar3'};
-&gt;&gt; SOA.grades = [90,100,85];
-&gt;&gt; SOA
-SOA = 
-     names: {'foobar1'  'foobar2'  'foobar3'}
-    grades: [90 100 85]
-</code></pre>
-<p><br />
-Suppose you have 10000 students in your class. Which one of these representations do you think would be more computationally efficient to represent the student data, in order to calculate the average grade in you class? Why? (the explanation is brief, you don’t need to write a paragraph.)</p>
-
-<p><strong>Answer:</strong><br />
-<em>Structure of arrays</em> is much more efficient for storing grade data. As we discussed repeatedly in class, this is due to the fact that data is stored sequentially in computer memory. Therefore, it would be much easier for the computer to fetch data from memory when all grade data is stored in an array sequentially in memory, than when each grade is separated from the next student’s grade by their names, just as in <em>array of structures</em>.</p>
-
-<p><br /><br /></p>
-
-<p><strong>7. </strong> Write a function <code>getRoot()</code> that takes in three coefficients $(a,b,c)$ of a quadratic equation $ax^2+bx+c$ and outputs the roots of this equation as the function output result.</p>
-
-<p><strong>Answer:</strong></p>
-<pre><code class="language-matlab">function [x1,x2] = getRoot(a,b,c)
-    d = sqrt(b^2 - 4*a*c);
-    x1 = (-b + d) / (2*a);
-    x2 = (-b - d) / (2*a);
-end
-</code></pre>
-<pre><code class="language-matlab">&gt;&gt; [r1,r2] = getRoot(1,1,1)
-r1 =
-  -0.5000 + 0.8660i
-r2 =
-  -0.5000 - 0.8660i
-</code></pre>
-
-<p><br /><br /></p>
-
-<p><strong>8. </strong> Write a MATLAB anonymous function that calculates the following integral, for arbitrary input integration limits $[a,b]$ and coefficient $c$,</p>
-
-<script type="math/tex; mode=display">f(a,b,c) = \int^b_a \big( x^2 + cx + 1 \big) \operatorname{d}x</script>
-
-<p>Write your function such that it takes the three variables collectively as a structure.</p>
-
-<p><strong>Answer:</strong></p>
-<pre><code class="language-matlab">f = @(in) (integral(@(x) (x.^2 + in.c*x + 1),in.a,in.b));
-</code></pre>
-
-<p><br /><br /></p>
-
-<p><strong>9. </strong> Write a function <code>getFac()</code> that calculates the factorial of an input integer $n$ (no need for robust coding, assume the input variable is indeed a positive integer).</p>
-
-<script type="math/tex; mode=display">n! = n \times (n-1) \times \cdots \times 1 ~.</script>
-
-<p><strong>Answer:</strong></p>
-<pre><code class="language-matlab">function result=getFactorial(x)
-    if (x&lt;=0)
-        result=1;
-    else
-        result=x*getFactorial(x-1);
+<p><strong>4. </strong> <strong>The significant impact of round-off errors in numerical computation.</strong> Consider the following program,</p>
+<pre><code class="language-matlab">formatSpec = 'With %d sqrt, then %d times ^2 operations, the number %.16f becomes: %.16f \n'; % the string format for fprintf function
+for n = 1:60
+    r_original = 2.0;
+    r = r_original;
+    for i = 1:n
+        r = sqrt(r);
     end
+    for i = 1:n
+        r = r^2;
+    end
+    fprintf(formatSpec,n,n,r_original,r);
 end
 </code></pre>
+<p><br />
+Explain what this code does. Then run the code, and explain why do you see the behavior observed. In particular, why do you not recover the original value $2.0$ after many repetitions of the same forward and reverse task of taking square root and squaring the result?</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>5. </strong> Consider the following code,</p>
+
+<pre><code class="language-matlab">eps = 1.0;
+while 1.0 ~= 1.0 + eps
+    disp(num2str(eps));
+    eps = eps / 2.0;
+end
+disp(['final eps:', num2str(eps)]);
+</code></pre>
+<p><br /><br />
+Explain what the code is doing. Run the code and observe the output. How could <code>1.0 ~= 1.0 + eps</code> be <code>false</code>?!</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>6. </strong> Suppose you want to find the largest prime number that is smaller than a given input value by the user. Write a function named <code>getLargestPrime</code> that does so, using for-loop, break, and MATLAB’s intrinsic function isprime(). Here is a test,</p>
+<pre><code class="language-matlab">&gt;&gt; getLargestPrime(123)
+ans =
+   113
+</code></pre>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>6. </strong> Consider the problem number 5 in HW 3, where we wrote a <a href="/ICP2017F/homework/3/fib.m">function</a> named <code>fib.m</code> that used the idea of recursive functions to generate the Fibonacci numbers.</p>
+
+<p>(A) Download <a href="/ICP2017F/homework/3/fib.m" target="_blank">this function fib()</a> and modify it using MATLAB <code>timeit()</code> function such that it also returns the average runtime of <code>getFib()</code> nested function inside <code>fib()</code>, right after giving the requested Fibonacci number. For example, here is an output from such modified code:</p>
+<pre><code class="language-matlab">&gt;&gt; fib
+Please enter a non-negative integer or type stop: 10
+	fib(10) = 55
+	average runtime: 1.0083e-05 seconds
+Please enter a non-negative integer or type stop: 15
+	fib(15) = 610
+	average runtime: 8.8884e-05 seconds
+Please enter a non-negative integer or type stop: 20
+	fib(20) = 6765
+	average runtime: 0.00095559 seconds
+Please enter a non-negative integer or type stop: 25
+	fib(25) = 75025
+	average runtime: 0.010311 seconds
+Please enter a non-negative integer or type stop: 30
+	fib(30) = 832040
+	average runtime: 0.11575 seconds
+Please enter a non-negative integer or type stop: 35
+	fib(35) = 9227465
+	average runtime: 1.2904 seconds
+Please enter a non-negative integer or type stop: stop
+</code></pre>
+<p><br />
+(Note that you can use <code>char(9)</code> at the beginning of your <code>disp()</code> messages in order to add the <code>tab</code> character at the beginning of your message, just like the above example.)</p>
+
+<p>(B) Now copy this function to a new MATLAB M-file named <code>fibLoop.m</code>. Also modify the name of the function <code>fib()</code> in this file <code>fibLoop()</code>. Modify the nested function <code>getFib()</code> inside of <code>fibLoop()</code> such that instead of recursive function calls, it uses a for-loop to find the requested Fibonacci number.</p>
+
+<p>(C) Now time your new function <code>fibLoop()</code> for the same input integers as in the above example: $10,15,20,25,30,35$. How do the runtimes for <code>fibLoop()</code> compare with <code>fib()</code>. Which function is faster and more efficient: <code>fib()</code> or <code>fibLoop()</code>? Why is there such huge difference in the performance of the two functions?</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>7. </strong> <strong>(A)</strong> Write two new MATLAB functions <code>timeFib(n)</code> and <code>timeFibLoop(n)</code> based on your MATLAB functions <code>fib()</code> and <code>fibLoop()</code> that you wrote in problem 6, such that both take an integer and output a structure whose fields are:</p>
+<pre><code class="language-matlab">output.n
+output.fib
+output.runtime
+</code></pre>
+<p><br />
+Note that the function should take as input only an integer variable, so you need to modify your old codes to only check whether the input <code>~ischar()</code>, and <code>isreal()</code> and <code>n&gt;=0</code> and <code>round(n)==n</code>. Here is an example output from the two functions,</p>
+<pre><code class="language-matlab">&gt;&gt; timeFib(20)
+ans = 
+          n: 20
+        fib: 6765
+    runtime: 9.6568e-04
+&gt;&gt; timeFib('amir')
+Error using timeFib (line 8)
+The input argument is not a non-negative integer! 
+&gt;&gt; timeFibLoop(20)
+ans = 
+          n: 20
+        fib: 6765
+    runtime: 4.4076e-06
+&gt;&gt; timeFibLoop('amir')
+Error using timeFibLoop (line 8)
+The input argument is not a non-negative integer! 
+</code></pre>
+<p><br />
+<strong>(B)</strong> Now write a script named <code>writeFibResult.m</code> that calls these two functions for a range of input $n={10,2,3,\ldots,35}$ values, and then write the output of these two functions in a formatted way in two files like these <a href="/ICP2017F/homework/4-problems/fibOutput.txt" target="_blank">fibOutput.txt</a> and <a href="/ICP2017F/homework/4-problems/fibLoopOutput.txt" target="_blank">fibLoopOutput.txt</a>. You can use any of MATLAB IO methods to create the output file with any file extension you prefer: <code>.txt</code>, <code>.csv</code>, <code>.xlsx</code>, <code>.tab</code>, … .</p>
 
 <p><br /><br /></p>
 
@@ -380,15 +338,15 @@ end
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 3: Solutions - MATLAB branching, functions&quot;%20/ICP2017F/quiz/3-solutions-matlab-branching-functions%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 4: Problems - loops, IO&quot;%20/ICP2017F/homework/4-problems-loops-IO%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/quiz/3-solutions-matlab-branching-functions"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/homework/4-problems-loops-IO"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/quiz/3-solutions-matlab-branching-functions"
+        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/homework/4-problems-loops-IO"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>
