@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-10-30T10:55:16-05:00</updated>
+<updated>2017-10-30T15:59:13-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -152,9 +152,9 @@ ans =
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; Consider the problem number 5 in HW 3, where we wrote a &lt;a href=&quot;http:/ICP2017F/homework/3/fib.m&quot;&gt;function&lt;/a&gt; named &lt;code&gt;fib.m&lt;/code&gt; that used the idea of recursive functions to generate the Fibonacci numbers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; Consider the problem number 5 in HW 3, where we wrote a &lt;a href=&quot;http:/ICP2017F/homework/3-solutions/fib.m&quot;&gt;function&lt;/a&gt; named &lt;code&gt;fib.m&lt;/code&gt; that used the idea of recursive functions to generate the Fibonacci numbers.&lt;/p&gt;
 
-&lt;p&gt;(A) Download &lt;a href=&quot;http:/ICP2017F/homework/3/fib.m&quot; target=&quot;_blank&quot;&gt;this function fib()&lt;/a&gt; and modify it using MATLAB &lt;code&gt;timeit()&lt;/code&gt; function such that it also returns the average runtime of &lt;code&gt;getFib()&lt;/code&gt; nested function inside &lt;code&gt;fib()&lt;/code&gt;, right after giving the requested Fibonacci number. For example, here is an output from such modified code:&lt;/p&gt;
+&lt;p&gt;(A) Download &lt;a href=&quot;http:/ICP2017F/homework/3-solutions/fib.m&quot; target=&quot;_blank&quot;&gt;this function fib()&lt;/a&gt; and modify it using MATLAB &lt;code&gt;timeit()&lt;/code&gt; function such that it also returns the average runtime of &lt;code&gt;getFib()&lt;/code&gt; nested function inside &lt;code&gt;fib()&lt;/code&gt;, right after giving the requested Fibonacci number. For example, here is an output from such modified code:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; fib
 Please enter a non-negative integer or type stop: 10
 	fib(10) = 55
