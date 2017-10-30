@@ -169,6 +169,11 @@ MathJax.Hub.Queue(function() {
 </div></div></div>
 <p><br /></p>
 
+<div class="center"><div class="video-wrapper"><div class="video-container">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/m3QK91zKt4Q" frameborder="0" allowfullscreen=""></iframe>
+</div></div></div>
+<p><br /></p>
+
 <h2 id="function-handles-in-matlab">Function handles in MATLAB</h2>
 
 <p>Function Handles are variables that allow you to invoke a function indirectly. A <strong>function handle</strong> is a <strong>data type</strong> that <strong>stores an association to a function</strong>. For example, you can use a function handle to construct <a href="#anonymous-functions">anonymous functions</a> or specify <a href="https://www.mathworks.com/help/matlab/creating_plots/callback-definition.html" target="_blank">call-back functions</a>. Also, you can use a function handle to <strong>pass a function to another function</strong>, or call local functions from outside the main function (see below).</p>
@@ -620,7 +625,7 @@ The scope of variables in MATLAB functions, especially nested functions, can bec
   </li>
 </ul>
 
-<h2 id="private-functions">Private Functions</h2>
+<h3 id="private-functions">Private Functions</h3>
 
 <p>A typical modern MATLAB contains thousands of M-files on the user’s path, all
 accessible just by typing the name of the M-file. While this ease of accessing M-files is
@@ -664,10 +669,8 @@ Consider the MATLAB intrinsic function <a href=""><code>strtok</code></a>, which
 <pre><code>language programming powerful very but strange rather a is MATLAB 
 </code></pre>
 
-<!--
-**Answer:**  
-```matlab
-function reverseSentence(string)
+<p><strong>Answer:</strong></p>
+<pre><code class="language-matlab">function reverseSentence(string)
     % reverseSentence recursively prints the words in a string in reverse order    
     getToken(string)
     function getToken(string)
@@ -679,8 +682,7 @@ function reverseSentence(string)
     end
     fprintf('\n')
 end
-```
--->
+</code></pre>
 
 <h2 id="matlabs-intrinsic-functions">MATLAB’s intrinsic functions</h2>
 
@@ -887,8 +889,8 @@ To prevent clearing persistent variables, lock the function file using mlock.</p
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 10 / 29</section></br> -->
-         <section>Last updated Sunday, 29 Oct 2017 at 01:49 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 10 / 30</section></br> -->
+         <section>Last updated Monday, 30 Oct 2017 at 10:55 AM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>

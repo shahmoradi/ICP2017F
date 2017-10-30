@@ -11,23 +11,23 @@
 -->
 
 <meta charset="utf-8">
-<title>HOMEWORK 3: PROBLEMS - STRUCTURES, BRANCHING AND FUNCTIONS IN MATLAB &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
+<title>HOMEWORK 3: SOLUTIONS - STRUCTURES, BRANCHING AND FUNCTIONS IN MATLAB &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
 <meta name="description" content="Introduction to<br>Computer Programming">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/ICP2017F/images/logo.png">
-<meta name="twitter:title" content="Homework 3: Problems - structures, branching and functions in MATLAB">
+<meta name="twitter:title" content="Homework 3: Solutions - structures, branching and functions in MATLAB">
 <meta name="twitter:description" content="Introduction to<br>Computer Programming">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Homework 3: Problems - structures, branching and functions in MATLAB">
+<meta property="og:title" content="Homework 3: Solutions - structures, branching and functions in MATLAB">
 <meta property="og:description" content="Introduction to<br>Computer Programming">
-<meta property="og:url" content="/ICP2017F/homework/3-problems-matlab-structures-branching-functions">
+<meta property="og:url" content="/ICP2017F/homework/3-solutions-matlab-structures-branching-functions">
 <meta property="og:site_name" content="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110">
 <meta property="og:image" content="/ICP2017F/images/">
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/ICP2017F/homework/3-problems-matlab-structures-branching-functions">
+<link rel="canonical" href="/ICP2017F/homework/3-solutions-matlab-structures-branching-functions">
 <!-- <link href="/ICP2017F/feed.xml" type="application/atom+xml" rel="alternate" title="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110 Feed"> -->
 
 
@@ -133,8 +133,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Homework 3: Problems - structures, branching and functions in MATLAB</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-10-09T00:00:00-05:00">09 Oct 2017</time></strong></p>
+                            <h2>Homework 3: Solutions - structures, branching and functions in MATLAB</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-10-30T00:00:00-05:00">30 Oct 2017</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,27 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <p>♣ <strong>Due Date: Monday Oct 30, 2017 9:00 AM</strong>. This homework aims at giving you some experience with structure types in MATLAB as well as branching and function concepts and their usage syntax. Write your MATLAB scripts with the corresponding <code>*.m</code> file names, and add a readme.md file in HW 3 folder of your ICP2017F repository if you need to add any additional explanation (Don’t forget to use markdown syntax highlight in your readme file, if needed).</p>
+                <p>This is the solution to <a href="3-problems-matlab-structures-branching-functions.html" target="_blank">Homework 3: Problems - structures, branching and functions in MATLAB</a>.</p>
+
+<!--
+
+The following figure illustrates the grade distribution for this homework.  
+
+<figure>
+	<img src="/ICP2017F/homework/gradeDist/gradeHistHomework2.png" width="700">
+    <figcaption style="text-align:center">
+        Maximum possible points, excluding bonus question, is 100.
+    </figcaption>
+</figure>
+
+---
+---
+
+<br> 
+
+-->
+
+<p>♣ <strong>Due Date: Monday Oct 30, 2017 9:00 AM</strong>. This homework aims at giving you some experience with structure types in MATLAB as well as branching and function concepts and their usage syntax. Write your MATLAB scripts with the corresponding <code>*.m</code> file names, and add a readme.md file in HW 3 folder of your ICP2017F repository if you need to add any additional explanation (Don’t forget to use markdown syntax highlight in your readme file, if needed).</p>
 
 <p><br /></p>
 
@@ -162,6 +182,10 @@ is one of the most widely used functions in science and technology. The paramete
 
 <p><br />
 Verify your answer by getting the same result from <a href="https://www.wolframalpha.com/" target="_blank">Wolfram Alpha</a> mathematical search engine, also by using MATLAB’s builtin function <a href="https://www.mathworks.com/help/stats/normpdf.html" target="_blank">normpdf($x$,$\mu$,$\sigma$)</a>.</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>An example implementation can be found <a href="/ICP2017F/homework/3-solutions/getNormPDF.m" target="_blank">here</a>.</p>
 
 <p><br /></p>
 
@@ -185,6 +209,10 @@ Verify your answer by getting the same result from <a href="https://www.wolframa
 <p><br />
 where $M$ is the mass of egg, $\rho$ is the density, $c$ is the specific heat capacity, and $K$ is thermal conductivity. Relevant values are $M=47~[g]$ for a small egg and $M=67~[g]$ for a large egg, $\rho=1.038 ~[g~cm^{-3}]$, $c = 3.7 ~[J~g^{-1}~K^{-1}]$, and $K = 5.4\times10^{-3} ~[Wcm^{-1}K^{-1}]$. Furthermore, $T_w$ is the temperature
 (in C degrees) of the boiling water, and $T_0$ is the original temperature (in C degrees) of the egg before being put in the water. Implement the formula in a MATLAB program, set $T_w = 100^\circ C$ and $T_y = 70^\circ C$, and compute $t$ for a large egg taken from the fridge ($T_0 = 4^\circ C$) and from room temperature ($T_0 = 20^\circ C$). (<strong>Hint</strong>: Note that for this problem you will need to use MATLAB’s builtin function <code>log()</code>, and the predefined variable <code>pi</code>.)</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>An example implementation can be found <a href="/ICP2017F/homework/3-solutions/protein.m" target="_blank">here</a>.</p>
 
 <p><br /></p>
 
@@ -212,6 +240,10 @@ where $M$ is the mass of egg, $\rho$ is the density, $c$ is the specific heat ca
 \end{align*} %]]></script>
 
 <p>Write a MATLAB function <code>getPolar(inputCartesianStruct)</code> that takes a structure <code>inputCartesianStruct</code> as input, that has two components <code>x</code> and <code>y</code>. Then on output, it returns another structure that has to components <code>r</code> and <code>phi</code>. Write another function <code>getCart(inputPolarStruct)</code> that does the inverse of <code>getPolar(inputCartesianStruct)</code>. Make sure that both functions are robust to wrong input structures by checking whether the input structures have the required fields: <code>x</code> and <code>y</code>, or <code>r</code> and <code>phi</code>. You can do so by using MATLAB’s builtin function <code>isfield()</code>.</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>Here is an example implementation of <a href="/ICP2017F/homework/3-solutions/getPolar.m" target="_blank">getPolar.m</a> and <a href="/ICP2017F/homework/3-solutions/getCart.m" target="_blank">getCart.m</a>.</p>
 
 <p><br /></p>
 
@@ -243,6 +275,10 @@ ans =
 </code></pre>
 <p><br />
 where here, the directory contains 123 objects. Write a MATLAB function that takes the path to a directory and outputs the total size of all files in the directory in units of bytes.</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>Here is an example implementation of <a href="/ICP2017F/homework/3-solutions/getBytes.m" target="_blank">getBytes.m</a>.</p>
 
 <p><br /></p>
 
@@ -318,6 +354,10 @@ Please enter a non-negative integer or type stop: stop
   <li>Then put this function <strong>inside another MATLAB function <code>fib()</code></strong> that asks the user to input a number (which could be potentially anything: a string, a real number, a complex number, or an integer). You can do this using MATLAB’s builtin function <code>input()</code>. Read the input value as a <code>string</code> using this MATLAB function. Then check if the user’s input string is equivalent to <strong>‘stop’</strong> or not. If it is ‘stop’, then the program must return, otherwise, use <code>str2double()</code> to convert this string to MATLAB numeric type. Then check is the numeric-converted input value is real number (as opposed to complex number) via MATLAB’s function <code>isreal()</code>. If the value is real, then check if it is a non-negative real number. Also check if it is an <strong>integer</strong> by comparing the value with its rounded value using MATLAB’s function <code>round()</code>. Thus is the user-input number is really a non-negative integer, then your code should display the result message as given in the above output (by calling your nested function <code>getFib(n_int)</code>), and then call this function <code>fib</code> to ask the user to input another number again, to repeat this procedure. If the user-input number is not a non-negative integer, then your code should display the requested message above, and call the function <code>fib</code> again to ask the user for another input.</li>
 </ol>
 
+<p><strong>Answer:</strong></p>
+
+<p>Here is an example implementation of <a href="/ICP2017F/homework/3-solutions/fib.m" target="_blank">fib.m</a>.</p>
+
 <p><br /></p>
 
 <hr />
@@ -330,6 +370,10 @@ Please enter a non-negative integer or type stop: stop
 <script type="math/tex; mode=display">A = \frac{1}{2} \bigg| x2y3 - x3y2 - x1y3 + x3y1 + x1y2 - x2y1 \bigg|</script>
 
 <p>Write a function <code>getTriangleArea(vertices)</code> that returns the area of a triangle whose vertices are specified by the argument vertices, which is a nested list of the vertex coordinates.</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>Here is an example implementation of <a href="/ICP2017F/homework/3-solutions/getTriangleArea.m" target="_blank">getTriangleArea.m</a>.</p>
 
 <p><br /></p>
 
@@ -351,6 +395,10 @@ Please enter a non-negative integer or type stop: stop
 
 <p>Note that you do not need and don’t have to use a <code>for-loop</code> for this problem (we have not yet discussed loops in our class!). All of it can be done using <strong>recursive function</strong> concept. You can verify the accuracy of your MATLAB script via by checking its output against MATLAB’s builtin function <code>isprime()</code>.</p>
 
+<p><strong>Answer:</strong></p>
+
+<p>Here is an example implementation of <a href="/ICP2017F/homework/3-solutions/isPrime.m" target="_blank">isPrime.m</a>.</p>
+
 <p><br /></p>
 
 <hr />
@@ -362,6 +410,10 @@ Please enter a non-negative integer or type stop: stop
 
 <p>On output, the host function should create and return a function handle for the nested function <code>evalFunc()</code>. The nested function should calculate a value of $y$ for a given value of $x$, using the values of $a$, $b$, and $c$ stored in the host function. This is called a <strong>function generator</strong>, since the host function generates and outputs another function that can be called and used later on in the program. Once you create your function generator, test it in the following way: Call <code>genFunc(1,2,0)</code> and save the output function handle in a variable, say <code>h1</code>. Call <code>genFunc(1,2)</code> and save the output function handle in a variable, say <code>h2</code>. Then these two function handles, should give the same result, given the same input <code>x</code> values.</p>
 
+<p><strong>Answer:</strong></p>
+
+<p>Here is an example implementation of <a href="/ICP2017F/homework/3-solutions/genFunc.m" target="_blank">genFunc.m</a>.</p>
+
 <p><br /><br /></p>
 
             </div>
@@ -369,15 +421,15 @@ Please enter a non-negative integer or type stop: stop
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 3: Problems - structures, branching and functions in MATLAB&quot;%20/ICP2017F/homework/3-problems-matlab-structures-branching-functions%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 3: Solutions - structures, branching and functions in MATLAB&quot;%20/ICP2017F/homework/3-solutions-matlab-structures-branching-functions%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/homework/3-problems-matlab-structures-branching-functions"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/homework/3-solutions-matlab-structures-branching-functions"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/homework/3-problems-matlab-structures-branching-functions"
+        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/homework/3-solutions-matlab-structures-branching-functions"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>

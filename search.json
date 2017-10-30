@@ -9,6 +9,14 @@
 		} ,
 	
 		{
+		  "title"      : "Homework 3: Solutions - structures, branching and functions in MATLAB",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/homework/3-solutions-matlab-structures-branching-functions",
+		  "date"       : "2017-10-30 00:00:00 -0500",
+		  "shortdate"  : "October 30, 2017"
+		} ,
+	
+		{
 		  "title"      : "Lecture 10: MATLAB - loops and vectorization",
 		  "category"   : "",
 		  "url"        : "/ICP2017F/lecture/10-matlab-loops-vectorization",
