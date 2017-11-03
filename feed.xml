@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-11-02T14:49:17-05:00</updated>
+<updated>2017-11-03T12:58:43-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -152,7 +152,7 @@ ans =
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; Consider the problem number 5 in HW 3, where we wrote a &lt;a href=&quot;http:/ICP2017F/homework/3-solutions/fib.m&quot;&gt;function&lt;/a&gt; named &lt;code&gt;fib.m&lt;/code&gt; that used the idea of recursive functions to generate the Fibonacci numbers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7. &lt;/strong&gt; Consider the problem number 5 in HW 3, where we wrote a &lt;a href=&quot;http:/ICP2017F/homework/3-solutions/fib.m&quot;&gt;function&lt;/a&gt; named &lt;code&gt;fib.m&lt;/code&gt; that used the idea of recursive functions to generate the Fibonacci numbers.&lt;/p&gt;
 
 &lt;p&gt;(A) Download &lt;a href=&quot;http:/ICP2017F/homework/3-solutions/fib.m&quot; target=&quot;_blank&quot;&gt;this function fib()&lt;/a&gt; and modify it using MATLAB &lt;code&gt;timeit()&lt;/code&gt; function such that it also returns the average runtime of &lt;code&gt;getFib()&lt;/code&gt; nested function inside &lt;code&gt;fib()&lt;/code&gt;, right after giving the requested Fibonacci number. For example, here is an output from such modified code:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; fib
@@ -190,7 +190,7 @@ Please enter a non-negative integer or type stop: stop
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;7. &lt;/strong&gt; &lt;strong&gt;(A)&lt;/strong&gt; Write two new MATLAB functions &lt;code&gt;timeFib(n)&lt;/code&gt; and &lt;code&gt;timeFibLoop(n)&lt;/code&gt; based on your MATLAB functions &lt;code&gt;fib()&lt;/code&gt; and &lt;code&gt;fibLoop()&lt;/code&gt; that you wrote in problem 6, such that both take an integer and output a structure whose fields are:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8. &lt;/strong&gt; &lt;strong&gt;(A)&lt;/strong&gt; Write two new MATLAB functions &lt;code&gt;timeFib(n)&lt;/code&gt; and &lt;code&gt;timeFibLoop(n)&lt;/code&gt; based on your MATLAB functions &lt;code&gt;fib()&lt;/code&gt; and &lt;code&gt;fibLoop()&lt;/code&gt; that you wrote in problem 6, such that both take an integer and output a structure whose fields are:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;output.n
 output.fib
 output.runtime
@@ -533,17 +533,19 @@ Please enter a non-negative integer or type stop: stop
 
 &lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
 
-&lt;!--
+&lt;h2 id=&quot;lecture-videos&quot;&gt;Lecture Videos&lt;/h2&gt;
 
-## Lecture Videos
-
-This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.
+&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.&lt;/p&gt;
 
 &lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
-    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/4Fx4ulZt0_c&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/GvIYiE59YgE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
---&gt;
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/h2sYfv4DRd8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;loops-in-matlab&quot;&gt;Loops in MATLAB&lt;/h2&gt;
 
@@ -852,7 +854,7 @@ be able to optimize the loop. One of the most important tips for producing effic
 &lt;pre&gt;&lt;code&gt;Elapsed time is 0.200450 seconds.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Amazing! isn’t it? You get almost 3x speedup in your MATLAB code f you use vectorized computation instead of fol-loops. Later on in this course, we will see that MATLAB has inherited these vectorization excellent techniques and syntax for matrix calculations, from its high-performance ancestor, &lt;a href=&quot;https://en.wikipedia.org/wiki/Fortran&quot; target=&quot;_blank&quot;&gt;Fortran&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Amazing! isn’t it? You get almost 3x speedup in your MATLAB code if you use vectorized computation instead of fol-loops. Later on in this course, we will see that MATLAB has inherited these vectorization excellent techniques and syntax for matrix calculations, from its high-performance ancestor, &lt;a href=&quot;https://en.wikipedia.org/wiki/Fortran&quot; target=&quot;_blank&quot;&gt;Fortran&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Exercise:&lt;/strong&gt;&lt;br /&gt;
 How do you vectorize the following code?&lt;/p&gt;
