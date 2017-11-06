@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-11-03T13:35:50-05:00</updated>
+<updated>2017-11-06T13:45:56-06:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -39,17 +39,17 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; &lt;strong&gt;The while-loop implementation of a for-loop.&lt;/strong&gt; Consider the following two vectors of temperatures in Celsius degrees to Fahrenheit, using a for-loop and then prints them on screen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; &lt;strong&gt;The while-loop implementation of a for-loop.&lt;/strong&gt; Consider the following two vectors of temperatures in Celsius degrees to Fahrenheit.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;Cdegrees = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40]
 Fdegrees = [-20, -15, -5, 0, 10, 15, 30, 35, 40]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
-(A) Write a function that takes an input vector of temperatures, and a string which is either &lt;code&gt;'F2C'&lt;/code&gt; or &lt;code&gt;C2F&lt;/code&gt;. Then, converts the input temperature vector from Fahrenheit to Celsius if the input string is &lt;code&gt;'F2C'&lt;/code&gt;, otherwise converts the input temperature vector from Celsius to Fahrenheit if the input string is &lt;code&gt;'C2F'&lt;/code&gt;, otherwise outputs an error message and aborts the program.&lt;/p&gt;
+Our goal in this problem is to write functions that take such vectors as input and perform some actions on them. The functions take as input, a vector of temperatures just like &lt;code&gt;Cdegrees&lt;/code&gt; and &lt;code&gt;Fdegrees&lt;/code&gt; above, as well as an input string which is either &lt;code&gt;'F2C'&lt;/code&gt; or &lt;code&gt;C2F&lt;/code&gt;. Then, converts the input temperature vector from Fahrenheit to Celsius if the input string is &lt;code&gt;'F2C'&lt;/code&gt;, otherwise converts the input temperature vector from Celsius to Fahrenheit if the input string is &lt;code&gt;'C2F'&lt;/code&gt;, otherwise outputs an error message and aborts the program.&lt;/p&gt;
 
-&lt;p&gt;(A) Write this function using while-loop construct (you can name the function &lt;code&gt;convertTempFor.m&lt;/code&gt;).&lt;br /&gt;
-(B) Write this function using for-loop construct (you can name the function &lt;code&gt;convertTempWhile.m&lt;/code&gt;).&lt;br /&gt;
-(C) Write this function using vectorization concept (you can name the function &lt;code&gt;convertTempVec.m&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;(A) Write the requested function using while-loop construct (you can name the function &lt;code&gt;convertTempFor.m&lt;/code&gt;).&lt;br /&gt;
+(B) Write the requested function using for-loop construct (you can name the function &lt;code&gt;convertTempWhile.m&lt;/code&gt;).&lt;br /&gt;
+(C) Write the requested function using vectorization concept (you can name the function &lt;code&gt;convertTempVec.m&lt;/code&gt;).&lt;/p&gt;
 
 &lt;p&gt;Here are some example calls to these functions,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;InVec = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40];
@@ -547,6 +547,11 @@ Please enter a non-negative integer or type stop: stop
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/kNH9iZAI9CU&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;loops-in-matlab&quot;&gt;Loops in MATLAB&lt;/h2&gt;
 
 &lt;p&gt;Many programming algorithms require iteration, that is, the repetitive execution of a block of program statements. Similar to other programming languages, MATLAB also has built-in tools for iterative tasks in codes.&lt;/p&gt;
@@ -611,11 +616,9 @@ end
 &lt;p&gt;&lt;strong&gt;Exercise:&lt;/strong&gt;&lt;br /&gt;
 suppose you want to find the largest prime number that is smaller than a given input value by the user. Write a function that does so, using for-loop, &lt;code&gt;break&lt;/code&gt;, and MATLAB’s intrinsic function &lt;code&gt;isprime()&lt;/code&gt;.&lt;/p&gt;
 
-&lt;!--
-**Answer:**  
-```matlab
-function integer = getPrime(upper)
-    if (upper&lt;1)
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;function integer = getPrime(upper)
+    if (upper&amp;lt;1)
         disp('input value cannot be less than 1. Goodbye!')
         return
     end
@@ -625,9 +628,8 @@ function integer = getPrime(upper)
         end
     end
 end
-```
-&lt;br&gt;
---&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;continue-statement-within-for-loops&quot;&gt;Continue statement within for-loops&lt;/h4&gt;
 
@@ -807,21 +809,18 @@ Write function &lt;code&gt;getFac(n)&lt;/code&gt; using while-loop, that calcula
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;!--  
-**Answer:**
-```matlab
-function getFac(n)
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;function getFac(n)
     nOrg = n;
     fac = n;
-    while n &gt; 1
+    while n &amp;gt; 1
         n = n-1;
         fac = fac*n;
     end
     disp([num2str(nOrg),'! = ' num2str(fac)])
 end
-```
-&lt;br&gt;
---&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;some-general-advice-on-while-loops&quot;&gt;Some general advice on while-loops&lt;/h4&gt;
 
@@ -854,7 +853,7 @@ be able to optimize the loop. One of the most important tips for producing effic
 &lt;pre&gt;&lt;code&gt;Elapsed time is 0.200450 seconds.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Amazing! isn’t it? You get almost 3x speedup in your MATLAB code if you use vectorized computation instead of fol-loops. Later on in this course, we will see that MATLAB has inherited these vectorization excellent techniques and syntax for matrix calculations, from its high-performance ancestor, &lt;a href=&quot;https://en.wikipedia.org/wiki/Fortran&quot; target=&quot;_blank&quot;&gt;Fortran&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Amazing! isn’t it? You get almost 3x speedup in your MATLAB code if you use vectorized computation instead of fol-loops. Later on in this course, we will see that MATLAB has inherited these excellent vectorization techniques and syntax for matrix calculations from its high-performance ancestor, &lt;a href=&quot;https://en.wikipedia.org/wiki/Fortran&quot; target=&quot;_blank&quot;&gt;Fortran&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Exercise:&lt;/strong&gt;&lt;br /&gt;
 How do you vectorize the following code?&lt;/p&gt;
@@ -866,14 +865,11 @@ end
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;!--
-**Answer:**  
-```matlab
-t = 0:.01:10;
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;t = 0:.01:10;
 y = sin(t);
-```
-&lt;br&gt;
---&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;vectorization-of-array-operations&quot;&gt;Vectorization of array operations&lt;/h3&gt;
 

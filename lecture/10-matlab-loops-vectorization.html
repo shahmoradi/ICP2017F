@@ -162,6 +162,11 @@ MathJax.Hub.Queue(function() {
 </div></div></div>
 <p><br /></p>
 
+<div class="center"><div class="video-wrapper"><div class="video-container">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/kNH9iZAI9CU" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+</div></div></div>
+<p><br /></p>
+
 <h2 id="loops-in-matlab">Loops in MATLAB</h2>
 
 <p>Many programming algorithms require iteration, that is, the repetitive execution of a block of program statements. Similar to other programming languages, MATLAB also has built-in tools for iterative tasks in codes.</p>
@@ -226,11 +231,9 @@ end
 <p><strong>Exercise:</strong><br />
 suppose you want to find the largest prime number that is smaller than a given input value by the user. Write a function that does so, using for-loop, <code>break</code>, and MATLAB’s intrinsic function <code>isprime()</code>.</p>
 
-<!--
-**Answer:**  
-```matlab
-function integer = getPrime(upper)
-    if (upper<1)
+<p><strong>Answer:</strong></p>
+<pre><code class="language-matlab">function integer = getPrime(upper)
+    if (upper&lt;1)
         disp('input value cannot be less than 1. Goodbye!')
         return
     end
@@ -240,9 +243,8 @@ function integer = getPrime(upper)
         end
     end
 end
-```
-<br>
--->
+</code></pre>
+<p><br /></p>
 
 <h4 id="continue-statement-within-for-loops">Continue statement within for-loops</h4>
 
@@ -422,21 +424,18 @@ Write function <code>getFac(n)</code> using while-loop, that calculates the fact
 </code></pre>
 <p><br /></p>
 
-<!--  
-**Answer:**
-```matlab
-function getFac(n)
+<p><strong>Answer:</strong></p>
+<pre><code class="language-matlab">function getFac(n)
     nOrg = n;
     fac = n;
-    while n > 1
+    while n &gt; 1
         n = n-1;
         fac = fac*n;
     end
     disp([num2str(nOrg),'! = ' num2str(fac)])
 end
-```
-<br>
--->
+</code></pre>
+<p><br /></p>
 
 <h4 id="some-general-advice-on-while-loops">Some general advice on while-loops</h4>
 
@@ -469,7 +468,7 @@ be able to optimize the loop. One of the most important tips for producing effic
 <pre><code>Elapsed time is 0.200450 seconds.
 </code></pre>
 
-<p>Amazing! isn’t it? You get almost 3x speedup in your MATLAB code if you use vectorized computation instead of fol-loops. Later on in this course, we will see that MATLAB has inherited these vectorization excellent techniques and syntax for matrix calculations, from its high-performance ancestor, <a href="https://en.wikipedia.org/wiki/Fortran" target="_blank">Fortran</a>.</p>
+<p>Amazing! isn’t it? You get almost 3x speedup in your MATLAB code if you use vectorized computation instead of fol-loops. Later on in this course, we will see that MATLAB has inherited these excellent vectorization techniques and syntax for matrix calculations from its high-performance ancestor, <a href="https://en.wikipedia.org/wiki/Fortran" target="_blank">Fortran</a>.</p>
 
 <p><strong>Exercise:</strong><br />
 How do you vectorize the following code?</p>
@@ -481,14 +480,11 @@ end
 </code></pre>
 <p><br /></p>
 
-<!--
-**Answer:**  
-```matlab
-t = 0:.01:10;
+<p><strong>Answer:</strong></p>
+<pre><code class="language-matlab">t = 0:.01:10;
 y = sin(t);
-```
-<br>
--->
+</code></pre>
+<p><br /></p>
 
 <h3 id="vectorization-of-array-operations">Vectorization of array operations</h3>
 
@@ -762,8 +758,8 @@ Sometimes programs run too fast for <code>tic</code> and <code>toc</code> to pro
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 11 / 03</section></br> -->
-         <section>Last updated Friday, 03 Nov 2017 at 01:35 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 11 / 06</section></br> -->
+         <section>Last updated Monday, 06 Nov 2017 at 01:45 PM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>
