@@ -72,6 +72,11 @@ callback([
   } ,
 
   {
+    "text": "Lecture 11: MATLAB - Input/Output (IO)",
+    "href": "/ICP2017F/lecture/11-matlab-IO"
+  } ,
+
+  {
     "text": "Lecture 10: MATLAB - loops and vectorization",
     "href": "/ICP2017F/lecture/10-matlab-loops-vectorization"
   } ,
