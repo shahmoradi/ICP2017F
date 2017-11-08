@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-11-06T21:34:23-06:00</updated>
+<updated>2017-11-07T23:23:58-06:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -1591,6 +1591,34 @@ Table of MATLAB's most-widely used vectorization functions.
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;why-is-vectorized-code-faster-than-for-loops&quot;&gt;Why is vectorized code faster than for-loops?&lt;/h3&gt;
+
+&lt;p&gt;The reason for the speedup in vectorized has to sought in the way the memory of computer is built. The figure below represents a schematic diagram of the Central Processing Unit (CPU) of every modern computer in relationship with computer memory.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/10/cpu-memory.jpg&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        The hierarchy of memory in most modern computers and its relationship with the CPU.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;At the highest level of memory hierarchy, closest to the CPU, we have the CPU register. A processor register is a quickly accessible location available to a computer’s CPU. Registers usually consist of a small amount of fast storage and may be read-only or write-only. The CPU has super fast access to data stored in register. But the problem is that this memory is very small, typically on the orders of bits of information.&lt;/p&gt;
+
+&lt;p&gt;At the second level of the hierarchy of memory, we have the CPU cache, typically comprised of three different levels L1, L2, L3, which rank from fastest to slowest respectively, in terms of CPU access. However, the faster the cache memory, the smaller it is. Thereofore, L1 is the fastest of the three, but also the smallest of the three levels.&lt;/p&gt;
+
+&lt;p&gt;CPU Caching was invented to solve a significant problem. In the early decades of computing, main memory was extremely slow and incredibly expensive — but CPUs weren’t particularly fast, either. Starting in the 1980s, the gap began to widen quickly. Microprocessor clock speeds took off, but memory access times improved far less dramatically. As this gap grew, it became increasingly clear that a new type of fast memory was needed to bridge the gap. See the figure below.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/10/CPU-DRAM.png&quot; width=&quot;900&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        The growing gap between the speed of DRAM memories and CPUs in time.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;After CPU cache, there the Random Access Memory (RAM) which you hear the most about, when you go to buy a new computer. Typical computers contain 4-32 Gb of RAM. When you open MATLAB and create some variables, all of your data is stored on this memory. However, this memory is the slowest of all in terms of access to CPU.&lt;/p&gt;
+
+&lt;p&gt;When you use for-loops in MATLAB to perform some specific calculations on a vector, you are asking MATLAB to go to this memory at each loop iteration to fetch an element of the loop, bring it to the CPU, perform the set of operations requested, and send it back to memory. However, the CPU is much more capable than doing a single calculation at a time. Therefore, if you could somehow tell MATLAB to fetch a bulk of elements from your vector and bring them to CPU to perform the requested operations, your code would become much faster. The way to tell MATLAB to do so, is called &lt;strong&gt;vectorization&lt;/strong&gt;. By vectorizing your code, you tell MATLAB to bring as much information as possible to the highest memory level close to CPU, in order to perform the operations on all of them simultaneously and return the result for all of them back to the memory all together. This results in much faster code, since nowadays, as the figure above shows, the bottleneck in code performance is not the CPU speed, but the memory access.&lt;/p&gt;
 
 &lt;h2 id=&quot;measuring-the-performance-of-your-matlab-functions-and-scripts&quot;&gt;Measuring the performance of your MATLAB functions and scripts&lt;/h2&gt;
 
