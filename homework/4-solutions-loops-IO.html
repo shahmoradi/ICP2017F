@@ -11,23 +11,23 @@
 -->
 
 <meta charset="utf-8">
-<title>HOMEWORK 4: PROBLEMS - LOOPS, IO &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
+<title>HOMEWORK 4: SOLUTIONS - LOOPS, IO &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
 <meta name="description" content="Introduction to<br>Computer Programming">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/ICP2017F/images/logo.png">
-<meta name="twitter:title" content="Homework 4: Problems - loops, IO">
+<meta name="twitter:title" content="Homework 4: Solutions - loops, IO">
 <meta name="twitter:description" content="Introduction to<br>Computer Programming">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Homework 4: Problems - loops, IO">
+<meta property="og:title" content="Homework 4: Solutions - loops, IO">
 <meta property="og:description" content="Introduction to<br>Computer Programming">
-<meta property="og:url" content="/ICP2017F/homework/4-problems-loops-IO">
+<meta property="og:url" content="/ICP2017F/homework/4-solutions-loops-IO">
 <meta property="og:site_name" content="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110">
 <meta property="og:image" content="/ICP2017F/images/">
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/ICP2017F/homework/4-problems-loops-IO">
+<link rel="canonical" href="/ICP2017F/homework/4-solutions-loops-IO">
 <!-- <link href="/ICP2017F/feed.xml" type="application/atom+xml" rel="alternate" title="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110 Feed"> -->
 
 
@@ -133,8 +133,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Homework 4: Problems - loops, IO</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-10-30T00:00:00-05:00">30 Oct 2017</time></strong></p>
+                            <h2>Homework 4: Solutions - loops, IO</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-11-13T00:00:00-06:00">13 Nov 2017</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,27 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <p>♣ <strong>Due Date: Monday Nov 13, 2017 9:00 AM</strong>. This homework aims at giving you some experience with MATLAB for-loops and while-loops as well as input/output functionalities in MATLAB.</p>
+                <p>This is the solution to <a href="4-problems-loops-IO.html" target="_blank">Homework 4: Problems - loops, IO</a>.</p>
+
+<!--
+
+The following figure illustrates the grade distribution for this homework.  
+
+<figure>
+	<img src="/ICP2017F/homework/gradeDist/gradeHistHomework2.png" width="700">
+    <figcaption style="text-align:center">
+        Maximum possible points, excluding bonus question, is 100.
+    </figcaption>
+</figure>
+
+-->
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p>♣ <strong>Due Date: Monday Nov 13, 2017 9:00 AM</strong>. This homework aims at giving you some experience with MATLAB for-loops and while-loops as well as input/output functionalities in MATLAB.</p>
 
 <p><br /></p>
 
@@ -153,17 +173,17 @@ MathJax.Hub.Queue(function() {
 
 <p><br /></p>
 
-<p><strong>1. </strong> <strong>The while-loop implementation of a for-loop.</strong> Consider the following two vectors of temperatures in Celsius degrees to Fahrenheit.</p>
+<p><strong>1. </strong> <strong>The while-loop implementation of a for-loop.</strong> Consider the following two vectors of temperatures in Celsius degrees to Fahrenheit, using a for-loop and then prints them on screen.</p>
 
 <pre><code class="language-matlab">Cdegrees = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40]
 Fdegrees = [-20, -15, -5, 0, 10, 15, 30, 35, 40]
 </code></pre>
 <p><br />
-Our goal in this problem is to write functions that take such vectors as input and perform some actions on them. The functions take as input, a vector of temperatures just like <code>Cdegrees</code> and <code>Fdegrees</code> above, as well as an input string which is either <code>'F2C'</code> or <code>C2F</code>. Then, converts the input temperature vector from Fahrenheit to Celsius if the input string is <code>'F2C'</code>, otherwise converts the input temperature vector from Celsius to Fahrenheit if the input string is <code>'C2F'</code>, otherwise outputs an error message and aborts the program.</p>
+(A) Write a function that takes an input vector of temperatures, and a string which is either <code>'F2C'</code> or <code>C2F</code>. Then, converts the input temperature vector from Fahrenheit to Celsius if the input string is <code>'F2C'</code>, otherwise converts the input temperature vector from Celsius to Fahrenheit if the input string is <code>'C2F'</code>, otherwise outputs an error message and aborts the program.</p>
 
-<p>(A) Write the requested function using while-loop construct (you can name the function <code>convertTempFor.m</code>).<br />
-(B) Write the requested function using for-loop construct (you can name the function <code>convertTempWhile.m</code>).<br />
-(C) Write the requested function using vectorization concept (you can name the function <code>convertTempVec.m</code>).</p>
+<p>(A) Write this function using while-loop construct (you can name the function <code>convertTempFor.m</code>).<br />
+(B) Write this function using for-loop construct (you can name the function <code>convertTempWhile.m</code>).<br />
+(C) Write this function using vectorization concept (you can name the function <code>convertTempVec.m</code>).</p>
 
 <p>Here are some example calls to these functions,</p>
 <pre><code class="language-matlab">InVec = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40];
@@ -177,6 +197,11 @@ ans =
 ans =
     -4     5    14    23    32    41    50    59    68    77    86    95   104
 </code></pre>
+<p><br /></p>
+
+<p><strong>Answer:</strong></p>
+
+<p>Here are the three <a href="/ICP2017F/homework/4-solutions/convertTempFor.m" target="_blank">convertTempFor.m</a>, <a href="/ICP2017F/homework/4-solutions/convertTempWhile.m" target="_blank">convertTempWhile.m</a>, and <a href="/ICP2017F/homework/4-solutions/convertTempVec.m" target="_blank">convertTempVec.m</a> functions.</p>
 
 <p><br /></p>
 
@@ -186,6 +211,15 @@ ans =
 <p><br /></p>
 
 <p><strong>2. </strong> Use MATLAB built-in timing functions to measure the performance of three functions you wrote in question 1 above.</p>
+
+<p><strong>Answer:</strong><br />
+Here is <a href="/ICP2017F/homework/4-solutions/timing.m" target="_blank">one way (timing.m script)</a> to time the functions. Here is a test result:</p>
+<pre><code class="language-matlab">&gt;&gt; timing
+Timing for convertTempVec: 0.038723 seconds.
+Timing for convertTempFor: 0.03936 seconds.
+Timing for convertTempWhile: 0.18011 seconds.
+</code></pre>
+<p><br /></p>
 
 <p><br /></p>
 
@@ -202,6 +236,10 @@ Write a MATLAB script <code>extractLetter.m</code> that uses for-loop to extract
 <pre><code class="language-matlab">&gt;&gt; extractLetter
 MATLAB is a strange, but popular programming language
 </code></pre>
+<p><br /></p>
+
+<p><strong>Answer:</strong><br />
+Here is an <a href="/ICP2017F/homework/4-solutions/extractLetter.m" target="_blank">example implementation</a>.</p>
 
 <p><br /></p>
 
@@ -211,7 +249,7 @@ MATLAB is a strange, but popular programming language
 <p><br /></p>
 
 <p><strong>4. </strong> <strong>The significant impact of round-off errors in numerical computation.</strong> Consider the following program,</p>
-<pre><code class="language-matlab">formatSpec = 'With %d sqrt, then %d times ^2 operations, the number %.16f becomes: %.16f \n'; % the string format for fprintf function
+<pre><code class="language-python">formatSpec = 'With %d sqrt, then %d times ^2 operations, the number %.16f becomes: %.16f \n'; % the string format for fprintf function
 for n = 1:60
     r_original = 2.0;
     r = r_original;
@@ -226,6 +264,73 @@ end
 </code></pre>
 <p><br />
 Explain what this code does. Then run the code, and explain why do you see the behavior observed. In particular, why do you not recover the original value $2.0$ after many repetitions of the same forward and reverse task of taking square root and squaring the result?</p>
+
+<p><strong>Answer:</strong><br />
+This code (<code>roundoff.m</code>) will yield the following output:</p>
+<pre><code class="language-text">&gt;&gt; roundoff
+With 1 sqrt, then 1 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000004 
+With 2 sqrt, then 2 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999996 
+With 3 sqrt, then 3 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999996 
+With 4 sqrt, then 4 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
+With 5 sqrt, then 5 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
+With 6 sqrt, then 6 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
+With 7 sqrt, then 7 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999714 
+With 8 sqrt, then 8 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 9 sqrt, then 9 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 10 sqrt, then 10 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 11 sqrt, then 11 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 12 sqrt, then 12 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999991336 
+With 13 sqrt, then 13 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
+With 14 sqrt, then 14 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
+With 15 sqrt, then 15 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
+With 16 sqrt, then 16 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000117746 
+With 17 sqrt, then 17 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000408580 
+With 18 sqrt, then 18 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000408580 
+With 19 sqrt, then 19 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
+With 20 sqrt, then 20 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
+With 21 sqrt, then 21 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
+With 22 sqrt, then 22 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000010885857 
+With 23 sqrt, then 23 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000029511749 
+With 24 sqrt, then 24 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000066771721 
+With 25 sqrt, then 25 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000066771721 
+With 26 sqrt, then 26 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 27 sqrt, then 27 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 28 sqrt, then 28 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 29 sqrt, then 29 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 30 sqrt, then 30 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 31 sqrt, then 31 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 32 sqrt, then 32 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999990380770896 
+With 33 sqrt, then 33 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 34 sqrt, then 34 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 35 sqrt, then 35 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 36 sqrt, then 36 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 37 sqrt, then 37 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 38 sqrt, then 38 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
+With 39 sqrt, then 39 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
+With 40 sqrt, then 40 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
+With 41 sqrt, then 41 times ^2 operations, the number 2.0000000000000000 becomes: 1.9994478907329654 
+With 42 sqrt, then 42 times ^2 operations, the number 2.0000000000000000 becomes: 1.9984718365144798 
+With 43 sqrt, then 43 times ^2 operations, the number 2.0000000000000000 becomes: 1.9965211562778555 
+With 44 sqrt, then 44 times ^2 operations, the number 2.0000000000000000 becomes: 1.9965211562778555 
+With 45 sqrt, then 45 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 46 sqrt, then 46 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 47 sqrt, then 47 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 48 sqrt, then 48 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 49 sqrt, then 49 times ^2 operations, the number 2.0000000000000000 becomes: 1.8682459487159784 
+With 50 sqrt, then 50 times ^2 operations, the number 2.0000000000000000 becomes: 1.6487212645509468 
+With 51 sqrt, then 51 times ^2 operations, the number 2.0000000000000000 becomes: 1.6487212645509468 
+With 52 sqrt, then 52 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 53 sqrt, then 53 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 54 sqrt, then 54 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 55 sqrt, then 55 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 56 sqrt, then 56 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 57 sqrt, then 57 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 58 sqrt, then 58 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 59 sqrt, then 59 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 60 sqrt, then 60 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+</code></pre>
+<p><br />
+What is happening is that, 1 is returned for n &gt;= 52 as square root of 2, that is, after 52 times square-root operation, the degree of accuracy required for representing the result goes beyond the degree of accuracy available in a MATLAB double precision number. Consequently, the later squaring operation on 1.00000000000000 will leave the number unchanged and therefore, 2 is not recovered.</p>
 
 <p><br /></p>
 
@@ -246,6 +351,67 @@ disp(['final eps:', num2str(eps)]);
 <p><br /><br />
 Explain what the code is doing. Run the code and observe the output. How could <code>1.0 ~= 1.0 + eps</code> be <code>false</code>?!</p>
 
+<p><strong>Answer:</strong><br />
+Here is the output of the code,</p>
+<pre><code class="language-text">&gt;&gt; epsError
+eps: 1
+eps: 0.5
+eps: 0.25
+eps: 0.125
+eps: 0.0625
+eps: 0.03125
+eps: 0.015625
+eps: 0.0078125
+eps: 0.0039063
+eps: 0.0019531
+eps: 0.00097656
+eps: 0.00048828
+eps: 0.00024414
+eps: 0.00012207
+eps: 6.1035e-05
+eps: 3.0518e-05
+eps: 1.5259e-05
+eps: 7.6294e-06
+eps: 3.8147e-06
+eps: 1.9073e-06
+eps: 9.5367e-07
+eps: 4.7684e-07
+eps: 2.3842e-07
+eps: 1.1921e-07
+eps: 5.9605e-08
+eps: 2.9802e-08
+eps: 1.4901e-08
+eps: 7.4506e-09
+eps: 3.7253e-09
+eps: 1.8626e-09
+eps: 9.3132e-10
+eps: 4.6566e-10
+eps: 2.3283e-10
+eps: 1.1642e-10
+eps: 5.8208e-11
+eps: 2.9104e-11
+eps: 1.4552e-11
+eps: 7.276e-12
+eps: 3.638e-12
+eps: 1.819e-12
+eps: 9.0949e-13
+eps: 4.5475e-13
+eps: 2.2737e-13
+eps: 1.1369e-13
+eps: 5.6843e-14
+eps: 2.8422e-14
+eps: 1.4211e-14
+eps: 7.1054e-15
+eps: 3.5527e-15
+eps: 1.7764e-15
+eps: 8.8818e-16
+eps: 4.4409e-16
+eps: 2.2204e-16
+final eps:1.1102e-16
+</code></pre>
+<p><br />
+What is happening is that after a certain number of divisions performed on the value of <code>eps</code>, the value goes beyond the highest float precision representable by Python standard ($0.0000000000000001$), and therefore the value of <code>eps</code> is eventually rounded to exact zero. The nonzero <code>eps</code> value computed above is called <strong>machine epsilon</strong> or <strong>machine zero</strong> and is an important parameter to know, since it can lead to disasters in your very important complex calculations.</p>
+
 <p><br /></p>
 
 <hr />
@@ -258,6 +424,22 @@ Explain what the code is doing. Run the code and observe the output. How could <
 ans =
    113
 </code></pre>
+<p><br /></p>
+
+<p><strong>Answer:</strong></p>
+
+<pre><code class="language-matlab">function integer = getLargestPrime(upper)
+    if (upper&lt;1)
+        disp('input value cannot be less than 1. Goodbye!')
+        return
+    end
+    for integer = upper:-1:1
+        if isprime(integer)
+            break
+        end
+    end
+end
+</code></pre>
 
 <p><br /></p>
 
@@ -266,9 +448,9 @@ ans =
 
 <p><br /></p>
 
-<p><strong>7. </strong> Consider the problem number 5 in HW 3, where we wrote a <a href="/ICP2017F/homework/3-solutions/fib.m">function</a> named <code>fib.m</code> that used the idea of recursive functions to generate the Fibonacci numbers.</p>
+<p><strong>6. </strong> Consider the problem number 5 in HW 3, where we wrote a <a href="/ICP2017F/homework/3/fib.m">function</a> named <code>fib.m</code> that used the idea of recursive functions to generate the Fibonacci numbers.</p>
 
-<p>(A) Download <a href="/ICP2017F/homework/3-solutions/fib.m" target="_blank">this function fib()</a> and modify it using MATLAB <code>timeit()</code> function such that it also returns the average runtime of <code>getFib()</code> nested function inside <code>fib()</code>, right after giving the requested Fibonacci number. For example, here is an output from such modified code:</p>
+<p>(A) Download <a href="/ICP2017F/homework/3/fib.m" target="_blank">this function fib()</a> and modify it using MATLAB <code>timeit()</code> function such that it also returns the average runtime of <code>getFib()</code> nested function inside <code>fib()</code>, right after giving the requested Fibonacci number. For example, here is an output from such modified code:</p>
 <pre><code class="language-matlab">&gt;&gt; fib
 Please enter a non-negative integer or type stop: 10
 	fib(10) = 55
@@ -297,6 +479,36 @@ Please enter a non-negative integer or type stop: stop
 
 <p>(C) Now time your new function <code>fibLoop()</code> for the same input integers as in the above example: $10,15,20,25,30,35$. How do the runtimes for <code>fibLoop()</code> compare with <code>fib()</code>. Which function is faster and more efficient: <code>fib()</code> or <code>fibLoop()</code>? Why is there such huge difference in the performance of the two functions?</p>
 
+<p><strong>Answer:</strong></p>
+
+<p>Here is an implementation of the <a href="/ICP2017F/homework/4/fib.m" target="_blank">modified fib()</a> and <a href="/ICP2017F/homework/4/fibLoop.m" target="_blank">modified fib()</a>.</p>
+<pre><code class="language-matlab">&gt;&gt; fibLoop
+Please enter a non-negative integer or type stop: 12
+	fib(12) = 144
+	average runtime: 4.3496e-06 seconds
+Please enter a non-negative integer or type stop: 10
+	fib(10) = 55
+	average runtime: 4.5323e-06 seconds
+Please enter a non-negative integer or type stop: 15
+	fib(15) = 610
+	average runtime: 4.5232e-06 seconds
+Please enter a non-negative integer or type stop: 20
+	fib(20) = 6765
+	average runtime: 4.6357e-06 seconds
+Please enter a non-negative integer or type stop: 25
+	fib(25) = 75025
+	average runtime: 4.6562e-06 seconds
+Please enter a non-negative integer or type stop: 30
+	fib(30) = 832040
+	average runtime: 4.7624e-06 seconds
+Please enter a non-negative integer or type stop: 35
+	fib(35) = 9227465
+	average runtime: 4.7889e-06 seconds
+Please enter a non-negative integer or type stop: stop
+</code></pre>
+<p><br />
+As you see, the for-loop version of the function <code>fibLoop()</code> is far faster than the recursive function version <code>fib()</code>. The reason is that the recursive version is not well written and does a lot of redundant calculations. Ask me in class to explain for you why there is such a huge redundancy in this function calculations.</p>
+
 <p><br /></p>
 
 <hr />
@@ -304,7 +516,7 @@ Please enter a non-negative integer or type stop: stop
 
 <p><br /></p>
 
-<p><strong>8. </strong> <strong>(A)</strong> Write two new MATLAB functions <code>timeFib(n)</code> and <code>timeFibLoop(n)</code> based on your MATLAB functions <code>fib()</code> and <code>fibLoop()</code> that you wrote in problem 6, such that both take an integer and output a structure whose fields are:</p>
+<p><strong>7. </strong> <strong>(A)</strong> Write two new MATLAB functions <code>timeFib(n)</code> and <code>timeFibLoop(n)</code> based on your MATLAB functions <code>fib()</code> and <code>fibLoop()</code> that you wrote in problem 6, such that both take an integer and output a structure whose fields are:</p>
 <pre><code class="language-matlab">output.n
 output.fib
 output.runtime
@@ -331,6 +543,10 @@ The input argument is not a non-negative integer!
 <p><br />
 <strong>(B)</strong> Now write a script named <code>writeFibResult.m</code> that calls these two functions for a range of input $n={10,2,3,\ldots,35}$ values, and then write the output of these two functions in a formatted way in two files like these <a href="/ICP2017F/homework/4-problems/fibOutput.txt" target="_blank">fibOutput.txt</a> and <a href="/ICP2017F/homework/4-problems/fibLoopOutput.txt" target="_blank">fibLoopOutput.txt</a>. You can use any of MATLAB IO methods to create the output file with any file extension you prefer: <code>.txt</code>, <code>.csv</code>, <code>.xlsx</code>, <code>.tab</code>, … .</p>
 
+<p><strong>Answer:</strong></p>
+
+<p>Here the two functions <a href="/ICP2017F/homework/4-solutions/timeFib.m" target="_blank">timeFib.m</a> and <a href="/ICP2017F/homework/4-solutions/timeFibLoop.m" target="_blank">timeFibLoop.m</a>, and here is the script <a href="/ICP2017F/homework/4-solutions/writeFibResult.m" target="_blank">writeFibResult.m</a> that creates the requested output file in the problem.</p>
+
 <p><br /><br /></p>
 
             </div>
@@ -338,15 +554,15 @@ The input argument is not a non-negative integer!
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 4: Problems - loops, IO&quot;%20/ICP2017F/homework/4-problems-loops-IO%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 4: Solutions - loops, IO&quot;%20/ICP2017F/homework/4-solutions-loops-IO%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/homework/4-problems-loops-IO"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/homework/4-solutions-loops-IO"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/homework/4-problems-loops-IO"
+        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/homework/4-solutions-loops-IO"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>

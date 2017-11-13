@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-11-13T13:29:03-06:00</updated>
+<updated>2017-11-13T15:17:38-06:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -78,7 +78,7 @@ average runtime for getFacVec(1700000): 0.005283 seconds
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Here is the script &lt;a href=&quot;http:/ICP2017F/quiz/4-solutions/getFacWhile.m&quot; target=&quot;_blank&quot;&gt;timeFacFuncs.m&lt;/a&gt;.&lt;br /&gt;
+Here is the script &lt;a href=&quot;http:/ICP2017F/quiz/4-solutions/timeFacFuncs.m&quot; target=&quot;_blank&quot;&gt;timeFacFuncs.m&lt;/a&gt;.&lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; &lt;strong&gt;Extra Credit&lt;/strong&gt; Modify your answer to problem 1.(c) above in such a way that instead of using &lt;code&gt;prod()&lt;/code&gt;, you get the factorial using &lt;code&gt;sum()&lt;/code&gt; and some other elementary mathematical MATLAB functions. (Hint: for this problem, you will need to transform the numbers involved in calculations using some appropriate MATLAB mathematical function and revert the result at the end.)&lt;/p&gt;
@@ -150,6 +150,430 @@ average runtime for getFacVec(1700000): 0.005283 seconds
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/4-problems-matlab-loops&quot;&gt;Quiz 4: Problems - MATLAB loops&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on November 13, 2017.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Homework 4: Solutions - loops, IO]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/homework/4-solutions-loops-IO"/>
+  <id>http:/ICP2017F/homework/4-solutions-loops-IO</id>
+  <published>2017-11-13T00:00:00-06:00</published>
+  <updated>2017-11-13T00:00:00-06:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This is the solution to &lt;a href=&quot;4-problems-loops-IO.html&quot; target=&quot;_blank&quot;&gt;Homework 4: Problems - loops, IO&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--
+
+The following figure illustrates the grade distribution for this homework.  
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/gradeDist/gradeHistHomework2.png&quot; width=&quot;700&quot;&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        Maximum possible points, excluding bonus question, is 100.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+--&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;♣ &lt;strong&gt;Due Date: Monday Nov 13, 2017 9:00 AM&lt;/strong&gt;. This homework aims at giving you some experience with MATLAB for-loops and while-loops as well as input/output functionalities in MATLAB.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; &lt;strong&gt;The while-loop implementation of a for-loop.&lt;/strong&gt; Consider the following two vectors of temperatures in Celsius degrees to Fahrenheit, using a for-loop and then prints them on screen.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;Cdegrees = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40]
+Fdegrees = [-20, -15, -5, 0, 10, 15, 30, 35, 40]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+(A) Write a function that takes an input vector of temperatures, and a string which is either &lt;code&gt;'F2C'&lt;/code&gt; or &lt;code&gt;C2F&lt;/code&gt;. Then, converts the input temperature vector from Fahrenheit to Celsius if the input string is &lt;code&gt;'F2C'&lt;/code&gt;, otherwise converts the input temperature vector from Celsius to Fahrenheit if the input string is &lt;code&gt;'C2F'&lt;/code&gt;, otherwise outputs an error message and aborts the program.&lt;/p&gt;
+
+&lt;p&gt;(A) Write this function using while-loop construct (you can name the function &lt;code&gt;convertTempFor.m&lt;/code&gt;).&lt;br /&gt;
+(B) Write this function using for-loop construct (you can name the function &lt;code&gt;convertTempWhile.m&lt;/code&gt;).&lt;br /&gt;
+(C) Write this function using vectorization concept (you can name the function &lt;code&gt;convertTempVec.m&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Here are some example calls to these functions,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;InVec = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40];
+&amp;gt;&amp;gt; convertTempFor(InVec,'C2F')
+ans =
+    -4     5    14    23    32    41    50    59    68    77    86    95   104
+&amp;gt;&amp;gt; convertTempWhile(InVec,'C2F')
+ans =
+    -4     5    14    23    32    41    50    59    68    77    86    95   104
+&amp;gt;&amp;gt; convertTempVec(InVec,'C2F')
+ans =
+    -4     5    14    23    32    41    50    59    68    77    86    95   104
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are the three &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/convertTempFor.m&quot; target=&quot;_blank&quot;&gt;convertTempFor.m&lt;/a&gt;, &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/convertTempWhile.m&quot; target=&quot;_blank&quot;&gt;convertTempWhile.m&lt;/a&gt;, and &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/convertTempVec.m&quot; target=&quot;_blank&quot;&gt;convertTempVec.m&lt;/a&gt; functions.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; Use MATLAB built-in timing functions to measure the performance of three functions you wrote in question 1 above.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Here is &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/timing.m&quot; target=&quot;_blank&quot;&gt;one way (timing.m script)&lt;/a&gt; to time the functions. Here is a test result:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; timing
+Timing for convertTempVec: 0.038723 seconds.
+Timing for convertTempFor: 0.03936 seconds.
+Timing for convertTempWhile: 0.18011 seconds.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; Consider the following nested cell vector,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;List = { {'M','A','T','L','A','B'}, {' '}, {'i','s'}, {' '}, {'a'}, {' '}, {'s','t','r','a','n','g','e'}, {', '}, {'b','u','t',' '}, {'p','o','p','u','l','a','r'}, {' '}, {'p','r','o','g','r','a','m','m','i','n','g',' ','l','a','n','g','u','a','g','e'} };
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Write a MATLAB script &lt;code&gt;extractLetter.m&lt;/code&gt; that uses for-loop to extract all the letters in the variable list and finally prints them all as a single string like the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; extractLetter
+MATLAB is a strange, but popular programming language
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Here is an &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/extractLetter.m&quot; target=&quot;_blank&quot;&gt;example implementation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. &lt;/strong&gt; &lt;strong&gt;The significant impact of round-off errors in numerical computation.&lt;/strong&gt; Consider the following program,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;formatSpec = 'With %d sqrt, then %d times ^2 operations, the number %.16f becomes: %.16f \n'; % the string format for fprintf function
+for n = 1:60
+    r_original = 2.0;
+    r = r_original;
+    for i = 1:n
+        r = sqrt(r);
+    end
+    for i = 1:n
+        r = r^2;
+    end
+    fprintf(formatSpec,n,n,r_original,r);
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Explain what this code does. Then run the code, and explain why do you see the behavior observed. In particular, why do you not recover the original value $2.0$ after many repetitions of the same forward and reverse task of taking square root and squaring the result?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+This code (&lt;code&gt;roundoff.m&lt;/code&gt;) will yield the following output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;gt;&amp;gt; roundoff
+With 1 sqrt, then 1 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000004 
+With 2 sqrt, then 2 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999996 
+With 3 sqrt, then 3 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999996 
+With 4 sqrt, then 4 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
+With 5 sqrt, then 5 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
+With 6 sqrt, then 6 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999964 
+With 7 sqrt, then 7 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999999714 
+With 8 sqrt, then 8 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 9 sqrt, then 9 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 10 sqrt, then 10 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 11 sqrt, then 11 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000000235 
+With 12 sqrt, then 12 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999991336 
+With 13 sqrt, then 13 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
+With 14 sqrt, then 14 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
+With 15 sqrt, then 15 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999999973292 
+With 16 sqrt, then 16 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000117746 
+With 17 sqrt, then 17 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000408580 
+With 18 sqrt, then 18 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000000408580 
+With 19 sqrt, then 19 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
+With 20 sqrt, then 20 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
+With 21 sqrt, then 21 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000001573586 
+With 22 sqrt, then 22 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000010885857 
+With 23 sqrt, then 23 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000029511749 
+With 24 sqrt, then 24 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000066771721 
+With 25 sqrt, then 25 times ^2 operations, the number 2.0000000000000000 becomes: 2.0000000066771721 
+With 26 sqrt, then 26 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 27 sqrt, then 27 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 28 sqrt, then 28 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 29 sqrt, then 29 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 30 sqrt, then 30 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 31 sqrt, then 31 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999999917775542 
+With 32 sqrt, then 32 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999990380770896 
+With 33 sqrt, then 33 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 34 sqrt, then 34 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 35 sqrt, then 35 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 36 sqrt, then 36 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 37 sqrt, then 37 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999971307544144 
+With 38 sqrt, then 38 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
+With 39 sqrt, then 39 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
+With 40 sqrt, then 40 times ^2 operations, the number 2.0000000000000000 becomes: 1.9999360966436217 
+With 41 sqrt, then 41 times ^2 operations, the number 2.0000000000000000 becomes: 1.9994478907329654 
+With 42 sqrt, then 42 times ^2 operations, the number 2.0000000000000000 becomes: 1.9984718365144798 
+With 43 sqrt, then 43 times ^2 operations, the number 2.0000000000000000 becomes: 1.9965211562778555 
+With 44 sqrt, then 44 times ^2 operations, the number 2.0000000000000000 becomes: 1.9965211562778555 
+With 45 sqrt, then 45 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 46 sqrt, then 46 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 47 sqrt, then 47 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 48 sqrt, then 48 times ^2 operations, the number 2.0000000000000000 becomes: 1.9887374575497223 
+With 49 sqrt, then 49 times ^2 operations, the number 2.0000000000000000 becomes: 1.8682459487159784 
+With 50 sqrt, then 50 times ^2 operations, the number 2.0000000000000000 becomes: 1.6487212645509468 
+With 51 sqrt, then 51 times ^2 operations, the number 2.0000000000000000 becomes: 1.6487212645509468 
+With 52 sqrt, then 52 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 53 sqrt, then 53 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 54 sqrt, then 54 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 55 sqrt, then 55 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 56 sqrt, then 56 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 57 sqrt, then 57 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 58 sqrt, then 58 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 59 sqrt, then 59 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+With 60 sqrt, then 60 times ^2 operations, the number 2.0000000000000000 becomes: 1.0000000000000000 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+What is happening is that, 1 is returned for n &amp;gt;= 52 as square root of 2, that is, after 52 times square-root operation, the degree of accuracy required for representing the result goes beyond the degree of accuracy available in a MATLAB double precision number. Consequently, the later squaring operation on 1.00000000000000 will leave the number unchanged and therefore, 2 is not recovered.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. &lt;/strong&gt; Consider the following code,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;eps = 1.0;
+while 1.0 ~= 1.0 + eps
+    disp(num2str(eps));
+    eps = eps / 2.0;
+end
+disp(['final eps:', num2str(eps)]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+Explain what the code is doing. Run the code and observe the output. How could &lt;code&gt;1.0 ~= 1.0 + eps&lt;/code&gt; be &lt;code&gt;false&lt;/code&gt;?!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Here is the output of the code,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;gt;&amp;gt; epsError
+eps: 1
+eps: 0.5
+eps: 0.25
+eps: 0.125
+eps: 0.0625
+eps: 0.03125
+eps: 0.015625
+eps: 0.0078125
+eps: 0.0039063
+eps: 0.0019531
+eps: 0.00097656
+eps: 0.00048828
+eps: 0.00024414
+eps: 0.00012207
+eps: 6.1035e-05
+eps: 3.0518e-05
+eps: 1.5259e-05
+eps: 7.6294e-06
+eps: 3.8147e-06
+eps: 1.9073e-06
+eps: 9.5367e-07
+eps: 4.7684e-07
+eps: 2.3842e-07
+eps: 1.1921e-07
+eps: 5.9605e-08
+eps: 2.9802e-08
+eps: 1.4901e-08
+eps: 7.4506e-09
+eps: 3.7253e-09
+eps: 1.8626e-09
+eps: 9.3132e-10
+eps: 4.6566e-10
+eps: 2.3283e-10
+eps: 1.1642e-10
+eps: 5.8208e-11
+eps: 2.9104e-11
+eps: 1.4552e-11
+eps: 7.276e-12
+eps: 3.638e-12
+eps: 1.819e-12
+eps: 9.0949e-13
+eps: 4.5475e-13
+eps: 2.2737e-13
+eps: 1.1369e-13
+eps: 5.6843e-14
+eps: 2.8422e-14
+eps: 1.4211e-14
+eps: 7.1054e-15
+eps: 3.5527e-15
+eps: 1.7764e-15
+eps: 8.8818e-16
+eps: 4.4409e-16
+eps: 2.2204e-16
+final eps:1.1102e-16
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+What is happening is that after a certain number of divisions performed on the value of &lt;code&gt;eps&lt;/code&gt;, the value goes beyond the highest float precision representable by Python standard ($0.0000000000000001$), and therefore the value of &lt;code&gt;eps&lt;/code&gt; is eventually rounded to exact zero. The nonzero &lt;code&gt;eps&lt;/code&gt; value computed above is called &lt;strong&gt;machine epsilon&lt;/strong&gt; or &lt;strong&gt;machine zero&lt;/strong&gt; and is an important parameter to know, since it can lead to disasters in your very important complex calculations.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; Suppose you want to find the largest prime number that is smaller than a given input value by the user. Write a function named &lt;code&gt;getLargestPrime&lt;/code&gt; that does so, using for-loop, break, and MATLAB’s intrinsic function isprime(). Here is a test,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; getLargestPrime(123)
+ans =
+   113
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;function integer = getLargestPrime(upper)
+    if (upper&amp;lt;1)
+        disp('input value cannot be less than 1. Goodbye!')
+        return
+    end
+    for integer = upper:-1:1
+        if isprime(integer)
+            break
+        end
+    end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; Consider the problem number 5 in HW 3, where we wrote a &lt;a href=&quot;http:/ICP2017F/homework/3/fib.m&quot;&gt;function&lt;/a&gt; named &lt;code&gt;fib.m&lt;/code&gt; that used the idea of recursive functions to generate the Fibonacci numbers.&lt;/p&gt;
+
+&lt;p&gt;(A) Download &lt;a href=&quot;http:/ICP2017F/homework/3/fib.m&quot; target=&quot;_blank&quot;&gt;this function fib()&lt;/a&gt; and modify it using MATLAB &lt;code&gt;timeit()&lt;/code&gt; function such that it also returns the average runtime of &lt;code&gt;getFib()&lt;/code&gt; nested function inside &lt;code&gt;fib()&lt;/code&gt;, right after giving the requested Fibonacci number. For example, here is an output from such modified code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; fib
+Please enter a non-negative integer or type stop: 10
+	fib(10) = 55
+	average runtime: 1.0083e-05 seconds
+Please enter a non-negative integer or type stop: 15
+	fib(15) = 610
+	average runtime: 8.8884e-05 seconds
+Please enter a non-negative integer or type stop: 20
+	fib(20) = 6765
+	average runtime: 0.00095559 seconds
+Please enter a non-negative integer or type stop: 25
+	fib(25) = 75025
+	average runtime: 0.010311 seconds
+Please enter a non-negative integer or type stop: 30
+	fib(30) = 832040
+	average runtime: 0.11575 seconds
+Please enter a non-negative integer or type stop: 35
+	fib(35) = 9227465
+	average runtime: 1.2904 seconds
+Please enter a non-negative integer or type stop: stop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+(Note that you can use &lt;code&gt;char(9)&lt;/code&gt; at the beginning of your &lt;code&gt;disp()&lt;/code&gt; messages in order to add the &lt;code&gt;tab&lt;/code&gt; character at the beginning of your message, just like the above example.)&lt;/p&gt;
+
+&lt;p&gt;(B) Now copy this function to a new MATLAB M-file named &lt;code&gt;fibLoop.m&lt;/code&gt;. Also modify the name of the function &lt;code&gt;fib()&lt;/code&gt; in this file &lt;code&gt;fibLoop()&lt;/code&gt;. Modify the nested function &lt;code&gt;getFib()&lt;/code&gt; inside of &lt;code&gt;fibLoop()&lt;/code&gt; such that instead of recursive function calls, it uses a for-loop to find the requested Fibonacci number.&lt;/p&gt;
+
+&lt;p&gt;(C) Now time your new function &lt;code&gt;fibLoop()&lt;/code&gt; for the same input integers as in the above example: $10,15,20,25,30,35$. How do the runtimes for &lt;code&gt;fibLoop()&lt;/code&gt; compare with &lt;code&gt;fib()&lt;/code&gt;. Which function is faster and more efficient: &lt;code&gt;fib()&lt;/code&gt; or &lt;code&gt;fibLoop()&lt;/code&gt;? Why is there such huge difference in the performance of the two functions?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is an implementation of the &lt;a href=&quot;http:/ICP2017F/homework/4/fib.m&quot; target=&quot;_blank&quot;&gt;modified fib()&lt;/a&gt; and &lt;a href=&quot;http:/ICP2017F/homework/4/fibLoop.m&quot; target=&quot;_blank&quot;&gt;modified fib()&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; fibLoop
+Please enter a non-negative integer or type stop: 12
+	fib(12) = 144
+	average runtime: 4.3496e-06 seconds
+Please enter a non-negative integer or type stop: 10
+	fib(10) = 55
+	average runtime: 4.5323e-06 seconds
+Please enter a non-negative integer or type stop: 15
+	fib(15) = 610
+	average runtime: 4.5232e-06 seconds
+Please enter a non-negative integer or type stop: 20
+	fib(20) = 6765
+	average runtime: 4.6357e-06 seconds
+Please enter a non-negative integer or type stop: 25
+	fib(25) = 75025
+	average runtime: 4.6562e-06 seconds
+Please enter a non-negative integer or type stop: 30
+	fib(30) = 832040
+	average runtime: 4.7624e-06 seconds
+Please enter a non-negative integer or type stop: 35
+	fib(35) = 9227465
+	average runtime: 4.7889e-06 seconds
+Please enter a non-negative integer or type stop: stop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+As you see, the for-loop version of the function &lt;code&gt;fibLoop()&lt;/code&gt; is far faster than the recursive function version &lt;code&gt;fib()&lt;/code&gt;. The reason is that the recursive version is not well written and does a lot of redundant calculations. Ask me in class to explain for you why there is such a huge redundancy in this function calculations.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7. &lt;/strong&gt; &lt;strong&gt;(A)&lt;/strong&gt; Write two new MATLAB functions &lt;code&gt;timeFib(n)&lt;/code&gt; and &lt;code&gt;timeFibLoop(n)&lt;/code&gt; based on your MATLAB functions &lt;code&gt;fib()&lt;/code&gt; and &lt;code&gt;fibLoop()&lt;/code&gt; that you wrote in problem 6, such that both take an integer and output a structure whose fields are:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;output.n
+output.fib
+output.runtime
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Note that the function should take as input only an integer variable, so you need to modify your old codes to only check whether the input &lt;code&gt;~ischar()&lt;/code&gt;, and &lt;code&gt;isreal()&lt;/code&gt; and &lt;code&gt;n&amp;gt;=0&lt;/code&gt; and &lt;code&gt;round(n)==n&lt;/code&gt;. Here is an example output from the two functions,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; timeFib(20)
+ans = 
+          n: 20
+        fib: 6765
+    runtime: 9.6568e-04
+&amp;gt;&amp;gt; timeFib('amir')
+Error using timeFib (line 8)
+The input argument is not a non-negative integer! 
+&amp;gt;&amp;gt; timeFibLoop(20)
+ans = 
+          n: 20
+        fib: 6765
+    runtime: 4.4076e-06
+&amp;gt;&amp;gt; timeFibLoop('amir')
+Error using timeFibLoop (line 8)
+The input argument is not a non-negative integer! 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;(B)&lt;/strong&gt; Now write a script named &lt;code&gt;writeFibResult.m&lt;/code&gt; that calls these two functions for a range of input $n={10,2,3,\ldots,35}$ values, and then write the output of these two functions in a formatted way in two files like these &lt;a href=&quot;http:/ICP2017F/homework/4-problems/fibOutput.txt&quot; target=&quot;_blank&quot;&gt;fibOutput.txt&lt;/a&gt; and &lt;a href=&quot;http:/ICP2017F/homework/4-problems/fibLoopOutput.txt&quot; target=&quot;_blank&quot;&gt;fibLoopOutput.txt&lt;/a&gt;. You can use any of MATLAB IO methods to create the output file with any file extension you prefer: &lt;code&gt;.txt&lt;/code&gt;, &lt;code&gt;.csv&lt;/code&gt;, &lt;code&gt;.xlsx&lt;/code&gt;, &lt;code&gt;.tab&lt;/code&gt;, … .&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here the two functions &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/timeFib.m&quot; target=&quot;_blank&quot;&gt;timeFib.m&lt;/a&gt; and &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/timeFibLoop.m&quot; target=&quot;_blank&quot;&gt;timeFibLoop.m&lt;/a&gt;, and here is the script &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/writeFibResult.m&quot; target=&quot;_blank&quot;&gt;writeFibResult.m&lt;/a&gt; that creates the requested output file in the problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/4-solutions-loops-IO&quot;&gt;Homework 4: Solutions - loops, IO&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on November 13, 2017.&lt;/p&gt;</content>
 </entry>
 
 
@@ -6260,260 +6684,6 @@ Table 2. A list of MATLAB &lt;code&gt;format&lt;/code&gt; options.
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/4-matlab-values-variables-types-I&quot;&gt;Lecture 4: MATLAB - values, variables, types - I&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on September 22, 2017.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Lecture 3: MATLAB for beginners]]></title>
-  <link rel="alternate" type="text/html" href="http:/ICP2017F/lecture/3-matlab-for-beginners"/>
-  <id>http:/ICP2017F/lecture/3-matlab-for-beginners</id>
-  <published>2017-09-20T00:00:00-05:00</published>
-  <updated>2017-09-20T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;Goals: This lecture aims at providing an introduction to MATLAB programming for beginners, how to install it, different components of the Graphical Unit Interface of MATLAB, as well as how to perform simple arithmetic operations in MATLAB.&lt;/p&gt;
-
-&lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;lecture-videos&quot;&gt;Lecture Videos&lt;/h2&gt;
-
-&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.&lt;/p&gt;
-
-&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
-    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/IrEdypnsCyY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;matlab-a-brief-history&quot;&gt;MATLAB: a brief history&lt;/h2&gt;
-
-&lt;p&gt;MATLAB was developed in the mid 1980’, by the collaborative works of &lt;a href=&quot;https://en.wikipedia.org/wiki/Cleve_Moler&quot; target=&quot;_blank&quot;&gt;Cleve Moler&lt;/a&gt;, a PhD graduate of Stanford University, and &lt;a href=&quot;https://en.wikipedia.org/wiki/John_N._Little&quot; target=&quot;_blank&quot;&gt;John Little&lt;/a&gt;, a graudate of MIT. Together they co-founded a private company named &lt;a href=&quot;https://en.wikipedia.org/wiki/MathWorks&quot; target=&quot;_blank&quot;&gt;MathWorks&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The name of the language and software they developed, &lt;a href=&quot;https://en.wikipedia.org/wiki/MATLAB&quot; target=&quot;_blank&quot;&gt;MATLAB&lt;/a&gt; is an attribution to the original purpose of the software, that is, to serve as a &lt;strong&gt;mat&lt;/strong&gt;rix &lt;strong&gt;lab&lt;/strong&gt;oratory. Cleve Moler was among the developers of the popular Fortran libraries &lt;a href=&quot;https://en.wikipedia.org/wiki/EISPACK&quot; target=&quot;_blank&quot;&gt;EISPACK&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/LINPACK&quot; target=&quot;_blank&quot;&gt;LINPACK&lt;/a&gt;. He wanted to provide his students with a higher-level environment, so that they could use these high-performance Fortran libraries without the need to learn Fortran.&lt;/p&gt;
-
-&lt;p&gt;Since MATLAB was developed by a scientist for scientists, its structure and syntax has more resemblance to the popular programming language of scientists, Fortran, than to any other language. You will soon notice this similarity when we get to learn modern Fortran later on in this course.&lt;/p&gt;
-
-&lt;p&gt;An informative historical review of MATLAB by its own inventor is &lt;a href=&quot;https://www.mathworks.com/videos/evolution-of-matlab-93125.html&quot; target=&quot;_blank&quot;&gt;available to watch on MathWork website&lt;/a&gt;. A lower quality of the same video can be accessed on youtube, which I embed here for you:&lt;/p&gt;
-
-&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
-    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/fa-sUaKv56A&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;matlab-why-do-you-need-to-learn-it&quot;&gt;MATLAB: Why do you need to learn it?&lt;/h2&gt;
-
-&lt;p&gt;For the following reasons:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;It targets engineers as well as natural and medical scientists as its main audience, just like Fortran.&lt;/li&gt;
-  &lt;li&gt;It has excellent &lt;em&gt;native&lt;/em&gt; array/matrix representation and manipulation tools, just like Fortran.&lt;/li&gt;
-  &lt;li&gt;It has extensive sets of high-level commands for numerical computing, like Fortran.&lt;/li&gt;
-  &lt;li&gt;It is an interpreted language that makes it really easy to use anytime, unlike C, C++, Fortran which are compiled languages.&lt;/li&gt;
-  &lt;li&gt;It has excellent set of graphical tools for 2D and 3D plotting (in fact other languages like Python have tried to copy from and reverse-engineer the graphical tools and commands available in MATLAB).&lt;/li&gt;
-  &lt;li&gt;It has one of the largest user-base (over 2,000,000 users) in all scientific communities.&lt;/li&gt;
-  &lt;li&gt;There is an extensive list of numerical libraries written in MATLAB over the past decades by all those science/engineering -oriented users.&lt;/li&gt;
-  &lt;li&gt;It has excellent manual, and user guide, with extensive illustrative examples. Basically, you might not even need to take a MATLAB class, if you could closely and carefully follow MATLAB’s user guide.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;matlab-caveats&quot;&gt;MATLAB caveats&lt;/h2&gt;
-
-&lt;p&gt;Here is a personal list of MATLAB caveats that I can think of, at the moment:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;It is not free.&lt;/li&gt;
-  &lt;li&gt;It is slow compared to compiled programming languages. See for example, the following performance comparisons and tests in &lt;a href=&quot;https://modelingguru.nasa.gov/docs/DOC-1762&quot; target=&quot;_blank&quot;&gt;NASA modeling guru web page&lt;/a&gt;. As you can see there, the &lt;strong&gt;performance of MATLAB script can be significantly lower than compiled languages such as Fortran and C&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;If you have already coded in a fully object-oriented programming (OOP) language, in particular Python, you will find some oddities in MATLAB’s OOP implementation. You may feel this when, for example, you are working with &lt;a href=&quot;xx&quot; target=&quot;_blank&quot;&gt;cell arrays&lt;/a&gt; in MATLAB. We will see later on, what cell arrays are.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;matlab-features&quot;&gt;MATLAB features&lt;/h2&gt;
-
-&lt;p&gt;MATLAB has the following features and attributes.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;MATLAB is a fourth-generation, high-level programming language.&lt;/strong&gt; Remember from our &lt;a href=&quot;http:/ICP2017F/lecture/2-programming-history&quot; target=&quot;_blank&quot;&gt;second lecture&lt;/a&gt;, that a high-level programming language provides a high level of programming abstraction from details of computer and machine code. For comparison, Fortran, C++, and C are considered high, medium, and low -level programming languages respectively.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;MATLAB is an array-based programming language&lt;/strong&gt;, meaning that it is designed to be with the goal of facilitating array manipulation for scientists and engineers.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;MATLAB is a multi-paradigm programming language&lt;/strong&gt;. MATLAB allows the programmer to use the following major programming paradigms in their codes:&lt;br /&gt;
-&lt;br /&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot; target=&quot;_blank&quot;&gt;functional programming&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Imperative_programming&quot; target=&quot;_blank&quot;&gt;imperative programming&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Procedural_programming&quot; target=&quot;_blank&quot;&gt;procedural programming&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot; target=&quot;_blank&quot;&gt;object-oriented programming (OOP)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;   Later on, we will get to each of these programming paradigms in MATLAB.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;MATLAB is an interpreted language&lt;/strong&gt;. A programming language implementation is a system for executing computer programs. There are two general approaches to programming language implementation:&lt;br /&gt;
-&lt;br /&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Interpretation&lt;/strong&gt;: An interpreter takes as input a program in some language, and performs the actions written in that language on some machine.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Compilation&lt;/strong&gt;: A compiler takes as input a program in some language, and translates that program into some other language, which may serve as input to another interpreter or another compiler.&lt;br /&gt;
-&lt;br /&gt;MATLAB is an interpreted language, meaning that, as soon as you type a MATLAB command on the MATLAB’s command-line and press enter, the MATLAB interpreter executes the statement.  MATLAB programs can also be compiled using &lt;a href=&quot;https://www.mathworks.com/products/compiler.html&quot; target=&quot;_blank&quot;&gt;MATLAB Compiler&lt;/a&gt;, to create standalone applications to be executed later when desired.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;The extension for human-readable MATLAB source code file is &lt;code&gt;.m&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;some-useful-resources-for-matlab&quot;&gt;Some useful resources for MATLAB&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.mathworks.com/matlabcentral/&quot; target=&quot;_blank&quot;&gt;MATLAB Central&lt;/a&gt;: A repository of many codes, libraries written in MATLAB, as well as many MATLAB related questions with answers.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mathworks.com/matlabcentral/newsreader/&quot; target=&quot;_blank&quot;&gt;comp.soft-sys.matlab&lt;/a&gt;: MATLAB’s newsletter.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mathworks.com/moler&quot; target=&quot;_blank&quot;&gt;http://www.mathworks.com/moler&lt;/a&gt;: The original MATLAB developer’s page.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.mathworks.com/videos/search.html?q=&amp;amp;page=1&quot; target=&quot;_blank&quot;&gt;MATLAB educational videos&lt;/a&gt;: A long search-able list of educational MATLAB videos.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;matlab-installation&quot;&gt;MATLAB installation&lt;/h2&gt;
-&lt;p&gt;Depending on your operating system, you can download and install a specific version of MATLAB for your personal computer. MATLAB is available to all students enrolled at UT Austin for free. It can be downloaded from &lt;a href=&quot;http://www.engr.utexas.edu/itg/products/8017-matlab&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;alternative-replicas-of-matlab&quot;&gt;Alternative replicas of MATLAB&lt;/h3&gt;
-
-&lt;p&gt;Since MATLAB is not free, the GNU organization has started a project called &lt;a href=&quot;https://en.wikipedia.org/wiki/GNU_Octave&quot; target=&quot;_blank&quot;&gt;GNU Octave&lt;/a&gt; which is a reverse-engineering of MATLAB language and environment, hence mostly compatible with it, but &lt;strong&gt;at no cost&lt;/strong&gt;!. You can download it from &lt;a href=&quot;https://www.gnu.org/software/octave/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. GNU Octave is a free open source software (FOSS) package which is &lt;em&gt;mostly compatible&lt;/em&gt; with MATLAB. It provides a very similar command line interpreter interface, and implements most of the functionality as the commercial MATLAB product. Nevertheless, there are subtle differences which anyone attempting to switch to GNU Octave or to write MATLAB/GNU Octave-compatible scripts must appreciate. Octave was conceived in 1988 and has been under development since 1992, and over the years has made a great deal of progress, especially in the area of graphics and plotting.&lt;/p&gt;
-
-&lt;h3 id=&quot;matlab-script-editors&quot;&gt;MATLAB script editors&lt;/h3&gt;
-
-&lt;p&gt;I highly recommend you to use MATLAB’s own IDE for MATLAB scripting since it has fantastic features such as automatic debugging, indentation and syntax highlight. However, once you become proficient in MATLAB scripting, you may realize that the text-editing capabilities of MATLAB IDE are not that great compared to highly popular general-purpose text editors. In that case, I recommend you to use,&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.sublimetext.com/&quot; target=&quot;_blank&quot;&gt;Sublime&lt;/a&gt;  (available Windows, OS X, Linux)&lt;br /&gt;
-Sublime is a sophisticated text editor for codes in many different languages, including MATLAB, C, C++, Fortran, etc. It has many advanced tools for code editing and syntax highlighting.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://notepad-plus-plus.org/&quot; target=&quot;_blank&quot;&gt;Notepad++&lt;/a&gt;  (available only on Windows)&lt;br /&gt;
-Notepad++ is a highly versatile text and source code editor for use with Microsoft Windows. It is likely – and in my opinion, arguably – the most powerful general-purpose text editor that is currently available on the web. Notepad++ automatically identifies the type of code the file contains based on the file extension and highlights the code syntax accordingly. However, you should keep in mind that it is not specifically designed for MATLAB. If you are professional multi-language programmer, you will soon find the hidden gems in Notepad++, that are not available in any other editor, including MATLAB’s own editor.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;which-matlab-version-should-i-use&quot;&gt;Which MATLAB version should I use?&lt;/h3&gt;
-
-&lt;p&gt;Always try to use the latest version if possible, since new features are added to MATLAB every year.&lt;/p&gt;
-
-&lt;h3 id=&quot;using-matlab-online-in-your-web-browser&quot;&gt;Using MATLAB online, in your web browser&lt;/h3&gt;
-
-&lt;p&gt;Since as a UT student, you have a campus-wide MATLAB licence, you can login to your account to use MATLAB in your browser, on a remote server. For instructions on how to use MATLAB on-line, click &lt;a href=&quot;https://www.mathworks.com/products/matlab-online.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;matlab-environment&quot;&gt;MATLAB environment&lt;/h2&gt;
-
-&lt;p&gt;As soon as you open MATLAB, you will likely encounter a environment like the following figure.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/3/matlab.png&quot; width=&quot;900&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        A snapshot of MATLAB environment.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;The main compartments in MATLAB environment are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;command window&lt;/strong&gt;: where you can type single or multiple line commands.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;script editor&lt;/strong&gt;: which is where you can create new or open/edit existing MATLAB files.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;address bar&lt;/strong&gt;: indicating the &lt;strong&gt;current working directory&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;folder tree window&lt;/strong&gt;: showing all files in the current working directory.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;workspace window&lt;/strong&gt;: which shows all the global variables currently defined in MATLAB.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;useful-matlab-commands&quot;&gt;Useful MATLAB commands&lt;/h2&gt;
-
-&lt;p&gt;The following are some useful MATLAB commands  that allow you to get help on the command-line:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;demo&lt;/code&gt; will load MATLAB examples in the Help Browser, illustrating some features of MATLAB.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;help &amp;lt;keyword&amp;gt;&lt;/code&gt; will explain any function. For example,
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; help sin
-sin    Sine of argument in radians.
- sin(X) is the sine of the elements of X.
-
- See also asin, sind.
-
- Reference page for sin
- Other functions named sin
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;help help&lt;/code&gt;  will explain how MATLAB help works.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;lookfor &amp;lt;keyword&amp;gt;&lt;/code&gt; searches through MATLAB help for a specific word or phrase. For example,
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; lookfor gaussian
-hwv                            - Create a Hull-White/Vasicek mean-reverting Gaussian diffusion model
-xreggpr                        - xreggpm Gaussian Process model constructor
-gmdistribution                 - Gaussian mixture distribution class.
-awgn                           - Add white Gaussian noise to a signal.
-bigaussianir                   - Bi-Gaussian Doppler filter impulse response.
-gaussianir                     - Gaussian Doppler filter impulse response.
-intfiltgaussian_intfactor      - Support function used by @channel package for
-wgn                            - Generate white Gaussian noise.
-commblkgaussfilt               - Gaussian filter block helper function.
-commblkgaussiansrc2            - Mask function for Gaussian Noise Generator block
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;doc &amp;lt;keyword&amp;gt;&lt;/code&gt; will bring up a documentation page in the Help Browser for the given keyword.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;dir &amp;lt;path&amp;gt;&lt;/code&gt; lists the contents of the given path.
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; dir
-.                lcdata.xml       m3iregistry      mcc.bat          mexext.bat       mw_mpiexec.bat   win64            
-..               lcdata.xsd       matlab.exe       mex.bat          mexsetup.pm      registry         worker.bat       
-deploytool.bat   lcdata_utf8.xml  mbuild.bat       mex.pl           mexutils.pm      util             
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;pwd&lt;/code&gt; outputs the current working directory.
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; pwd
-ans =
-C:\Program Files\MATLAB\R2016a\bin
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;quit&lt;/code&gt; quits MATLAB by closing the application.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;diary('filename')&lt;/code&gt; (or &lt;code&gt;diary filename&lt;/code&gt;) saves  all subsequent keyboard interactions with MATLAB Command Window to the file &lt;code&gt;filename&lt;/code&gt;. &lt;code&gt;diary off&lt;/code&gt; suspends the diary. &lt;code&gt;diary on&lt;/code&gt; resumes diary mode using the current filename, or the default filename diary if none has yet been specified.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;comments-in-matlab-scripts&quot;&gt;Comments in MATLAB scripts&lt;/h2&gt;
-
-&lt;p&gt;Comment lines in MATLAB begin with percent character &lt;code&gt;%&lt;/code&gt;. Anything after &lt;code&gt;%&lt;/code&gt; is ignored by MATLAB interpreter. The &lt;code&gt;%&lt;/code&gt; character itself only tells the interpreter to ignore the remainder of the same line. In the MATLAB Editor, &lt;font color=&quot;#00e600&quot;&gt;commented areas are printed in green by default&lt;/font&gt;. There are two useful keyboard shortcuts for adding and removing chunks of comments. Select the code you wish to comment or uncomment, and then press &lt;code&gt;Ctrl-R&lt;/code&gt; to place one &lt;code&gt;%&lt;/code&gt; symbol at the beginning of each line and `Ctrl-T to do the opposite.&lt;/p&gt;
-
-&lt;p&gt;MATLAB also supports multi-line comments, akin to &lt;code&gt;/* ... */&lt;/code&gt; in languages like C or C++, via the &lt;code&gt;%{ %}&lt;/code&gt; delimiters. But there is a small and important difference. In MATLAB, the &lt;strong&gt;lines containing &lt;code&gt;%{&lt;/code&gt; or &lt;code&gt;%}&lt;/code&gt; should not contain any other text (except white spaces)&lt;/strong&gt;. Otherwise the multi-line comment would not work as you wish. For example,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;%{ x = 1;
-y=2;%}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-You notice that in the above, &lt;code&gt;y=2;&lt;/code&gt; is not commented. The correct syntax is,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;%{
-x = 1;
-y=2;
-%}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-Comments are useful for explaining what function a certain piece of code performs especially if the code relies on implicit or subtle assumptions or otherwise perform subtle actions. Doing this is a good idea both for yourself and for others who try to read your code. It is highly recommended to include a block of comments at the beginning of your codes explaining what the your MATLAB script or function does does and how to use it. MATLAB will output the leading comments that appear at the beginning of an &lt;code&gt;.m&lt;/code&gt; file, when you type,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; help &amp;lt;my function name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-All of MATLAB’s built-in functions written in MATLAB are documented this way.&lt;/p&gt;
-
-&lt;h2 id=&quot;matlabs-search-path&quot;&gt;MATLAB’s search path&lt;/h2&gt;
-
-&lt;p&gt;MATLAB has a search path and strategy that is used to find variables, and MATLAB scripts. MATLAB’s current &lt;strong&gt;working directory&lt;/strong&gt; is always displayed in the MATLAB address bar. When you enter a name in MATLAB’s command prompt, the MATLAB interpreter attemps to find an entity with that name in the following order:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;First, it looks for a variable of the same name in MATLAB’s workspace and if it exists, MATLAB displays the value of the variable.&lt;/li&gt;
-  &lt;li&gt;If not, then MATLAB, looks for a M-file (a MATLAB script) in the working directory of MATLAB.&lt;/li&gt;
-  &lt;li&gt;If not, then MATLAB looks for an M-file in MATLAB’s list of directories (the search path) to find the file. If no entity exists with the given name, then MATLAB gives an error.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/3-matlab-for-beginners&quot;&gt;Lecture 3: MATLAB for beginners&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on September 20, 2017.&lt;/p&gt;</content>
 </entry>
 
 </feed>
