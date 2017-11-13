@@ -7,13 +7,95 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-11-13T09:10:28-06:00</updated>
+<updated>2017-11-13T13:29:03-06:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/ICP2017F/</uri>
   <email>amir@ices.utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Quiz 4: Solutions - MATLAB loops]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/quiz/4-solutions-matlab-loops"/>
+  <id>http:/ICP2017F/quiz/4-solutions-matlab-loops</id>
+  <published>2017-11-13T00:00:00-06:00</published>
+  <updated>2017-11-13T00:00:00-06:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This is the solution to &lt;a href=&quot;4-problems-matlab-loops.html&quot; target=&quot;_blank&quot;&gt;Quiz 4: Problems - MATLAB loops&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--
+
+The following figure illustrates the grade distribution for this quiz.  
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/quiz/gradeDist/gradeHistQuiz4.png&quot; width=&quot;700&quot;&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;
+        Maximum possible points is 1.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+--&gt;
+
+&lt;p&gt;This quiz is about for loops, while loops and vectorization in MATLAB.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; Write a function that takes an input integer, and computes its factorial,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;n!=n\times (n-1) \times (n-2) \cdots \times 2 \times 1 ~,&lt;/script&gt;
+
+&lt;p&gt;in the following ways:&lt;/p&gt;
+
+&lt;p&gt;(a) Write this function using while-loop. Name it &lt;code&gt;getFacWhile(n)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;(b) Write this function using for-loop. Name it &lt;code&gt;getFacFor(n)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;(c) Write this function using the vectorization concept. Name it &lt;code&gt;getFacVec(n)&lt;/code&gt;. (Hint: for the vectorized version of this function, you will have to first create a vector of integers from 1 to n, using MATLAB vector construction notation (This is very simple and easy if you recall from lecture notes). Then use MATLAB’s built-in &lt;a href=&quot;https://www.mathworks.com/help/matlab/ref/prod.html&quot;&gt;prod()&lt;/a&gt; function to accomplish the task of computing $n!$ as given by the above equation.)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Here are the functions: &lt;a href=&quot;http:/ICP2017F/quiz/4-solutions/getFacWhile.m&quot; target=&quot;_blank&quot;&gt;getFacWhile.m&lt;/a&gt;, &lt;a href=&quot;http:/ICP2017F/quiz/4-solutions/getFacFor.m&quot; target=&quot;_blank&quot;&gt;getFacFor.m&lt;/a&gt;, &lt;a href=&quot;http:/ICP2017F/quiz/4-solutions/getFacVec.m&quot; target=&quot;_blank&quot;&gt;getFacVec.m&lt;/a&gt;.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; Write a MATLAB script, &lt;code&gt;timeFacFuncs.m&lt;/code&gt; that times the performance of the three functions you wrote in the previous problem, so that when you run this script, you get an output like the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; timeFacFuncs
+average runtime for getFacWhile(1700000): 0.0054129 seconds
+average runtime for getFacFor(1700000): 0.0080964 seconds
+average runtime for getFacVec(1700000): 0.005283 seconds
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Here is the script &lt;a href=&quot;http:/ICP2017F/quiz/4-solutions/getFacWhile.m&quot; target=&quot;_blank&quot;&gt;timeFacFuncs.m&lt;/a&gt;.&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; &lt;strong&gt;Extra Credit&lt;/strong&gt; Modify your answer to problem 1.(c) above in such a way that instead of using &lt;code&gt;prod()&lt;/code&gt;, you get the factorial using &lt;code&gt;sum()&lt;/code&gt; and some other elementary mathematical MATLAB functions. (Hint: for this problem, you will need to transform the numbers involved in calculations using some appropriate MATLAB mathematical function and revert the result at the end.)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+You can do so, using &lt;code&gt;log()&lt;/code&gt; transformation of the numbers in factorial,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;n! = n\times (n-1) \times \cdots \times 1 ~, \\
+\Rightarrow \log(n!) = \log(n) + \log(n-1) + \cdots + \log(1) ~.&lt;/script&gt;
+
+&lt;p&gt;Therefore, a possible implementation using &lt;code&gt;sum()&lt;/code&gt; could be this function: &lt;a href=&quot;http:/ICP2017F/quiz/4-solutions/getFacVecSum.m&quot; target=&quot;_blank&quot;&gt;getFacVecSum.m&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/4-solutions-matlab-loops&quot;&gt;Quiz 4: Solutions - MATLAB loops&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on November 13, 2017.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -6432,71 +6514,6 @@ All of MATLAB’s built-in functions written in MATLAB are documented this way.&
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/3-matlab-for-beginners&quot;&gt;Lecture 3: MATLAB for beginners&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on September 20, 2017.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Quiz 1: Solutions - Version control system]]></title>
-  <link rel="alternate" type="text/html" href="http:/ICP2017F/quiz/1-solutions-version-control-system"/>
-  <id>http:/ICP2017F/quiz/1-solutions-version-control-system</id>
-  <published>2017-09-18T00:00:00-05:00</published>
-  <updated>2017-09-18T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;This is the solution to &lt;a href=&quot;1-problems-version-control-system.html&quot; target=&quot;_blank&quot;&gt;Quiz 1: Problems - Version control system&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The following figure illustrates the grade distribution for this quiz.&lt;/p&gt;
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/quiz/gradeDist/gradeHistQuiz1.png&quot; width=&quot;700&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Maximum possible points is 1.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Which of the following Git commands can add all the &lt;strong&gt;new&lt;/strong&gt; and &lt;strong&gt;modified-existing&lt;/strong&gt; files to the staging area? choose all that apply.&lt;br /&gt;
-(A) &lt;code&gt;git add -A&lt;/code&gt;&lt;br /&gt;
-(B) &lt;code&gt;git add --A&lt;/code&gt;&lt;br /&gt;
-(C) &lt;code&gt;git add -all&lt;/code&gt;&lt;br /&gt;
-(D) &lt;code&gt;git add --all&lt;/code&gt;&lt;br /&gt;
-(E) &lt;code&gt;git add -u&lt;/code&gt;&lt;br /&gt;
-(F) &lt;code&gt;git add .&lt;/code&gt;&lt;br /&gt;
-(G) &lt;code&gt;git add .; git add -u&lt;/code&gt;&lt;br /&gt;
-(H) &lt;code&gt;git add .; git add --u&lt;/code&gt;&lt;br /&gt;
-(I) &lt;code&gt;git add -u; git add .&lt;/code&gt;&lt;br /&gt;
-(J) &lt;code&gt;git add --u; git add .&lt;/code&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;strong&gt;Answer: A, D, G, F, I&lt;/strong&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Which of the following Git commands &lt;strong&gt;both&lt;/strong&gt; stages and commits &lt;strong&gt;only modified and deleted files&lt;/strong&gt; but &lt;strong&gt;NOT&lt;/strong&gt; the &lt;em&gt;new files&lt;/em&gt; added to the repository since the last commit. Choose all that apply.&lt;br /&gt;
-(A) &lt;code&gt;git commit&lt;/code&gt;&lt;br /&gt;
-(B) &lt;code&gt;git commit -a&lt;/code&gt;&lt;br /&gt;
-(C) &lt;code&gt;git commit -am&lt;/code&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;strong&gt;Answer: B, C&lt;/strong&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Write down the Git command that lists all Git commands for you.&lt;br /&gt;
-&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ git help -a
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/1-solutions-version-control-system&quot;&gt;Quiz 1: Solutions - Version control system&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on September 18, 2017.&lt;/p&gt;</content>
 </entry>
 
 </feed>
