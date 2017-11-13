@@ -2,6 +2,11 @@
 callback([
 
   {
+    "text": "Quiz 4: Problems - MATLAB loops",
+    "href": "/ICP2017F/quiz/4-problems-matlab-loops"
+  } ,
+
+  {
     "text": "Quiz 3: Solutions - MATLAB branching, functions",
     "href": "/ICP2017F/quiz/3-solutions-matlab-branching-functions"
   } ,
