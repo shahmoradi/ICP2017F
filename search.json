@@ -17,6 +17,14 @@
 		} ,
 	
 		{
+		  "title"      : "Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo",
+		  "date"       : "2017-11-13 00:00:00 -0600",
+		  "shortdate"  : "November 13, 2017"
+		} ,
+	
+		{
 		  "title"      : "Homework 4: Solutions - loops, IO",
 		  "category"   : "",
 		  "url"        : "/ICP2017F/homework/4-solutions-loops-IO",

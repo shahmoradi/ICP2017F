@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-11-13T15:17:38-06:00</updated>
+<updated>2017-11-14T12:36:51-06:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -150,6 +150,113 @@ average runtime for getFacVec(1700000): 0.005283 seconds
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/4-problems-matlab-loops&quot;&gt;Quiz 4: Problems - MATLAB loops&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on November 13, 2017.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo"/>
+  <id>http:/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo</id>
+  <published>2017-11-13T00:00:00-06:00</published>
+  <updated>2017-11-13T00:00:00-06:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;♣ &lt;strong&gt;Due Date: Monday Nov 29, 2017 9:00 AM&lt;/strong&gt;. This homework aims at giving you some experience with data input/output methods in MATLAB as well as plotting graphs and Monte Carlo techniques).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; &lt;strong&gt;Reading scientific data from web using MATLAB&lt;/strong&gt;. Consider the following webpage address &lt;a href=&quot;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&quot; target=&quot;_blank&quot;&gt;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&lt;/a&gt;. This is an data table (in HTML language) containing data from &lt;a href=&quot;https://www.nasa.gov/mission_pages/swift/main&quot; target=&quot;_blank&quot;&gt;NASA’s Swift satellite&lt;/a&gt;. Each row in this table represents information about a &lt;a href=&quot;https://en.wikipedia.org/wiki/Gamma-ray_burst&quot; target=&quot;_blank&quot;&gt;Gamma-Ray Burst (GRB)&lt;/a&gt; detection that Swift has made in the past years. Now, corresponding to each of event IDs, there (might) exist files that contain some attributes of these events which we wish to plot and understand their behavior. For example, for the first event in this table, contains a data file which is hidden in a directory on this website &lt;a href=&quot;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. For each event in this table, there is likely one such table hidden in this web directory.&lt;/p&gt;
+
+&lt;p&gt;Our goal in this question is to fetch all these files from the website, using MATLAB and save them locally in our own computer. Then read their contents one by one and plot the two columns of data in all of them together.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(A)&lt;/strong&gt; Write a MATLAB script named &lt;code&gt;fetchDataFromWeb.m&lt;/code&gt; that uses this web address: &lt;code&gt;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/triggers.txt&lt;/code&gt; to read a list of all GRB events and then writes the entire table of &lt;code&gt;triggers.txt&lt;/code&gt; to a local file with the same name on your device. For this purpose, you will need MATLAB built-in function &lt;code&gt;webread()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(B)&lt;/strong&gt; Now, add to your script another set of commands that uses the event IDs stored in this file, to generate the corresponding web addresses like: &lt;a href=&quot;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&lt;/a&gt;. Then it uses the generated web address to read the content of the page and store it in a local file on your device with the same name as it is stored on the webpage (for example, for the given webpage, the filename would be &lt;code&gt;GRB00745966_ep_flu.txt&lt;/code&gt;). &lt;strong&gt;Note:&lt;/strong&gt; Some of the web addresses for the given event IDs do not exist. Therefore, you should MATLAB’s try-catch construct to avoid runtime errors in your MATLAB code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(C)&lt;/strong&gt; Now write another MATLAB script named &lt;code&gt;plotDatafromFile.m&lt;/code&gt;, that reads all of these files in your directory, one by one, using MATLAB &lt;code&gt;readtable()&lt;/code&gt; function, and plots the content of all of them together, on a single scatter plot (using MATLAB function &lt;code&gt;scatter()&lt;/code&gt;) like the following,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/5-problems/swiftDataPlot.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; again that some the data files stored on your computer are empty and some others have useless data if data in the second column of the file is larger than 0. So you will have to write your script in such a way that it checks for non-emptiness of the file (that is, the file does indeed contain some numerical data) as well as the negativity of the values in the column of data in each file. For example, you could check for the negativity of the values using MATLAB function &lt;code&gt;all(data[:,1]&amp;lt;0.0)&lt;/code&gt; assuming that data is the variable containing the information read from the file.&lt;/p&gt;
+
+&lt;p&gt;Once you have done all these checks, you have to do one final manipulation of data, that is, the data in these files on the second column is actually the log of data, so have to get the &lt;code&gt;exp()&lt;/code&gt; value to plot it (because the plot in the figure above is a log-log plot and we want to exactly regenerate it). To do so you could simply use,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;data[:,2] = exp(data[:,2]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+as soon as you read from the file, and then finally you make a scatter plot of all data using MATLAB scatter plot. At the end, you will have to set a title for your plot as well and label the axes of the plot, and save your plot using MATLAB’s built-in function &lt;code&gt;saveas()&lt;/code&gt;. In order to find out how many files you have plotted in the figure, you will have to define a variable counter which increases by one unit, each time a new non-empty negative-second-column data file is read and plotted.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; I strongly urge you to attend the next three lectures in order to answer this question.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;Simulating a fun Monte Carlo game.&lt;/strong&gt; Suppose you’re on a game show, and you’re given the choice of three doors:&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/5-problems/Monty_1.png&quot; width=&quot;600&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Behind one door is a car; behind the two others, goats. You pick a door, say No. 1, and the host of the show opens another door, say No. 3, which has a goat.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/5-problems/Monty_open_door.png&quot; width=&quot;600&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;He then says to you, “Do you want to pick door No. 2?”.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question: What would you do?&lt;/strong&gt; Is it to your advantage to switch your choice from door 1 to door 2? Is it to your advantage, &lt;strong&gt;in the long run, for a large number of game tries&lt;/strong&gt;, to switch to the other door?&lt;/p&gt;
+
+&lt;p&gt;Now whatever your answer is, I want you to check/prove your answer by a Monte Carlo simulation of this problem. Make a plot of your simulation for &lt;code&gt;nExperiments=100000&lt;/code&gt; repeat of this game, that shows, in the long run, on average, what is the probability of winning this game if you switch your choice, and what is the probability of winning, if you do not switch to the other door.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; I strongly urge you to attend the lectures this week in order to get help for this question.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; &lt;strong&gt;Monte Carlo approximation of the number $\pi$&lt;/strong&gt;. Suppose we did not know the value of $\pi$ and we wanted to estimate its value using Monte Carlo methods. One practical approach is to draw a square of unit side, with its diagonal opposite corners extending from the coordinates origin $(0,0)$ to $(1,1)$. Now we try to simulate uniform random points from inside of this square by generating uniform random points along the $X$ and $Y$ axes, i.e., by generating two random uniform numbers (x,y) from the range $[0,1]$.&lt;/p&gt;
+
+&lt;p&gt;Now the generated random point $P$ has the coordinate $(x,y)$, so we can calculate its distance from the coordinate origin. Now suppose we also draw a quarter-circle inside of this square whose radius is unit and is centered at the origin $(0,0)$. The ratio of the area of this quarter-circle, $S_C$ to the area of the area of the square enclosing it, $S_S$ is,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{S_C}{S_S} = \frac{\frac{1}{4}\pi r^2}{r^2} = \frac{1}{4}\pi&lt;/script&gt;
+
+&lt;p&gt;This is because the area of the square of unit sides, is just 1. Therefore, if we can somehow measure the area of the quarter $S_C$, then we can use the following equation, to get an estimate of $\pi$,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\pi = 4S_C&lt;/script&gt;
+
+&lt;p&gt;In order to obtain, $S_C$, we are going to throw random points in the square, just as described above, and then find the fraction of points, $f=n_C/n_{\rm total}$, that fall inside this quarter-circle. This fraction is related to the area of the circle and square by the following equation,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f=\frac{n_C}{n_{\rm total}} = \frac{S_C}{S_S}&lt;/script&gt;
+
+&lt;p&gt;Therefore, one can obtain an estimate of $\pi$ using this fraction,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\pi \approx \frac{1}{4}\frac{n_C}{n_{\rm total}}&lt;/script&gt;
+
+&lt;p&gt;Now, write a MATLAB script, that takes in the number of points to be simulated, and then calculates an approximate value for $\pi$ based on the Monte Carlo algorithm described above.  Write a second function that plot the estimate of $\pi$ versus the number of points simulated, like the following,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/5-solutions/approximatePI.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo&quot;&gt;Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on November 13, 2017.&lt;/p&gt;</content>
 </entry>
 
 
@@ -6044,646 +6151,6 @@ Since slicing the cell array by &lt;code&gt;{}&lt;/code&gt; returns a comma-sepa
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/5-matlab-values-variables-types-II&quot;&gt;Lecture 5: MATLAB - values, variables, types - II&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on September 27, 2017.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Lecture 4: MATLAB - values, variables, types - I]]></title>
-  <link rel="alternate" type="text/html" href="http:/ICP2017F/lecture/4-matlab-values-variables-types-I"/>
-  <id>http:/ICP2017F/lecture/4-matlab-values-variables-types-I</id>
-  <published>2017-09-22T00:00:00-05:00</published>
-  <updated>2017-09-22T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;This lecture aims at teaching you the how to of programming, difference between programming languages and the natural languages, the type of programming errors and the meaning code debugging how to perform simple arithmetic operations on the MATLAB command line.&lt;/p&gt;
-
-&lt;p&gt;For general information on MATLAB Data Types, see &lt;a href=&quot;https://www.mathworks.com/help/matlab/data-types_data-types.html&quot; target=&quot;_blank&quot;&gt;MATLAB manual&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;lecture-videos&quot;&gt;Lecture Videos&lt;/h2&gt;
-
-&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful. For this lecture, video 4.0 was currupt, and could not be uploaded here.&lt;/p&gt;
-
-&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
-    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/1KQrVbFvP4c&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
-    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/M1EClHcfBn8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;programming-glossary&quot;&gt;Programming glossary&lt;/h2&gt;
-
-&lt;p&gt;The following table contains some technical programming phrases that are often used and heard in the field of computer science and programming, that you need to be familiar as well.&lt;/p&gt;
-
-&lt;table class=&quot;center&quot;&gt;
-&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
-Table 1. Some programming phrases that are discussed in this lecture. The boldface words in the description column indicate items that are expressions with their own description in this table.
-&lt;/caption&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Expression&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Description&lt;/font&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;algorithm&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A general method for solving a class of problems.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;bug&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;An error in &lt;b&gt;program&lt;/b&gt; that has to be resolved for successful execution of the program.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;compiled language&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A programming language whose programs need to be compiled by a &lt;b&gt;compiler&lt;/b&gt; in order to run.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;compiler&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A software that translates an entire high-level program into a lower-level language to make it &lt;b&gt;executable&lt;/b&gt;.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;debugging&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;The process of finding and removing any type of error in the program.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;exception&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;An alternative name for &lt;b&gt;runtime error&lt;/b&gt; in the program.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;executable&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;An &lt;b&gt;object code&lt;/b&gt;, ready to be executed. Generally has the file extension &lt;code&gt;.exe&lt;/code&gt; or &lt;code&gt;.out&lt;/code&gt; or no extension at all.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;formal language&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A language that is intentionally designed for specific purposes, which, unlike &lt;b&gt;natural languages&lt;/b&gt;, follows a strict standard.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;high-level language&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A programming language (e.g., MATLAB, Python, Fortran, Java, etc) that has high level of abstraction from the underlying hardware.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;interpreted language&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A programming language whose statements are interpreted line-by-line by an &lt;b&gt;interpreter&lt;/b&gt; and immediately executed.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;low-level language&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A programming language that has a low-level of abstraction from computer hardware and architecture, such as Assembly. Very close to machine code.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;natural language&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A language that evolves naturally, and has looser &lt;b&gt;syntax&lt;/b&gt; rules and standard compared to &lt;b&gt;formal languages&lt;/b&gt;.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;object code&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;The output of a compiler after translating a program.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;parsing&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;Reading and examining a file/program and analyzing the syntactic structure of the file/program.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;portability&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A program's ability to be executable on more than one kind of computer architecture, without changing the code.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;problem solving&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;The process of formulating a problem and finding and expressing a solution to it.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;program&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A set of instructions in a that together specify an algorithm a computation.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;runtime error&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;An error that does not arise and cause the program to stop, until the program has started to execute.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;script&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A program in an &lt;b&gt;interpreted language&lt;/b&gt; stored in a file.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;semantic error&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A type of error in a program that makes the program do something other than what was intended. Catching these errors can be very tricky.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;semantics&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;The meaning of a program.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;source code&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A program in a high-level compiled language, before being compiled by the &lt;b&gt;compiler&lt;/b&gt;.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;syntax error&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;A type of error in program that violates the standard &lt;b&gt;syntax&lt;/b&gt; of the programming language, and hence, the program cannot be interpreted or compiled until the syntax error is resolved.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;syntax&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;The structure of a program.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;&lt;b&gt;token&lt;/b&gt;&lt;/td&gt;
-    &lt;td&gt;One of the basic elements of the syntactic structure of a program, in analogy with &lt;i&gt;word&lt;/i&gt; in a &lt;b&gt;natural language&lt;/b&gt;.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;the-content-of-a-computer-program&quot;&gt;The content of a computer program&lt;/h2&gt;
-
-&lt;p&gt;Although different programming languages look different in their syntax standards, virtually all programming languages are comprised of the following major components (instructions):&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;input&lt;/strong&gt;&lt;br /&gt;
-  Virtually every program starts with some input data by the user, or the input data that is &lt;a href=&quot;https://en.wikipedia.org/wiki/Hard_coding&quot; target=&quot;_blank&quot;&gt;hard-coded&lt;/a&gt; in the program.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;mathematical/logical operations&lt;/strong&gt;&lt;br /&gt;
-  Virtually all programs involve some sort of mathematical or logical operations on the input data to the program.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;conditional execution&lt;/strong&gt;&lt;br /&gt;
-  In order to perform the above operations on data, most often (but not always) there is a need to chack if some conditions are met in the program, and then perform specific programming instructions corresponding to each of the conditions.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;repetition / looping&lt;/strong&gt;&lt;br /&gt;
-  Frequently it is needed to perform a specific set of operations repeatedly in the program to achieve the program’s goal.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;output&lt;/strong&gt;&lt;br /&gt;
-  At the end of the program, it is always needed to output the program result, either to computer screen, or to a file.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;debugging-a-program&quot;&gt;Debugging a program&lt;/h2&gt;
-
-&lt;p&gt;As it is obvious from its name, a &lt;strong&gt;bug&lt;/strong&gt; in a computer program is annoying programming error that needs fixing in order for the program to become executable &lt;strong&gt;or&lt;/strong&gt; to give out the correct answer. The process of removing program bugs is called debugging. There are basically three types of programming bugs (errors):&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;syntax error&lt;/strong&gt;&lt;br /&gt;
-&lt;br /&gt;
-A program, weather interpreted or compiled, can be successfully run only if it is &lt;em&gt;syntactically correct&lt;/em&gt;. Syntax errors are related to the structure and standard of the language, and the order by which the language &lt;strong&gt;tokens&lt;/strong&gt; are allowed to appear in the code. For example, when you write your first MATLAB &lt;strong&gt;Hello World&lt;/strong&gt; script, you would write,
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; disp('Hello World!')
-Hello World!
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;
-or,&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; disp 'Hello World!';
-Hello World!
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;
-However, if you type a wrong statement, MATLAB will give you a syntax error, like the following,&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; disp(*Hello World!*)
- disp(*Hello World!*)
-   ↑
-Error: Unexpected MATLAB operator.
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;runtime error&lt;/strong&gt;&lt;br /&gt;
-&lt;br /&gt;
-Runtime errors or sometimes also named &lt;strong&gt;exceptions&lt;/strong&gt; are a class of programming errors that can be detected only at the time of running the code, that is, they are not syntax errors. Examples include:&lt;br /&gt;
-&lt;br /&gt;
-    &lt;ul&gt;
-      &lt;li&gt;memory leaks (very common error in beginner C and C++ codes)&lt;/li&gt;
-      &lt;li&gt;uninitialized memory&lt;/li&gt;
-      &lt;li&gt;access request to illegal memory address of the computer&lt;/li&gt;
-      &lt;li&gt;security attack vulnerabilities&lt;/li&gt;
-      &lt;li&gt;buffer overflow
-&lt;br /&gt;
-These errors can be sometimes tricky to identify.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;semantic error&lt;/strong&gt;
-&lt;br /&gt;
-Unlike syntax errors that comprise of something the compiler/interpreter does not understand, semantic errors do not cause any compiler/interpreter error messages. However, the resulting compiled/interpreted code will NOT do what it is intended to do. Semantic errors are the most dangerous types of programming errors, as they do not raise any error flag by the compiler/interpreter, yet the program will not do what it is intended to do, although the code may look perfectly fine on its face. Semantic error is almost synonymous with &lt;strong&gt;logical error&lt;/strong&gt;. Dividing two integers using the regular division operator &lt;code&gt;/&lt;/code&gt; in MATLAB while expecting the result to be integer, would be a semantic error. This is because in MATLAB (unlike Fortran, for example), the regular division operator always outputs the result as real (float).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; 2/7
-
-ans =
-
-    0.2857
-
-&amp;gt;&amp;gt; class(ans)
-
-ans =
-
-double
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;methods-of-running-a-matlab-program&quot;&gt;Methods of running a MATLAB program&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Writing MATLAB script on the MATLAB interpreter’s command prompt:&lt;/strong&gt;&lt;br /&gt;
-Now, as you may have noticed, in the above example, I used MATLAB command line to code my first simple MATLAB script. This is one of the simplest and quickest method of MATLAB scripting and is actually very useful for testing small simple MATLAB ideas and code snippets on-the-fly.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Running MATLAB code written in a MATLAB &lt;code&gt;.m&lt;/code&gt; file from MATLAB command prompt:&lt;/strong&gt;&lt;br /&gt;
-As the program size grows, it wiser to put all of your MATLAB script into a single &lt;code&gt;.m&lt;/code&gt; file, and then let the MATLAB interpreter run (i.e., interpret) your entire file all at once. To save the above simple “Hello World” MATLAB code in a file and run it, open a new m-file in MATLAB editor, then paste the code in the file and save it in MATLAB’s current working directory as &lt;code&gt;hello.m&lt;/code&gt;. Then you can either call your program on the command line as the following,
-&lt;br /&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; hello
-Hello World!
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;
-or, simply press &lt;code&gt;F5&lt;/code&gt; button on your keyboard to run it.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Running your MATLAB script file from the Bash/cmd command line&lt;/strong&gt;: You can also run your codes directly from the Windows cmd or Linux Bash command lines by simply calling MATLAB, followed by a list of optional flags, followed by the name and path to your MATLAB script. For example,
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;matlab -nodisplay -nodesktop -r &quot;run /home/amir/matlab/hello.m&quot;
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Running MATLAB code as an standalone application by compiling it&lt;/strong&gt;: You can also compile your MATLAB script into a binary file (machine language), which is then standalone and executable independently of MATLAB. This is however out of the scope of our course, but you can read more about it &lt;a href=&quot;https://www.mathworks.com/videos/getting-started-standalone-applications-using-matlab-compiler-100088.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;matlab-interpreter-as-a-simple-calculator&quot;&gt;MATLAB interpreter as a simple calculator&lt;/h2&gt;
-
-&lt;p&gt;One of the greatest advantages of MATLAB is that it can be used as a simple calculator and program interpreter on-the-fly, just like Python, Mathematica, R, and other scripting languages. In the following, you will see why and how.&lt;/p&gt;
-
-&lt;h3 id=&quot;values-and-their-types-in-matlab&quot;&gt;Values and their types in MATLAB&lt;/h3&gt;
-
-&lt;p&gt;Values are one of the most fundamental entities in programming. Like any other language, a value in MATLAB can be of  different types, most importantly &lt;strong&gt;Numeric&lt;/strong&gt; (plain integer, long integer, float (real number), complex), &lt;strong&gt;Boolean&lt;/strong&gt; (logical) which is a subtype of Numeric, or &lt;strong&gt;char&lt;/strong&gt; (string), and many more. Each value type in MATLAB is a class. We will get to what classes are, at the end of the semester. For now, all you need to know is that there 6 main data types (in addition to &lt;a href=&quot;https://www.mathworks.com/help/matlab/function-handles.html&quot; target=&quot;_blank&quot;&gt;function handles&lt;/a&gt;).&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/4/fundamental_classes.png&quot; width=&quot;900&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Main MATLAB value types (classes).
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;numeric-and-logical-values-in-matlab&quot;&gt;Numeric and logical values in MATLAB&lt;/h4&gt;
-
-&lt;p&gt;The following are a few example arithmetic operations with values in MATLAB. You can perform very simple arithmetic on the MATLAB command line, and the result immediately by pressing &lt;code&gt;enter&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; 2 + 5 % Just typing some comment on the MATLAB command line. Anything after % is a comment and will be ignored.
-
-ans =
-
-     7
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; 2 - 7 % difference
-
-ans =
-
-    -5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; 2 * 7 % product
-
-ans =
-
-    14
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; true % logical true value
-
-ans =
-
-     1
-
-&amp;gt;&amp;gt; false % logical false value
-
-ans =
-
-     0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;obtaining-the-type-ie-class-of-a-value&quot;&gt;Obtaining the type (i.e. class) of a value&lt;/h4&gt;
-
-&lt;p&gt;You can use the MATLAB’s built-in function &lt;code&gt;class&lt;/code&gt; to get the type of a value in MATLAB (Of course, this is somewhat obvious and redundant for a value as we already readily know the type of a value).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; class(2*7) % class function gives you the type of the input object to function &quot;class&quot;
-
-ans =
-
-double
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; class('This is a MATLAB string (char)') % a char value in MATLAB
-
-ans =
-
-char
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; class(&quot;This is a MATLAB string&quot;) % Note that you cannot use quotation marks for representing string values.
- class(&quot;This is a MATLAB string&quot;) % Note that you cannot use quotation marks for representing string values.
-       ↑
-Error: The input character is not valid in MATLAB statements or expressions.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; class(1)
-
-ans =
-
-double
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; class(class(1))
-
-ans =
-
-char
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; class(true)
-
-ans =
-
-logical
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; class(false)
-
-ans =
-
-logical
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;vector-and-matrix-values&quot;&gt;vector and matrix values&lt;/h4&gt;
-
-&lt;p&gt;Vectors and matrices are used to represent sets of values, all of which have the same type. A matrix can be visualized as a table of values. The dimensions of a matrix are $rows \times cols$, where $rows$ is the number of rows and $cols$ is the number of columns of the matrix. A &lt;strong&gt;vector&lt;/strong&gt; in MATLAB is equivalent to a one-dimensional array or matrix.&lt;/p&gt;
-
-&lt;h5 id=&quot;creating-row-wise-and-column-wise-vectors&quot;&gt;Creating row-wise and column-wise vectors&lt;/h5&gt;
-
-&lt;p&gt;Use &lt;code&gt;,&lt;/code&gt; or space to separate the elements of a row-wise vector.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; [1 2 3 4] % a space-separated row vector
-
-ans =
-
-     1     2     3     4
-
-&amp;gt;&amp;gt; class([1 2 3 4])
-
-ans =
-
-double
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; [1, 2, 3, 4] % a comma-separated row vector
-
-ans =
-
-     1     2     3     4
-
-&amp;gt;&amp;gt; class([1, 2, 3, 4])
-
-ans =
-
-double
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Use &lt;code&gt;;&lt;/code&gt; to separate the elements of a column-wise vector.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; [1; 2; 3; 4] % a column vector
-
-ans =
-
-     1
-     2
-     3
-     4
-
-&amp;gt;&amp;gt; class([1; 2; 3; 4])
-
-ans =
-
-double
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h5 id=&quot;creating-matrix-values&quot;&gt;Creating matrix values&lt;/h5&gt;
-
-&lt;p&gt;Use &lt;code&gt;;&lt;/code&gt; to separate a row of matrix from the next.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; [1,2,3,4;5,6,7,8;9,10,11,12] % a 3 by 4 matrix
-
-ans =
-
-     1     2     3     4
-     5     6     7     8
-     9    10    11    12
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;cells-and-tables&quot;&gt;Cells and tables&lt;/h4&gt;
-
-&lt;p&gt;Matrices and vectors can only store numbers in MATLAB. If one needs a more general array representation for a list of strings for example, then one has to use cells or tables.&lt;/p&gt;
-
-&lt;h5 id=&quot;cell-array-values&quot;&gt;Cell array values&lt;/h5&gt;
-
-&lt;p&gt;Cell arrays, are array entities that can contain data of varying types and sizes. A &lt;strong&gt;cell array&lt;/strong&gt; is a data type with indexed data containers called &lt;strong&gt;cells&lt;/strong&gt;, where each cell can contain any type of data. Cell arrays commonly contain either lists of text strings, combinations of text and numbers, or numeric arrays of different sizes. Refer to sets of cells by enclosing indices in smooth parentheses, &lt;code&gt;()&lt;/code&gt;. Access the contents of cells by indexing with curly braces, &lt;code&gt;{}&lt;/code&gt;. Also, to define a cell, use &lt;code&gt;{}&lt;/code&gt; like the following notation,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; {'Hi', ' ', 'World!'} % a cell array of strings
-
-ans = 
-
-    'Hi'    ' '    'World!'
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; class({'Hi', ' ', 'World!'})
-
-ans =
-
-cell
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; {'Hi', 1, true, 'World!'}
-
-ans = 
-
-    'Hi'    [1]    [1]    'World!'
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;table-values&quot;&gt;Table values&lt;/h5&gt;
-
-&lt;p&gt;MATLAB tables are arrays in tabular form whose named columns can have different types. Table is a data type suitable for column-oriented or tabular data that is often stored as columns in a text file or in a spreadsheet. Tables consist of rows and column-oriented variables. Each variable in a table can have a different data type and a different size with the one restriction that each variable must have the same number of rows.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/4/table.png&quot; width=&quot;500&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        An example MATLAB table.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Later on, we learn more about Tables and Cells in MATLAB, once we introduce MATLAB variables.&lt;/p&gt;
-
-&lt;h4 id=&quot;value-coercion-in-matlab&quot;&gt;Value coercion in MATLAB&lt;/h4&gt;
-
-&lt;p&gt;Value coercion is the &lt;strong&gt;implicit&lt;/strong&gt; process by which the MATLAB interpreter/compiler automatically converts a value of one type into a value of another type when that second type is required by the surrounding context. For example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; class(int32(1.0)) % int32 gives a 32-bit (4-byte) integer.
-ans =
-
-int32
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; int32(2.0) * int32(1.0) % Note that the product of two integers, is integer.
-
-ans =
-
-           2
-
-&amp;gt;&amp;gt; class(ans)
-
-ans =
-
-int32
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; int32(1.0) * 2.5 % Note that the product of float and integer, is coerced into an integer!
-
-ans =
-
-           3
-
-&amp;gt;&amp;gt; class(ans)
-
-ans =
-
-int32
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; int32(1.0) / 2.5 % Note that the division of float and integer, is coerced into an integer.
-
-ans =
-
-           0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; 2.0 / 7 % floating point division with float result
-
-ans =
-
-    0.2857
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; true + 1 % logical and double are coerced into double
-
-ans =
-
-     2
-
-&amp;gt;&amp;gt; class(true + 1)
-
-ans =
-
-double
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;But note that,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; true + int32(1) % you cannot combine logical with integer
-Error using  + 
-Integers can only be combined with integers of the same class, or scalar doubles.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; true + false
-
-ans =
-
-     1
-
-&amp;gt;&amp;gt; true * false
-
-ans =
-
-     0
-
-&amp;gt;&amp;gt; true / false
-Undefined operator '/' for input arguments of type 'logical'.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-    &lt;b&gt;ATTENTION&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
-    As you saw above, unlike other languages, such as Python, integer value has precedence over float, that is, the result of the calculation is coerced into an integer.
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-    &lt;b&gt;ATTENTION&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
-    I recommend you to always explicitly write the type of each value in your calculations or your MATLAB scripts. For example, denote all floats by adding a decimal point &lt;code&gt;.&lt;/code&gt; to each float (real) value.
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;some-further-useful-matlab-commands&quot;&gt;Some further useful MATLAB commands&lt;/h4&gt;
-
-&lt;p&gt;MATLAB has a built-in function called &lt;code&gt;format&lt;/code&gt; that can modify the output style of MATLAB on the command line. For example,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; 2/5
-
-ans =
-
-    0.4000
-
-&amp;gt;&amp;gt; format long
-&amp;gt;&amp;gt; 2/5
-
-ans =
-
-   0.400000000000000
-
-&amp;gt;&amp;gt; format short
-&amp;gt;&amp;gt; 2/5
-
-ans =
-
-    0.4000
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; format compact
-&amp;gt;&amp;gt; 2/5
-ans =
-    0.4000
-&amp;gt;&amp;gt; format loose
-&amp;gt;&amp;gt; 2/5
-
-ans =
-
-    0.4000
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is a complete list of options that format can take,&lt;/p&gt;
-&lt;table class=&quot;center&quot;&gt;
-&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
-Table 2. A list of MATLAB &lt;code&gt;format&lt;/code&gt; options.
-&lt;/caption&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Style&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Result&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Example&lt;/font&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;short (default)&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short, fixed-decimal format with 4 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.1416&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;long&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long, fixed-decimal format with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.&lt;/td&gt;&lt;td&gt;3.141592654&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;shortE&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short scientific notation with 4 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;longE&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long scientific notation with 15 digits after the decimal point for double values, and 7 digits after the decimal point for single values.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;shortG&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short, fixed-decimal format or scientific notation, whichever is more compact, with a total of 5 digits.&lt;/td&gt;&lt;td&gt;3.1416&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;longG&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long, fixed-decimal format or scientific notation, whichever is more compact, with a total of 15 digits for double values, and 7 digits for singlevalues.&lt;/td&gt;&lt;td&gt;3.141592654&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;shortEng&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Short engineering notation (exponent is a multiple of 3) with 4 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;longEng&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Long engineering notation (exponent is a multiple of 3) with 15 significant digits.&lt;/td&gt;&lt;td&gt;3.14E+00&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;+&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Positive/Negative format with +, -, and blank characters displayed for positive, negative, and zero elements.&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;bank&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Currency format with 2 digits after the decimal point.&lt;/td&gt;&lt;td&gt;3.14&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;hex&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Hexadecimal representation of a binary double-precision number.&lt;/td&gt;&lt;td&gt;400921fb54442d18&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;code&gt;rat&lt;/code&gt;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Ratio of small integers.&lt;/td&gt;&lt;td&gt;355/113&lt;/td&gt;&lt;/tr&gt;
-
-
-&lt;br /&gt;&lt;br /&gt;
-
-    
-&lt;/tbody&gt;&lt;/table&gt;
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/4-matlab-values-variables-types-I&quot;&gt;Lecture 4: MATLAB - values, variables, types - I&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on September 22, 2017.&lt;/p&gt;</content>
 </entry>
 
 </feed>

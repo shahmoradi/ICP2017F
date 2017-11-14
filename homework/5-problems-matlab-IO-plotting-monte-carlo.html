@@ -11,23 +11,23 @@
 -->
 
 <meta charset="utf-8">
-<title>ANNOUNCEMENT 3: MIDTERM EXAM DATE AND SCHEDULE &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
+<title>HOMEWORK 5: PROBLEMS - MATLAB IO, PLOTTING, AND MONTE CARLO METHODS &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
 <meta name="description" content="Introduction to<br>Computer Programming">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/ICP2017F/images/logo.png">
-<meta name="twitter:title" content="Announcement 3: Midterm Exam Date and Schedule">
+<meta name="twitter:title" content="Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods">
 <meta name="twitter:description" content="Introduction to<br>Computer Programming">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Announcement 3: Midterm Exam Date and Schedule">
+<meta property="og:title" content="Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods">
 <meta property="og:description" content="Introduction to<br>Computer Programming">
-<meta property="og:url" content="/ICP2017F/announcement/3-midterm-exam-schedule">
+<meta property="og:url" content="/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo">
 <meta property="og:site_name" content="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110">
 <meta property="og:image" content="/ICP2017F/images/">
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/ICP2017F/announcement/3-midterm-exam-schedule">
+<link rel="canonical" href="/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo">
 <!-- <link href="/ICP2017F/feed.xml" type="application/atom+xml" rel="alternate" title="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110 Feed"> -->
 
 
@@ -133,8 +133,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Announcement 3: Midterm Exam Date and Schedule</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-10-25T00:00:00-05:00">25 Oct 2017</time></strong></p>
+                            <h2>Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-11-13T00:00:00-06:00">13 Nov 2017</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -144,44 +144,108 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <p>The goal of this survey is to find out the most popular vote in class for the midterm exam and its date.</p>
-
-<div align="center">
-    <script>
-        (function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd_2BAklP6IRJLSSnZF_2FQhOsoqlzlxX39RgVUO8eiKa9A61.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");
-    </script>
-</div>
+                <p>♣ <strong>Due Date: Monday Nov 29, 2017 9:00 AM</strong>. This homework aims at giving you some experience with data input/output methods in MATLAB as well as plotting graphs and Monte Carlo techniques).</p>
 
 <p><br /></p>
 
-<h2 id="survey-results">Survey results</h2>
-
-<p>A slight majority (52.87%) of the class voted for cancelling the midterm exam and redistributing its grade to homework, quiz, and the final semester project.</p>
-
-<figure>
-	<img src="/ICP2017F/announcement/3/results.png" width="700" />
-</figure>
-
-<figure>
-	<img src="/ICP2017F/announcement/3/numbers.png" width="700" />
-</figure>
+<hr />
+<hr />
 
 <p><br /></p>
+
+<p><strong>1. </strong> <strong>Reading scientific data from web using MATLAB</strong>. Consider the following webpage address <a href="http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/bat_time_table.html" target="_blank">http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/bat_time_table.html</a>. This is an data table (in HTML language) containing data from <a href="https://www.nasa.gov/mission_pages/swift/main" target="_blank">NASA’s Swift satellite</a>. Each row in this table represents information about a <a href="https://en.wikipedia.org/wiki/Gamma-ray_burst" target="_blank">Gamma-Ray Burst (GRB)</a> detection that Swift has made in the past years. Now, corresponding to each of event IDs, there (might) exist files that contain some attributes of these events which we wish to plot and understand their behavior. For example, for the first event in this table, contains a data file which is hidden in a directory on this website <a href="http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt" target="_blank">here</a>. For each event in this table, there is likely one such table hidden in this web directory.</p>
+
+<p>Our goal in this question is to fetch all these files from the website, using MATLAB and save them locally in our own computer. Then read their contents one by one and plot the two columns of data in all of them together.</p>
+
+<p><strong>(A)</strong> Write a MATLAB script named <code>fetchDataFromWeb.m</code> that uses this web address: <code>http://www.shahmoradi.org/ICP2017F/homework/5-problems/triggers.txt</code> to read a list of all GRB events and then writes the entire table of <code>triggers.txt</code> to a local file with the same name on your device. For this purpose, you will need MATLAB built-in function <code>webread()</code>.</p>
+
+<p><strong>(B)</strong> Now, add to your script another set of commands that uses the event IDs stored in this file, to generate the corresponding web addresses like: <a href="http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt" target="_blank">http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt</a>. Then it uses the generated web address to read the content of the page and store it in a local file on your device with the same name as it is stored on the webpage (for example, for the given webpage, the filename would be <code>GRB00745966_ep_flu.txt</code>). <strong>Note:</strong> Some of the web addresses for the given event IDs do not exist. Therefore, you should MATLAB’s try-catch construct to avoid runtime errors in your MATLAB code.</p>
+
+<p><strong>(C)</strong> Now write another MATLAB script named <code>plotDatafromFile.m</code>, that reads all of these files in your directory, one by one, using MATLAB <code>readtable()</code> function, and plots the content of all of them together, on a single scatter plot (using MATLAB function <code>scatter()</code>) like the following,</p>
+
+<figure>
+	<img src="/ICP2017F/homework/5-problems/swiftDataPlot.png" width="900" />
+</figure>
+<p><br /></p>
+
+<p><strong>Note</strong> again that some the data files stored on your computer are empty and some others have useless data if data in the second column of the file is larger than 0. So you will have to write your script in such a way that it checks for non-emptiness of the file (that is, the file does indeed contain some numerical data) as well as the negativity of the values in the column of data in each file. For example, you could check for the negativity of the values using MATLAB function <code>all(data[:,1]&lt;0.0)</code> assuming that data is the variable containing the information read from the file.</p>
+
+<p>Once you have done all these checks, you have to do one final manipulation of data, that is, the data in these files on the second column is actually the log of data, so have to get the <code>exp()</code> value to plot it (because the plot in the figure above is a log-log plot and we want to exactly regenerate it). To do so you could simply use,</p>
+<pre><code class="language-matlab">data[:,2] = exp(data[:,2]);
+</code></pre>
+<p><br />
+as soon as you read from the file, and then finally you make a scatter plot of all data using MATLAB scatter plot. At the end, you will have to set a title for your plot as well and label the axes of the plot, and save your plot using MATLAB’s built-in function <code>saveas()</code>. In order to find out how many files you have plotted in the figure, you will have to define a variable counter which increases by one unit, each time a new non-empty negative-second-column data file is read and plotted.</p>
+
+<p><strong>Hint:</strong> I strongly urge you to attend the next three lectures in order to answer this question.</p>
+
+<p><br /><br /></p>
+
+<p><strong>2. </strong> <strong>Simulating a fun Monte Carlo game.</strong> Suppose you’re on a game show, and you’re given the choice of three doors:</p>
+
+<figure>
+	<img src="/ICP2017F/homework/5-problems/Monty_1.png" width="600" />
+</figure>
+<p><br /></p>
+
+<p>Behind one door is a car; behind the two others, goats. You pick a door, say No. 1, and the host of the show opens another door, say No. 3, which has a goat.</p>
+
+<figure>
+	<img src="/ICP2017F/homework/5-problems/Monty_open_door.png" width="600" />
+</figure>
+<p><br /></p>
+
+<p>He then says to you, “Do you want to pick door No. 2?”.</p>
+
+<p><strong>Question: What would you do?</strong> Is it to your advantage to switch your choice from door 1 to door 2? Is it to your advantage, <strong>in the long run, for a large number of game tries</strong>, to switch to the other door?</p>
+
+<p>Now whatever your answer is, I want you to check/prove your answer by a Monte Carlo simulation of this problem. Make a plot of your simulation for <code>nExperiments=100000</code> repeat of this game, that shows, in the long run, on average, what is the probability of winning this game if you switch your choice, and what is the probability of winning, if you do not switch to the other door.</p>
+
+<p><strong>Hint:</strong> I strongly urge you to attend the lectures this week in order to get help for this question.</p>
+
+<p><br /><br /></p>
+
+<p><strong>3. </strong> <strong>Monte Carlo approximation of the number $\pi$</strong>. Suppose we did not know the value of $\pi$ and we wanted to estimate its value using Monte Carlo methods. One practical approach is to draw a square of unit side, with its diagonal opposite corners extending from the coordinates origin $(0,0)$ to $(1,1)$. Now we try to simulate uniform random points from inside of this square by generating uniform random points along the $X$ and $Y$ axes, i.e., by generating two random uniform numbers (x,y) from the range $[0,1]$.</p>
+
+<p>Now the generated random point $P$ has the coordinate $(x,y)$, so we can calculate its distance from the coordinate origin. Now suppose we also draw a quarter-circle inside of this square whose radius is unit and is centered at the origin $(0,0)$. The ratio of the area of this quarter-circle, $S_C$ to the area of the area of the square enclosing it, $S_S$ is,</p>
+
+<script type="math/tex; mode=display">\frac{S_C}{S_S} = \frac{\frac{1}{4}\pi r^2}{r^2} = \frac{1}{4}\pi</script>
+
+<p>This is because the area of the square of unit sides, is just 1. Therefore, if we can somehow measure the area of the quarter $S_C$, then we can use the following equation, to get an estimate of $\pi$,</p>
+
+<script type="math/tex; mode=display">\pi = 4S_C</script>
+
+<p>In order to obtain, $S_C$, we are going to throw random points in the square, just as described above, and then find the fraction of points, $f=n_C/n_{\rm total}$, that fall inside this quarter-circle. This fraction is related to the area of the circle and square by the following equation,</p>
+
+<script type="math/tex; mode=display">f=\frac{n_C}{n_{\rm total}} = \frac{S_C}{S_S}</script>
+
+<p>Therefore, one can obtain an estimate of $\pi$ using this fraction,</p>
+
+<script type="math/tex; mode=display">\pi \approx \frac{1}{4}\frac{n_C}{n_{\rm total}}</script>
+
+<p>Now, write a MATLAB script, that takes in the number of points to be simulated, and then calculates an approximate value for $\pi$ based on the Monte Carlo algorithm described above.  Write a second function that plot the estimate of $\pi$ versus the number of points simulated, like the following,</p>
+
+<figure>
+	<img src="/ICP2017F/homework/5-solutions/approximatePI.png" width="900" />
+</figure>
+<p><br /></p>
+
+<p><br /><br /></p>
+
 
             </div>
         </article>
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Announcement 3: Midterm Exam Date and Schedule&quot;%20/ICP2017F/announcement/3-midterm-exam-schedule%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods&quot;%20/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/announcement/3-midterm-exam-schedule"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/announcement/3-midterm-exam-schedule"
+        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>
