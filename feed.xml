@@ -7,13 +7,298 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-11-15T10:58:28-06:00</updated>
+<updated>2017-11-15T14:48:30-06:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/ICP2017F/</uri>
   <email>amir@ices.utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Lecture 12: MATLAB - plotting and Monte Carlo methods]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/lecture/12-matlab-plotting-monte-carlo"/>
+  <id>http:/ICP2017F/lecture/12-matlab-plotting-monte-carlo</id>
+  <published>2017-11-17T00:00:00-06:00</published>
+  <updated>2017-11-17T00:00:00-06:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This lecture discusses some of the most important topics in MATLAB plotting, as well as random numbers and Monte Carlo methods in MATLAB.&lt;/p&gt;
+
+&lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
+
+&lt;!--
+
+## Lecture Videos
+
+This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.
+
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/4Fx4ulZt0_c&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+
+--&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;curve-plotting-in-matlab&quot;&gt;Curve plotting in MATLAB&lt;/h2&gt;
+
+&lt;p&gt;One of the most useful methods of outputting the results of your research and MATLAB projects is plotting. MATLAB is truly the unique best language for plotting data, and in my personal view, no other language comes even close to it (except perhaps, the R programming language which is specifically designed for data analysis and plotting). Here in this lecture, we will only review some of the most important and most useful plotting capabilities in MATLAB.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;plotting-simple-2d-data&quot;&gt;Plotting simple 2D data&lt;/h3&gt;
+
+&lt;p&gt;One of the most widely used MATLAB plotting functions is &lt;code&gt;plot()&lt;/code&gt;. With this function, plotting x-y data is as simple as it can be. All you need to have is a dataset consisting of X and Y vectors,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; X = 0:0.1:10;
+&amp;gt;&amp;gt; plot(X,sin(X));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+This will open the following MATLAB figure page for you in the MATLAB environment,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/12/sin.png&quot; width=&quot;700&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;You could also save this figure in almost any format you wish using &lt;code&gt;save()&lt;/code&gt; function,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; saveas(gcf,'sin.png')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Here, &lt;code&gt;gcf&lt;/code&gt; refers tothe current figure handle in MATLAB environment. If you wish to add new data to this plot, you could use &lt;code&gt;hold on;&lt;/code&gt; command,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; hold on;
+&amp;gt;&amp;gt; plot(X,cos(X));
+&amp;gt;&amp;gt; saveas(gcf,'sinCos.png')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+This will save the following figure for you, on your local device,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/12/sinCos.png&quot; width=&quot;700&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;annotating-and-decorating-your-matlab-plots&quot;&gt;Annotating and decorating your MATLAB plots&lt;/h3&gt;
+
+&lt;p&gt;Things you can do with MATLAB plotting functions is virtually endless, and there is no way we could cover all of them here in this course. Nevertheless, here are a few useful commands that help you decorate your plots. For example you could add a plot title as well as X-axis and Y-axis labels to your plots by,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; title('A simple plot of Sin(x) and Cos(X)', 'fontsize', 12)
+&amp;gt;&amp;gt; xlabel('X value', 'fontsize', 13);
+&amp;gt;&amp;gt; ylabel('Y value', 'fontsize', 13);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Also we could add legends to the plot, explaining what each line represents,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; legend( { 'Sin(X)' , 'Cos(X)' } , 'fontsize' , 13 , 'location' , 'southwest' );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Note that the &lt;code&gt;fontsize&lt;/code&gt; keyword is not necessary. You could simply omit it and MATLAB’s default font size will be used instead.&lt;/p&gt;
+
+&lt;p&gt;You could also change the line-width of the borders of the plot, for example, by,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; set( gca , 'linewidth' , 3 );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Here, &lt;code&gt;gca&lt;/code&gt; is a MATLAB keyword that refers to the current active plot in the current active figure. If you wanted to thicken the curve lines themselves, you could simple add the &lt;code&gt;'linewidth'&lt;/code&gt; keyword when calling &lt;code&gt;plot()&lt;/code&gt;, along with the desired line width value. You could also determine the line color using &lt;code&gt;color&lt;/code&gt; keyword followed by the desired color,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; hold off; % this closes access to the old figure
+&amp;gt;&amp;gt; figure() % this creates a new figure handle
+&amp;gt;&amp;gt; plot(X,sin(X),'linewidth',3, 'color', 'blue');
+&amp;gt;&amp;gt; hold on;
+&amp;gt;&amp;gt; plot(X,cos(X),'linewidth',3, 'color', 'red');
+&amp;gt;&amp;gt; legend( { 'Sin(X)' , 'Cos(X)' } , 'fontsize' , 13 , 'location' , 'southwest' );
+&amp;gt;&amp;gt; title('A simple plot of Sin(x) and Cos(X)', 'fontsize', 12)
+&amp;gt;&amp;gt; xlabel('X value', 'fontsize', 13);
+&amp;gt;&amp;gt; ylabel('Y value', 'fontsize', 13);
+&amp;gt;&amp;gt; set( gca , 'linewidth' , 3 );
+&amp;gt;&amp;gt; saveas(gcf,'sinCosDecorated.png')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+This will generate the following figure and save it to your local hard drive,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/12/sinCosDecorated.png&quot; width=&quot;700&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also plot the data using different line/ point styles. For example, to plot the same data using points instead of lines, all you need to do, is to add the &lt;code&gt;'.'&lt;/code&gt; string to your &lt;code&gt;plot()&lt;/code&gt; functions, indicating that you want a scatter plot, instead of line plot,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; figure() % this creates a new figure handle
+&amp;gt;&amp;gt; plot(X,sin(X), '.', 'color', 'blue', 'markersize', 20);
+&amp;gt;&amp;gt; hold on;
+&amp;gt;&amp;gt; plot(X,cos(X), '.', 'color', 'red', 'markersize', 20);
+&amp;gt;&amp;gt; legend( { 'Sin(X)' , 'Cos(X)' } , 'fontsize' , 13 , 'location' , 'southwest' );
+&amp;gt;&amp;gt; title('A simple plot of Sin(x) and Cos(X)', 'fontsize', 12)
+&amp;gt;&amp;gt; xlabel('X value', 'fontsize', 13);
+&amp;gt;&amp;gt; ylabel('Y value', 'fontsize', 13);
+&amp;gt;&amp;gt; set( gca , 'linewidth' , 3 );
+&amp;gt;&amp;gt; saveas(gcf,'sinCosDecoratedScatter.png')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+which will produce and save the following plot,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/12/sinCosDecoratedScatter.png&quot; width=&quot;700&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;To learn more about fantastic things you can do with MALTAB plotting functions, see &lt;a href=&quot;https://www.mathworks.com/help/matlab/learn_matlab/basic-plotting-functions.html&quot; target=&quot;_blank&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-more-complex-plotting-functions-in-matlab&quot;&gt;Other more complex plotting functions in MATLAB&lt;/h3&gt;
+
+&lt;p&gt;MATLAB, as said above, has a tremendous set of plotting functions, which make it an ideally suited programming language for scientific research. We will learn how to use some of these functions in homework 5. &lt;a href=&quot;https://www.mathworks.com/help/matlab/creating_plots/types-of-matlab-plots.html&quot; target=&quot;_blank&quot;&gt;Here on this page&lt;/a&gt;, you can find a long list of MATLAB plotting functions and types of plots that you can draw using MATLAB.&lt;/p&gt;
+
+&lt;h3 id=&quot;closing-figures-and-plots-in-matlab&quot;&gt;Closing figures and plots in MATLAB&lt;/h3&gt;
+
+&lt;p&gt;for closing the current active figure in MATLAB, you could simply use &lt;code&gt;close(gcf)&lt;/code&gt;. Here, &lt;code&gt;gcf&lt;/code&gt; refers to the current active figure handle. To close all open figures, simply type &lt;code&gt;close all;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;random-numbers-in-matlab&quot;&gt;Random numbers in MATLAB&lt;/h2&gt;
+
+&lt;p&gt;One of the most important topics in today’s science and computer simulation is random number generation and Monte Carlo simulation methods. In the simplest scenario for your research, you may need to generate a sequence of uniformly distributed random numbers in MATLAB. MATLAB has a large set of built-in functions to handle such random number generation problems. All of these functions are collectively named the &lt;strong&gt;statistics and machine learning toolbox&lt;/strong&gt; in MATLAB.&lt;/p&gt;
+
+&lt;p&gt;MATLAB has a long list of random number generators. For example, you can use &lt;code&gt;rand()&lt;/code&gt; to create a random number in the interval (0,1),&lt;/p&gt;
+
+&lt;p&gt;– &lt;code&gt;X = rand&lt;/code&gt; returns a single uniformly distributed random number in the interval (0,1).&lt;br /&gt;
+– &lt;code&gt;X = rand(n)&lt;/code&gt; returns an n-by-n matrix of random numbers.&lt;br /&gt;
+– &lt;code&gt;X = rand(n,m)&lt;/code&gt; returns an n-by-m matrix of random numbers.&lt;/p&gt;
+
+&lt;p&gt;For example, suppose you generated 10000 uniform random numbers,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; RandomValues = rand(10000,1);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+You could test whether the generated random numbers are truly uniformly distributed or not by plotting their histogram,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; histogram(RandomValues)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+which will plot the following figure,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/12/unifrnd.png&quot; width=&quot;700&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;To generate random integer numbers in a given range, you can use &lt;code&gt;randi()&lt;/code&gt; function,&lt;/p&gt;
+
+&lt;p&gt;– &lt;code&gt;X = randi(imax)&lt;/code&gt; returns a pseudorandom scalar integer between 1 and imax.&lt;br /&gt;
+– &lt;code&gt;X = randi(imax,n)&lt;/code&gt; returns an n-by-n matrix of pseudorandom integers drawn from the discrete uniform distribution on the interval [1,imax].&lt;br /&gt;
+– &lt;code&gt;X = randi(imax,n,m)&lt;/code&gt; returns an n-by-m matrix of pseudorandom integers drawn from the discrete uniform distribution on the interval [1,imax].&lt;br /&gt;
+– &lt;code&gt;X = randi([imin,imax],n,m)&lt;/code&gt; an n-by-m matrix of pseudorandom integers drawn from the discrete uniform distribution on the interval [imin,imax].&lt;/p&gt;
+
+&lt;p&gt;For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; randi([10 23], 3,2)
+ans =
+    20    16
+    13    17
+    18    11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that so far, we have only generated uniformly distributed float/integer random numbers. We could however, generate random numbers according to any distribution we wish, that is also supported by MATLAB. For example, a very popular distribution choice, is random number from the &lt;a href=&quot;https://en.wikipedia.org/wiki/Normal_distribution&quot; target=&quot;_blank&quot;&gt;Normal (Gaussian) distribution&lt;/a&gt;. To get normally distributed random numbers, you can use MATLAB function &lt;code&gt;randn()&lt;/code&gt;,&lt;/p&gt;
+
+&lt;p&gt;– &lt;code&gt;X = randn&lt;/code&gt; returns a random scalar drawn from the standard normal distribution (mean=0,sigma=1).&lt;br /&gt;
+– &lt;code&gt;X = randn(n)&lt;/code&gt; returns an n-by-n matrix of standard-normally distributed random numbers.&lt;br /&gt;
+– &lt;code&gt;X = randn(n,m)&lt;/code&gt; returns an n-by-m matrix of standard-normally distributed random numbers.&lt;/p&gt;
+
+&lt;p&gt;Note that this function generated only &lt;strong&gt;standard&lt;/strong&gt;-normally distributed random values. Therefore, a histogram of 10000 of such values produced by &lt;code&gt;randn()&lt;/code&gt; would look something like the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; SNormalValues = randn(10000,1);
+&amp;gt;&amp;gt; histogram(SNormalValues);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/12/snormrnd.png&quot; width=&quot;700&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;To get normally distributed random numbers with mean and standard deviation other than the standard normal distribution ($\mu=0,\sigma=1$), you will have to use another MATLAB builtin function &lt;code&gt;normrnd()&lt;/code&gt;,&lt;/p&gt;
+
+&lt;p&gt;– R = normrnd(mu,sigma) generates random numbers from the normal distribution with mean parameter mu and standard deviation parameter sigma. mu and sigma can be vectors, matrices, or multidimensional arrays that have the same size, which is also the size of R. A scalar input for mu or sigma is expanded to a constant array with the same dimensions as the other input.&lt;br /&gt;
+– R = normrnd(mu,sigma,m,n,…) or R = normrnd(mu,sigma,[m,n,…]) generates an m-by-n-by-… array. The mu, sigma parameters can each be scalars or arrays of the same size as R.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;NormalValues = normrnd(100, 10, 10000, 1);
+&amp;gt;&amp;gt; histogram(NormalValues)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/12/normrnd.png&quot; width=&quot;700&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-deterministic-aspect-of-randomness-in-matlab&quot;&gt;The deterministic aspect of randomness in MATLAB&lt;/h3&gt;
+
+&lt;p&gt;There is a truth about random numbers and random number generators and algorithms, not only in MATLAB, but in all programming languages, and that is, true random numbers do not exist in the world of programming!&lt;/p&gt;
+
+&lt;p&gt;What we call a sequence of random numbers, is simply a sequence of numbers that we, the user, to the best of our knowledge, don’t know how it was generated, and therefore, the sequence looks random to us, but not the to the developer of the algorithm!. To prove this, type the following code in a MATLAB session,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; rng(135);
+&amp;gt;&amp;gt; rand()
+ans =
+    0.8844
+&amp;gt;&amp;gt; rand()
+ans =
+    0.0771
+&amp;gt;&amp;gt; rand()
+ans =
+    0.5492
+&amp;gt;&amp;gt; rand()
+ans =
+    0.8296
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Here, the function &lt;code&gt;rng()&lt;/code&gt; controls the random number generation algorithm using the input positive integer number. The truth is that every algorithm for random number generation is deterministic and starts from an input integer number, called the &lt;strong&gt;seed of random number generator&lt;/strong&gt;, to construct the sequence of random numbers. This means, that if we set the random number seed to a fixed value before we call the random number generator every time, then we will always get the same fixed random value (in fact, it is not random anymore!),&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; rng(135);
+rand()
+ans =
+    0.6613
+&amp;gt;&amp;gt; rng(135);
+rand()
+ans =
+    0.6613
+&amp;gt;&amp;gt; rng(135);
+rand()
+ans =
+    0.6613
+&amp;gt;&amp;gt; rng(135);
+rand()
+ans =
+    0.6613
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Note that, every time you restart MATLAB, the random number generator seed is set back to the default value, nor matter what you set it to in the last time. This means that every time you open MATLAB, type &lt;code&gt;rand()&lt;/code&gt;, you will get the exact same random number as in the last time you opened MATLAB. To avoid this problem, you can use,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; rng('shuffle')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+which seeds the random number generator based on the current time in the CPU. Thus, rand, randi, and randn will produce a different sequence of numbers after each time you call rng(‘shuffle’).&lt;/p&gt;
+
+&lt;p&gt;Sometimes however, this is not the desired behavior. For example, you want the results of your code to be reproducible. In those cases, it is actually good to initialize the seed of the random number generator in MATLAB to some pre-specified number, so that every time you run your code, you get the exact same result as before. To learn more about the seed of random number generators in MATLAB, visit &lt;a href=&quot;https://www.mathworks.com/help/matlab/ref/rng.html?searchHighlight=rng&amp;amp;s_tid=doc_srchtitle&quot; target=&quot;_blank&quot;&gt;this page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-random-permutation-of-numbers&quot;&gt;Creating random permutation of numbers&lt;/h3&gt;
+
+&lt;p&gt;There is a useful MATLAB function called &lt;code&gt;randperm()&lt;/code&gt; that generates a &lt;a href=&quot;https://en.wikipedia.org/wiki/Random_permutation&quot; target=&quot;_blank&quot;&gt;random permutation&lt;/a&gt; of numbers for the user,&lt;/p&gt;
+
+&lt;p&gt;– p = randperm(n) returns a row vector containing a random permutation of the integers from 1 to n inclusive.&lt;/p&gt;
+
+&lt;p&gt;For example, if we wanted to get a sequence of random numbers within the range from 1 to a given maximum integer $n$, say $n=10$, in an arbitrary order, we could use this function,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; randperm(10)
+ans =
+     8     5     2     1    10     6     4     3     9     7
+&amp;gt;&amp;gt; randperm(10)
+ans =
+     4     8     1     3    10     2     5     7     9     6
+&amp;gt;&amp;gt; randperm(10)
+ans =
+     6     1     2     4     5     8     7     3    10     9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Note that every time you call the function, you would get a new random permutation of the requested sequence of numbers.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/12-matlab-plotting-monte-carlo&quot;&gt;Lecture 12: MATLAB - plotting and Monte Carlo methods&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on November 17, 2017.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -844,17 +1129,14 @@ then all the necessary MATLAB codes to generate all the results will be called b
 
 &lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
 
-&lt;!--
+&lt;h2 id=&quot;lecture-videos&quot;&gt;Lecture Videos&lt;/h2&gt;
 
-## Lecture Videos
-
-This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.
+&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.&lt;/p&gt;
 
 &lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
-    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/4Fx4ulZt0_c&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
-
---&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/fcHoYAeiKiI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1986,6 +2268,11 @@ Please enter a non-negative integer or type stop: stop
 
 &lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
     &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/kNH9iZAI9CU&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/jed9DCFzXTc&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -5073,456 +5360,6 @@ ans =
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/2-problems-programming-history-matlab-variables&quot;&gt;Quiz 2: Problems - Programming history, MATLAB variables&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 04, 2017.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Homework 2: Solutions - Variables, Values, and Types]]></title>
-  <link rel="alternate" type="text/html" href="http:/ICP2017F/homework/2-solutions-variables-values-types"/>
-  <id>http:/ICP2017F/homework/2-solutions-variables-values-types</id>
-  <published>2017-10-02T00:00:00-05:00</published>
-  <updated>2017-10-02T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;This is the solution to &lt;a href=&quot;2-problems-variables-values-types.html&quot; target=&quot;_blank&quot;&gt;Homework 2: Problems - Variables, Values, and Types&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The following figure illustrates the grade distribution for this homework.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/homework/gradeDist/gradeHistHomework2.png&quot; width=&quot;700&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Maximum possible points is 1.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;♣ &lt;strong&gt;Due Date: Monday Oct 2, 2017 9:00 AM&lt;/strong&gt;. This homework aims at giving you some experience with MATLAB variables.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; Type the following in the command window and submit the results. Briefy explain what each assignment does.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = 1
-&amp;gt;&amp;gt; b = 'x'
-&amp;gt;&amp;gt; c = true
-&amp;gt;&amp;gt; whos a b c
-&amp;gt;&amp;gt; a == c
-&amp;gt;&amp;gt; a + c
-&amp;gt;&amp;gt; d = [1 2 3 4]
-&amp;gt;&amp;gt; e = ['a' 'b' 'c' 'd']
-&amp;gt;&amp;gt; f = ['abcd']
-&amp;gt;&amp;gt; g = {‘a’ ‘b’ ‘c’ ‘d’}
-&amp;gt;&amp;gt; h = { a b c d}
-&amp;gt;&amp;gt; whos d e f g h
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = 1
-a =
-     1
-&amp;gt;&amp;gt; b = 'x'
-b =
-x
-&amp;gt;&amp;gt; c = true
-c =
-  logical
-   1
-&amp;gt;&amp;gt; whos abc
-&amp;gt;&amp;gt; whos a b c
-  Name      Size            Bytes  Class      Attributes
-
-  a         1x1                 8  double               
-  b         1x1                 2  char                 
-  c         1x1                 1  logical
-&amp;gt;&amp;gt; a == c
-ans =
-  logical
-   1
-&amp;gt;&amp;gt; a + c
-ans =
-     2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;a == c&lt;/code&gt; because, although they are different types, &lt;code&gt;a&lt;/code&gt; logical type of true is also represented by the integer 1, so &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;c&lt;/code&gt; are equivalent, and can be added together.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; d = [1 2 3 4]
-d =
-     1     2     3     4
-&amp;gt;&amp;gt; e = ['a' 'b' 'c' 'd']
-e =
-abcd
-&amp;gt;&amp;gt; f = ['abcd']
-f =
-abcd
-&amp;gt;&amp;gt; g = {'a' 'b' 'c' 'd'}
-g =
-  1×4 cell array
-    'a'    'b'    'c'    'd'
-&amp;gt;&amp;gt; h = { a b c d}
-h =
-  1×4 cell array
-    [1]    'x'    [1]    [1×4 double]
-&amp;gt;&amp;gt; whos d e f g h
-  Name      Size            Bytes  Class     Attributes
-
-  d         1x4                32  double              
-  e         1x4                 8  char                
-  f         1x4                 8  char                
-  g         1x4               456  cell                
-  h         1x4               491  cell    
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;e&lt;/code&gt; and &lt;code&gt;f&lt;/code&gt; are equivalent, because they are both just character arrays, &lt;code&gt;e&lt;/code&gt; just concatenated all the individual single characters into one array, while &lt;code&gt;f&lt;/code&gt; was already concatenated together. g is a cell array of characters ‘a’, ‘b’, ‘c’, and ‘d’, and h is a cell array of the variables &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt;, &lt;code&gt;c&lt;/code&gt;, and &lt;code&gt;d&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; What would happen if you go beyond the range for a particular type? For example, the largest integer that can be stored in &lt;strong&gt;int8&lt;/strong&gt; is 127, and the smallest integer is -128, so what would happen if we type cast a larger integer to the type &lt;strong&gt;int8&lt;/strong&gt;? Smaller integer? Use the built-in functions &lt;code&gt;intmin&lt;/code&gt; and &lt;code&gt;intmax&lt;/code&gt; to find the largest and smallest integers that can be stored in &lt;strong&gt;int16&lt;/strong&gt; and &lt;strong&gt;int32&lt;/strong&gt;.
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; int8(200)
-ans =
-  int8
-   127
-&amp;gt;&amp;gt; int8(-150)
-ans =
-  int8
-   -128
-&amp;gt;&amp;gt; intmax('int16')
-ans =
-  int16
-   32767
-&amp;gt;&amp;gt; intmin('int16')
-ans =
-  int16
-   -32768
-&amp;gt;&amp;gt; intmax('int32')
-ans =
-  int32
-   2147483647
-&amp;gt;&amp;gt; intmin('int32')
-ans =
-  int32
-   -2147483648
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; Think about what the results would be for the following expressions, and then type them in to the terminal to verify your answers. Briefly explain the results for each one.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; 1\2 
-&amp;gt;&amp;gt; 1/2
-&amp;gt;&amp;gt; int8(1/2)
-&amp;gt;&amp;gt; int8(1/3)
-&amp;gt;&amp;gt; -5^2 
-&amp;gt;&amp;gt; (-5) ^ 2 
-&amp;gt;&amp;gt; 10-6/2 
-&amp;gt;&amp;gt; 5*4/2*3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;  :
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; 1\2
-ans =
-     2
-&amp;gt;&amp;gt; 1/2
-ans =
-    0.5000
-&amp;gt;&amp;gt; int8(1/2)
-ans =
-  int8
-   1
-&amp;gt;&amp;gt; int8(1/3)
-ans =
-  int8
-   0
-&amp;gt;&amp;gt; -5^2
-ans =
-   -25
-&amp;gt;&amp;gt; (-5)^2
-ans =
-    25
-&amp;gt;&amp;gt; 10-6/2
-ans =
-     7
-&amp;gt;&amp;gt; 5*4/2*3
-ans =
-    30
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4.(a) &lt;/strong&gt; Define the following variables:
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a
-a =
-     1     0
-     2     1
-&amp;gt;&amp;gt; b
-b =
-    -1     2
-     0     1
-&amp;gt;&amp;gt; c
-c =
-     3
-     2
-&amp;gt;&amp;gt; d
-d =
-     5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = [1 0; 2 1]
-a =
-     1     0
-     2     1
-&amp;gt;&amp;gt; b = [-1 2; 0 1]
-b =
-    -1     2
-     0     1
-&amp;gt;&amp;gt; c = [3; 2]
-c =
-     3
-     2
-&amp;gt;&amp;gt; d = 5
-d =
-     5
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4.(b) &lt;/strong&gt; What is the result of each of the following expressions? Briefly explain what MATLAB is doing for each operation.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;code&gt;a + b&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;a .* b&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;a * b&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;a * c&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;a + c&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;a + d&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;a .* d&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;a * d&lt;/code&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a + b
-ans =
-     0     2
-     2     2
-&amp;gt;&amp;gt; a .* b
-ans =
-    -1     0
-     0     1
-&amp;gt;&amp;gt; a * b
-ans =
-    -1     2
-    -2     5
-&amp;gt;&amp;gt; a * c
-ans =
-     3
-     8
-&amp;gt;&amp;gt; a + c
-ans =
-     4     3
-     4     3
-&amp;gt;&amp;gt; a + d
-ans =
-     6     5
-     7     6
-&amp;gt;&amp;gt; a .* d
-ans =
-     5     0
-    10     5
-&amp;gt;&amp;gt; a * d
-ans =
-     5     0
-    10     5
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;5. &lt;/strong&gt; Provide three different methods of generating the matrix &lt;strong&gt;a&lt;/strong&gt;, one method should use the &lt;code&gt;diag()&lt;/code&gt; function, one should use the &lt;strong&gt;eye&lt;/strong&gt; function, and one should use the &lt;strong&gt;zeros&lt;/strong&gt; function.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a
-a =
-     2     0     0
-     0     2     0
-     0     0     2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = eye(3,3) * 2
-a =
-     2     0     0
-     0     2     0
-     0     0     2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; d = [2 2 2]
-d =
-     2     2     2
-&amp;gt;&amp;gt; a = diag(d)
-a =
-     2     0     0
-     0     2     0
-     0     0     2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; a = zeros(3,3);
-&amp;gt;&amp;gt; a(1,1) = 2;
-&amp;gt;&amp;gt; a(2,2) = 2;
-&amp;gt;&amp;gt; a(3,3) = 2;
-&amp;gt;&amp;gt; a
-a =
-     2     0     0
-     0     2     0
-     0     0     2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; Download this &lt;a href=&quot;../2-problems/script_full_of_errors.m&quot; target=&quot;_blank&quot;&gt;code&lt;/a&gt;. This code is full syntax errors. Fix the errors and submit the corrected code with name &lt;code&gt;script_full_of_errors_fixed.m&lt;/code&gt; in your folder for this HW. Explain in front of each corrected MATLAB statement, why the error occurred. Modify the last two variables so that they display,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; Persian
-Persian =
-Persian is a human language
-&amp;gt;&amp;gt; Spanish
-Spanish = 
-    'Spanish '    'is '    ' another'    'language'
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-Modify the last line such that for the last line the code displays,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;Persian is not the same as Spanish
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-Explain these results.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-The corrected script can be found &lt;a href=&quot;../2-solutions/script_full_of_errors_fixed.m&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;7. &lt;/strong&gt; Use MATLAB help to find out how you can create a new directory named &lt;code&gt;mynewdir&lt;/code&gt; from MATLAB command line. Then change the working directory the newly created directory. Then create a MATLAB script in this directory named &lt;code&gt;myscript.m&lt;/code&gt; with the following code in it,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;% First create an array from -2*pi to 2:pi
-x = -2*pi:pi/20:2*pi;
-
-% Calculate |sin(x)|
-y = abs(sin(x));
-
-plot(x,y);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-Now on MATLAB command line, run the script by calling its name. What do you get? Save the output as a figure and submit it with your homework.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;You can create a new directory and switch the current directory to it using the following commands,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;&amp;gt;&amp;gt; mkdir mynewdir
-&amp;gt;&amp;gt; cd mynewdir
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-The script &lt;code&gt;myscript&lt;/code&gt; generates a plot of $y$ versus $x$ where $y = |sin(x)|$. In doing so, MATLAB opens a new window called &lt;strong&gt;plot window&lt;/strong&gt; that contains the plot of y as a function of x. Here is the resulting figure:&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/homework/2-solutions/plot.png&quot; width=&quot;900&quot; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;8. &lt;/strong&gt; Now change your working directory to the original directory before you created &lt;code&gt;mynewdir&lt;/code&gt; directory. Try to run the script &lt;code&gt;myscript&lt;/code&gt; you had created again, from MATLAB command line. What do you get? and why?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;You get an error message like the following,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; cd mynewdir\
-&amp;gt;&amp;gt; myscript
-&amp;gt;&amp;gt; cd ..
-&amp;gt;&amp;gt; myscript
-Undefined function or variable 'myscript'.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-And this happens because the script we are trying to run is neither in MATLAB’s working directory, nor in any of MATLAB’s search paths. Therefore, MATLAB gives an error, as it cannot find the requested file.&lt;/p&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/2-solutions-variables-values-types&quot;&gt;Homework 2: Solutions - Variables, Values, and Types&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 02, 2017.&lt;/p&gt;</content>
 </entry>
 
 </feed>
