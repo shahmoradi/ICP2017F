@@ -153,7 +153,11 @@ MathJax.Hub.Queue(function() {
 
 <p><br /></p>
 
-<p><strong>1. </strong> <strong>Reading scientific data from web using MATLAB</strong>. Consider the following webpage address <a href="http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/bat_time_table.html" target="_blank">http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/bat_time_table.html</a>. This is an data table (in HTML language) containing data from <a href="https://www.nasa.gov/mission_pages/swift/main" target="_blank">NASA’s Swift satellite</a>. Each row in this table represents information about a <a href="https://en.wikipedia.org/wiki/Gamma-ray_burst" target="_blank">Gamma-Ray Burst (GRB)</a> detection that Swift has made in the past years. Now, corresponding to each of event IDs, there (might) exist files that contain some attributes of these events which we wish to plot and understand their behavior. For example, for the first event in this table, contains a data file which is hidden in a directory on this website <a href="http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt" target="_blank">here</a>. For each event in this table, there is likely one such table hidden in this web directory.</p>
+<p><strong>1. </strong> <strong>Creating random 3-member student groups for the semester project</strong> Consider this <a href="/ICP2017F/homework/5-problems/students.csv" target="_blank">csv data file</a> which contains the names of all of the students in this course. Our goal here is to write a MATLAB script that reads all the names in this file, and then creates random triples of names to form student groups who would work collaboratively on the final semester project. To do so you will need MATLAB’s built-in function <code>randperm()</code> which creates random permutations of student IDs in the range 1-99. Once you create a random permutation, you will have to write a MATLAB for-loop which takes triples of integers from this vector of random permutations and puts the names corresponding to these IDs together in a cell array. Finally, this cell array of 33-by-3 elements could be written to an output Microsoft xlsx file, using MATLAB’s <code>xlswrite()</code> function. On output your script should yield an excel file like <a href="/ICP2017F/homework/5-problems/nameTriples.xlsx" target="_blank">this one</a>. To get the exact same order and triple of names, you will have to use <code>rng(131313)</code> at the beginning of your script in order to initialize the seed of MATLAB random number generator to 131313 so that the table can be regenerated every time you run your code.</p>
+
+<p><br /><br /></p>
+
+<p><strong>2. </strong> <strong>Reading scientific data from web using MATLAB</strong>. Consider the following webpage address <a href="http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/bat_time_table.html" target="_blank">http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/bat_time_table.html</a>. This is an data table (in HTML language) containing data from <a href="https://www.nasa.gov/mission_pages/swift/main" target="_blank">NASA’s Swift satellite</a>. Each row in this table represents information about a <a href="https://en.wikipedia.org/wiki/Gamma-ray_burst" target="_blank">Gamma-Ray Burst (GRB)</a> detection that Swift has made in the past years. Now, corresponding to each of event IDs, there (might) exist files that contain some attributes of these events which we wish to plot and understand their behavior. For example, for the first event in this table, contains a data file which is hidden in a directory on this website <a href="http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt" target="_blank">here</a>. For each event in this table, there is likely one such table hidden in this web directory.</p>
 
 <p>Our goal in this question is to fetch all these files from the website, using MATLAB and save them locally in our own computer. Then read their contents one by one and plot the two columns of data in all of them together.</p>
 
@@ -180,7 +184,7 @@ as soon as you read from the file, and then finally you make a scatter plot of a
 
 <p><br /><br /></p>
 
-<p><strong>2. </strong> <strong>Simulating a fun Monte Carlo game.</strong> Suppose you’re on a game show, and you’re given the choice of three doors:</p>
+<p><strong>3. </strong> <strong>Simulating a fun Monte Carlo game.</strong> Suppose you’re on a game show, and you’re given the choice of three doors:</p>
 
 <figure>
 	<img src="/ICP2017F/homework/5-problems/Monty_1.png" width="600" />
@@ -204,7 +208,7 @@ as soon as you read from the file, and then finally you make a scatter plot of a
 
 <p><br /><br /></p>
 
-<p><strong>3. </strong> <strong>Monte Carlo approximation of the number $\pi$</strong>. Suppose we did not know the value of $\pi$ and we wanted to estimate its value using Monte Carlo methods. One practical approach is to draw a square of unit side, with its diagonal opposite corners extending from the coordinates origin $(0,0)$ to $(1,1)$. Now we try to simulate uniform random points from inside of this square by generating uniform random points along the $X$ and $Y$ axes, i.e., by generating two random uniform numbers (x,y) from the range $[0,1]$.</p>
+<p><strong>4. </strong> <strong>Monte Carlo approximation of the number $\pi$</strong>. Suppose we did not know the value of $\pi$ and we wanted to estimate its value using Monte Carlo methods. One practical approach is to draw a square of unit side, with its diagonal opposite corners extending from the coordinates origin $(0,0)$ to $(1,1)$. Now we try to simulate uniform random points from inside of this square by generating uniform random points along the $X$ and $Y$ axes, i.e., by generating two random uniform numbers (x,y) from the range $[0,1]$.</p>
 
 <p>Now the generated random point $P$ has the coordinate $(x,y)$, so we can calculate its distance from the coordinate origin. Now suppose we also draw a quarter-circle inside of this square whose radius is unit and is centered at the origin $(0,0)$. The ratio of the area of this quarter-circle, $S_C$ to the area of the area of the square enclosing it, $S_S$ is,</p>
 
@@ -300,8 +304,8 @@ as soon as you read from the file, and then finally you make a scatter plot of a
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 11 / 14</section></br> -->
-         <section>Last updated Tuesday, 14 Nov 2017 at 12:36 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 11 / 15</section></br> -->
+         <section>Last updated Wednesday, 15 Nov 2017 at 02:57 AM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>

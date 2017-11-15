@@ -683,21 +683,72 @@ Weak typing is also good for code-reuse. You can code a scalar algorithm in MATL
 </code></pre>
 <p><br /></p>
 
-<!--
+<h2 id="reading-data-from-web-using-webread">Reading data from web using <code>webread()</code></h2>
 
-https://www.mathworks.com/help/matlab/matlab_prog/use-trycatch-to-handle-errors.html
-https://www.mathworks.com/help/matlab/ref/try.html
-https://www.mathworks.com/help/matlab/ref/error.html
-https://www.mathworks.com/help/matlab/ref/assert.html
+<p>In today’s world, it often happens that the data you need for your research is already stored somewhere on the world-wide-web. For such cases MATLAB has built-in methods and functions to read and import data or even a webpage. For example, consider <a href="http://www.shahmoradi.org/ICP2017F/homework/5-problems/triggers.txt" target="_blank">this page</a> on this course’s website. It is indeed a text file containing a set of IDs for some astrophysical events. Suppose, you needed to read and store these IDs locally on your own device. You could simply try the following code in MATLAB to fetch all of the table’s information in a single string via,</p>
+<pre><code class="language-matlab">&gt;&gt; webContent = webread('http://www.shahmoradi.org/ICP2017F/homework/5-problems/triggers.txt')
+webContent =
+    '00745966
+     00745090
+     00745022
+     00744791
+     00741528
+     00741220
+     00739517
+     00737438
+     ...
+     00100319'
+&gt;&gt;
+</code></pre>
+<p><br />
+Now if we wanted to get the individual IDs, we could simply use <code>strplit()</code> function to split the IDs at the line break characters <code>'\n'</code>,</p>
+<pre><code class="language-matlab">&gt;&gt; webContent = strsplit(webContent,'\n')
+webContent =
+  1×1019 cell array
+  Columns 1 through 11
+    {'00745966'}    {'00745090'}    {'00745022'} ...
+</code></pre>
+<p><br /></p>
 
-#### Handling IO errors
+<p>We will see more sophisticated usages of this MATLAB function in the first problem of homework 5.</p>
 
-```matlab
-```
-<br>
-Reading a data file using `dlmread()` and `csvread()`
+<h2 id="handling-io-errors">Handling IO errors</h2>
 
--->
+<p>A good code has to be able to handle exceptional situations that may occur during the code execution. These exceptions may occur during data input from either command line, terminal window, or an input file. They may also occur as a result of repeated operations on the input data, inside the code. For example, in previous homework assignments, we have learned some simple ways of handling the wrong number of input arguments, for example in Fibonacci sequence problem. This and similar measures to handle nicely the unexpected runtime errors are collectively called <strong>error and exception handling</strong>.</p>
+
+<p>A simple way of error handling is to write multiple if-blocks, each of which handles a special exceptional situation. That is, to let the code execute some statements, and if something goes wrong, write the program in such a way that can detect this and jump to a set of statements that handle the erroneous situation as desired.</p>
+
+<p>A more modern and flexible way of handling such potential errors in MATLAB is through MATLAB’s <strong>try/catch</strong> construction. You can use a try/catch statement to execute code after your program encounters an error. try/catch statements can be useful when you Want to finish the program in another way that avoids errors (which could lead to abrupt interruption of the program), or when you want to nicely control the effects of error (for example, when a division by zero happens in your calculations), or you have a function that could take many problematic parameters or commands as input, just like the fib function we wrote in the previous homework assignments.</p>
+
+<p>The general syntax for try/catch statements is like the following pseudocode,</p>
+<pre><code class="language-matlab">try
+  try statements (all the normal things you would want to do)...
+catch exception
+  catch block (things to do when the try statements go wrong) ...
+end
+</code></pre>
+<p><br /></p>
+
+<p>If an error occurs within the try block, MATLAB skips any remaining commands in the try block and executes the commands in the catch block. If no error occurs within try block, MATLAB skips the entire catch block.</p>
+
+<p>For example, suppose we wanted to read data from a webpage that does not exist,</p>
+<pre><code class="language-matlab">&gt;&gt; webContent = webread('http://www.shahmoradi.org/ICP2017F/homework/5-problems/')
+Error using readContentFromWebService (line 45)
+The server returned the status 404 with message "Not Found" in response to the request to URL http://www.shahmoradi.org/ICP2017F/homework/5-problems/.
+Error in webread (line 125)
+[varargout{1:nargout}] = readContentFromWebService(connection, options); 
+</code></pre>
+<p><br />
+In such cases, it would be nice to control the behavior of the problem, and not allow MATLAB to end the program abruptly. We could therefore say,</p>
+<pre><code class="language-matlab">&gt;&gt; try
+    webContent = webread('http://www.shahmoradi.org/ICP2017F/homework/5-problems/')
+catch
+    disp('The requested page does not exist! Gracefully exiting...')
+end
+The requested page does not exist! Gracefully exiting...
+</code></pre>
+<p><br />
+Now, the true advantage of this error handling construct would become clear to you when you use it in functions. We will see more of this in homework 5.</p>
 
 <p><br /><br /></p>
 
@@ -769,8 +820,8 @@ Reading a data file using `dlmread()` and `csvread()`
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 11 / 14</section></br> -->
-         <section>Last updated Tuesday, 14 Nov 2017 at 12:36 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 11 / 15</section></br> -->
+         <section>Last updated Wednesday, 15 Nov 2017 at 02:57 AM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>

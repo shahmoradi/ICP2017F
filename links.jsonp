@@ -142,6 +142,11 @@ callback([
   } ,
 
   {
+    "text": "Exam final: semester project",
+    "href": "/ICP2017F/exam/1-semester-project"
+  } ,
+
+  {
     "text": "Announcement 3: Midterm Exam Date and Schedule",
     "href": "/ICP2017F/announcement/3-midterm-exam-schedule"
   } ,
