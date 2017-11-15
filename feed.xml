@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-11-15T14:56:57-06:00</updated>
+<updated>2017-11-15T15:02:14-06:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -476,7 +476,7 @@ average runtime for getFacVec(1700000): 0.005283 seconds
 &lt;p&gt;&lt;strong&gt;(C)&lt;/strong&gt; Now write another MATLAB script named &lt;code&gt;plotDatafromFile.m&lt;/code&gt;, that reads all of these files in your directory, one by one, using MATLAB &lt;code&gt;readtable()&lt;/code&gt; function, and plots the content of all of them together, on a single scatter plot (using MATLAB function &lt;code&gt;scatter()&lt;/code&gt;) like the following,&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/homework/5-problems/swiftDataPlot.png&quot; width=&quot;900&quot; /&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/5-problems/SwiftDataPlot.png&quot; width=&quot;900&quot; /&gt;  
 &lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
