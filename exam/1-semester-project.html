@@ -164,7 +164,7 @@ then all the necessary MATLAB codes to generate all the results will be called b
 
 <p>Therefore, the vector of times at which we have the number of tumor cells measured would be,</p>
 
-<script type="math/tex; mode=display">Time = [ 0, 10, 12, 14, 16, 18, 20, 22, 24 ] ~,</script>
+<script type="math/tex; mode=display">Time = [ 0, 10, 12, 14, 16, 18, 20, 22 ] ~,</script>
 
 <p>in units of days. Given this data set,</p>
 
@@ -224,17 +224,17 @@ then all the necessary MATLAB codes to generate all the results will be called b
 
 <p>Now, if our physical model was ideally perfect in describing the data, the curve of the model prediction would pass through all the points in the growth curve plot of the above figure, thus providing a prefect description of data. This is however, never the case, as it is famously said <strong>all models are wrong, but some are useful</strong>. In other words, the model prediction never matches observation perfectly. Therefore, we have to seek for the parameter values of the model that can get us as close as possible to data. To do so, we define a <strong>statistical model</strong> in addition to the <strong>physical model</strong> described above. In other words, we have to define a statistical regression model (the renowned <strong>least-squares method</strong>) that gives us the probability $\pi(N_{obs}|N(t))$ of observing individual data points at each of the given times,</p>
 
-<script type="math/tex; mode=display">\pi(N_{obs} | N(t|N_0,\lambda,c),\sigma) = \frac{1}{N_{obs}\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t)-\log N(t|N_0,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~,</script>
+<script type="math/tex; mode=display">\pi(N_{obs} | N(t,N_0,\lambda,c),\sigma) = \frac{1}{N_{obs}\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t)-\log N(t,N_0,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~,</script>
 
-<p>Note that our statistical model given above is a Lognormal probability density function, with its mean parameter represented by the output of our physical model, $\log N(t|a,b,c)$, and its standard deviation represented by $\sigma$, which is unknown, and we seek to find it.</p>
+<p>Note that our statistical model given above is a Lognormal probability density function, with its mean parameter represented by the output of our physical model, $\log N(t,N_0,\lambda,c)$, and its standard deviation represented by $\sigma$, which is unknown, and we seek to find it.</p>
 
 <p>We have seven data points, so the overall probability of observing all of data $\mathcal{D}$ together given the parameters of the model, $\mathcal{L}(\mathcal{D}|N_0,\lambda,c,\sigma)$, is the product of their individual probabilities of observations given by the above equation,</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{align*}
 \mathcal{L}(\mathcal{D}|N_0,\lambda,c,\sigma) 
-&= \prod_{i=1}^{n=8} \pi(N_{obs}(t_i)|N(t_i|N_0,\lambda,c),\sigma) \\\\
-&= \prod_{i=1}^{n=8} \frac{1}{N_{obs}\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i|N_0,\lambda,c,\sigma) \big]^2}{2\sigma^2} \bigg) ~.
+&= \prod_{i=1}^{n=8} \pi(N_{obs}(t_i)|N(t_i,N_0,\lambda,c),\sigma) \\\\
+&= \prod_{i=1}^{n=8} \frac{1}{N_{obs}\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i,N_0,\lambda,c,\sigma) \big]^2}{2\sigma^2} \bigg) ~.
 \end{align*} %]]></script>
 
 <p>Frequently however, you would want to work with $\log\mathcal{L}$ instead of $\mathcal{L}$, so the above equation becomes,</p>
@@ -242,8 +242,8 @@ then all the necessary MATLAB codes to generate all the results will be called b
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{align*}
     \log\mathcal{L}(\mathcal{D}|N_0,\lambda,c,\sigma)
-    &= \sum_{i=1}^{n=8} \log \pi(N_{obs}(t_i)|N(t_i|N_0,\lambda,c),\sigma) \\\\
-    &= \sum_{i=1}^{n=8} \log \bigg[ \frac{1}{N_{obs}\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i|N_0,\lambda,c,\sigma) \big]^2}{2\sigma^2} \bigg) \bigg] ~.
+    &= \sum_{i=1}^{n=8} \log \pi(N_{obs}(t_i)|N(t_i,N_0,\lambda,c),\sigma) \\\\
+    &= \sum_{i=1}^{n=8} \log \bigg[ \frac{1}{N_{obs}\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i,N_0,\lambda,c,\sigma) \big]^2}{2\sigma^2} \bigg) \bigg] ~.
 \end{align*} %]]></script>
 
 <p><br /></p>
@@ -332,7 +332,7 @@ then all the necessary MATLAB codes to generate all the results will be called b
     <footer class="notepad-site-footer">
     <div class="copyright">
          <!-- <section>Last updated 2017 / 11 / 20</section></br> -->
-         <section>Last updated Monday, 20 Nov 2017 at 12:16 PM CST</section></br>
+         <section>Last updated Monday, 20 Nov 2017 at 05:25 PM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>
