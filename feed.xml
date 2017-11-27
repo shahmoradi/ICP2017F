@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-11-20T17:25:16-06:00</updated>
+<updated>2017-11-27T08:59:03-06:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -517,7 +517,7 @@ as soon as you read from the file, and then finally you make a scatter plot of a
 
 &lt;p&gt;Now the generated random point $P$ has the coordinate $(x,y)$, so we can calculate its distance from the coordinate origin. Now suppose we also draw a quarter-circle inside of this square whose radius is unit and is centered at the origin $(0,0)$. The ratio of the area of this quarter-circle, $S_C$ to the area of the area of the square enclosing it, $S_S$ is,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{S_C}{S_S} = \frac{4\pi r^2}{r^2} = \frac{1}{4}\pi&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{S_C}{S_S} = \frac{\frac{1}{4}\pi r^2}{r^2} = \frac{1}{4}\pi&lt;/script&gt;
 
 &lt;p&gt;This is because the area of the square of unit sides, is just 1. Therefore, if we can somehow measure the area of the quarter $S_C$, then we can use the following equation, to get an estimate of $\pi$,&lt;/p&gt;
 
@@ -529,7 +529,7 @@ as soon as you read from the file, and then finally you make a scatter plot of a
 
 &lt;p&gt;Therefore, one can obtain an estimate of $\pi$ using this fraction,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\pi \approx \frac{1}{4}\frac{n_C}{n_{\rm total}}&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\pi \approx 4\frac{n_C}{n_{\rm total}}&lt;/script&gt;
 
 &lt;p&gt;Now, write a MATLAB script, that takes in the number of points to be simulated, and then calculates an approximate value for $\pi$ based on the Monte Carlo algorithm described above.  Write a second function that plot the estimate of $\pi$ versus the number of points simulated, like the following,&lt;/p&gt;
 
