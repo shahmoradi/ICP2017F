@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-11-29T11:39:36-06:00</updated>
+<updated>2017-11-29T15:41:25-06:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -58,8 +58,9 @@
 &lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;Getting the boundary of objects in images.&lt;/strong&gt;. Consider the same dataset as in the previous problem. Write a MATLAB script that delineates the boundary of the tumor in all of the subplots and generates a figure with the tumor boundary highlighted, like the following graph.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/homework/6-problems/subplotsWithTB.png&quot; width=&quot;900&quot; /&gt;  
+	&lt;img src=&quot;http:/ICP2017F/homework/6-problems/subplotsWithTumorBoundaries.png&quot; width=&quot;900&quot; /&gt;  
 &lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -70,8 +71,23 @@
 &lt;/figure&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hints:&lt;/strong&gt; Our hypothesis is that the data in this histogram comes from a standard Normal distribution with a fixed mean ($\mu$) and standard deviation ($\sigma$). For the moment, let’s assume that we know the values of these two parameters. Then if all of these points, $D$, come from the normal distribution with the given $(\mu,\sigma)$, then the probability of all them coming from the normal distribution with these parameter values can be computed as,&lt;/p&gt;
 
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\pi\big(\boldsymbol D\big|\mu,\sigma\big) = \prod^{N=100}_{i=1} \frac{1}{2\pi\sigma^2}\exp\bigg( -\bigg[ \frac{\boldsymbol D(i)-\mu}{\sqrt{2}\sigma} \bigg]^2 \bigg) ~~,&lt;/script&gt;
+
+&lt;p&gt;where the symbol $\pi$ to the left of equality means &lt;strong&gt;probability&lt;/strong&gt; (but note that $\pi$ on the right hand side of the euqation stands for the number $\pi=3.14\ldots$, and $\boldsymbol D(i)$ refers to the $i$th point in the sample of points. Since probabilities are always extremely small numbers, it is always good to work with their &lt;code&gt;log()&lt;/code&gt; values instead of their raw values (can you guess why?). Therefore, we could take the log of the above equation to write it as,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\log\pi\big(\boldsymbol D\big|\mu,\sigma\big) = \sum^{N=100}_{i=1} - \log\big(2\pi\sigma^2\big) - \bigg[ \frac{\boldsymbol D(i)-\mu}{\sqrt{2}\sigma} \bigg]^2 ~~,&lt;/script&gt;
+
+&lt;p&gt;Now our goad is to construct this function (let’s name it &lt;code&gt;getLogProbNorm()&lt;/code&gt;) and pass it to MATLAB’s built-in function &lt;code&gt;fminsearch()&lt;/code&gt; in order to find the most likely $(\mu,\sigma)$ that leads to the highest likelihood value (the maximum of the above equation). Here is one last tip: Note that &lt;code&gt;fminsearch()&lt;/code&gt; minimizes functions, but we want to maximize &lt;code&gt;getLogProbNorm()&lt;/code&gt;, instead of minimizing it. What change could you make to this function to make it work with &lt;code&gt;fminsearch()&lt;/code&gt;? Name your main script &lt;code&gt;findBestFitParameters.m&lt;/code&gt;. Now when you run your script it should call &lt;code&gt;fminsearch()&lt;/code&gt; and then output the best-fit parameters like the following,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; findBestFitParameters
+mu: -0.082001 , sigma: 1.0043
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+Start your parameter search via &lt;code&gt;fminsearch()&lt;/code&gt; with the following values: $[\mu,\sigma] = [1,10]$.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/6-problems-matlab-data-analysis-optimization&quot;&gt;Homework 6: Problems - MATLAB data analysis and optimization&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on November 27, 2017.&lt;/p&gt;</content>

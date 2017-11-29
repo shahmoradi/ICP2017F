@@ -172,8 +172,9 @@ MathJax.Hub.Queue(function() {
 <p><strong>2. </strong> <strong>Getting the boundary of objects in images.</strong>. Consider the same dataset as in the previous problem. Write a MATLAB script that delineates the boundary of the tumor in all of the subplots and generates a figure with the tumor boundary highlighted, like the following graph.</p>
 
 <figure>
-	<img src="/ICP2017F/homework/6-problems/subplotsWithTB.png" width="900" />  
+	<img src="/ICP2017F/homework/6-problems/subplotsWithTumorBoundaries.png" width="900" />  
 </figure>
+<p><br /></p>
 
 <p><br /><br /></p>
 
@@ -184,8 +185,23 @@ MathJax.Hub.Queue(function() {
 </figure>
 <p><br /></p>
 
-<p><br /><br /></p>
+<p><strong>Hints:</strong> Our hypothesis is that the data in this histogram comes from a standard Normal distribution with a fixed mean ($\mu$) and standard deviation ($\sigma$). For the moment, let’s assume that we know the values of these two parameters. Then if all of these points, $D$, come from the normal distribution with the given $(\mu,\sigma)$, then the probability of all them coming from the normal distribution with these parameter values can be computed as,</p>
 
+<script type="math/tex; mode=display">\pi\big(\boldsymbol D\big|\mu,\sigma\big) = \prod^{N=100}_{i=1} \frac{1}{2\pi\sigma^2}\exp\bigg( -\bigg[ \frac{\boldsymbol D(i)-\mu}{\sqrt{2}\sigma} \bigg]^2 \bigg) ~~,</script>
+
+<p>where the symbol $\pi$ to the left of equality means <strong>probability</strong> (but note that $\pi$ on the right hand side of the euqation stands for the number $\pi=3.14\ldots$, and $\boldsymbol D(i)$ refers to the $i$th point in the sample of points. Since probabilities are always extremely small numbers, it is always good to work with their <code>log()</code> values instead of their raw values (can you guess why?). Therefore, we could take the log of the above equation to write it as,</p>
+
+<script type="math/tex; mode=display">\log\pi\big(\boldsymbol D\big|\mu,\sigma\big) = \sum^{N=100}_{i=1} - \log\big(2\pi\sigma^2\big) - \bigg[ \frac{\boldsymbol D(i)-\mu}{\sqrt{2}\sigma} \bigg]^2 ~~,</script>
+
+<p>Now our goad is to construct this function (let’s name it <code>getLogProbNorm()</code>) and pass it to MATLAB’s built-in function <code>fminsearch()</code> in order to find the most likely $(\mu,\sigma)$ that leads to the highest likelihood value (the maximum of the above equation). Here is one last tip: Note that <code>fminsearch()</code> minimizes functions, but we want to maximize <code>getLogProbNorm()</code>, instead of minimizing it. What change could you make to this function to make it work with <code>fminsearch()</code>? Name your main script <code>findBestFitParameters.m</code>. Now when you run your script it should call <code>fminsearch()</code> and then output the best-fit parameters like the following,</p>
+
+<pre><code class="language-matlab">&gt;&gt; findBestFitParameters
+mu: -0.082001 , sigma: 1.0043
+</code></pre>
+<p><br />
+Start your parameter search via <code>fminsearch()</code> with the following values: $[\mu,\sigma] = [1,10]$.</p>
+
+<p><br /><br /></p>
 
             </div>
         </article>
@@ -256,7 +272,7 @@ MathJax.Hub.Queue(function() {
     <footer class="notepad-site-footer">
     <div class="copyright">
          <!-- <section>Last updated 2017 / 11 / 29</section></br> -->
-         <section>Last updated Wednesday, 29 Nov 2017 at 11:39 AM CST</section></br>
+         <section>Last updated Wednesday, 29 Nov 2017 at 03:41 PM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>

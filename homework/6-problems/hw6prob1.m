@@ -1,3 +1,4 @@
+clear all;
 close all;
 load('data3D.mat');
 
@@ -9,6 +10,10 @@ figHandle.Position = [0, 0, 900, 1350]; % set the position and size of the figur
 figHandle.Visible = 'on'; % set the visibility of figure in MATLAB
 figHandle.Color = [0.9400    0.9400    0.9400]; % set the background color of the figure to MATLAB default. You could try other options, such as 'none' or color names 'red',...
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ADD THE MAIN AXES TO THE FIGURE: ThE main axes is needed in order to add the x and y labels and the color bar for the entire figure.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % main plot specifications
 mainPlotMarginTop = 0.06; % top margin of the main axes in figure
