@@ -102,6 +102,11 @@ callback([
   } ,
 
   {
+    "text": "Homework 6: Problems - MATLAB data analysis and optimization",
+    "href": "/ICP2017F/homework/6-problems-matlab-data-analysis-optimization"
+  } ,
+
+  {
     "text": "Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods",
     "href": "/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo"
   } ,

@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!--
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="/ICP2017F/assets/js/mdHeaderCollapse.js"></script>
+-->
+
 <meta charset="utf-8">
-<title>COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
+<title>HOMEWORK 6: PROBLEMS - MATLAB DATA ANALYSIS AND OPTIMIZATION &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
 <meta name="description" content="Introduction to<br>Computer Programming">
-<meta name="keywords" content="Amir, Shahmoradi, Instructor">
+<meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/ICP2017F/images/logo.png">
-<meta name="twitter:title" content="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110">
+<meta name="twitter:title" content="Homework 6: Problems - MATLAB data analysis and optimization">
 <meta name="twitter:description" content="Introduction to<br>Computer Programming">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110">
+<meta property="og:title" content="Homework 6: Problems - MATLAB data analysis and optimization">
 <meta property="og:description" content="Introduction to<br>Computer Programming">
-<meta property="og:url" content="/ICP2017F/about/index.html">
+<meta property="og:url" content="/ICP2017F/homework/6-problems-matlab-data-analysis-optimization">
 <meta property="og:site_name" content="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110">
 <meta property="og:image" content="/ICP2017F/images/">
 
@@ -26,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/ICP2017F/about/">
+<link rel="canonical" href="/ICP2017F/homework/6-problems-matlab-data-analysis-optimization">
 <!-- <link href="/ICP2017F/feed.xml" type="application/atom+xml" rel="alternate" title="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110 Feed"> -->
 
 
@@ -80,21 +89,16 @@ MathJax.Hub.Queue(function() {
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>
 </head>
-<body class="post-template page" itemscope itemtype="http://schema.org/WebPage">
+<body class="post-template" itemscope itemtype="http://schema.org/WebPage">  
 
-<main id="notepad-page-container" class="notepad-page-container" role="main">
-    
-    
-        <header class="notepad-page-header">
-            <div class="notepad-page-menu-header">
-                
-                    <a class="notepad-blog-logo" href="http://www.shahmoradi.org" target="_blank">
-                        <img src="/ICP2017F/images/logo.png" alt="shahmoradi.org">
-                    </a>
-                
-                
-                
+        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
+            <header class="notepad-post-header-simple">
+                <div class="notepad-post-menu-header-simple">
+
+                    <a class="notepad-blog-logo" href="/ICP2017F" target="_blank"><img src="/ICP2017F/images/logo.png" alt="shahmoradi.org" /></a>
+
                 <div class="notepad-blog-menu">      
     <div class="notepad-mobile-menu show-for-small">
         <a href="#"><i class="fa fa-bars"></i></a>
@@ -119,154 +123,128 @@ MathJax.Hub.Queue(function() {
             <li>
                     <a href="/ICP2017F/about">About</a>
                  </li>
-
+            
            <li><a href="/ICP2017F/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
     </ul>
+
 </div>
             </div>
-            
-        </header>
 
-<article class="notepad-page-content">
-                    <div style="text-align:justify;">
-<p><br /></p>
+                <div class="notepad-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="notepad-post-meta-simple">
+                            <h2>Homework 6: Problems - MATLAB data analysis and optimization</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-11-27T00:00:00-06:00">27 Nov 2017</time></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-<div class="post_toc"></div>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<h3 id="syllabus">Syllabus</h3>
-<p>Official information and details of Introduction to Computer Programming (fall 2017) can be found in the course’s <a href="../syllabus-ICP2017F.pdf" target="_blank">syllabus (PDF)</a>.</p>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<h3 id="about-icp-coe-301--ase-301">About ICP (COE 301 / ASE 301)</h3>
-
-<p><strong>ASE/COE 301: Introduction to Computer Programming (ICP)</strong> is a 3-hours credit course offered as part of the undergraduate coursework in the <a href="http://www.ae.utexas.edu/" target="_blank">Aerospace</a> and the <a href="http://www.ae.utexas.edu/undergraduate/computational-undergrad-program" target="_blank">Computational Engineering</a> programs at <a href="https://www.utexas.edu/" target="_blank">The University of Texas at Austin</a>.</p>
-
-<p>The course covers topics in Basic computer programming concepts for engineering computation. Programming in MATLAB or similar computing environments is emphasized, but more advanced languages may also be discussed. The course is offered as three lecture hours per week for one semester. Aerospace Engineering 301 and Computational Engineering 301 may not both be counted.</p>
+        
+            <article class="notepad-post-content post tag-simple">
+        
+            <div style="text-align:justify;">
+                <p>♣ <strong>Due Date: Wednesday Dec 13, 2017 9:00 AM</strong>. This homework aims at giving you some experience with image and data analysis and optimization techniques in MATLAB.</p>
 
 <p><br /></p>
 
 <hr />
-
-<p><br /></p>
-
-<h3 id="about-icp---fall-2017-icp2017f">About ICP - Fall 2017 (ICP2017F)</h3>
-
-<p>For the Fall 2017 offering of this course, we will cover the principles of computer programming using MATLAB programming language, as well as using important modern compiled languages that are widely used in scientific computation: Fortran and C++. Specifically, upon completion of this course students will be familiar with</p>
-
-<ul>
-  <li>programming paradigms,</li>
-  <li>principles of software maintenance and collaborative project development,</li>
-  <li>differences between compiled and interpreted programming languages,</li>
-  <li>how to use MATLAB as a simple calculator,</li>
-  <li>how to use MATLAB as an advanced scientific computation and graphics toolbox,</li>
-  <li>how to compile and write scientific code in modern compiled languages such as Fortran and C++,</li>
-  <li>how to formulate cast a scientific problem in the form of a computational programming algorithm.</li>
-</ul>
-
-<p><br /></p>
-
 <hr />
 
 <p><br /></p>
 
-<h3 id="about-icp-instructor-amir-shahmoradi">About ICP Instructor: Amir Shahmoradi</h3>
-
-<p>Dr. Amir Shahmoradi is a physicist by training and science-lover in general, with extensive teaching &amp; research experience and background in high energy physics, astronomy and astrophysics, theoretical physics, statistics, data analysis and modeling, computational physics, Molecular Dynamics simulations, stochastic processes, Monte Carlo Methods, Bayesian probability theory, biomedical sciences and <abbr title="Magnetic Resonance Imaging">MRI</abbr> data analysis, bioinformatics and evolutionary biology, in particular, viral evolution, protein dynamics and interactions. He can be reached via his email at <a href="mailto: amir@ices.utexas.edu"> amir@ices.utexas.edu</a>.</p>
+<p><strong>1. </strong> <strong>Subplots in MATLAB.</strong> Consider this MATLAB data file <a href="/ICP2017F/homework/6-problems/data3D.mat" target="_blank">data3D.mat</a> which contains a 3-dimensional $41\times 61\times 16$ matrix of the brain of a rat. Write a MATLAB script that creates and saves a graph of all $X-Y$ information for the 16 slices along the z axis like the following.</p>
 
 <figure>
-    <img src="/ICP2017F/images/about/AmirShahmoradi300.png" alt="Instructor: Amir Shahmoradi" />
-    <figcaption style="text-align:center">Instructor: Amir Shahmoradi</figcaption>
+	<img src="/ICP2017F/homework/6-problems/subplots.png" width="900" />  
 </figure>
 
-<p><br /></p>
+<p><br /><br /></p>
 
-<hr />
-
-<p><br /></p>
-
-<h3 id="about-icp-teaching-assistant-vivek-varier">About ICP Teaching Assistant: Vivek Varier</h3>
-
-<p>Mr. Vivek Varier is a 3nd Year graduate student in the Department of Electrical and Computer Engineering at the University of Texas at Austin, and is the current TA for Introduction to Computer Programming - Fall 2017. Previously, he has also served as TA for other courses including Python Programming, MIS304 - Introduction to Problem Solving, offered by the McCombs School of Business at <abbr title="University of Texas at Austin">UT Austin</abbr>. He can be reached via his email at <a href="mailto: viv.varier@utexas.edu"> viv.varier@utexas.edu</a>.</p>
+<p><strong>2. </strong> <strong>Getting the boundary of objects in images.</strong>. Consider the same dataset as in the previous problem. Write a MATLAB script that delineates the boundary of the tumor in all of the subplots and generates a figure with the tumor boundary highlighted, like the following graph.</p>
 
 <figure>
-    <img src="/ICP2017F/images/about/vivek.jpg" alt="TA: Vivek Varier" width="300px" />
-    <figcaption style="text-align:center">Teaching Assistant: Vivek Varier</figcaption>
+	<img src="/ICP2017F/homework/6-problems/subplotsWithTB.png" width="900" />  
 </figure>
 
-<p><br /></p>
+<p><br /><br /></p>
 
-<hr />
-
-<p><br /></p>
-
-<h3 id="about-icp-teaching-assistant-travis-driver">About ICP Teaching Assistant: Travis Driver</h3>
-
-<p>Travis Driver is a 3rd year Computational Engineering student at the University of Texas at Austin. He is originally from Flower Mound, Texas in the Dallas Fort Worth area. He has research experience in Monte Carlo integration methods and computational geometry, working at the moment with Dr. Shahmoradi. He can be reached via his email at <a href="mailto: travis.driver7@utexas.edu"> travis.driver7@utexas.edu</a>.</p>
+<p><strong>3. </strong> <strong>Regression: obtaining the most likely mean and standard deviation of a set of Standard Normally Distributed Random Variables.</strong> Consider this dataset, <a href="/ICP2017F/homework/6-problems/Drand.mat" target="_blank">Drand.mat</a>, which contains a set of random numbers. Let’s make a hypothesis with regards to this dataset: We assume that this dataset is well fit by a <a href="https://en.wikipedia.org/wiki/Normal_distribution" target="_blank">Gaussian distribution</a>. But, we don’t know the values of the two parameters (mean and standard deviation) of this Normal (Gaussian) distribution. Therefore, write a MATLAB script that constructs an objective function (similar to what we are planning to do for the mathematical modeling section of the project) and then uses MATLAB’s built-in function, <code>fminsearch()</code>, to find the most likely values of the mean and standard deviation of this Gaussian distribution. Here is a best-fit Gaussian distribution using the most likely parameters to the histogram of this dataset.</p>
 
 <figure>
-    <img src="/ICP2017F/images/about/travis.jpg" alt="TA: Travis Driver" width="300px" />
-    <figcaption style="text-align:center">Teaching Assistant: Travis Driver</figcaption>
+	<img src="/ICP2017F/homework/6-problems/histfit.png" width="700" />
 </figure>
-
 <p><br /></p>
 
-<hr />
+<p><br /><br /></p>
 
-<p><br /></p>
 
-<h3 id="about-icp-teaching-assistant-sanjit-paliwal">About ICP Teaching Assistant: Sanjit Paliwal</h3>
-
-<p>Sanjit Paliwal is a 2nd year Graduate student of Operations Research and Industrial Engineering program (Department of Mechanical Engineering) at the University of Texas at Austin. His interests include Statistical Analysis, Open Source and Python. He has previously served as a TA for Engineering Physics Lab (103 M) at the Department of Physics at <abbr title="University of Texas at Austin">UT Austin</abbr> and as a Graduate Student Tutor for Calculus, Statistics and Probability at the Texas Athletics Dept at <abbr title="University of Texas at Austin">UT Austin</abbr>. He can be reached on his email : sanjit.paliwal@utexas.edu.</p>
-
-<figure>
-    <img src="/ICP2017F/images/about/sanjit.jpg" alt="TA: Sanjit Paliwal" width="300px" />
-    <figcaption style="text-align:center">Teaching Assistant: Sanjit Paliwal</figcaption>
-</figure>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<h3 id="about-icp-students">About ICP Students</h3>
-
-<p>As of Wednesday, 29 Nov 2017 at 08:39 AM, there are 102 undergraduate students enrolled in this course. Below is the latest photo of students.</p>
-
-<figure>
-	<img src="/ICP2017F/images/about/studentsResized.jpg" alt="students" />
-    <figcaption style="text-align:center">The Fall 2017 class participants</figcaption>
-</figure>
-
-<p><br /></p>
-
-<div align="center"> <h3> <abbr title="University of Texas at Austin">UT Austin</abbr> Campus Photos </h3> </div>
-
-<figure class="third">
-	<a href="/ICP2017F/images/about/UTtowerSouthFaceEve.png"><img src="/ICP2017F/images/about/UTtowerSouthFaceEve.png" /></a>
-	<a href="/ICP2017F/images/about/UTtowerSouthFace.png"><img src="/ICP2017F/images/about/UTtowerSouthFace.png" /></a>
-	<a href="/ICP2017F/images/about/UTtowerNorthFace.png"><img src="/ICP2017F/images/about/UTtowerNorthFace.png" /></a>
-</figure>
-<figure class="half">
-	<a href="/ICP2017F/images/about/FacultyLoungeICES.png"><img src="/ICP2017F/images/about/FacultyLoungeICES.png" /></a>
-	<a href="/ICP2017F/images/about/chemistry.png"><img src="/ICP2017F/images/about/chemistry.png" /></a>
-	<a href="/ICP2017F/images/about/RLM.png"><img src="/ICP2017F/images/about/RLM.png" /></a>
-	<a href="/ICP2017F/images/about/UTtowerSouthFacePanoramic.png"><img src="/ICP2017F/images/about/UTtowerSouthFacePanoramic.png" /></a>
-</figure>
-</div>
-</article>
+            </div>
+        </article>
         <div class="cf"></div>
+<div class="row text-center">
+    <section class="notepad-post-share">
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 6: Problems - MATLAB data analysis and optimization&quot;%20/ICP2017F/homework/6-problems-matlab-data-analysis-optimization%20via%20&#64;AmirShahmoradi"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/homework/6-problems-matlab-data-analysis-optimization"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/homework/6-problems-matlab-data-analysis-optimization"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+            <i class="fa fa-google-plus"></i>
+        </a>
+    </section>
+</div>
+        <div class="cf"></div>
+        
+<div class="notepad-author-info">
+    <div class="row">
+        <section class="notepad-post-author small-12 columns">
+            <a href="http://www.shahmoradi.org" target="_blank">
+                <img src="/ICP2017F/images/logo.png" class="notepad-post-author-avatar" alt="Amir Shahmoradi's photo">
+            </a>
+            <span class="author-label">Author</span>
+            <h1>Amir Shahmoradi</h1>
+            <p><a href="mailto:amir@ices.utexas.edu" class="author-website">amir@ices.utexas.edu</a></p>
+            <p>Genius is 99% perspiration and 1% inspiration</p>
+        </section>
+    </div>
+</div> 
+        
+        <div class="cf"></div>
+        
+        <section class="notepad-disqus row">
+    <div class="small-12 columns">
+        <h1 class="notepad-comments-header">Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'shahmoradi'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+        <div class="cf"></div>
+
     <footer class="notepad-site-footer">
     <div class="copyright">
          <!-- <section>Last updated 2017 / 11 / 29</section></br> -->
@@ -302,9 +280,8 @@ MathJax.Hub.Queue(function() {
     </div>
     
     <div class="cf"></div>
-</footer>
-</main>
-
+</footer> 
+</main>    
 <!--dynamic page header-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/ICP2017F/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
@@ -376,7 +353,7 @@ Analytics"></a></div></noscript>
     target="_blank"><img class="statcounter"
     src="http://c.statcounter.com/10611821/0/902e4bb4/0/"
     alt="shopify visitor statistics"></a></div></noscript>
-For Shahmoradi.org: End of StatCounter Code for Default Guide -->
+For Shahmoradi.org: End of StatCounter Code for Default Guide --> 
 <!--automatic Table of Content.-->
 <script src="/ICP2017F/assets/js/autoTOC.js"></script>
 </body>
