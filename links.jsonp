@@ -2,6 +2,11 @@
 callback([
 
   {
+    "text": "Quiz 5: Solutions - MATLAB IO and plotting",
+    "href": "/ICP2017F/quiz/5-solutions-matlab-IO-plotting"
+  } ,
+
+  {
     "text": "Quiz 5: Problems - MATLAB IO and plotting",
     "href": "/ICP2017F/quiz/5-problems-matlab-IO-plotting"
   } ,

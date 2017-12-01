@@ -11,23 +11,23 @@
 -->
 
 <meta charset="utf-8">
-<title>QUIZ 2: PROBLEMS - PROGRAMMING HISTORY, MATLAB VARIABLES &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
+<title>QUIZ 5: SOLUTIONS - MATLAB IO AND PLOTTING &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
 <meta name="description" content="Introduction to<br>Computer Programming">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/ICP2017F/images/logo.png">
-<meta name="twitter:title" content="Quiz 2: Problems - Programming history, MATLAB variables">
+<meta name="twitter:title" content="Quiz 5: Solutions - MATLAB IO and plotting">
 <meta name="twitter:description" content="Introduction to<br>Computer Programming">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quiz 2: Problems - Programming history, MATLAB variables">
+<meta property="og:title" content="Quiz 5: Solutions - MATLAB IO and plotting">
 <meta property="og:description" content="Introduction to<br>Computer Programming">
-<meta property="og:url" content="/ICP2017F/quiz/2-problems-programming-history-matlab-variables">
+<meta property="og:url" content="/ICP2017F/quiz/5-solutions-matlab-IO-plotting">
 <meta property="og:site_name" content="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110">
 <meta property="og:image" content="/ICP2017F/images/">
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/ICP2017F/quiz/2-problems-programming-history-matlab-variables">
+<link rel="canonical" href="/ICP2017F/quiz/5-solutions-matlab-IO-plotting">
 <!-- <link href="/ICP2017F/feed.xml" type="application/atom+xml" rel="alternate" title="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110 Feed"> -->
 
 
@@ -133,8 +133,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Quiz 2: Problems - Programming history, MATLAB variables</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-10-04T00:00:00-05:00">04 Oct 2017</time></strong></p>
+                            <h2>Quiz 5: Solutions - MATLAB IO and plotting</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-12-01T00:00:00-06:00">01 Dec 2017</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -144,65 +144,92 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <p>This quiz aims at testing your general knowledge of programming history and MATLAB arrays. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to <strong>quiz/2/</strong> folder in your Github project.</p>
+                <p>This is the solution to <a href="5-problems-matlab-IO-plotting.html" target="_blank">Quiz 5: Problems - MATLAB IO and plotting</a>.</p>
 
-<p><br /></p>
+<!--
 
-<hr />
-<hr />
-
-<p><br /></p>
-
-<ol>
-  <li>(A) What is the closest programming language to machine code (i.e., binary code)?<br />
-(B) Does it need interpretation in order to become machine-comprehensible?<br />
-<br /><br /></li>
-  <li>(A) Name the oldest high-level programming language that is still in active daily usage.<br />
-(B) Approximately how many decades is it old? ($\pm15$ years is accetasble answer. the decade it was created is also an acceptable answer)<br />
-<br /><br /></li>
-  <li>(A) Name a second-generation programming language.<br />
-(B) Which language-generation are Fortran, C, C++, MATLAB?<br />
-<br /><br /></li>
-  <li>In what decades C, C++, and MATLAB were created, respectively?<br />
-<br /><br /></li>
-  <li>Name an ancestor programming language of C.<br />
-<br /><br /></li>
-  <li>Name a programming language ancestor of C++.<br />
-<br /><br /></li>
-  <li>Name a programming language ancestor of MATLAB.<br />
-<br /><br /></li>
-  <li>Initialized a cell array variable <code>C</code> of size $2\times2$, then fill its elements like the following figure.<br />
-<br />
-    <figure>
-    <img src="/ICP2017F/quiz/2/cellArray.png" width="500" />
+The following figure illustrates the grade distribution for this quiz.  
+<figure>
+	<img src="/ICP2017F/quiz/gradeDist/gradeHistQuiz4.png" width="700">
+    <figcaption style="text-align:center">
+        Maximum possible points is 1.
+    </figcaption>
 </figure>
-    <p><br /><br /></p>
-  </li>
-  <li>Now, if you type <code>C{2}</code> on the MATLAB command line, what do you get? Why do get this value?<br />
-<br /><br /></li>
-  <li>Does MATLAB follow column-wise data storage, or row-wise? Explain what it means? Why does it follow this storage method? (if you recall, we discussed this in class) <br />
-<br /><br /></li>
-  <li>How many bytes is a MATLAB integer of type <code>int64</code>? (if you recall, we discussed this in class)<br />
-<br /><br /></li>
-  <li>What would happen if you tried to covert a huge integer number that requires MATLAB <code>int64</code> data type to the MATLAB <code>int32</code> data type? (if you recall, we discussed this in class)<br />
-<br /><br /></li>
-</ol>
 
+-->
+
+<p>This quiz is about methods of IO and plotting in MATLAB.</p>
+
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<p><strong>1. </strong> Write a MATLAB script, named <code>plotGrowthRate.m</code>, that reads this <a href="/ICP2017F/quiz/5-problems/chain.txt" target="_blank">chain.txt</a> file, and then makes a plot of the fourth column of data (GrowthRate) in this file, that looks like the following,</p>
+
+<figure>
+	<img src="/ICP2017F/quiz/5-problems/GrowthRate.png" width="700" />
+</figure>
+<p><br /></p>
+
+<p>Use whatever MATLAB IO method that you prefer, in order to read the data. Save the plot with the name <code>GrowthRate.png</code>.</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>Here is a possible implementation: <a href="/ICP2017F/quiz/5-solutions/plotGrowthRate.m" target="_blank">plotGrowthRate.m</a>.</p>
+
+<p><br /><br /></p>
+
+<p><strong>2. </strong> Write a MATLAB script named, <code>robustWebRead.m</code> that takes an input string containing a web address, then checks if the web address exists or not, if it exists, it returns the content of the web page as the output of the function,</p>
+
+<pre><code class="language-matlab">&gt;&gt; d = robustWebRead('https://apod.nasa.gov/apod/image/1711/M33Nagy_tamed.jpg');
+Reading data from the web address...
+Done.
+&gt;&gt; imshow(d)
+&gt;&gt;
+</code></pre>
+<p><br /></p>
+<pre><code class="language-matlab">&gt;&gt; robustWebRead('Chicken or egg? which came first? This is the question')
+Reading data from the web address...
+Warning: The requested web address does not exist! Gracefully exiting... 
+&gt; In robustWebRead (line 7) 
+ans =
+     []
+&gt;&gt;
+</code></pre>
+<p><br />
+otherwise prints a message like the following and exits the function without breaking the MATLAB (e.g., without any abrupt stop).</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>Here is a possible implementation: <a href="/ICP2017F/quiz/5-solutions/robustWebRead.m" target="_blank">robustWebRead.m</a>.</p>
+
+<p><br /><br /></p>
+
+<p><strong>3. </strong> What is the difference between <code>gca</code> and <code>gcf</code> keywords in MATLAB? (what does each one do?)</p>
+
+<p><strong>Answer:</strong></p>
+
+<p>The term <code>gca</code> is a MATLAB keyword that refers to the current active plot in the current active figure. By contrast, <code>gcf</code> refers to the current active figure handle.</p>
+
+<p><br /><br /></p>
 
             </div>
         </article>
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 2: Problems - Programming history, MATLAB variables&quot;%20/ICP2017F/quiz/2-problems-programming-history-matlab-variables%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 5: Solutions - MATLAB IO and plotting&quot;%20/ICP2017F/quiz/5-solutions-matlab-IO-plotting%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/quiz/2-problems-programming-history-matlab-variables"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/quiz/5-solutions-matlab-IO-plotting"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/quiz/2-problems-programming-history-matlab-variables"
+        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/quiz/5-solutions-matlab-IO-plotting"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>
