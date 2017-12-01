@@ -7,13 +7,78 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-11-29T16:51:02-06:00</updated>
+<updated>2017-12-01T09:01:28-06:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/ICP2017F/</uri>
   <email>amir@ices.utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Quiz 5: Problems - MATLAB IO and plotting]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/quiz/5-problems-matlab-IO-plotting"/>
+  <id>http:/ICP2017F/quiz/5-problems-matlab-IO-plotting</id>
+  <published>2017-12-01T00:00:00-06:00</published>
+  <updated>2017-12-01T00:00:00-06:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This quiz is about methods of IO and plotting in MATLAB.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; Write a MATLAB script, named &lt;code&gt;plotGrowthRate.m&lt;/code&gt;, that reads this &lt;a href=&quot;http:/ICP2017F/quiz/5-problems/chain.txt&quot; target=&quot;_blank&quot;&gt;chain.txt&lt;/a&gt; file, and then makes a plot of the fourth column of data (GrowthRate) in this file, that looks like the following,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/quiz/5-problems/GrowthRate.png&quot; width=&quot;700&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Use whatever MATLAB IO method that you prefer, in order to read the data. Save the plot with the name &lt;code&gt;GrowthRate.png&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; Write a MATLAB script named, &lt;code&gt;robustWebRead.m&lt;/code&gt; that takes an input string containing a web address, then checks if the web address exists or not, if it exists, it returns the content of the web page as the output of the function,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; d = robustWebRead('https://apod.nasa.gov/apod/image/1711/M33Nagy_tamed.jpg');
+Reading data from the web address...
+Done.
+&amp;gt;&amp;gt; imshow(d)
+&amp;gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; robustWebRead('Chicken or egg? which came first? This is the question')
+Reading data from the web address...
+Warning: The requested web address does not exist! Gracefully exiting... 
+&amp;gt; In robustWebRead (line 7) 
+ans =
+     []
+&amp;gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+otherwise prints a message like the following and exits the function without breaking the MATLAB (e.g., without any abrupt stop).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; What is the difference between &lt;code&gt;gca&lt;/code&gt; and &lt;code&gt;gcf&lt;/code&gt; keywords in MATLAB? (what does each one do?)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/5-problems-matlab-IO-plotting&quot;&gt;Quiz 5: Problems - MATLAB IO and plotting&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on December 01, 2017.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -5242,137 +5307,6 @@ Please enter a non-negative integer or type stop: stop
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/3-problems-matlab-structures-branching-functions&quot;&gt;Homework 3: Problems - structures, branching and functions in MATLAB&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 09, 2017.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Quiz 2: Solutions - Programming history, MATLAB variables]]></title>
-  <link rel="alternate" type="text/html" href="http:/ICP2017F/quiz/2-solutions-programming-history-matlab-variables"/>
-  <id>http:/ICP2017F/quiz/2-solutions-programming-history-matlab-variables</id>
-  <published>2017-10-04T00:00:00-05:00</published>
-  <updated>2017-10-04T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;This is the solution to &lt;a href=&quot;2-problems-programming-history-matlab-variables.html&quot; target=&quot;_blank&quot;&gt;Quiz 2: Problems - Programming history, MATLAB variables&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The following figure illustrates the grade distribution for this quiz.&lt;/p&gt;
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/quiz/gradeDist/gradeHistQuiz2.png&quot; width=&quot;700&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Maximum possible points is 1.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;(A) What is the closest programming language to machine code (i.e., binary code)?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Assembly&lt;br /&gt;
-(B) Does it need interpretation in order to become machine-comprehensible?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Yes. An &lt;em&gt;Assembler&lt;/em&gt; interprets the program for the machine.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;(A) Name the oldest high-level programming language that is still in active daily usage.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Fortran&lt;br /&gt;
-(B) Approximately how many decades is it old? ($\pm15$ years is accetasble answer. the decade it was created is also an acceptable answer)&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-in 1950s&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;(A) Name a second-generation programming language.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Assembly  &lt;br /&gt;
-(B) Which language-generation are Fortran, C, C++, MATLAB?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-third, third, third, fourth&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;In what decades C, C++, and MATLAB were created, respectively?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-1970s, 1980s, 1980s&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name an ancestor programming language of C.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-B&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name a programming language ancestor of C++.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-C, Simula&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Name a programming language ancestor of MATLAB.&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Fortran&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Initialized a cell array variable &lt;code&gt;C&lt;/code&gt; of size $2\times2$, then fill its elements like the following figure.&lt;br /&gt;
-&lt;br /&gt;
-    &lt;figure&gt;
-    &lt;img src=&quot;http:/ICP2017F/quiz/2/cellArray.png&quot; width=&quot;500&quot; /&gt;
-&lt;/figure&gt;
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; C = cell(2,2)
-&amp;gt;&amp;gt; C{1,1} = [1,3,-7;2,0,6;0,5,1];
-&amp;gt;&amp;gt; C{1,2} = 'This is a text string.';
-&amp;gt;&amp;gt; C{2,1} = [];
-&amp;gt;&amp;gt; C{2,2} = [3+4i,-5;-10i,3-4i];
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; C
-C = 
-[3x3 double]    'This is a text string.'
-          []                [2x2 double]
-&amp;gt;&amp;gt; C{1,1}
-ans =
-    1     3    -7
-    2     0     6
-    0     5     1
-&amp;gt;&amp;gt; C{2,2}
-ans =
-    3.0000 + 4.0000i  -5.0000 + 0.0000i
-    0.0000 -10.0000i   3.0000 - 4.0000i
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Now, if you type &lt;code&gt;C{2}&lt;/code&gt; on the MATLAB command line, what do you get? Why do get this value?&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-You will get the value for the cell element $(2,1)$. This is happens, because as we discussed in class, MATLAB is column-wise language.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Does MATLAB follow column-wise data storage, or row-wise? Explain what it means? Why does it follow this storage method? (if you recall, we discussed this in class) &lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-MATLAB stores data in a column-major (columnwise) numbering scheme, which is how Fortran stores matrices. MATLAB uses this convention because it was originally written in Fortran. MATLAB internally stores data elements from the first column first, then data elements from the second column second, and so on, through the last column.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;How many bytes is a MATLAB integer of type &lt;code&gt;int64&lt;/code&gt;? (if you recall, we discussed this in class)&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-8 bytes.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;What would happen if you tried to covert a huge integer number that requires MATLAB &lt;code&gt;int64&lt;/code&gt; data type to the MATLAB &lt;code&gt;int32&lt;/code&gt; data type? (if you recall, we discussed this in class)&lt;br /&gt;
-&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-The huge number is converted to the maximum number that can be represented by &lt;code&gt;int32&lt;/code&gt; data type.
-    &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; intmax('int32')
-ans =
-    2147483647
-&amp;gt;&amp;gt; intmax('int64')
-ans =
-    9223372036854775807
-&amp;gt;&amp;gt; int32(intmax('int64'))
-ans =
-    2147483647
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;This is a language-specific rule. In other programming languages, the number may be converted to infinity, if it is bigger than the maximum number that can be represented by the requested integer type.&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/quiz/2-solutions-programming-history-matlab-variables&quot;&gt;Quiz 2: Solutions - Programming history, MATLAB variables&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 04, 2017.&lt;/p&gt;</content>
 </entry>
 
 </feed>
