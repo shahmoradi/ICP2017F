@@ -28,7 +28,7 @@ mainPlotTitleFontSize = 12;
 mainPlotAxisFontSize = 12;
 
 mainPlot = axes(); % create a set of axes in this figure. This main axes is needed in order to add the x and y labels and the color bar for the entire figure.
-mainPlot.Color = 'none'; % set color to none
+%mainPlot.Color = 'none'; % set color to none
 mainPlot.Position = [ mainPlotPositionX mainPlotPositionY mainPlotWidth mainPlotHeight ]; % set position of the axes
 mainPlot.XLim = [0 1]; % set X axis limits
 mainPlot.YLim = [0 1]; % set Y axis limits
