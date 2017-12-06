@@ -212,45 +212,56 @@ then all the necessary MATLAB codes to generate all the results will be called b
 
 <p><strong>4. </strong> Now our goal is to fit the time evolution of the growth of this tumor, using a mathematical model. To do so, we need to find the best-fit parameters of the model. The mathematical model we will use here is called the <a href="https://en.wikipedia.org/wiki/Gompertz_function" target="_blank">Gompertzian growth model</a>. Here, we will use a slightly modified for of the Gompertzian function of the following form,</p>
 
-<script type="math/tex; mode=display">N(t,N_0,\lambda,c) = N_0 \times \exp\bigg( \lambda~\bigg[ 1-\exp(-ct) \bigg] \bigg) ~,</script>
+<script type="math/tex; mode=display">N(t,\lambda,c) = N_0 \times \exp\bigg( \lambda~\bigg[ 1-\exp(-ct) \bigg] \bigg) ~,</script>
 
-<p>where $N(t)$ is the number of tumor cells at time $t$, $N_0$ is the initial number of tumor cells at time $t=0$ days, $\lambda$ is the growth rate parameter of the model, and $c$ is just another parameter of the model. We already know the initial value of the number of tumor cells, $N_0=100,000\pm10,000$. Therefore, we can fix $N_0$ to $100,000$ in the equation of the model given above.</p>
+<p>where $N(t,\lambda,c)$ is the <strong>predicted number</strong> of tumor cells at time $t$, $N_0$ is the initial number of tumor cells at time $t=0$ days, $\lambda$ is the growth rate parameter of the model, and $c$ is just another parameter of the model. We already know the initial value of the number of tumor cells, $N_0=100,000\pm10,000$. Therefore, we can fix $N_0$ to $100,000$ in the equation of the model given above.</p>
 
 <p>However, we don’t know the values of the parameters $\lambda$ and $c$. Thus, we would like to find their best values given the input tumor cell data using some MATLAB optimization algorithm.</p>
 
-<p>This Gompertzian growth model is called our <strong>physical model</strong> for this problem., because it describes the physics of our problem.</p>
+<p>This Gompertzian growth model is called our <strong>physical model</strong> for this problem, because it describes the physics of our problem (The physics/biology of the tumor growth).</p>
 
 <h3 id="combining-the-physical-model-with-a-regression-model">Combining the physical model with a regression model</h3>
 
-<p>Now, if our physical model was ideally perfect in describing the data, the curve of the model prediction would pass through all the points in the growth curve plot of the above figure, thus providing a prefect description of data. This is however, never the case, as it is famously said <strong>all models are wrong, but some are useful</strong>. In other words, the model prediction never matches observation perfectly. Therefore, we have to seek for the parameter values of the model that can get us as close as possible to data. To do so, we define a <strong>statistical model</strong> in addition to the <strong>physical model</strong> described above. In other words, we have to define a statistical regression model (the renowned <strong>least-squares method</strong>) that gives us the probability $\pi(N_{obs}|N(t))$ of observing individual data points at each of the given times,</p>
+<p>Now, if our physical model was ideally perfect in describing the data, the curve of the model prediction would pass through all the points in the growth curve plot of the above figure, thus providing a prefect description of data. This is however, never the case, as it is famously said <strong>all models are wrong, but some are useful</strong>. In other words, the model prediction never matches observation perfectly.</p>
 
-<script type="math/tex; mode=display">\pi(N_{obs} | N(t,N_0,\lambda,c),\sigma) = \frac{1}{N_{obs}\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t)-\log N(t,N_0,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~,</script>
+<p>Therefore, we have to seek for the parameter values that can bring the model prediction us as close as possible to data. To do so, we define a <strong>statistical model</strong> in addition to the <strong>physical model</strong> described above. In other words, we have to define a statistical regression model (the renowned <strong>least-squares method</strong>) that gives us the probability $\pi(\log N_{obs}|\log N(t))$ of observing individual data points at each of the given times,</p>
 
-<p>Note that our statistical model given above is a Lognormal probability density function, with its mean parameter represented by the output of our physical model, $\log N(t,N_0,\lambda,c)$, and its standard deviation represented by $\sigma$, which is unknown, and we seek to find it.</p>
+<script type="math/tex; mode=display">\pi(\log N_{obs} | \log N(t,\lambda,c),\sigma) = \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t)-\log N(t,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~,</script>
 
-<p>We have seven data points, so the overall probability of observing all of data $\mathcal{D}$ together given the parameters of the model, $\mathcal{L}(\mathcal{D}|N_0,\lambda,c,\sigma)$, is the product of their individual probabilities of observations given by the above equation,</p>
+<p>Note that our statistical model given above is a Normal probability density function, with its mean parameter represented by <strong>the log</strong> of the output of our physical model, $\log N(t,\lambda,c)$, and its standard deviation represented by $\sigma$, which is unknown, and we seek to find it. The symbol $\pi$, whenever it appears with parentheses, like $\pi()$, it means probability of the entity inside the parentheses. However, whenever it appears alone, it means the famous number PI, $\pi\approx 3.1415$.</p>
+
+<p><strong>Why do we use the logarithm of the number of cells instead of using the number of cells directly?</strong> The reason behind it is slightly complicated. A simple (but not entirely correct argument) is the following: We do so, because the tumor cell counts at later times become extremely large numbers, on the order of several million cells (For example, look at the number of cells in the late stages of the tumor growth, around $t=20$ days). Therefore, to make sure that we don’t hit any numerical precision limits of the computer when dealing with such huge numbers, we work with the logarithm of the number of tumor cells instead of their true non-logarithmic values.</p>
+
+<p>We have seven data points, so the overall probability of observing all of data $\mathcal{D}$ together (the time vector and the logarithm of the number of cells at different times) given the parameters of the model, $\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$, is the product of their individual probabilities of observations given by the above equation,</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{align*}
-\mathcal{L}(\mathcal{D}|N_0,\lambda,c,\sigma) 
-&= \prod_{i=1}^{n=8} \pi(N_{obs}(t_i)|N(t_i,N_0,\lambda,c),\sigma) \\\\
-&= \prod_{i=1}^{n=8} \frac{1}{N_{obs}\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i,N_0,\lambda,c,\sigma) \big]^2}{2\sigma^2} \bigg) ~.
+\mathcal{L}(\mathcal{D}|\lambda,c,\sigma) 
+&= \prod_{i=1}^{n=8} \pi(\log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
+&= \prod_{i=1}^{n=8} \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i,\lambda,c,\sigma) \big]^2}{2\sigma^2} \bigg) ~.
 \end{align*} %]]></script>
 
-<p>Frequently however, you would want to work with $\log\mathcal{L}$ instead of $\mathcal{L}$, so the above equation becomes,</p>
+<p>Frequently however, you would want to work with $\log\mathcal{L}$ instead of $\mathcal{L}$. This is again because the numbers involved are extremely small often below the precision limits of the computer. So, by taking the logarithm of the numbers, we work instead with number’s exponent, which looks just like a normal number (not so big, not so small). So, by taking the log, the above equation becomes,</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{align*}
-    \log\mathcal{L}(\mathcal{D}|N_0,\lambda,c,\sigma)
-    &= \sum_{i=1}^{n=8} \log \pi(N_{obs}(t_i)|N(t_i,N_0,\lambda,c),\sigma) \\\\
-    &= \sum_{i=1}^{n=8} \log \bigg[ \frac{1}{N_{obs}\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i,N_0,\lambda,c,\sigma) \big]^2}{2\sigma^2} \bigg) \bigg] ~.
+    \log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)
+    &= \sum_{i=1}^{n=8} \log \pi( \log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
+    &= \sum_{i=1}^{n=8} \log \bigg[ \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i) - \log N(t_i,\lambda,c,\sigma) \big]^2}{2\sigma^2} \bigg) \bigg] ~.
 \end{align*} %]]></script>
 
 <p><br /></p>
 
-<p><strong>5. </strong>  Now the goal is to use an optimization algorithm in MATLAB, such as <code>fminsearch()</code>, to find the most likely set of the parameters of the model $\lambda,c,\sigma$ that give the best prediction of the available data. You can also use any other function or method that you wish, to obtain the best parameters.</p>
+<p><strong>5. </strong>
+Now the goal is to use an optimization algorithm in MATLAB, such as <code>fminsearch()</code>, to find the most likely set of the parameters of the model $\lambda,c,\sigma$ that give the highest likelihood of obtaining the available data, which is given by the number $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$ from the above equation. So we want to find the set of parameters for which this number given by the above equation is maximized. You can also use any MATLAB optimization function or method that you wish, to obtain the best parameters.</p>
 
-<p>Once you find the optimal parameters, then redraw the above tumor evolution curve and show the result from the model as well, like the following,</p>
+<p>However, if you use <code>fminsearch()</code>, then note that this function finds the minimum of an input function, not the maximum. What we want is to find the maximum of $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$.
+What is the solution then? Very simple.
+We can multiply the value of $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$ by a negative, so that the maximum value is converted to minimum. But, note that the position (the set of parameter values) at which this minimum occurs, will remain the same as the maximum position for $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$.</p>
+
+<p>So, now rewrite your likelihood function above by multiplying its final result (which is just number) by a negative sign. Then you pass this modified function to <code>fminsearch()</code> and you find the optimal parameters. Note that <code>fminsearch()</code> takes as input also a set of initial staring parameter values to initiate the search for the optimal parameters. You can use $(\lambda,c,\sigma) = [10,0.1,1]$ as your starting point given to <code>fminsearch()</code> to search for the optimal values of the parameters.</p>
+
+<p>Then redraw the above tumor evolution curve and show the result from the model prediction as well, like the following,</p>
 
 <figure>
 	<img src="/ICP2017F/exam/1-problems/figures/growthCurveFit.png" width="900" />
@@ -258,8 +269,6 @@ then all the necessary MATLAB codes to generate all the results will be called b
 <p><br /></p>
 
 <p>Report also your best fit parameters in a file and submit them with all the figures and your codes to your exam folder repository.</p>
-
-<p><strong>Hint:</strong> You can use $(\lambda,c,\log\sigma) = [10,0.1,0]$ as your starting point given to <code>fminsearch()</code> to search for the optimal values of the parameters. I again urge you strongly to attend the remaining lectures until the end of the semester, and seek help from the instructor about details of the steps involved in this project.</p>
 
 <p><br /><br /></p>
 
@@ -331,8 +340,8 @@ then all the necessary MATLAB codes to generate all the results will be called b
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 12 / 05</section></br> -->
-         <section>Last updated Tuesday, 05 Dec 2017 at 02:44 PM CST</section></br>
+         <!-- <section>Last updated 2017 / 12 / 06</section></br> -->
+         <section>Last updated Wednesday, 06 Dec 2017 at 02:41 PM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>
