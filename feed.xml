@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2017-12-06T14:41:36-06:00</updated>
+<updated>2017-12-06T14:44:28-06:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -247,6 +247,156 @@ Start your parameter search via &lt;code&gt;fminsearch()&lt;/code&gt; with the f
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/6-problems-matlab-data-analysis-optimization&quot;&gt;Homework 6: Problems - MATLAB data analysis and optimization&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on November 27, 2017.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Homework 5: Solutions - MATLAB IO, plotting, and Monte Carlo methods]]></title>
+  <link rel="alternate" type="text/html" href="http:/ICP2017F/homework/5-solutions-matlab-IO-plotting-monte-carlo"/>
+  <id>http:/ICP2017F/homework/5-solutions-matlab-IO-plotting-monte-carlo</id>
+  <published>2017-11-27T00:00:00-06:00</published>
+  <updated>2017-11-27T00:00:00-06:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/ICP2017F</uri>
+    <email>amir@ices.utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    &lt;p&gt;This is the solution to &lt;a href=&quot;5-problems-matlab-IO-plotting-monte-carlo.html&quot; target=&quot;_blank&quot;&gt;Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--
+
+The following figure illustrates the grade distribution for this homework.  
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/gradeDist/gradeHistHomework5.png&quot; width=&quot;700&quot;&gt;
+&lt;/figure&gt;
+
+---
+---
+
+&lt;br&gt; 
+
+--&gt;
+
+&lt;p&gt;♣ &lt;strong&gt;Due Date: Friday Dec 1, 2017 11:59 PM&lt;/strong&gt;. This homework aims at giving you some experience with data input/output methods in MATLAB as well as plotting graphs and Monte Carlo techniques.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; &lt;strong&gt;Creating random 3-member student groups for the semester project&lt;/strong&gt; Consider this &lt;a href=&quot;http:/ICP2017F/homework/5-problems/students.csv&quot; target=&quot;_blank&quot;&gt;csv data file&lt;/a&gt; which contains the names of all of the students in this course. Our goal here is to write a MATLAB script that reads all the names in this file, and then creates random triples of names to form student groups who would work collaboratively on the final semester project. To do so you will need MATLAB’s built-in function &lt;code&gt;randperm()&lt;/code&gt; which creates random permutations of student IDs in the range 1-99. Once you create a random permutation, you will have to write a MATLAB for-loop which takes triples of integers from this vector of random permutations and puts the names corresponding to these IDs together in a cell array. Finally, this cell array of 33-by-3 elements could be written to an output Microsoft xlsx file, using MATLAB’s &lt;code&gt;xlswrite()&lt;/code&gt; function. On output your script should yield an excel file like &lt;a href=&quot;http:/ICP2017F/homework/5-problems/nameTriples.xlsx&quot; target=&quot;_blank&quot;&gt;this one&lt;/a&gt;. To get the exact same order and triple of names, you will have to use &lt;code&gt;rng(131313)&lt;/code&gt; at the beginning of your script in order to initialize the seed of MATLAB random number generator to 131313 so that the table can be regenerated every time you run your code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is an implementation of this code: &lt;a href=&quot;http:/ICP2017F/homework/5-solutions/pickStudentTriples.m&quot; target=&quot;_blank&quot;&gt;pickStudentTriples.m&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;Reading scientific data from web using MATLAB&lt;/strong&gt;. Consider the following webpage address &lt;a href=&quot;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&quot; target=&quot;_blank&quot;&gt;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&lt;/a&gt;. This is an data table (in HTML language) containing data from &lt;a href=&quot;https://www.nasa.gov/mission_pages/swift/main&quot; target=&quot;_blank&quot;&gt;NASA’s Swift satellite&lt;/a&gt;. Each row in this table represents information about a &lt;a href=&quot;https://en.wikipedia.org/wiki/Gamma-ray_burst&quot; target=&quot;_blank&quot;&gt;Gamma-Ray Burst (GRB)&lt;/a&gt; detection that Swift has made in the past years. Now, corresponding to each of event IDs, there (might) exist files that contain some attributes of these events which we wish to plot and understand their behavior. For example, for the first event in this table, contains a data file which is hidden in a directory on this website &lt;a href=&quot;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. For each event in this table, there is likely one such table hidden in this web directory.&lt;/p&gt;
+
+&lt;p&gt;Our goal in this question is to fetch all these files from the website, using MATLAB and save them locally in our own computer. Then read their contents one by one and plot the two columns of data in all of them together.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(A)&lt;/strong&gt; Write a MATLAB script named &lt;code&gt;fetchDataFromWeb.m&lt;/code&gt; that uses this web address: &lt;code&gt;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/triggers.txt&lt;/code&gt; to read a list of all GRB events and then writes the entire table of &lt;code&gt;triggers.txt&lt;/code&gt; to a local file with the same name on your device. For this purpose, you will need MATLAB built-in function &lt;code&gt;webread()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(B)&lt;/strong&gt; Now, add to your script another set of commands that uses the event IDs stored in this file, to generate the corresponding web addresses like: &lt;a href=&quot;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;http://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&lt;/a&gt;. Then it uses the generated web address to read the content of the page and store it in a local file on your device with the same name as it is stored on the webpage (for example, for the given webpage, the filename would be &lt;code&gt;GRB00745966_ep_flu.txt&lt;/code&gt;). &lt;strong&gt;Note:&lt;/strong&gt; Some of the web addresses for the given event IDs do not exist. Therefore, you should MATLAB’s try-catch construct to avoid runtime errors in your MATLAB code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(C)&lt;/strong&gt; Now write another MATLAB script named &lt;code&gt;plotDatafromFile.m&lt;/code&gt;, that reads all of these files in your directory, one by one, using MATLAB &lt;code&gt;readtable()&lt;/code&gt; function, and plots the content of all of them together, on a single scatter plot (using MATLAB function &lt;code&gt;scatter()&lt;/code&gt;) like the following,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/5-problems/SwiftDataPlot.png&quot; width=&quot;900&quot; /&gt;  
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; again that some the data files stored on your computer are empty and some others have useless data if data in the second column of the file is larger than 0. So you will have to write your script in such a way that it checks for non-emptiness of the file (that is, the file does indeed contain some numerical data) as well as the negativity of the values in the column of data in each file. For example, you could check for the negativity of the values using MATLAB function &lt;code&gt;all(data[:,1]&amp;lt;0.0)&lt;/code&gt; assuming that data is the variable containing the information read from the file.&lt;/p&gt;
+
+&lt;p&gt;Once you have done all these checks, you have to do one final manipulation of data, that is, the data in these files on the second column is actually the log of data, so have to get the &lt;code&gt;exp()&lt;/code&gt; value to plot it (because the plot in the figure above is a log-log plot and we want to exactly regenerate it). To do so you could simply use,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;data[:,2] = exp(data[:,2]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+as soon as you read from the file, and then finally you make a scatter plot of all data using MATLAB scatter plot. At the end, you will have to set a title for your plot as well and label the axes of the plot, and save your plot using MATLAB’s built-in function &lt;code&gt;saveas()&lt;/code&gt;. In order to find out how many files you have plotted in the figure, you will have to define a variable counter which increases by one unit, each time a new non-empty negative-second-column data file is read and plotted.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; I strongly urge you to attend the next three lectures in order to answer this question.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is an example implementation of the two MATLAB scripts: &lt;a href=&quot;http:/ICP2017F/homework/5-solutions/fetchDataFromWeb.m&quot; target=&quot;_blank&quot;&gt;fetchDataFromWeb.m&lt;/a&gt; and &lt;a href=&quot;http:/ICP2017F/homework/5-solutions/plotDatafromFile.m&quot; target=&quot;_blank&quot;&gt;plotDatafromFile.m&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; &lt;strong&gt;Simulating a fun Monte Carlo game.&lt;/strong&gt; Suppose you’re on a game show, and you’re given the choice of three doors:&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/5-problems/Monty_1.png&quot; width=&quot;600&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Behind one door is a car; behind the two others, goats. You pick a door, say No. 1, and the host of the show opens another door, say No. 3, which has a goat.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/5-problems/Monty_open_door.png&quot; width=&quot;600&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;He then says to you, “Do you want to pick door No. 2?”.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question: What would you do?&lt;/strong&gt; Is it to your advantage to switch your choice from door 1 to door 2? Is it to your advantage, &lt;strong&gt;in the long run, for a large number of game tries&lt;/strong&gt;, to switch to the other door?&lt;/p&gt;
+
+&lt;p&gt;Now whatever your answer is, I want you to check/prove your answer by a Monte Carlo simulation of this problem. Make a plot of your simulation for &lt;code&gt;nExperiments=100000&lt;/code&gt; repeat of this game, that shows, in the long run, on average, what is the probability of winning this game if you switch your choice, and what is the probability of winning, if you do not switch to the other door.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; I strongly urge you to attend the lectures this week in order to get help for this question.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+An example code can be downloaded from &lt;a href=&quot;http:/ICP2017F/homework/5-solutions/monteGame.py&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Here is the code’s output figure,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/5-solutions/MontyGameResult.png&quot; width=&quot;800&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;
+As you see in the figure, although you may initially win by not switching your choice, but in the long run, on average, you will lose, if you don’t switch your choice.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. &lt;/strong&gt; &lt;strong&gt;Monte Carlo approximation of the number $\pi$&lt;/strong&gt;. Suppose we did not know the value of $\pi$ and we wanted to estimate its value using Monte Carlo methods. One practical approach is to draw a square of unit side, with its diagonal opposite corners extending from the coordinates origin $(0,0)$ to $(1,1)$. Now we try to simulate uniform random points from inside of this square by generating uniform random points along the $X$ and $Y$ axes, i.e., by generating two random uniform numbers (x,y) from the range $[0,1]$.&lt;/p&gt;
+
+&lt;p&gt;Now the generated random point $P$ has the coordinate $(x,y)$, so we can calculate its distance from the coordinate origin. Now suppose we also draw a quarter-circle inside of this square whose radius is unit and is centered at the origin $(0,0)$. The ratio of the area of this quarter-circle, $S_C$ to the area of the area of the square enclosing it, $S_S$ is,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{S_C}{S_S} = \frac{\frac{1}{4}\pi r^2}{r^2} = \frac{1}{4}\pi&lt;/script&gt;
+
+&lt;p&gt;This is because the area of the square of unit sides, is just 1. Therefore, if we can somehow measure the area of the quarter $S_C$, then we can use the following equation, to get an estimate of $\pi$,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\pi = 4S_C&lt;/script&gt;
+
+&lt;p&gt;In order to obtain, $S_C$, we are going to throw random points in the square, just as described above, and then find the fraction of points, $f=n_C/n_{\rm total}$, that fall inside this quarter-circle. This fraction is related to the area of the circle and square by the following equation,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f=\frac{n_C}{n_{\rm total}} = \frac{S_C}{S_S}&lt;/script&gt;
+
+&lt;p&gt;Therefore, one can obtain an estimate of $\pi$ using this fraction,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\pi \approx 4\frac{n_C}{n_{\rm total}}&lt;/script&gt;
+
+&lt;p&gt;Now, write a MATLAB script, that takes in the number of points to be simulated, and then calculates an approximate value for $\pi$ based on the Monte Carlo algorithm described above.  Write a second function that plot the estimate of $\pi$ versus the number of points simulated, like the following,&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;http:/ICP2017F/homework/5-solutions/approximatePI.png&quot; width=&quot;900&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+Here is an example MATLAB code that estimates $\pi$: &lt;a href=&quot;http:/ICP2017F/homework/5-solutions/estimatePi.m&quot; target=&quot;_blank&quot;&gt;estimatePi.m&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/homework/5-solutions-matlab-IO-plotting-monte-carlo&quot;&gt;Homework 5: Solutions - MATLAB IO, plotting, and Monte Carlo methods&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on November 27, 2017.&lt;/p&gt;</content>
 </entry>
 
 
@@ -4618,566 +4768,6 @@ ncol =
 
   
   &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/7-matlab-functions-I&quot;&gt;Lecture 7: MATLAB - functions I&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 11, 2017.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Lecture 6: MATLAB - operators, branching, and control statements]]></title>
-  <link rel="alternate" type="text/html" href="http:/ICP2017F/lecture/6-matlab-operators-branching"/>
-  <id>http:/ICP2017F/lecture/6-matlab-operators-branching</id>
-  <published>2017-10-09T00:00:00-05:00</published>
-  <updated>2017-10-09T00:00:00-05:00</updated>
-  <author>
-    <name>Amir Shahmoradi</name>
-    <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
-  </author>
-  
-  <content type="html">
-  
-    &lt;p&gt;This lecture explains some of the most widely used operators, as well as branching statements in MATLAB.&lt;/p&gt;
-
-&lt;div class=&quot;post_toc&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;lecture-videos&quot;&gt;Lecture Videos&lt;/h2&gt;
-
-&lt;p&gt;This video is created solely as reference for the attendants of ICP2017F course at UT Austin. If you did not attend this class, then you may not find this video useful.&lt;/p&gt;
-
-&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
-    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/EnuaR-NGedQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
-    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/Q6t2SDX9mRc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
-    &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/eB4PH7qtEus&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;matlab-operators&quot;&gt;MATLAB operators&lt;/h2&gt;
-
-&lt;p&gt;A complete list of MALTAB operators can be found &lt;a href=&quot;https://www.mathworks.com/help/matlab/matlab_prog/matlab-operators-and-special-characters.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Corresponding to each operator, there is also MATLAB function that does the exact same thing for you.&lt;/p&gt;
-
-&lt;table class=&quot;center&quot;&gt;
-&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
-Table of Arithmetic operators in MATLAB.
-&lt;/caption&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Symbol&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Role&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Alternative&lt;/font&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; +  &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Addition                                      &lt;/td&gt;&lt;td&gt;&lt;code&gt;plus()      &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; +  &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Unary plus                                    &lt;/td&gt;&lt;td&gt;&lt;code&gt;uplus()     &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; -  &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Subtraction                                   &lt;/td&gt;&lt;td&gt;&lt;code&gt;minus()     &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; -  &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Unary minus                                   &lt;/td&gt;&lt;td&gt;&lt;code&gt;uminus()    &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; .* &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Element-wise multiplication                   &lt;/td&gt;&lt;td&gt;&lt;code&gt;times()     &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; *  &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Matrix multiplication                         &lt;/td&gt;&lt;td&gt;&lt;code&gt;mtimes()    &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; ./ &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Element-wise right division                   &lt;/td&gt;&lt;td&gt;&lt;code&gt;rdivide()   &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; /  &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Matrix right division                         &lt;/td&gt;&lt;td&gt;&lt;code&gt;mrdivide()  &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; .\ &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Element-wise left division                    &lt;/td&gt;&lt;td&gt;&lt;code&gt;ldivide()   &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; \  &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Matrix left divison (also known as backslash) &lt;/td&gt;&lt;td&gt;&lt;code&gt;mldivide()  &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; .^ &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Element-wise power                            &lt;/td&gt;&lt;td&gt;&lt;code&gt;power()     &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; ^  &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Matrix power                                  &lt;/td&gt;&lt;td&gt;&lt;code&gt;mpower()    &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; .' &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Transpose                                     &lt;/td&gt;&lt;td&gt;&lt;code&gt;transpose() &lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; '  &lt;/code&gt;&lt;/td&gt;&lt;td&gt; Complex conjugate transpose                   &lt;/td&gt;&lt;td&gt;&lt;code&gt;ctranspose()&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;!--
-&lt;figure&gt;
-    &lt;a href=&quot;https://www.mathworks.com/help/matlab/matlab_prog/matlab-operators-and-special-characters.html&quot; target=&quot;_blank&quot;&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/6/arithop.png&quot; width=&quot;900&quot;&gt;
-    &lt;/a&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Arithmetic operators in MATLAB.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
---&gt;
-
-&lt;table class=&quot;center&quot;&gt;
-&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
-Table of Rational operators in MATLAB.
-&lt;/caption&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Symbol&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Role&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Alternative&lt;/font&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; == &lt;/code&gt;&lt;/td&gt;&lt;td&gt;Equal to&lt;/td&gt;&lt;td&gt;&lt;code&gt;eq()&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; ~= &lt;/code&gt;&lt;/td&gt;&lt;td&gt;Not equal to&lt;/td&gt;&lt;td&gt;&lt;code&gt;ne()&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; &amp;gt;  &lt;/code&gt;&lt;/td&gt;&lt;td&gt;Greater than&lt;/td&gt;&lt;td&gt;&lt;code&gt;gt()&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; &amp;gt;= &lt;/code&gt;&lt;/td&gt;&lt;td&gt;Greater than or equal to&lt;/td&gt;&lt;td&gt;&lt;code&gt;ge()&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; &amp;lt;  &lt;/code&gt;&lt;/td&gt;&lt;td&gt;Less than&lt;/td&gt;&lt;td&gt;&lt;code&gt;lt()&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; &amp;lt;= &lt;/code&gt;&lt;/td&gt;&lt;td&gt;Less than or equal to&lt;/td&gt;&lt;td&gt;&lt;code&gt;le()&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;!--
-&lt;figure&gt;
-    &lt;a href=&quot;https://www.mathworks.com/help/matlab/matlab_prog/matlab-operators-and-special-characters.html&quot; target=&quot;_blank&quot;&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/6/rationalop.png&quot; width=&quot;900&quot;&gt;
-    &lt;/a&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Rational operators in MATLAB.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
---&gt;
-
-&lt;table class=&quot;center&quot;&gt;
-&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
-Table of Logical operators in MATLAB.
-&lt;/caption&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Symbol&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Role&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Alternative&lt;/font&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; &amp;amp;  &lt;/code&gt;&lt;/td&gt;&lt;td&gt;Logical AND&lt;/td&gt;&lt;td&gt;&lt;code&gt;and()&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; |  &lt;/code&gt;&lt;/td&gt;&lt;td&gt;Logical OR&lt;/td&gt;&lt;td&gt;&lt;code&gt;or()&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; &amp;amp;&amp;amp; &lt;/code&gt;&lt;/td&gt;&lt;td&gt;Logical AND (with short-circuiting)&lt;/td&gt;&lt;td&gt;--&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; || &lt;/code&gt;&lt;/td&gt;&lt;td&gt;Logical OR (with short-circuiting)&lt;/td&gt;&lt;td&gt;--&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;code&gt; ~  &lt;/code&gt;&lt;/td&gt;&lt;td&gt;Logical NOT&lt;/td&gt;&lt;td&gt;&lt;code&gt;not()&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;
-
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;!--
-&lt;figure&gt;
-    &lt;a href=&quot;https://www.mathworks.com/help/matlab/matlab_prog/matlab-operators-and-special-characters.html&quot; target=&quot;_blank&quot;&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/6/logicop.png&quot; width=&quot;900&quot;&gt;
-    &lt;/a&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Logical operators in MATLAB.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-### Logical operator short-circuit in MATLAB
-
-Note that there are two types of logical operators, one of which is called [short-circuit](http:/ICP2017F/lecture/6/shortCircuit.mp4){:target=&quot;_blank&quot;}. More information about them and their meanings can be found [here](https://www.mathworks.com/help/matlab/ref/logicaloperatorsshortcircuit.html#bt_0nai-1){:target=&quot;_blank&quot;}.
-
-&lt;!--
-&lt;div class=&quot;center&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;div class=&quot;video-container&quot;&gt;
-    &lt;video width=&quot;100%&quot; src=&quot;http:/ICP2017F/lecture/6/shortCircuit.mp4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/video&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
---&gt;
-
-&lt;h3 id=&quot;special-characters-in-matlab&quot;&gt;Special characters in MATLAB&lt;/h3&gt;
-
-&lt;p&gt;There are also a set of characters that have special role in MATLAb, some of which we have already discussed in the past lectures. You can learn about them &lt;a href=&quot;https://www.mathworks.com/help/matlab/matlab_prog/matlab-operators-and-special-characters.html#bvg3oy_-5&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;implicit-type-casting-and-operator-overloading&quot;&gt;Implicit type casting and operator overloading&lt;/h2&gt;
-
-&lt;p&gt;MATLAB is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Strong_and_weak_typing&quot; target=&quot;_blank&quot;&gt;loosely or weakly-typed language&lt;/a&gt;, which has a number of real-world implications. The first, and probably most notable, difference between MATLAB and a strongly-typed language is that you don’t have to explicitly declare the types of the variables you use. For example, the declarations x=5; x=’foo’ immediately following one another are perfectly acceptable; the first declaration causes x to be treated as a number, the second changes its treatment to a string.&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;main benefit&lt;/strong&gt; of using a weakly-typed language is the &lt;strong&gt;ability to do rapid prototyping&lt;/strong&gt;. The number of lines of code required to declare and use a dynamically allocated array in C (and properly clean up after its use) are much greater than the number of lines required for the same process in MATLAB. Weak typing is also good for code-reuse. You can code a scalar algorithm in MATLAB and with relatively little effort modify it to work on arrays as well as scalars. The fact that MATLAB is a scripted instead of a compiled language also contributes to rapid prototyping.&lt;/p&gt;
-
-&lt;p&gt;Weak typing is not without its pitfalls, though. For example, weak typing combined with unexpected user input can sometimes lead to erroneous results,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; x=5;
-&amp;gt;&amp;gt; y=4;
-&amp;gt;&amp;gt; x/y
-ans =
-    1.2500
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt; whereas the same code in strongly-typed compiled languages, such as C and Fortran would have given &lt;em&gt;integer&lt;/em&gt; value &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Weak typing, combined with intrinsic MATLAB &lt;a href=&quot;https://www.google.com/search?q=operator+overloading&amp;amp;spell=1&amp;amp;sa=X&amp;amp;ved=0ahUKEwix2e-x1-vVAhUF-lQKHXZxCZYQvwUIIygA&amp;amp;biw=1344&amp;amp;bih=744&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;operator overloading&lt;/strong&gt;&lt;/a&gt; can also can lead to unexpected results when operations between mixed types are done. Consider what happens when you add &lt;code&gt;1+'1'&lt;/code&gt;, that is, the scalar 1 and the character ‘1’. The surprising result is 50. MATLAB automatically converts the character &lt;code&gt;'1'&lt;/code&gt; to its ASCII representation value, which is 49 (You can get the ASCII code for any character using the &lt;code&gt;abs()&lt;/code&gt; function). After this implicit conversion, MATLAB adds the scalar value of &lt;code&gt;1&lt;/code&gt; to return &lt;code&gt;50&lt;/code&gt;. (Note: While this example is somewhat contrived it can easily arise, especially when passing a function argument where the type is undetermined. To write completely safe weakly-typed code, user input should always be checked before performing operations on it.)&lt;/p&gt;
-
-&lt;p&gt;The situation can be more complicated when you deal with strings rather than single characters. For example,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; x=10;
-&amp;gt;&amp;gt; y='10';
-&amp;gt;&amp;gt; x+y
-ans =
-    59    58
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;
-Basically, what happened above is that &lt;code&gt;'10'&lt;/code&gt; is considered as a vector of characters, therefore, when you add it to &lt;code&gt;10&lt;/code&gt;, Matlab automatically converts this string to a vector of corresponding ASCII values and adds the value &lt;code&gt;10&lt;/code&gt; to each one.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; 'Hello' + 'World'
-ans =
-    159 212 222 216 211
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;explicit-type-conversion&quot;&gt;Explicit type conversion&lt;/h2&gt;
-
-&lt;p&gt;Unlike implicit type casting which is done by MATLAB under the hood as described above, which can also be dangerous, you can also explicitly request MATLAB to convert the type of a variable to some other type, using MATLAB’s built-in functions like &lt;code&gt;cast&lt;/code&gt;, or one of the &lt;a href=&quot;https://www.mathworks.com/help/matlab/data-type-conversion.html&quot; target=&quot;_blank&quot;&gt;many other functions&lt;/a&gt; that MATLAB has for this purpose.&lt;/p&gt;
-
-&lt;h3 id=&quot;array-vs-matrix-operations&quot;&gt;Array vs. Matrix Operations&lt;/h3&gt;
-
-&lt;p&gt;We have already learned that arrays and matrices are not the same in MATLAB. As a result, the operators that can act on them are also not identical.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Matrix operations&lt;/strong&gt; follow the rules of linear algebra and are not compatible with multidimensional arrays. The required size and shape of the inputs in relation to one another depends on the operation. For non-scalar inputs, the matrix operators generally calculate different answers than their array operator counterparts.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Array operations&lt;/strong&gt; execute element by element operations on corresponding elements of vectors, matrices, and multidimensional arrays. If the operands have the same size, then each element in the first operand gets matched up with the element in the same location in the second operand. If the operands have compatible sizes, then each input is implicitly expanded as needed to match the size of the other.&lt;/p&gt;
-
-&lt;p&gt;You can learn more about them in &lt;a href=&quot;https://www.mathworks.com/help/matlab/matlab_prog/array-vs-matrix-operations.html&quot; target=&quot;_blank&quot;&gt;MATLAB manual&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;operator-precedence-in-matlab&quot;&gt;Operator precedence in MATLAB&lt;/h3&gt;
-
-&lt;p&gt;You can build expressions that use any combination of arithmetic, relational, and logical operators. Precedence levels determine the order in which MATLAB® evaluates an expression. Within each precedence level, operators have equal precedence and are evaluated from left to right. The precedence rules for MATLAB operators are shown in this list, ordered from highest precedence level to lowest precedence level:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Parentheses &lt;code&gt;()&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Transpose &lt;code&gt;.'&lt;/code&gt;, power &lt;code&gt;.^&lt;/code&gt;, complex conjugate transpose &lt;code&gt;'&lt;/code&gt;, matrix power &lt;code&gt;^&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Power with unary minus &lt;code&gt;.^-&lt;/code&gt;, unary plus &lt;code&gt;.^+&lt;/code&gt;, or logical negation &lt;code&gt;.^~&lt;/code&gt; as well as matrix power with unary minus &lt;code&gt;^-&lt;/code&gt;, unary plus &lt;code&gt;^+&lt;/code&gt;, or logical negation &lt;code&gt;^~&lt;/code&gt;. (Note:   Although most operators work from left to right, the operators &lt;code&gt;^-&lt;/code&gt;, &lt;code&gt;.^-&lt;/code&gt;, &lt;code&gt;^+&lt;/code&gt;, &lt;code&gt;.^+&lt;/code&gt;, &lt;code&gt;^~&lt;/code&gt;, and &lt;code&gt;.^~&lt;/code&gt; work from second from the right to left. It is recommended that you use parentheses to explicitly specify the intended precedence of statements containing these operator combinations.)&lt;/li&gt;
-  &lt;li&gt;Unary plus &lt;code&gt;+&lt;/code&gt;, unary minus &lt;code&gt;-&lt;/code&gt;, logical negation &lt;code&gt;~&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Multiplication &lt;code&gt;.*&lt;/code&gt;, right division &lt;code&gt;./&lt;/code&gt;, left division &lt;code&gt;.\&lt;/code&gt;, matrix multiplication &lt;code&gt;*&lt;/code&gt;, matrix right division &lt;code&gt;/&lt;/code&gt;, matrix left division &lt;code&gt;\&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Addition &lt;code&gt;+&lt;/code&gt;, subtraction &lt;code&gt;-&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Colon operator &lt;code&gt;:&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Less than &lt;code&gt;&amp;lt;&lt;/code&gt;, less than or equal to &lt;code&gt;&amp;lt;=&lt;/code&gt;, greater than &lt;code&gt;&amp;gt;&lt;/code&gt;, greater than or equal to &lt;code&gt;&amp;gt;=&lt;/code&gt;, equal to &lt;code&gt;==&lt;/code&gt;, not equal to &lt;code&gt;~=&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Element-wise AND &lt;code&gt;&amp;amp;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Element-wise OR &lt;code&gt;|&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/6/shortCircuit.mp4&quot; target=&quot;_blank&quot;&gt;Short-circuit&lt;/a&gt; AND &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http:/ICP2017F/lecture/6/shortCircuit.mp4&quot; target=&quot;_blank&quot;&gt;Short-circuit&lt;/a&gt; OR &lt;code&gt;||&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;You can learn more about operator precedence in &lt;a href=&quot;https://www.mathworks.com/help/matlab/matlab_prog/operator-precedence.html&quot; target=&quot;_blank&quot;&gt;MATLAB manual&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;branching-in-matlab&quot;&gt;Branching in MATLAB&lt;/h2&gt;
-
-&lt;p&gt;The normal flow of control in procedural programming paradigm is in general, &lt;em&gt;sequential&lt;/em&gt;. So is the flow of control in MATLAB.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/6/normalFlow.png&quot; width=&quot;900&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        Normal sequential control flow in imperative/procedural programming paradigms.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/6/conditionalFlow.png&quot; width=&quot;900&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;
-        The conditional control flow in imperative/procedural programming paradigms.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;In MATLAB, you can achieve conditional flow control, using either &lt;strong&gt;if-block&lt;/strong&gt; or &lt;strong&gt;switch-case&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;matlab-if-blocks&quot;&gt;MATLAB if-blocks&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;a = input('Enter a number:');
-if isnumeric(a) &amp;amp;&amp;amp; (a &amp;gt;= 0)
-    root = sqrt(a);
-    disp(['Square root(',num2str(a),') = ', num2str(root)]);
-elseif isnumeric(a) &amp;amp;&amp;amp; (a &amp;lt; 0)
-    disp(['The input number is negative, there is no square root.']);
-else
-    disp(['Please enter a real number!']);
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Enter a number:13
-Square root = 3.6056
-
-Enter a number:-11
-The input number is negative, there is no square root
-
-Enter a number:i
-Square root = 0.70711+0.70711i
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note in the above example, how MATLAB treats complex variables. More information on operators that can be used to construct or combine logical conditions for if-statements can be found &lt;a href=&quot;https://www.mathworks.com/help/matlab/logical-operations.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;exercise&quot;&gt;Exercise&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;1. &lt;/strong&gt; write a MATLAB script that takes two predefined matrices &lt;code&gt;A&lt;/code&gt; and &lt;code&gt;B&lt;/code&gt; as input and determines whether they have equal size. If so, then it concatenates the two matrices in a column-wise manner.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;answer&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if isequal(size(A),size(B))
-   C = [A; B];
-else
-   disp('A and B are not the same size.')
-   C = [];
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; Write a script that checks if it (the script itself) exists!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;answer&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if exist('myScript.m','file')
-    disp('Your file exists! Did you expect otherwise?')
-else
-    disp('Your file does not exist! Then perhaps you don''t exist either??')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. &lt;/strong&gt; Write a script that takes an input predefined number $x$ and calculates the following function,&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{equation*}
-y =
-\begin{cases}
-    x &amp; \text{for}~~~-1&lt;=x&lt;=1 \\
-    x^2 &amp; \text{otherwise} \\
-\end{cases}
-\end{equation*} %]]&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;strong&gt;answer&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;x = input('input the value of x: ')
-if x &amp;gt;= -1 &amp;amp;&amp;amp; x &amp;lt;= 1
-    y = x
-else
-    y = x^2
-end
-disp(['y(x=',num2str(x),') = ',num2str(y)])
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;matlab-switch-case&quot;&gt;MATLAB switch-case&lt;/h3&gt;
-
-&lt;p&gt;Sometimes we may have many if statements which all use conditions based on the same variable. It is not incorrect to use if statements in such cases, but it can lead to a large number of consecutive if statements in our code, making it harder to read and more prone to errors. In this case, it is preferable to use a switch statement. The switch statement offers an easy way of writing code where the same variable needs to be checked against a number of different values.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;day = input('Enter a day number:');
-switch day
-    case 1
-        day_name = 'Monday';
-    case 2
-        day_name = 'Tuesday';
-    case 3
-        day_name = 'Wednesday';
-    case 4
-        day_name = 'Thursday';
-    case 5
-        day_name = 'Friday';
-    case 6
-        day_name = 'Saturday';
-    case 7
-        day_name = 'Sunday';
-    otherwise
-        day_name = 'Unknown';
-end
-disp(['The corresponding weekday is ',day_name,'.'])
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Enter a day number:4
-The corresponding weekday is Thursday.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;MATLAB will compare the switch expression (in this case, &lt;code&gt;day&lt;/code&gt;) with each case expression in turn (the numbers 1–7). When a comparison evaluates to &lt;code&gt;true&lt;/code&gt;, MATLAB executes the corresponding statements and then exits the switch statement, i.e. control flow passes to after the &lt;code&gt;end&lt;/code&gt; statement. The &lt;code&gt;otherwise&lt;/code&gt; block is optional and executes only when no comparison evaluates to    &lt;code&gt;true&lt;/code&gt;. Note that the &lt;code&gt;switch&lt;/code&gt; statement is used only for equality tests – we cannot use it for other types of comparison (e.g. &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;&lt;/code&gt;, etc.).&lt;/p&gt;
-
-&lt;p&gt;A &lt;code&gt;switch&lt;/code&gt; statement may also take a cell array as one of its cases,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;day = input('Enter a day number:');
-switch day
-    case {1,2,3,4,5}
-        day_name = 'Weekday';
-    case {6,7}
-        day_name = 'Weekend';
-    otherwise
-        day_name = 'Unknown';
-end
-disp(['The input day number corresponds to ',day_name,'.'])
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Enter a day number:6
-The input day number corresponds to Weekend.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;non-boolean-conditions-in-if-statements&quot;&gt;Non-boolean conditions in if-statements&lt;/h3&gt;
-
-&lt;p&gt;There is a rather interesting feature of conditions for if-statements in MATLAB (also in Python language), that allows the programmer to use a non-boolean variable or non-boolean value type directly in place of the condition in if-statement. What really happens here is that, MATLAB interpreter converts the non-boolean type to a boolean value, when it occurs in place of an if-statement condition.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if 5.6
-    disp('The condition in this if statement is automatically converted from float to boolean')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;The condition in this if statement is automatically converted from float to boolean
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if ~0.0
-    disp('A float value of zero is converted to false')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;A float value of zero is converted to false
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if 0.0
-    disp('A float value of zero is converted to false')
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if 0.000000000000000000000000000000000000000000000000000000000000000000001
-    disp('Any non-zero float value of any precision is converted to true')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Any non-zero float value of any precision is converted to true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if 1.e-323
-    disp('Any non-zero float value of any precision is converted to true')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Any non-zero float value of any precision is converted to true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if 1.e-324 % make sure you don't go beyond computer precision
-    disp('Any non-zero float value smaller than the computer precision will be set to 0')
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if ~1.e-324 % make sure you don't go beyond computer precision
-    disp('Any non-zero float value smaller than the computer precision will be set to 0')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Any non-zero float value smaller than the computer precision will be set to 0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if 12
-    disp('The same rules also hold for integers.')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;The same rules also hold for integers.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if ''
-    disp('An empty string is always converted to boolean false, because it is considered an empty logical vector.')
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if ''
-else
-    disp('An empty string is always converted to boolean false, because it is considered an empty logical vector.')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;An empty string is always converted to boolean false, because it is considered an empty logical vector.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if []
-else
-    disp('An empty vector is always converted to boolean false, because it is considered an empty logical vector.')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;An empty vector is always converted to boolean false, because it is considered an empty logical vector.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But note that conversion from cell to logical is not possible in MATLAB:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if {}
-    disp('An empty cell cannot be converted to boolean value, because MATLAB wants it that way!')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Conversion to logical from cell is not possible. 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if ['amir']
-    disp('A non-empty vector is converted to boolean true.')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;A non-empty vector is converted to boolean true.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;if ' '
-    disp('A non-empty string is converted to boolean true.')
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;A non-empty string is converted to boolean true.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;matlabs-built-in-is-functions&quot;&gt;MATLAB’s built-in &lt;strong&gt;is&lt;/strong&gt; functions&lt;/h3&gt;
-
-&lt;p&gt;MATLAB has a wide range of functions whose names begins with &lt;code&gt;is&lt;/code&gt;, and their output is a logical value type, which can be used in if-blocks. These functions are extremely useful in MATLAB coding, and you will encounter them frequently in your computational life. Here is a rather comprehensive list of them,&lt;/p&gt;
-
-&lt;table class=&quot;center&quot;&gt;
-&lt;caption class=&quot;title&quot; style=&quot;padding-bottom:10px;text-align:center;&quot;&gt;
-Table of MATLAB's &lt;i&gt;is-functions&lt;/i&gt; and description of their functionality.
-&lt;/caption&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Expression&lt;/font&gt;&lt;/th&gt;
-&lt;th&gt;&lt;font size=&quot;4rm&quot; color=&quot;red&quot;&gt;Description&lt;/font&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isa()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Detect object of given MATLAB class or Java® class&lt;/td&gt;&lt;/tr&gt;  
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isappdata()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if object has specific application-defined data&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isbetween()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Array elements occurring within date and time interval&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;iscalendarduration()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is duration array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;iscategorical()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine whether input is categorical array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;iscategory()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Test for categorical array categories&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;iscell()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is cell array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;iscellstr()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is cell array of strings&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;ischar()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is character array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;iscolumn()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine whether input is column vector&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;iscom()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is Component Object Model (COM) object&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isdatetime()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is datetime array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isdir()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is folder&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isdst()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Datetime values occurring during daylight saving time&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isduration()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is duration array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isempty()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is empty array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isequal()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if arrays are numerically equal&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isequaln()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if arrays are numerically equal, treating NaNs as equal&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isevent()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is Component Object Model (COM) object event&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isfield()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is MATLAB structure array field&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isfinite()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Detect finite elements of array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isfloat()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is floating-point array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;ishandle()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Detect valid graphics object handles&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;ishold()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if graphics hold state is on&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isinf()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Detect infinite elements of array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isinteger()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is integer array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isinterface()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is Component Object Model (COM) interface&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isjava()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is Java object&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;iskeyword()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is MATLAB keyword&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isletter()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Detect elements that are alphabetic letters&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;islogical()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is logical array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;ismac()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if running MATLAB for Macintosh OS X platform&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;ismatrix()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine whether input is matrix&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;ismember()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Detect members of specific set&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;ismethod()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is object method&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;ismissing()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Find table elements with missing values&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isnan()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Detect elements of array that are not a number (NaN)&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isnumeric()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is numeric array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isobject()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is MATLAB object&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isordinal()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine whether input is ordinal categorical array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;ispc()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if running MATLAB for PC (Windows®) platform&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isprime()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Detect prime elements of array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isprop()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is object property&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isprotected()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine whether categories of categorical array are protected&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isreal()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if all array elements are real numbers&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isrow()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine whether input is row vector&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isscalar()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is scalar&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;issorted()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if set elements are in sorted order&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isspace()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Detect space characters in array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;issparse()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is sparse array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isstrprop()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if string is of specified category&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isstruct()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is MATLAB structure array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isstudent()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if Student Version of MATLAB&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;istable()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine whether input is table&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isundefined()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Find undefined elements in categorical array&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isunix()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if running MATLAB for UNIX®[a] platform.&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isvarname()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is valid variable name&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isvector()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Determine if input is vector&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;&lt;code&gt;isweekend()&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Datetime values occurring during weekend&lt;/td&gt;&lt;/tr&gt;
-
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;br /&gt;
-For more information on each individual function, see &lt;a href=&quot;https://www.mathworks.com/help/matlab/ref/is.html&quot; target=&quot;_blank&quot;&gt;MATLAB’s use manual&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-  
-  &lt;p&gt;&lt;a href=&quot;http:/ICP2017F/lecture/6-matlab-operators-branching&quot;&gt;Lecture 6: MATLAB - operators, branching, and control statements&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/ICP2017F&quot;&gt;COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110&lt;/a&gt; on October 09, 2017.&lt;/p&gt;</content>
 </entry>
 
 </feed>

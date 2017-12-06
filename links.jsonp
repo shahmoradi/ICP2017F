@@ -117,6 +117,11 @@ callback([
   } ,
 
   {
+    "text": "Homework 5: Solutions - MATLAB IO, plotting, and Monte Carlo methods",
+    "href": "/ICP2017F/homework/5-solutions-matlab-IO-plotting-monte-carlo"
+  } ,
+
+  {
     "text": "Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods",
     "href": "/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo"
   } ,
