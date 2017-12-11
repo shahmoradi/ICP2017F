@@ -1,6 +1,22 @@
 [
 	
 		{
+		  "title"      : "Quiz 6: Solutions - MATLAB plotting and Monte Carlo methods",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/quiz/6-solutions-matlab-plotting-monte-carlo-methods",
+		  "date"       : "2017-12-11 00:00:00 -0600",
+		  "shortdate"  : "December 11, 2017"
+		} ,
+	
+		{
+		  "title"      : "Quiz 6: Problems - MATLAB plotting and Monte Carlo methods",
+		  "category"   : "",
+		  "url"        : "/ICP2017F/quiz/6-problems-matlab-plotting-monte-carlo-methods",
+		  "date"       : "2017-12-11 00:00:00 -0600",
+		  "shortdate"  : "December 11, 2017"
+		} ,
+	
+		{
 		  "title"      : "Quiz 5: Solutions - MATLAB IO and plotting",
 		  "category"   : "",
 		  "url"        : "/ICP2017F/quiz/5-solutions-matlab-IO-plotting",

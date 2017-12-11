@@ -2,6 +2,16 @@
 callback([
 
   {
+    "text": "Quiz 6: Solutions - MATLAB plotting and Monte Carlo methods",
+    "href": "/ICP2017F/quiz/6-solutions-matlab-plotting-monte-carlo-methods"
+  } ,
+
+  {
+    "text": "Quiz 6: Problems - MATLAB plotting and Monte Carlo methods",
+    "href": "/ICP2017F/quiz/6-problems-matlab-plotting-monte-carlo-methods"
+  } ,
+
+  {
     "text": "Quiz 5: Solutions - MATLAB IO and plotting",
     "href": "/ICP2017F/quiz/5-solutions-matlab-IO-plotting"
   } ,
