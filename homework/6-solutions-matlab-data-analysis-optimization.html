@@ -11,23 +11,23 @@
 -->
 
 <meta charset="utf-8">
-<title>QUIZ 4: PROBLEMS - MATLAB LOOPS &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
+<title>HOMEWORK 6: SOLUTIONS - MATLAB DATA ANALYSIS AND OPTIMIZATION &vert; COE 301 - FALL 2017 - MWF 9-10 AM - UTC 4.110</title>
 <meta name="description" content="Introduction to<br>Computer Programming">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/ICP2017F/images/logo.png">
-<meta name="twitter:title" content="Quiz 4: Problems - MATLAB loops">
+<meta name="twitter:title" content="Homework 6: Solutions - MATLAB data analysis and optimization">
 <meta name="twitter:description" content="Introduction to<br>Computer Programming">
 <meta name="twitter:creator" content="@AmirShahmoradi">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quiz 4: Problems - MATLAB loops">
+<meta property="og:title" content="Homework 6: Solutions - MATLAB data analysis and optimization">
 <meta property="og:description" content="Introduction to<br>Computer Programming">
-<meta property="og:url" content="/ICP2017F/quiz/4-problems-matlab-loops">
+<meta property="og:url" content="/ICP2017F/homework/6-solutions-matlab-data-analysis-optimization">
 <meta property="og:site_name" content="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110">
 <meta property="og:image" content="/ICP2017F/images/">
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="/ICP2017F/quiz/4-problems-matlab-loops">
+<link rel="canonical" href="/ICP2017F/homework/6-solutions-matlab-data-analysis-optimization">
 <!-- <link href="/ICP2017F/feed.xml" type="application/atom+xml" rel="alternate" title="COE 301 - Fall 2017 - MWF 9-10 AM - UTC 4.110 Feed"> -->
 
 
@@ -133,8 +133,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Quiz 4: Problems - MATLAB loops</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-11-13T00:00:00-06:00">13 Nov 2017</time></strong></p>
+                            <h2>Homework 6: Solutions - MATLAB data analysis and optimization</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2017-12-13T00:00:00-06:00">13 Dec 2017</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,24 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <p>This quiz is about for loops, while loops and vectorization in MATLAB.</p>
+                <p>This is the solution to <a href="6-problems-matlab-data-analysis-optimization.html" target="_blank">Homework 6: Problems - MATLAB data analysis and optimization</a>.</p>
+
+<!--
+
+The following figure illustrates the grade distribution for this homework.  
+
+<figure>
+	<img src="/ICP2017F/homework/gradeDist/gradeHistHomework6.png" width="700">
+</figure>
+
+---
+---
+
+<br> 
+
+-->
+
+<p>♣ <strong>Due Date: Wednesday Dec 13, 2017 9:00 AM</strong>. This homework aims at giving you some experience with image and data analysis and optimization techniques in MATLAB. For this homework, you need to only return two problems of your own choice, out of the three questions. The extra question, if you answer it, will be considered as an extra credit.</p>
 
 <p><br /></p>
 
@@ -153,30 +170,65 @@ MathJax.Hub.Queue(function() {
 
 <p><br /></p>
 
-<p><strong>1. </strong> Write a function that takes an input integer, and computes its factorial,</p>
+<p><strong>1. </strong> <strong>Subplots in MATLAB.</strong> Consider this MATLAB data file <a href="/ICP2017F/homework/6-problems/data3D.mat" target="_blank">data3D.mat</a> which contains a 3-dimensional $41\times 61\times 16$ matrix of the brain of a rat. Write a MATLAB script that  creates and saves a graph of all $X-Y$ information for the 16 slices along the z axis like the following.</p>
 
-<script type="math/tex; mode=display">n!=n\times (n-1) \times (n-2) \cdots \times 2 \times 1 ~,</script>
+<figure>
+	<img src="/ICP2017F/homework/6-problems/subplots.png" width="900" />  
+</figure>
+<p><br /></p>
 
-<p>in the following ways:</p>
+<p><strong>Hint:</strong> Start from this <a href="/ICP2017F/homework/6-problems/hw6prob1.m" target="_blank">MATLAB script</a> that I have written for you. Play with all the options to understand what they do and see their effects on the resulting plot. This script should generate the following figure for you.</p>
 
-<p>(a) Write this function using while-loop. Name it <code>getFacWhile(n)</code>.</p>
+<figure>
+	<img src="/ICP2017F/homework/6-problems/currentPlot.png" width="900" />  
+</figure>
+<p><br /></p>
 
-<p>(b) Write this function using for-loop. Name it <code>getFacFor(n)</code>.</p>
+<p><strong>Answer:</strong></p>
 
-<p>(c) Write this function using the vectorization concept. Name it <code>getFacVec(n)</code>. (Hint: for the vectorized version of this function, you will have to first create a vector of integers from 1 to n, using MATLAB vector construction notation (This is very simple and easy if you recall from lecture notes). Then use MATLAB’s built-in <a href="https://www.mathworks.com/help/matlab/ref/prod.html">prod()</a> function to accomplish the task of computing $n!$ as given by the above equation.)</p>
+<p>Here is an implementation of this code: <a href="/ICP2017F/homework/6-solutions/makeSubplots.m" target="_blank">makeSubplots.m</a>.</p>
 
 <p><br /><br /></p>
 
-<p><strong>2. </strong> Write a MATLAB script, <code>timeFacFuncs.m</code> that times the performance of the three functions you wrote in the previous problem, so that when you run this script, you get an output like the following,</p>
-<pre><code class="language-matlab">&gt;&gt; timeFacFuncs
-average runtime for getFacWhile(1700000): 0.0054129 seconds
-average runtime for getFacFor(1700000): 0.0080964 seconds
-average runtime for getFacVec(1700000): 0.005283 seconds
+<p><strong>2. </strong> <strong>Getting the boundary of objects in images.</strong>. Consider the same dataset as in the previous problem. Write a MATLAB script that delineates the boundary of the tumor in all of the subplots and generates a figure with the tumor boundary highlighted, like the following graph.</p>
+
+<figure>
+	<img src="/ICP2017F/homework/6-problems/subplotsWithTumorBoundaries.png" width="900" />  
+</figure>
+<p><br /></p>
+
+<p><strong>Answer:</strong></p>
+
+<p>Here is an implementation of this code: <a href="/ICP2017F/homework/6-solutions/makeSubplots.m" target="_blank">makeSubplotsWithTumorBoundary.m</a>.</p>
+
+<p><br /><br /></p>
+
+<p><strong>3. </strong> <strong>Regression: obtaining the most likely mean and standard deviation of a set of Standard Normally Distributed Random Variables.</strong> Consider this dataset, <a href="/ICP2017F/homework/6-problems/Drand.mat" target="_blank">Drand.mat</a>, which contains a set of random numbers. Let’s make a hypothesis with regards to this dataset: We assume that this dataset is well fit by a <a href="https://en.wikipedia.org/wiki/Normal_distribution" target="_blank">Gaussian distribution</a>. But, we don’t know the values of the two parameters (mean and standard deviation) of this Normal (Gaussian) distribution. Therefore, write a MATLAB script that constructs an objective function (similar to what we are planning to do for the mathematical modeling section of the project) and then uses MATLAB’s built-in function, <code>fminsearch()</code>, to find the most likely values of the mean and standard deviation of this Gaussian distribution. Here is a best-fit Gaussian distribution using the most likely parameters to the histogram of this dataset.</p>
+
+<figure>
+	<img src="/ICP2017F/homework/6-problems/histfit.png" width="700" />
+</figure>
+<p><br /></p>
+
+<p><strong>Hints:</strong> Our hypothesis is that the data in this histogram comes from a standard Normal distribution with a fixed mean ($\mu$) and standard deviation ($\sigma$). For the moment, let’s assume that we know the values of these two parameters. Then if all of these points, $D$, come from the normal distribution with the given $(\mu,\sigma)$, then the probability of all them coming from the normal distribution with these parameter values can be computed as,</p>
+
+<script type="math/tex; mode=display">\pi\big(\boldsymbol D\big|\mu,\sigma\big) = \prod^{N=100}_{i=1} \frac{1}{2\pi\sigma^2}\exp\bigg( -\bigg[ \frac{\boldsymbol D(i)-\mu}{\sqrt{2}\sigma} \bigg]^2 \bigg) ~~,</script>
+
+<p>where the symbol $\pi$ to the left of equality means <strong>probability</strong> (but note that $\pi$ on the right hand side of the euqation stands for the number $\pi=3.14\ldots$, and $D(i)$ refers to the $i$th point in the sample of points. Since probabilities are always extremely small numbers, it is always good to work with their <code>log()</code> values instead of their raw values (can you guess why?). Therefore, we could take the log of the above equation to write it as,</p>
+
+<script type="math/tex; mode=display">\log\pi\big(\boldsymbol D\big|\mu,\sigma\big) = \sum^{N=100}_{i=1} - \log\big(2\pi\sigma^2\big) - \bigg[ \frac{\boldsymbol D(i)-\mu}{\sqrt{2}\sigma} \bigg]^2 ~~,</script>
+
+<p>Now our goad is to construct this function (let’s name it <code>getLogProbNorm()</code>) and pass it to MATLAB’s built-in function <code>fminsearch()</code> in order to find the most likely $(\mu,\sigma)$ that leads to the highest likelihood value (the maximum of the above equation). Here is one last tip: Note that <code>fminsearch()</code> minimizes functions, but we want to maximize <code>getLogProbNorm()</code>, instead of minimizing it. What change could you make to this function to make it work with <code>fminsearch()</code>? Name your main script <code>findBestFitParameters.m</code>. Now when you run your script it should call <code>fminsearch()</code> and then output the best-fit parameters like the following,</p>
+
+<pre><code class="language-matlab">&gt;&gt; findBestFitParameters
+mu: -0.082001 , sigma: 1.0043
 </code></pre>
+<p><br />
+Start your parameter search via <code>fminsearch()</code> with the following values: $[\mu,\sigma] = [1,10]$.</p>
 
-<p><br /><br /></p>
+<p><strong>Answer:</strong></p>
 
-<p><strong>3. </strong> <strong>Extra Credit</strong> Modify your answer to problem 1.(c) above in such a way that instead of using <code>prod()</code>, you get the factorial using <code>sum()</code> and some other elementary mathematical MATLAB functions. (Hint: for this problem, you will need to transform the numbers involved in calculations using some appropriate MATLAB mathematical function and revert the result at the end.)</p>
+<p>Here is an implementation of this code: <a href="/ICP2017F/homework/6-solutions/findBestFitParameters.m" target="_blank">findBestFitParameters.m</a>.</p>
 
 <p><br /><br /></p>
 
@@ -185,15 +237,15 @@ average runtime for getFacVec(1700000): 0.005283 seconds
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 4: Problems - MATLAB loops&quot;%20/ICP2017F/quiz/4-problems-matlab-loops%20via%20&#64;AmirShahmoradi"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Homework 6: Solutions - MATLAB data analysis and optimization&quot;%20/ICP2017F/homework/6-solutions-matlab-data-analysis-optimization%20via%20&#64;AmirShahmoradi"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/quiz/4-problems-matlab-loops"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/ICP2017F/homework/6-solutions-matlab-data-analysis-optimization"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/quiz/4-problems-matlab-loops"
+        <a class="google-icon" href="https://plus.google.com/share?url=/ICP2017F/homework/6-solutions-matlab-data-analysis-optimization"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
             <i class="fa fa-google-plus"></i>
         </a>

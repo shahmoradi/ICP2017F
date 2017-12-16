@@ -122,6 +122,11 @@ callback([
   } ,
 
   {
+    "text": "Homework 6: Solutions - MATLAB data analysis and optimization",
+    "href": "/ICP2017F/homework/6-solutions-matlab-data-analysis-optimization"
+  } ,
+
+  {
     "text": "Homework 6: Problems - MATLAB data analysis and optimization",
     "href": "/ICP2017F/homework/6-problems-matlab-data-analysis-optimization"
   } ,

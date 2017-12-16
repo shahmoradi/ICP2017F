@@ -238,7 +238,7 @@ then all the necessary MATLAB codes to generate all the results will be called b
 \begin{align*}
 \mathcal{L}(\mathcal{D}|\lambda,c,\sigma) 
 &= \prod_{i=1}^{n=8} \pi(\log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
-&= \prod_{i=1}^{n=8} \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i,\lambda,c,\sigma) \big]^2}{2\sigma^2} \bigg) ~.
+&= \prod_{i=1}^{n=8} \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~.
 \end{align*} %]]></script>
 
 <p>Frequently however, you would want to work with $\log\mathcal{L}$ instead of $\mathcal{L}$. This is again because the numbers involved are extremely small often below the precision limits of the computer. So, by taking the logarithm of the numbers, we work instead with number’s exponent, which looks just like a normal number (not so big, not so small). So, by taking the log, the above equation becomes,</p>
@@ -247,7 +247,7 @@ then all the necessary MATLAB codes to generate all the results will be called b
 \begin{align*}
     \log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)
     &= \sum_{i=1}^{n=8} \log \pi( \log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
-    &= \sum_{i=1}^{n=8} \log \bigg[ \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i) - \log N(t_i,\lambda,c,\sigma) \big]^2}{2\sigma^2} \bigg) \bigg] ~.
+    &= \sum_{i=1}^{n=8} \log \bigg[ \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i) - \log N(t_i,\lambda,c) \big]^2}{2\sigma^2} \bigg) \bigg] ~.
 \end{align*} %]]></script>
 
 <p><br /></p>
@@ -340,8 +340,8 @@ We can multiply the value of $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$ by 
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2017 / 12 / 11</section></br> -->
-         <section>Last updated Monday, 11 Dec 2017 at 11:23 AM CST</section></br>
+         <!-- <section>Last updated 2017 / 12 / 16</section></br> -->
+         <section>Last updated Saturday, 16 Dec 2017 at 01:34 PM CST</section></br>
          <section>All content exclusively maintained by <a href="http://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="http://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>
