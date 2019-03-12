@@ -335,7 +335,7 @@ cell
     [9]
 </code></pre>
 
-<p>Therefore, if you want to iterate over elements of a multidimensional matrix or array, you have to first reshape them using MATLAB’s built-in <code>reshape()</code> function to convert them to vector format, then iterating over them. For exzmple,</p>
+<p>Therefore, if you want to iterate over elements of a multidimensional matrix or array, you have to first reshape them using MATLAB’s built-in <code>reshape()</code> function to convert them to vector format, then iterating over them. For example,</p>
 <pre><code class="language-matlab">a = {1, 2, 3; 4, 5, 6; 7, 8, 9};
 a = reshape(a,[1,9]);
 for index = a
@@ -476,7 +476,7 @@ be able to optimize the loop. One of the most important tips for producing effic
 <pre><code>Elapsed time is 0.200450 seconds.
 </code></pre>
 
-<p>Amazing! isn’t it? You get almost 3x speedup in your MATLAB code if you use vectorized computation instead of fol-loops. Later on in this course, we will see that MATLAB has inherited these excellent vectorization techniques and syntax for matrix calculations from its high-performance ancestor, <a href="https://en.wikipedia.org/wiki/Fortran" target="_blank">Fortran</a>.</p>
+<p>Amazing! isn’t it? You get almost 3x speedup in your MATLAB code if you use vectorized computation instead of for-loops. Later on in this course, we will see that MATLAB has inherited these excellent vectorization techniques and syntax for matrix calculations from its high-performance ancestor, <a href="https://en.wikipedia.org/wiki/Fortran" target="_blank">Fortran</a>.</p>
 
 <p><strong>Exercise:</strong><br />
 How do you vectorize the following code?</p>
@@ -652,7 +652,7 @@ Table of MATLAB's most-widely used vectorization functions.
 
 <p>At the highest level of memory hierarchy, closest to the CPU, we have the CPU register. A processor register is a quickly accessible location available to a computer’s CPU. Registers usually consist of a small amount of fast storage and may be read-only or write-only. The CPU has super fast access to data stored in register. But the problem is that this memory is very small, typically on the orders of bits of information.</p>
 
-<p>At the second level of the hierarchy of memory, we have the CPU cache, typically comprised of three different levels L1, L2, L3, which rank from fastest to slowest respectively, in terms of CPU access. However, the faster the cache memory, the smaller it is. Thereofore, L1 is the fastest of the three, but also the smallest of the three levels.</p>
+<p>At the second level of the hierarchy of memory, we have the CPU cache, typically comprised of three different levels L1, L2, L3, which rank from fastest to slowest respectively, in terms of CPU access. However, the faster the cache memory, the smaller it is. Therefore, L1 is the fastest of the three, but also the smallest of the three levels.</p>
 
 <p>CPU Caching was invented to solve a significant problem. In the early decades of computing, main memory was extremely slow and incredibly expensive — but CPUs weren’t particularly fast, either. Starting in the 1980s, the gap began to widen quickly. Microprocessor clock speeds took off, but memory access times improved far less dramatically. As this gap grew, it became increasingly clear that a new type of fast memory was needed to bridge the gap. See the figure below.</p>
 
@@ -794,8 +794,8 @@ Sometimes programs run too fast for <code>tic</code> and <code>toc</code> to pro
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2018 / 04 / 17</section></br> -->
-         <section>Last updated Tuesday, 17 Apr 2018 at 12:31 PM CST</section></br>
+         <!-- <section>Last updated 2019 / 03 / 12</section></br> -->
+         <section>Last updated Tuesday, 12 Mar 2019 at 03:28 PM CST</section></br>
          <section>All content exclusively maintained by <a href="https://shahmoradi.org" target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="https://www.ae.utexas.edu/" target="_blank">Department of Aerospace Engineering and Engineering Mechanics</a></section></br>
          <section><a class="icon-ghost" href="https://www.ices.utexas.edu/" target="_blank">Institute for Computational Engineering and Sciences | POB 6.328</a></section></br>

@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2018-04-17T12:31:16-05:00</updated>
+<updated>2019-03-12T15:28:31-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -3016,7 +3016,7 @@ cell
     [9]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Therefore, if you want to iterate over elements of a multidimensional matrix or array, you have to first reshape them using MATLAB’s built-in &lt;code&gt;reshape()&lt;/code&gt; function to convert them to vector format, then iterating over them. For exzmple,&lt;/p&gt;
+&lt;p&gt;Therefore, if you want to iterate over elements of a multidimensional matrix or array, you have to first reshape them using MATLAB’s built-in &lt;code&gt;reshape()&lt;/code&gt; function to convert them to vector format, then iterating over them. For example,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;a = {1, 2, 3; 4, 5, 6; 7, 8, 9};
 a = reshape(a,[1,9]);
 for index = a
@@ -3157,7 +3157,7 @@ be able to optimize the loop. One of the most important tips for producing effic
 &lt;pre&gt;&lt;code&gt;Elapsed time is 0.200450 seconds.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Amazing! isn’t it? You get almost 3x speedup in your MATLAB code if you use vectorized computation instead of fol-loops. Later on in this course, we will see that MATLAB has inherited these excellent vectorization techniques and syntax for matrix calculations from its high-performance ancestor, &lt;a href=&quot;https://en.wikipedia.org/wiki/Fortran&quot; target=&quot;_blank&quot;&gt;Fortran&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Amazing! isn’t it? You get almost 3x speedup in your MATLAB code if you use vectorized computation instead of for-loops. Later on in this course, we will see that MATLAB has inherited these excellent vectorization techniques and syntax for matrix calculations from its high-performance ancestor, &lt;a href=&quot;https://en.wikipedia.org/wiki/Fortran&quot; target=&quot;_blank&quot;&gt;Fortran&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Exercise:&lt;/strong&gt;&lt;br /&gt;
 How do you vectorize the following code?&lt;/p&gt;
@@ -3333,7 +3333,7 @@ Table of MATLAB's most-widely used vectorization functions.
 
 &lt;p&gt;At the highest level of memory hierarchy, closest to the CPU, we have the CPU register. A processor register is a quickly accessible location available to a computer’s CPU. Registers usually consist of a small amount of fast storage and may be read-only or write-only. The CPU has super fast access to data stored in register. But the problem is that this memory is very small, typically on the orders of bits of information.&lt;/p&gt;
 
-&lt;p&gt;At the second level of the hierarchy of memory, we have the CPU cache, typically comprised of three different levels L1, L2, L3, which rank from fastest to slowest respectively, in terms of CPU access. However, the faster the cache memory, the smaller it is. Thereofore, L1 is the fastest of the three, but also the smallest of the three levels.&lt;/p&gt;
+&lt;p&gt;At the second level of the hierarchy of memory, we have the CPU cache, typically comprised of three different levels L1, L2, L3, which rank from fastest to slowest respectively, in terms of CPU access. However, the faster the cache memory, the smaller it is. Therefore, L1 is the fastest of the three, but also the smallest of the three levels.&lt;/p&gt;
 
 &lt;p&gt;CPU Caching was invented to solve a significant problem. In the early decades of computing, main memory was extremely slow and incredibly expensive — but CPUs weren’t particularly fast, either. Starting in the 1980s, the gap began to widen quickly. Microprocessor clock speeds took off, but memory access times improved far less dramatically. As this gap grew, it became increasingly clear that a new type of fast memory was needed to bridge the gap. See the figure below.&lt;/p&gt;
 
