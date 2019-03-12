@@ -1,0 +1,209 @@
+
+callback([
+
+  {
+    "text": "Quiz 6: Solutions - MATLAB plotting and Monte Carlo methods",
+    "href": "/ICP2017F/quiz/6-solutions-matlab-plotting-monte-carlo-methods"
+  } ,
+
+  {
+    "text": "Quiz 6: Problems - MATLAB plotting and Monte Carlo methods",
+    "href": "/ICP2017F/quiz/6-problems-matlab-plotting-monte-carlo-methods"
+  } ,
+
+  {
+    "text": "Quiz 5: Solutions - MATLAB IO and plotting",
+    "href": "/ICP2017F/quiz/5-solutions-matlab-IO-plotting"
+  } ,
+
+  {
+    "text": "Quiz 5: Problems - MATLAB IO and plotting",
+    "href": "/ICP2017F/quiz/5-problems-matlab-IO-plotting"
+  } ,
+
+  {
+    "text": "Quiz 4: Solutions - MATLAB loops",
+    "href": "/ICP2017F/quiz/4-solutions-matlab-loops"
+  } ,
+
+  {
+    "text": "Quiz 4: Problems - MATLAB loops",
+    "href": "/ICP2017F/quiz/4-problems-matlab-loops"
+  } ,
+
+  {
+    "text": "Quiz 3: Solutions - MATLAB branching, functions",
+    "href": "/ICP2017F/quiz/3-solutions-matlab-branching-functions"
+  } ,
+
+  {
+    "text": "Quiz 3: Problems - MATLAB branching, functions",
+    "href": "/ICP2017F/quiz/3-problems-matlab-branching-functions"
+  } ,
+
+  {
+    "text": "Quiz 2: Solutions - Programming history, MATLAB variables",
+    "href": "/ICP2017F/quiz/2-solutions-programming-history-matlab-variables"
+  } ,
+
+  {
+    "text": "Quiz 2: Problems - Programming history, MATLAB variables",
+    "href": "/ICP2017F/quiz/2-problems-programming-history-matlab-variables"
+  } ,
+
+  {
+    "text": "Quiz 1: Solutions - Version control system",
+    "href": "/ICP2017F/quiz/1-solutions-version-control-system"
+  } ,
+
+  {
+    "text": "Quiz 1: Problems - Version control system",
+    "href": "/ICP2017F/quiz/1-problems-version-control-system"
+  } ,
+
+  {
+    "text": "Lecture 8-9: MATLAB - functions II & III",
+    "href": "/ICP2017F/lecture/8-9-matlab-functions-II-III"
+  } ,
+
+  {
+    "text": "Lecture 7: MATLAB - functions I",
+    "href": "/ICP2017F/lecture/7-matlab-functions-I"
+  } ,
+
+  {
+    "text": "Lecture 6: MATLAB - operators, branching, and control statements",
+    "href": "/ICP2017F/lecture/6-matlab-operators-branching"
+  } ,
+
+  {
+    "text": "Lecture 5: MATLAB - values, variables, types - II",
+    "href": "/ICP2017F/lecture/5-matlab-values-variables-types-II"
+  } ,
+
+  {
+    "text": "Lecture 4: MATLAB - values, variables, types - I",
+    "href": "/ICP2017F/lecture/4-matlab-values-variables-types-I"
+  } ,
+
+  {
+    "text": "Lecture 3: MATLAB for beginners",
+    "href": "/ICP2017F/lecture/3-matlab-for-beginners"
+  } ,
+
+  {
+    "text": "Lecture 2: Programming history",
+    "href": "/ICP2017F/lecture/2-programming-history"
+  } ,
+
+  {
+    "text": "Lecture 1: Advanced Git concepts",
+    "href": "/ICP2017F/lecture/1-advanced-git"
+  } ,
+
+  {
+    "text": "Lecture 12: MATLAB - plotting and Monte Carlo methods",
+    "href": "/ICP2017F/lecture/12-matlab-plotting-monte-carlo"
+  } ,
+
+  {
+    "text": "Lecture 11: MATLAB - Input/Output (IO)",
+    "href": "/ICP2017F/lecture/11-matlab-IO"
+  } ,
+
+  {
+    "text": "Lecture 10: MATLAB - loops and vectorization",
+    "href": "/ICP2017F/lecture/10-matlab-loops-vectorization"
+  } ,
+
+  {
+    "text": "Lecture 0: A professional programmer uses Version Control System (VCS)",
+    "href": "/ICP2017F/lecture/0-version-control-system"
+  } ,
+
+  {
+    "text": "Homework 6: Solutions - MATLAB data analysis and optimization",
+    "href": "/ICP2017F/homework/6-solutions-matlab-data-analysis-optimization"
+  } ,
+
+  {
+    "text": "Homework 6: Problems - MATLAB data analysis and optimization",
+    "href": "/ICP2017F/homework/6-problems-matlab-data-analysis-optimization"
+  } ,
+
+  {
+    "text": "Homework 5: Solutions - MATLAB IO, plotting, and Monte Carlo methods",
+    "href": "/ICP2017F/homework/5-solutions-matlab-IO-plotting-monte-carlo"
+  } ,
+
+  {
+    "text": "Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods",
+    "href": "/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo"
+  } ,
+
+  {
+    "text": "Homework 4: Solutions - loops, IO",
+    "href": "/ICP2017F/homework/4-solutions-loops-IO"
+  } ,
+
+  {
+    "text": "Homework 4: Problems - loops, IO",
+    "href": "/ICP2017F/homework/4-problems-loops-IO"
+  } ,
+
+  {
+    "text": "Homework 3: Solutions - structures, branching and functions in MATLAB",
+    "href": "/ICP2017F/homework/3-solutions-matlab-structures-branching-functions"
+  } ,
+
+  {
+    "text": "Homework 3: Problems - structures, branching and functions in MATLAB",
+    "href": "/ICP2017F/homework/3-problems-matlab-structures-branching-functions"
+  } ,
+
+  {
+    "text": "Homework 2: Solutions - Variables, Values, and Types",
+    "href": "/ICP2017F/homework/2-solutions-variables-values-types"
+  } ,
+
+  {
+    "text": "Homework 2: Problems - Variables, Values, and Types",
+    "href": "/ICP2017F/homework/2-problems-variables-values-types"
+  } ,
+
+  {
+    "text": "Homework 1: Solutions - Version Control Using Git and Github",
+    "href": "/ICP2017F/homework/1-solutions-version-control-using-git-github"
+  } ,
+
+  {
+    "text": "Homework 1: Problems - Version Control Using Git and Github",
+    "href": "/ICP2017F/homework/1-problems-version-control-using-git-github"
+  } ,
+
+  {
+    "text": "Exam final: semester project",
+    "href": "/ICP2017F/exam/1-semester-project"
+  } ,
+
+  {
+    "text": "Announcement 3: Midterm Exam Date and Schedule",
+    "href": "/ICP2017F/announcement/3-midterm-exam-schedule"
+  } ,
+
+  {
+    "text": "Announcement 2: Course Progress Evaluation",
+    "href": "/ICP2017F/announcement/2-course-progress-evaluation"
+  } ,
+
+  {
+    "text": "Announcement 1: Assessing your programming knowledge and interests",
+    "href": "/ICP2017F/announcement/1-assessing-your-programming-knowledge-and-interests"
+  } ,
+
+  {
+    "text": "Announcement 0: Student-professor connection day",
+    "href": "/ICP2017F/announcement/0-student-professor-connection-day"
+  } 
+
+])
