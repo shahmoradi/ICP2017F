@@ -45,78 +45,14 @@
         <loc>/ICP2017F/tags/index.html</loc>
     </url>
     
-    <url>
-        <loc>/ICP2017F/page2/</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/page3/</loc>
-    </url>
-    
 
-    
-    <url>
-        <loc>/ICP2017F/homework/6-solutions-matlab-data-analysis-optimization</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/quiz/6-solutions-matlab-plotting-monte-carlo-methods</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/quiz/6-problems-matlab-plotting-monte-carlo-methods</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/quiz/5-solutions-matlab-IO-plotting</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/quiz/5-problems-matlab-IO-plotting</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/homework/6-problems-matlab-data-analysis-optimization</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/homework/5-solutions-matlab-IO-plotting-monte-carlo</loc>
-    </url>
     
     <url>
         <loc>/ICP2017F/lecture/12-matlab-plotting-monte-carlo</loc>
     </url>
     
     <url>
-        <loc>/ICP2017F/quiz/4-solutions-matlab-loops</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/quiz/4-problems-matlab-loops</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/homework/4-solutions-loops-IO</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/exam/1-semester-project</loc>
-    </url>
-    
-    <url>
         <loc>/ICP2017F/lecture/11-matlab-IO</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/homework/4-problems-loops-IO</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/homework/3-solutions-matlab-structures-branching-functions</loc>
     </url>
     
     <url>
@@ -125,14 +61,6 @@
     
     <url>
         <loc>/ICP2017F/announcement/3-midterm-exam-schedule</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/quiz/3-solutions-matlab-branching-functions</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/quiz/3-problems-matlab-branching-functions</loc>
     </url>
     
     <url>
@@ -152,22 +80,6 @@
     </url>
     
     <url>
-        <loc>/ICP2017F/homework/3-problems-matlab-structures-branching-functions</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/quiz/2-solutions-programming-history-matlab-variables</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/quiz/2-problems-programming-history-matlab-variables</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/homework/2-solutions-variables-values-types</loc>
-    </url>
-    
-    <url>
         <loc>/ICP2017F/lecture/5-matlab-values-variables-types-II</loc>
     </url>
     
@@ -180,23 +92,7 @@
     </url>
     
     <url>
-        <loc>/ICP2017F/quiz/1-solutions-version-control-system</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/quiz/1-problems-version-control-system</loc>
-    </url>
-    
-    <url>
         <loc>/ICP2017F/lecture/2-programming-history</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/homework/2-problems-variables-values-types</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/homework/1-solutions-version-control-using-git-github</loc>
     </url>
     
     <url>
@@ -205,10 +101,6 @@
     
     <url>
         <loc>/ICP2017F/lecture/0-version-control-system</loc>
-    </url>
-    
-    <url>
-        <loc>/ICP2017F/homework/1-problems-version-control-using-git-github</loc>
     </url>
     
     <url>
