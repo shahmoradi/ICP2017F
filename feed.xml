@@ -7,12 +7,12 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2019-03-12T15:28:31-05:00</updated>
+<updated>2019-06-03T15:21:32-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/ICP2017F/</uri>
-  <email>amir@ices.utexas.edu</email>
+  <email>shahmoradi@utexas.edu</email>
 </author>
 
 
@@ -25,7 +25,7 @@
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -132,7 +132,7 @@ Start your parameter search via &lt;code&gt;fminsearch()&lt;/code&gt; with the f
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -164,7 +164,7 @@ Start your parameter search via &lt;code&gt;fminsearch()&lt;/code&gt; with the f
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -200,7 +200,7 @@ Start your parameter search via &lt;code&gt;fminsearch()&lt;/code&gt; with the f
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -291,7 +291,7 @@ otherwise prints a message like the following and exits the function without bre
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -356,7 +356,7 @@ otherwise prints a message like the following and exits the function without bre
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -434,7 +434,7 @@ Start your parameter search via &lt;code&gt;fminsearch()&lt;/code&gt; with the f
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -473,13 +473,13 @@ The following figure illustrates the grade distribution for this homework.
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;Reading scientific data from web using MATLAB&lt;/strong&gt;. Consider the following webpage address &lt;a href=&quot;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&quot; target=&quot;_blank&quot;&gt;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&lt;/a&gt;. This is an data table (in HTML language) containing data from &lt;a href=&quot;https://www.nasa.gov/mission_pages/swift/main&quot; target=&quot;_blank&quot;&gt;NASA’s Swift satellite&lt;/a&gt;. Each row in this table represents information about a &lt;a href=&quot;https://en.wikipedia.org/wiki/Gamma-ray_burst&quot; target=&quot;_blank&quot;&gt;Gamma-Ray Burst (GRB)&lt;/a&gt; detection that Swift has made in the past years. Now, corresponding to each of event IDs, there (might) exist files that contain some attributes of these events which we wish to plot and understand their behavior. For example, for the first event in this table, contains a data file which is hidden in a directory on this website &lt;a href=&quot;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. For each event in this table, there is likely one such table hidden in this web directory.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;Reading scientific data from web using MATLAB&lt;/strong&gt;. Consider the following webpage address &lt;a href=&quot;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&quot; target=&quot;_blank&quot;&gt;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&lt;/a&gt;. This is an data table (in HTML language) containing data from &lt;a href=&quot;https://www.nasa.gov/mission_pages/swift/main&quot; target=&quot;_blank&quot;&gt;NASA’s Swift satellite&lt;/a&gt;. Each row in this table represents information about a &lt;a href=&quot;https://en.wikipedia.org/wiki/Gamma-ray_burst&quot; target=&quot;_blank&quot;&gt;Gamma-Ray Burst (GRB)&lt;/a&gt; detection that Swift has made in the past years. Now, corresponding to each of event IDs, there (might) exist files that contain some attributes of these events which we wish to plot and understand their behavior. For example, for the first event in this table, contains a data file which is hidden in a directory on this website &lt;a href=&quot;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. For each event in this table, there is likely one such table hidden in this web directory.&lt;/p&gt;
 
 &lt;p&gt;Our goal in this question is to fetch all these files from the website, using MATLAB and save them locally in our own computer. Then read their contents one by one and plot the two columns of data in all of them together.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;(A)&lt;/strong&gt; Write a MATLAB script named &lt;code&gt;fetchDataFromWeb.m&lt;/code&gt; that uses this web address: &lt;code&gt;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/triggers.txt&lt;/code&gt; to read a list of all GRB events and then writes the entire table of &lt;code&gt;triggers.txt&lt;/code&gt; to a local file with the same name on your device. For this purpose, you will need MATLAB built-in function &lt;code&gt;webread()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(A)&lt;/strong&gt; Write a MATLAB script named &lt;code&gt;fetchDataFromWeb.m&lt;/code&gt; that uses this web address: &lt;code&gt;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/triggers.txt&lt;/code&gt; to read a list of all GRB events and then writes the entire table of &lt;code&gt;triggers.txt&lt;/code&gt; to a local file with the same name on your device. For this purpose, you will need MATLAB built-in function &lt;code&gt;webread()&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;(B)&lt;/strong&gt; Now, add to your script another set of commands that uses the event IDs stored in this file, to generate the corresponding web addresses like: &lt;a href=&quot;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&lt;/a&gt;. Then it uses the generated web address to read the content of the page and store it in a local file on your device with the same name as it is stored on the webpage (for example, for the given webpage, the filename would be &lt;code&gt;GRB00745966_ep_flu.txt&lt;/code&gt;). &lt;strong&gt;Note:&lt;/strong&gt; Some of the web addresses for the given event IDs do not exist. Therefore, you should MATLAB’s try-catch construct to avoid runtime errors in your MATLAB code.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(B)&lt;/strong&gt; Now, add to your script another set of commands that uses the event IDs stored in this file, to generate the corresponding web addresses like: &lt;a href=&quot;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&lt;/a&gt;. Then it uses the generated web address to read the content of the page and store it in a local file on your device with the same name as it is stored on the webpage (for example, for the given webpage, the filename would be &lt;code&gt;GRB00745966_ep_flu.txt&lt;/code&gt;). &lt;strong&gt;Note:&lt;/strong&gt; Some of the web addresses for the given event IDs do not exist. Therefore, you should MATLAB’s try-catch construct to avoid runtime errors in your MATLAB code.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;(C)&lt;/strong&gt; Now write another MATLAB script named &lt;code&gt;plotDatafromFile.m&lt;/code&gt;, that reads all of these files in your directory, one by one, using MATLAB &lt;code&gt;readtable()&lt;/code&gt; function, and plots the content of all of them together, on a single scatter plot (using MATLAB function &lt;code&gt;scatter()&lt;/code&gt;) like the following,&lt;/p&gt;
 
@@ -584,7 +584,7 @@ Here is an example MATLAB code that estimates $\pi$: &lt;a href=&quot;http:/ICP2
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -886,7 +886,7 @@ Note that every time you call the function, you would get a new random permutati
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -964,7 +964,7 @@ You can do so, using &lt;code&gt;log()&lt;/code&gt; transformation of the number
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -1019,7 +1019,7 @@ average runtime for getFacVec(1700000): 0.005283 seconds
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -1037,13 +1037,13 @@ average runtime for getFacVec(1700000): 0.005283 seconds
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;Reading scientific data from web using MATLAB&lt;/strong&gt;. Consider the following webpage address &lt;a href=&quot;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&quot; target=&quot;_blank&quot;&gt;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&lt;/a&gt;. This is an data table (in HTML language) containing data from &lt;a href=&quot;https://www.nasa.gov/mission_pages/swift/main&quot; target=&quot;_blank&quot;&gt;NASA’s Swift satellite&lt;/a&gt;. Each row in this table represents information about a &lt;a href=&quot;https://en.wikipedia.org/wiki/Gamma-ray_burst&quot; target=&quot;_blank&quot;&gt;Gamma-Ray Burst (GRB)&lt;/a&gt; detection that Swift has made in the past years. Now, corresponding to each of event IDs, there (might) exist files that contain some attributes of these events which we wish to plot and understand their behavior. For example, for the first event in this table, contains a data file which is hidden in a directory on this website &lt;a href=&quot;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. For each event in this table, there is likely one such table hidden in this web directory.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. &lt;/strong&gt; &lt;strong&gt;Reading scientific data from web using MATLAB&lt;/strong&gt;. Consider the following webpage address &lt;a href=&quot;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&quot; target=&quot;_blank&quot;&gt;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/swift/bat_time_table.html&lt;/a&gt;. This is an data table (in HTML language) containing data from &lt;a href=&quot;https://www.nasa.gov/mission_pages/swift/main&quot; target=&quot;_blank&quot;&gt;NASA’s Swift satellite&lt;/a&gt;. Each row in this table represents information about a &lt;a href=&quot;https://en.wikipedia.org/wiki/Gamma-ray_burst&quot; target=&quot;_blank&quot;&gt;Gamma-Ray Burst (GRB)&lt;/a&gt; detection that Swift has made in the past years. Now, corresponding to each of event IDs, there (might) exist files that contain some attributes of these events which we wish to plot and understand their behavior. For example, for the first event in this table, contains a data file which is hidden in a directory on this website &lt;a href=&quot;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. For each event in this table, there is likely one such table hidden in this web directory.&lt;/p&gt;
 
 &lt;p&gt;Our goal in this question is to fetch all these files from the website, using MATLAB and save them locally in our own computer. Then read their contents one by one and plot the two columns of data in all of them together.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;(A)&lt;/strong&gt; Write a MATLAB script named &lt;code&gt;fetchDataFromWeb.m&lt;/code&gt; that uses this web address: &lt;code&gt;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/triggers.txt&lt;/code&gt; to read a list of all GRB events and then writes the entire table of &lt;code&gt;triggers.txt&lt;/code&gt; to a local file with the same name on your device. For this purpose, you will need MATLAB built-in function &lt;code&gt;webread()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(A)&lt;/strong&gt; Write a MATLAB script named &lt;code&gt;fetchDataFromWeb.m&lt;/code&gt; that uses this web address: &lt;code&gt;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/triggers.txt&lt;/code&gt; to read a list of all GRB events and then writes the entire table of &lt;code&gt;triggers.txt&lt;/code&gt; to a local file with the same name on your device. For this purpose, you will need MATLAB built-in function &lt;code&gt;webread()&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;(B)&lt;/strong&gt; Now, add to your script another set of commands that uses the event IDs stored in this file, to generate the corresponding web addresses like: &lt;a href=&quot;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&lt;/a&gt;. Then it uses the generated web address to read the content of the page and store it in a local file on your device with the same name as it is stored on the webpage (for example, for the given webpage, the filename would be &lt;code&gt;GRB00745966_ep_flu.txt&lt;/code&gt;). &lt;strong&gt;Note:&lt;/strong&gt; Some of the web addresses for the given event IDs do not exist. Therefore, you should MATLAB’s try-catch construct to avoid runtime errors in your MATLAB code.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(B)&lt;/strong&gt; Now, add to your script another set of commands that uses the event IDs stored in this file, to generate the corresponding web addresses like: &lt;a href=&quot;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&quot; target=&quot;_blank&quot;&gt;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/swift/GRB00745966_ep_flu.txt&lt;/a&gt;. Then it uses the generated web address to read the content of the page and store it in a local file on your device with the same name as it is stored on the webpage (for example, for the given webpage, the filename would be &lt;code&gt;GRB00745966_ep_flu.txt&lt;/code&gt;). &lt;strong&gt;Note:&lt;/strong&gt; Some of the web addresses for the given event IDs do not exist. Therefore, you should MATLAB’s try-catch construct to avoid runtime errors in your MATLAB code.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;(C)&lt;/strong&gt; Now write another MATLAB script named &lt;code&gt;plotDatafromFile.m&lt;/code&gt;, that reads all of these files in your directory, one by one, using MATLAB &lt;code&gt;readtable()&lt;/code&gt; function, and plots the content of all of them together, on a single scatter plot (using MATLAB function &lt;code&gt;scatter()&lt;/code&gt;) like the following,&lt;/p&gt;
 
@@ -1130,7 +1130,7 @@ as soon as you read from the file, and then finally you make a scatter plot of a
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -1549,7 +1549,7 @@ The input argument is not a non-negative integer!
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -1696,7 +1696,7 @@ We can multiply the value of $\log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$ by 
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -2244,8 +2244,8 @@ Weak typing is also good for code-reuse. You can code a scalar algorithm in MATL
 
 &lt;h2 id=&quot;reading-data-from-web-using-webread&quot;&gt;Reading data from web using &lt;code&gt;webread()&lt;/code&gt;&lt;/h2&gt;
 
-&lt;p&gt;In today’s world, it often happens that the data you need for your research is already stored somewhere on the world-wide-web. For such cases MATLAB has built-in methods and functions to read and import data or even a webpage. For example, consider &lt;a href=&quot;https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/triggers.txt&quot; target=&quot;_blank&quot;&gt;this page&lt;/a&gt; on this course’s website. It is indeed a text file containing a set of IDs for some astrophysical events. Suppose, you needed to read and store these IDs locally on your own device. You could simply try the following code in MATLAB to fetch all of the table’s information in a single string via,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; webContent = webread('https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/triggers.txt')
+&lt;p&gt;In today’s world, it often happens that the data you need for your research is already stored somewhere on the world-wide-web. For such cases MATLAB has built-in methods and functions to read and import data or even a webpage. For example, consider &lt;a href=&quot;https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/triggers.txt&quot; target=&quot;_blank&quot;&gt;this page&lt;/a&gt; on this course’s website. It is indeed a text file containing a set of IDs for some astrophysical events. Suppose, you needed to read and store these IDs locally on your own device. You could simply try the following code in MATLAB to fetch all of the table’s information in a single string via,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; webContent = webread('https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/triggers.txt')
 webContent =
     '00745966
      00745090
@@ -2291,16 +2291,16 @@ end
 &lt;p&gt;If an error occurs within the try block, MATLAB skips any remaining commands in the try block and executes the commands in the catch block. If no error occurs within try block, MATLAB skips the entire catch block.&lt;/p&gt;
 
 &lt;p&gt;For example, suppose we wanted to read data from a webpage that does not exist,&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; webContent = webread('https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/')
+&lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; webContent = webread('https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/')
 Error using readContentFromWebService (line 45)
-The server returned the status 404 with message &quot;Not Found&quot; in response to the request to URL https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/.
+The server returned the status 404 with message &quot;Not Found&quot; in response to the request to URL https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/.
 Error in webread (line 125)
 [varargout{1:nargout}] = readContentFromWebService(connection, options); 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
 In such cases, it would be nice to control the behavior of the problem, and not allow MATLAB to end the program abruptly. We could therefore say,&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; try
-    webContent = webread('https://www.shahmoradi.orghttp:/ICP2017F/homework/5-problems/')
+    webContent = webread('https://www.cdslab.orghttp:/ICP2017F/homework/5-problems/')
 catch
     disp('The requested page does not exist! Gracefully exiting...')
 end
@@ -2325,7 +2325,7 @@ Now, the true advantage of this error handling construct would become clear to y
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -2533,7 +2533,7 @@ The input argument is not a non-negative integer!
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -2820,7 +2820,7 @@ Please enter a non-negative integer or type stop: stop
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -3421,7 +3421,7 @@ Sometimes programs run too fast for &lt;code&gt;tic&lt;/code&gt; and &lt;code&gt
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -3464,7 +3464,7 @@ Sometimes programs run too fast for &lt;code&gt;tic&lt;/code&gt; and &lt;code&gt
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
@@ -3712,7 +3712,7 @@ end
   <author>
     <name>Amir Shahmoradi</name>
     <uri>http:/ICP2017F</uri>
-    <email>amir@ices.utexas.edu</email>
+    <email>shahmoradi@utexas.edu</email>
   </author>
   
   <content type="html">
