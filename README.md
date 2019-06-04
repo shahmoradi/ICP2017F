@@ -1,10 +1,10 @@
-# ICP2017S
+# ICP2017F
 
 ## Fall 2017 - Introduction to Computer Programming
  
 Information about this course can be found on the course web-page:
  
-http://www.shahmoradi.org/ICP2017S/
+http://www.cdslab.org/ICP2017F/
 
 For questions about this course, contact:
 
