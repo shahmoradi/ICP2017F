@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2019-07-15T16:14:46-05:00</updated>
+<updated>2019-07-15T16:24:26-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -304,7 +304,7 @@ as soon as you read from the file, and then finally you make a scatter plot of a
 
 &lt;p&gt;&lt;br /&gt;
 &lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-An example code can be downloaded from &lt;a href=&quot;http:/ICP2017F/homework/5-solutions/montehall.py&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Here is the code’s output figure,&lt;/p&gt;
+An example code can be downloaded from &lt;a href=&quot;http:/ICP2017F/homework/5-solutions/montehall.m&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. Here is the code’s output figure,&lt;/p&gt;
 
 &lt;figure&gt;
 	&lt;img src=&quot;http:/ICP2017F/homework/5-solutions/MontyGameResult.png&quot; width=&quot;800&quot; /&gt;
@@ -3462,7 +3462,7 @@ ans =
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;fplot(@sin,[-2*pi 2*pi])
 &lt;/code&gt;&lt;/pre&gt;
 &lt;figure&gt;
-	&lt;img src=&quot;http:/ICP2017F/lecture/8/sin.png&quot; width=&quot;700&quot; /&gt;
+	&lt;img src=&quot;http:/ICP2017F/lecture/8-9/sin.png&quot; width=&quot;700&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&quot;nested-functions&quot;&gt;Nested functions&lt;/h3&gt;
@@ -6834,7 +6834,7 @@ Table 2. A list of MATLAB &lt;code&gt;format&lt;/code&gt; options.
 &lt;ul&gt;
   &lt;li&gt;It is not free.&lt;/li&gt;
   &lt;li&gt;It is slow compared to compiled programming languages. See for example, the following performance comparisons and tests in &lt;a href=&quot;https://modelingguru.nasa.gov/docs/DOC-1762&quot; target=&quot;_blank&quot;&gt;NASA modeling guru web page&lt;/a&gt;. As you can see there, the &lt;strong&gt;performance of MATLAB script can be significantly lower than compiled languages such as Fortran and C&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;If you have already coded in a fully object-oriented programming (OOP) language, in particular Python, you will find some oddities in MATLAB’s OOP implementation. You may feel this when, for example, you are working with &lt;a href=&quot;xx&quot; target=&quot;_blank&quot;&gt;cell arrays&lt;/a&gt; in MATLAB. We will see later on, what cell arrays are.&lt;/li&gt;
+  &lt;li&gt;If you have already coded in a fully object-oriented programming (OOP) language, in particular Python, you will find some oddities in MATLAB’s OOP implementation. You may feel this when, for example, you are working with &lt;a href=&quot;https://www.mathworks.com/help/matlab/cell-arrays.html&quot; target=&quot;_blank&quot;&gt;cell arrays&lt;/a&gt; in MATLAB. We will see later on, what cell arrays are.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;matlab-features&quot;&gt;MATLAB features&lt;/h2&gt;
