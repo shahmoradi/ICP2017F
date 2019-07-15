@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/ICP2017F/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/ICP2017F/" />
-<updated>2019-07-15T16:24:26-05:00</updated>
+<updated>2019-07-15T16:27:26-05:00</updated>
 <id>http:/ICP2017F/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -1079,7 +1079,7 @@ end
 
 &lt;p&gt;&lt;strong&gt;6. &lt;/strong&gt; Consider the problem number 5 in HW 3, where we wrote a &lt;a href=&quot;http:/ICP2017F/homework/3/fib.m&quot;&gt;function&lt;/a&gt; named &lt;code&gt;fib.m&lt;/code&gt; that used the idea of recursive functions to generate the Fibonacci numbers.&lt;/p&gt;
 
-&lt;p&gt;(A) Download &lt;a href=&quot;http:/ICP2017F/homework/3/fib.m&quot; target=&quot;_blank&quot;&gt;this function fib()&lt;/a&gt; and modify it using MATLAB &lt;code&gt;timeit()&lt;/code&gt; function such that it also returns the average runtime of &lt;code&gt;getFib()&lt;/code&gt; nested function inside &lt;code&gt;fib()&lt;/code&gt;, right after giving the requested Fibonacci number. For example, here is an output from such modified code:&lt;/p&gt;
+&lt;p&gt;(A) Download &lt;a href=&quot;http:/ICP2017F/homework/3-solutions/fib.m&quot; target=&quot;_blank&quot;&gt;this function fib()&lt;/a&gt; and modify it using MATLAB &lt;code&gt;timeit()&lt;/code&gt; function such that it also returns the average runtime of &lt;code&gt;getFib()&lt;/code&gt; nested function inside &lt;code&gt;fib()&lt;/code&gt;, right after giving the requested Fibonacci number. For example, here is an output from such modified code:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; fib
 Please enter a non-negative integer or type stop: 10
 	fib(10) = 55
@@ -1110,7 +1110,7 @@ Please enter a non-negative integer or type stop: stop
 
 &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Here is an implementation of the &lt;a href=&quot;http:/ICP2017F/homework/4/fib.m&quot; target=&quot;_blank&quot;&gt;modified fib()&lt;/a&gt; and &lt;a href=&quot;http:/ICP2017F/homework/4/fibLoop.m&quot; target=&quot;_blank&quot;&gt;modified fib()&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is an implementation of the &lt;a href=&quot;http:/ICP2017F/homework/4/fib.m&quot; target=&quot;_blank&quot;&gt;modified fib()&lt;/a&gt; and &lt;a href=&quot;http:/ICP2017F/homework/4-solutions/fibLoop.m&quot; target=&quot;_blank&quot;&gt;modified fib()&lt;/a&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-matlab&quot;&gt;&amp;gt;&amp;gt; fibLoop
 Please enter a non-negative integer or type stop: 12
 	fib(12) = 144
