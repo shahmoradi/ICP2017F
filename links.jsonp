@@ -62,66 +62,6 @@ callback([
   } ,
 
   {
-    "text": "Homework 6: Solutions - MATLAB data analysis and optimization",
-    "href": "/ICP2017F/homework/6-solutions-matlab-data-analysis-optimization"
-  } ,
-
-  {
-    "text": "Homework 6: Problems - MATLAB data analysis and optimization",
-    "href": "/ICP2017F/homework/6-problems-matlab-data-analysis-optimization"
-  } ,
-
-  {
-    "text": "Homework 5: Solutions - MATLAB IO, plotting, and Monte Carlo methods",
-    "href": "/ICP2017F/homework/5-solutions-matlab-IO-plotting-monte-carlo"
-  } ,
-
-  {
-    "text": "Homework 5: Problems - MATLAB IO, plotting, and Monte Carlo methods",
-    "href": "/ICP2017F/homework/5-problems-matlab-IO-plotting-monte-carlo"
-  } ,
-
-  {
-    "text": "Homework 4: Solutions - loops, IO",
-    "href": "/ICP2017F/homework/4-solutions-loops-IO"
-  } ,
-
-  {
-    "text": "Homework 4: Problems - loops, IO",
-    "href": "/ICP2017F/homework/4-problems-loops-IO"
-  } ,
-
-  {
-    "text": "Homework 3: Solutions - structures, branching and functions in MATLAB",
-    "href": "/ICP2017F/homework/3-solutions-matlab-structures-branching-functions"
-  } ,
-
-  {
-    "text": "Homework 3: Problems - structures, branching and functions in MATLAB",
-    "href": "/ICP2017F/homework/3-problems-matlab-structures-branching-functions"
-  } ,
-
-  {
-    "text": "Homework 2: Solutions - Variables, Values, and Types",
-    "href": "/ICP2017F/homework/2-solutions-variables-values-types"
-  } ,
-
-  {
-    "text": "Homework 2: Problems - Variables, Values, and Types",
-    "href": "/ICP2017F/homework/2-problems-variables-values-types"
-  } ,
-
-  {
-    "text": "Homework 1: Solutions - Version Control Using Git and Github",
-    "href": "/ICP2017F/homework/1-solutions-version-control-using-git-github"
-  } ,
-
-  {
-    "text": "Homework 1: Problems - Version Control Using Git and Github",
-    "href": "/ICP2017F/homework/1-problems-version-control-using-git-github"
-  } ,
-
-  {
     "text": "Announcement 3: Midterm Exam Date and Schedule",
     "href": "/ICP2017F/announcement/3-midterm-exam-schedule"
   } ,
